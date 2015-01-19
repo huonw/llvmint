@@ -51,6 +51,10 @@ fn main() {
 //! `::adjust_trampoline` and `llvm.x86.addcarry.u32` becomes
 //! `::x86::addcarry_u32`.
 //!
+//! Many of these intrinsics have corresponding intrinsics exposed by
+//! GCC/Clang in C/C++, these names are listed in
+//! [`gcc_names`](gcc_names/index.html).
+//!
 //! # Platform support
 //!
 //! An intrinsic being available in a certain module (or at the top
@@ -64,18 +68,24 @@ fn main() {
 
 extern crate simdty;
 ");
+
+    let mut gcc_reexports = BTreeMap::new();
     for (module, items) in modules.iter() {
         let (indent, close, strip) = match *module {
             None => {
                 println!("extern {{");
-                ("    ", "}", "int_".len())
+                ("    ",
+                 "}",
+                 "int_".len())
             }
             Some(arch) => {
                 println!("\
 /// LLVM intrinsics for the {arch} architecture.
 pub mod {arch} {{
     extern {{", arch=arch);
-                ("        ", "    }\n}", "int_".len() + arch.as_str().len() + 1)
+                ("        ",
+                 "    }\n}",
+                 "int_".len() + arch.as_str().len() + 1)
             }
         };
 
@@ -106,11 +116,17 @@ pub mod {arch} {{
                 _ => continue
             };
             let link_name = format!("llvm.{}", intr.name["int_".len()..].replace("_", "."));
+            let fn_name = avoid_keywords(&intr.name[strip..]);
             let mut docs = format!("The `{}` intrinsic", link_name);
             if let Some(ref name) = intr.gcc_name {
                 docs.push_str("; known as `");
                 docs.push_str(&name[]);
                 docs.push_str("` in GCC");
+
+                (match gcc_reexports.entry(&name[]) {
+                    btree_map::Entry::Occupied(o) => o.into_mut(),
+                    btree_map::Entry::Vacant(v) => v.insert(vec![])
+                }).push((*module, fn_name))
             }
             docs.push_str(".");
 
@@ -121,13 +137,32 @@ pub mod {arch} {{
                      indent = indent,
                      docs = docs,
                      link_name = link_name,
-                     fn_name = avoid_keywords(&intr.name[strip..]),
+                     fn_name = fn_name,
                      params = p,
                      ret = ret);
         }
 
         println!("{}", close);
     }
+
+    println!("\
+/// Listing of the corresponding name(s) of many GCC intrinsics, for reference/search purposes.
+///
+/// <dl>");
+    for (gcc_name, locations) in gcc_reexports.iter() {
+        println!("/// <dt><strong><code>{}</code></strong></dt>", gcc_name);
+        for &(module, fn_name) in locations.iter() {
+            println!("\
+/// <dd><a href=\"../{module}{url_sep}fn.{fn_name}.html\"><code>{module}{mod_sep}{fn_name}</code></a></dd>",
+                     module = module.map(|a| a.as_str()).unwrap_or(""),
+                     url_sep = if module.is_some() {"/"} else {""},
+                     mod_sep = if module.is_some() {"::"} else {""},
+                     fn_name = fn_name)
+        }
+    }
+println!("\
+/// </dl>
+pub mod gcc_names {{}}");
 }
 
 fn avoid_keywords(s: &str) -> &str {
