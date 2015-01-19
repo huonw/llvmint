@@ -1,0 +1,9 @@
+[package]
+
+name = "generator"
+version = "0.0.1"
+authors = ["Huon Wilson <dbau.pp@gmail.com>"]
+
+[dependencies]
+regex = "0.1.10"
+regex_macros = "0.1.5"

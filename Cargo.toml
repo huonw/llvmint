@@ -1,0 +1,19 @@
+[package]
+
+name = "llvmint"
+version = "0.0.1"
+authors = ["Huon Wilson <dbau.pp@gmail.com>"]
+
+homepage = "https://github.com/huonw/llvmint"
+repository = "https://github.com/huonw/llvmint"
+documentation = "http://huonw.github.io/llvmint/llvmint/"
+license = "MIT/Apache-2.0"
+keywords = ["numerics", "simd", "llvm", "intrinsics"]
+readme = "README.md"
+description = """
+Bindings to all LLVM intrinsics, for all platforms.
+"""
+
+
+[dependencies]
+simdty = "0"
