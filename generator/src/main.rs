@@ -105,12 +105,22 @@ pub mod {arch} {{
                 },
                 _ => continue
             };
+            let link_name = format!("llvm.{}", intr.name["int_".len()..].replace("_", "."));
+            let mut docs = format!("The `{}` intrinsic", link_name);
+            if let Some(ref name) = intr.gcc_name {
+                docs.push_str("; known as `");
+                docs.push_str(&name[]);
+                docs.push_str("` in GCC");
+            }
+            docs.push_str(".");
 
             println!("\
-{indent}#[link_name = \"llvm.{link_name}\"]
+{indent}/// {docs}
+{indent}#[link_name = \"{link_name}\"]
 {indent}pub fn {fn_name}({params}) -> {ret};",
                      indent = indent,
-                     link_name = intr.name["int_".len()..].replace("_", "."),
+                     docs = docs,
+                     link_name = link_name,
                      fn_name = avoid_keywords(&intr.name[strip..]),
                      params = p,
                      ret = ret);
