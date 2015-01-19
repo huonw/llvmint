@@ -2,24 +2,33 @@ use std::fmt;
 use std::num::Int;
 use std::str::FromStr;
 
+use ast;
+
+#[derive(Show, PartialEq, Eq, Clone)]
+pub enum MatchStyle {
+    Direct, Extend, Truncate
+}
+
 #[derive(Show, PartialEq, Eq, Clone)]
 pub enum LLVMType {
     Anon,
-    Int(Option<usize>),
-    Float(Option<usize>),
-    FixedPoint(usize),
+    Int(Option<u32>),
+    Float(Option<u32>),
+    FixedPoint(u32),
     Ptr(Box<LLVMType>),
 
-    Vector(Option<(usize, Box<LLVMType>)>),
+    Vector(Option<(u32, Box<LLVMType>)>),
     Metadata,
     Vararg,
     Descriptor,
     X86mmx,
-    Mips(Box<LLVMType>)
+    Mips(Box<LLVMType>),
+
+    MatchedType(u32, MatchStyle),
 }
 
-fn int(x: usize) -> LLVMType { LLVMType::Int(Some(x)) }
-fn float(x: usize) -> LLVMType { LLVMType::Float(Some(x)) }
+fn int(x: u32) -> LLVMType { LLVMType::Int(Some(x)) }
+fn float(x: u32) -> LLVMType { LLVMType::Float(Some(x)) }
 fn ptr(ty: LLVMType) -> LLVMType { LLVMType::Ptr(Box::new(ty)) }
 
 fn parse_internals(s: &str) -> Option<LLVMType> {
@@ -58,15 +67,38 @@ fn parse_internals(s: &str) -> Option<LLVMType> {
 
 impl FromStr for LLVMType {
     fn from_str(s: &str) -> Option<LLVMType> {
-        if s.starts_with("anonymous_") { return Some(LLVMType::Anon) }
-
         if s.starts_with("mips_") && s.ends_with("_ty") {
             return parse_internals(&s["mips_".len()..s.len()-"_ty".len()])
                 .map(|t| LLVMType::Mips(Box::new(t)))
         }
-        else if !(s.starts_with("llvm_") && s.ends_with("_ty")) { return None }
-
         parse_internals(&s["llvm_".len()..s.len() - "_ty".len()])
+            .or_else(|| parse_internals(s))
+    }
+}
+
+impl LLVMType {
+    fn from_ast(t: &ast::Type) -> Option<LLVMType> {
+        if t.args.is_empty() {
+            t.name.parse()
+        } else {
+            let style = match &t.name[] {
+                "LLVMMatchType" => MatchStyle::Direct,
+                "LLVMExtendedType" => MatchStyle::Extend,
+                "LLVMTruncatedType" => MatchStyle::Truncate,
+                "LLVMAnyPointerType" => {
+                    return match t.args[0] {
+                        ast::Val::Type(ref t) => LLVMType::from_ast(t).map(ptr),
+                        _ => None
+                    }
+                }
+                _ => return None
+            };
+            let n  = match t.args[0] {
+                ast::Val::Int(n) => n,
+                _ => return None,
+            };
+            Some(LLVMType::MatchedType(n, style))
+        }
     }
 }
 
@@ -159,55 +191,81 @@ pub struct Intrinsic {
     pub arch: Option<Arch>,
     pub name: String,
     pub gcc_name: Option<String>,
-    pub llvm_name: String,
-    pub target_prefix: String,
+    pub llvm_name: Option<String>,
     pub params: Vec<LLVMType>,
     pub ret: Vec<LLVMType>,
 }
 
-impl FromStr for Intrinsic {
-    fn from_str(s: &str) -> Option<Intrinsic> {
-        let main = regex!(r"(?ism)def\s*(?P<name>int_[a-z_0-9]*)\s*\{.*?$(?P<contents>[^}]*)\}\s*");
+impl Intrinsic {
+    pub fn from_ast(d: &ast::Def) -> Option<Intrinsic> {
+        if !d.name.starts_with("int_") { return None }
         let arch = regex!(r"^int_([^_]*)");
-        let gcc_name = regex!(r#"GCCBuiltinName = "([^"]*)""#); // "]))
-        let llvm_name = regex!(r#"LLVMName = "([^"]*)""#); // "]))
-        let target_prefix = regex!(r#"TargetPrefix = "([^"]*)""#); // "]))
-        let params = regex!(r#"ParamTypes = \[([^\]]*)\]"#); // "
-        let ret = regex!(r#"RetTypes = \[([^\]]*)\]"#); // "
+        let arch = arch.captures(&d.name[]).unwrap().at(1).unwrap().parse();
 
-        let caps = try_opt!(main.captures(s));
-        let name = caps.name("name").unwrap();
-        let arch = arch.captures(name).unwrap().at(1).unwrap().parse();
-        let contents = caps.name("contents").unwrap();
+        let mut gcc_name = None;
+        let mut llvm_name = None;
+        let mut ret = vec![];
+        let mut params = vec![];
+        for sup in d.inherits.iter() {
+            match &sup.name[] {
+                "GCCBuiltin" => {
+                    match sup.args[0] {
+                        ast::Val::String(ref s) => {
+                            if !s.is_empty() {
+                                gcc_name = Some(s.clone())
+                            }
+                        }
+                        _ => return None
+                    }
+                }
+                "Intrinsic" => {
+                    match sup.args[0] {
+                        ast::Val::List(ref ret_) => {
+                            ret = try_opt!(ret_.iter()
+                                .map(|v| match *v {
+                                    ast::Val::Type(ref t) => LLVMType::from_ast(t),
+                                    _ => None
+                                })
+                                .collect::<Option<_>>())
+                        }
+                        _ => return None
+                    }
+                    match sup.args[1] {
+                        ast::Val::List(ref params_) => {
+                            params = try_opt!(params_.iter()
+                                .map(|v| match *v {
+                                    ast::Val::Type(ref t) => LLVMType::from_ast(t),
+                                    _ => None
+                                })
+                                .collect::<Option<_>>())
+                        }
+                        _ => return None
+                    }
+                    match sup.args[3] {
+                        ast::Val::String(ref s) => {
+                            if !s.is_empty() { llvm_name = Some(s.clone()) }
+                        }
+                        _ => return None
+                    }
+                }
+                _ => {}
+            }
+        }
 
-        let gcc_name = gcc_name.captures(contents).map(|c| c.at(1).unwrap().to_string());
-        let llvm_name = try_opt!(llvm_name.captures(contents)).at(1).unwrap();
-        let target_prefix = try_opt!(target_prefix.captures(contents)).at(1).unwrap();
-        let params = try_opt!(params.captures(contents)).at(1).unwrap();
-        let params =
-            try_opt!(params.split(',')
-                     .map(|s| s.trim()).filter(|s| !s.is_empty())
-                     .map(|s| s.parse()).collect());
-        let ret = try_opt!(ret.captures(contents)).at(1).unwrap();
-        let ret =
-            try_opt!(ret.split(',')
-                     .map(|s| s.trim()).filter(|s| !s.is_empty())
-                     .map(|s| s.parse()).collect());
         Some(Intrinsic {
-            name: name.to_string(),
             arch: arch,
+            name: d.name.clone(),
             gcc_name: gcc_name,
-            llvm_name: llvm_name.to_string(),
-            target_prefix: target_prefix.to_string(),
-            params: params,
+            llvm_name: llvm_name,
             ret: ret,
+            params: params,
         })
     }
 }
 
 #[cfg(test)]
 mod tests {
-    use super::{LLVMType, Intrinsic};
+    use super::{LLVMType, Intrinsic, Arch};
 
     #[test]
     fn llvm_type_parse() {
@@ -215,31 +273,5 @@ mod tests {
                    Some(LLVMType::Vector(Some((8, Box::new(LLVMType::Int(Some(16))))))));
     }
 
-    #[test]
-    fn llvm_intrinsic_parse() {
-        let s = r#"def int_x86_xop_vpshlw {	// GCCBuiltin SDPatternOperator Intrinsic
-  string GCCBuiltinName = "__builtin_ia32_vpshlw";
-  string Intrinsic:name = "";
-  string LLVMName = "";
-  string TargetPrefix = "";
-  list<LLVMType> RetTypes = [llvm_v8i16_ty];
-  list<LLVMType> ParamTypes = [llvm_v8i16_ty, llvm_v8i16_ty];
-  list<IntrinsicProperty> Properties = [IntrNoMem];
-  bit isTarget = 0;
-  string NAME = ?;
-}"#;
-        let int = s.parse::<Intrinsic>();
-        assert_eq!(int, Some(Intrinsic {
-            name: "int_x86_xop_vpshlw".to_string(),
-            gcc_name: "__builtin_ia32_vpshlw".to_string(),
-            llvm_name: "".to_string(),
-            target_prefix: "".to_string(),
-            ret: vec![LLVMType::Vector(Some((8, Box::new(LLVMType::Int(Some(16))))))],
-            params: vec![
-                LLVMType::Vector(Some((8, Box::new(LLVMType::Int(Some(16)))))),
-                LLVMType::Vector(Some((8, Box::new(LLVMType::Int(Some(16))))))
-                    ]
-        }));
-    }
 
 }

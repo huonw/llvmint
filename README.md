@@ -22,9 +22,7 @@ To (re)create the table of intrinsics `allintrinsics`:
 ```sh
 # directory containing a rust-lang/rust checkout
 RUST=~/rust
-# directory in which rust has been built (including the platform)
-RUST_BUILD=~/rust/build/x86_64-unknown-linux-gnu
-${RUST_BUILD}/llvm/Release+Asserts/bin/llvm-tblgen -I ${RUST}/src/llvm/include < ${RUST}/src/llvm/include/llvm/IR/Intrinsics.td > allintrinsics
+cat ${RUST}/src/llvm/include/llvm/IR/Intrinsics*.td > allintrinsics
 ```
 
 To recreate the library file:
@@ -36,6 +34,5 @@ cargo build --release
 ```
 
 Why not a build script? Partly because I haven't written one, partly
-because I don't want to require users to have access to the
-binaries/info necessary from LLVM, so just checking the output into VC
-is easy.
+because I don't want to require users to have access to the info
+necessary from LLVM, so just checking the output into VC is easy.

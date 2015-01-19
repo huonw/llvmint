@@ -7,19 +7,24 @@ extern crate regex;
 use std::collections::{BTreeMap, btree_map};
 
 macro_rules! try_opt {
-    ($e: expr) => {  match $e { Some(x) => x, None => return None } }
+    ($e: expr) => {  match $e { Some(x) => x, None => { return None } } }
 }
 
 mod intrinsic;
+mod ast;
 fn main() {
     let s = std::io::stdin().read_to_string().unwrap();
-    let defs = regex!(r"(?sm)def\sint_.*?^\}");
+
+    let ast = ast::parse(&s[], &Path::new(""));
+    let (classes, mut defs) = ast::flatten_separate(ast);
+    let class_names = ast::classes_by_name(&classes[]);
+    ast::resolve_classes(&mut defs[], &class_names);
 
     let mut modules = BTreeMap::new();
-    for capture in defs.captures_iter(&s[]) {
-        let found = capture.at(0).unwrap();
-        let intr = match found.parse::<intrinsic::Intrinsic>() {
-            None => panic!("failed to parse {}", found),
+    for d in defs.iter() {
+        let intr = match intrinsic::Intrinsic::from_ast(d) {
+            None if !d.name.starts_with("int_") => continue,
+            None => panic!("failed to parse: {:?}", d),
             Some(intr) => intr
         };
 
