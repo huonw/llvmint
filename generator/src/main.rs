@@ -59,9 +59,9 @@ fn main() {
 //!
 //! An intrinsic being available in a certain module (or at the top
 //! level) does not guarantee that it is supported on all CPUs of that
-//! architecture (resp. all CPUs), e.g. the x86::avx512 are only
-//! supported on the very latest x86-64 CPUs, not on older x86
-//! processors.
+//! architecture (resp. all CPUs), e.g. the `x86::avx512_...`
+//! intrinsics are only supported on the very latest x86-64 CPUs, not
+//! on older x86 processors.
 //!
 //! Using an intrinsic in a configuration that is not supported will
 //! likely cause LLVM assertions or general badness along those lines.
