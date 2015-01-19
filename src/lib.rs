@@ -36,14 +36,14 @@
 extern crate simdty;
 
 extern {
-    /// The `llvm.vastart` intrinsic.
-    #[link_name = "llvm.vastart"]
+    /// The `llvm.va_start` intrinsic.
+    #[link_name = "llvm.va_start"]
     pub fn vastart(a: *mut i8) -> ();
-    /// The `llvm.vacopy` intrinsic.
-    #[link_name = "llvm.vacopy"]
+    /// The `llvm.va_copy` intrinsic.
+    #[link_name = "llvm.va_copy"]
     pub fn vacopy(a: *mut i8, b: *mut i8) -> ();
-    /// The `llvm.vaend` intrinsic.
-    #[link_name = "llvm.vaend"]
+    /// The `llvm.va_end` intrinsic.
+    #[link_name = "llvm.va_end"]
     pub fn vaend(a: *mut i8) -> ();
     /// The `llvm.gcroot` intrinsic.
     #[link_name = "llvm.gcroot"]
@@ -162,8 +162,8 @@ extern {
     /// The `llvm.donothing` intrinsic.
     #[link_name = "llvm.donothing"]
     pub fn donothing() -> ();
-    /// The `llvm.clear.cache` intrinsic.
-    #[link_name = "llvm.clear.cache"]
+    /// The `llvm.clear_cache` intrinsic.
+    #[link_name = "llvm.clear_cache"]
     pub fn clear_cache(a: *mut i8, b: *mut i8) -> ();
 }
 /// LLVM intrinsics for the AMDGPU architecture.

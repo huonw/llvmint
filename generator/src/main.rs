@@ -120,7 +120,9 @@ pub mod {arch} {{
                 },
                 _ => continue
             };
-            let link_name = format!("llvm.{}", intr.name["int_".len()..].replace("_", "."));
+
+            let link_name = intr.llvm_name.clone()
+                .unwrap_or_else(|| format!("llvm.{}", intr.name["int_".len()..].replace("_", ".")));
             let fn_name = avoid_keywords(&intr.name[strip..]);
             let mut docs = format!("The `{}` intrinsic", link_name);
             if let Some(ref name) = intr.gcc_name {
