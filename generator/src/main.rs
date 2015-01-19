@@ -34,6 +34,34 @@ fn main() {
 #![feature(simd, simd_ffi, link_llvm_intrinsics)]
 #![allow(non_snake_case)]
 
+//! Bindings to (almost) all LLVM intrinsics.
+//!
+//! Intrinsics are categorised into modules by the architecture on
+//! which they are supported (however, see [Platform
+//! support][#platform-support] for a caveat), with certain intrinsics
+//! available at the top level. These are raw bindings and absolutely
+//! zero error checking is performed.
+//!
+//! # Naming
+//!
+//! The intrinsics are named entirely for their internal LLVM names,
+//! with the `llvm` prefix stripped, `.` replaced by `_` and, if it
+//! exists, a platform prefix replaced by being placed in a module of
+//! that name. For example, `llvm.adjust.trampoline` becomes
+//! `::adjust_trampoline` and `llvm.x86.addcarry.u32` becomes
+//! `::x86::addcarry_u32`.
+//!
+//! # Platform support
+//!
+//! An intrinsic being available in a certain module (or at the top
+//! level) does not guarantee that it is supported on all CPUs of that
+//! architecture (resp. all CPUs), e.g. the x86::avx512 are only
+//! supported on the very latest x86-64 CPUs, not on older x86
+//! processors.
+//!
+//! Using an intrinsic in a configuration that is not supported will
+//! likely cause LLVM assertions or general badness along those lines.
+
 extern crate simdty;
 ");
     for (module, items) in modules.iter() {
