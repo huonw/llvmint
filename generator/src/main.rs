@@ -38,7 +38,7 @@ fn main() {
 //!
 //! Intrinsics are categorised into modules by the architecture on
 //! which they are supported (however, see [Platform
-//! support][#platform-support] for a caveat), with certain intrinsics
+//! support](#platform-support) for a caveat), with certain intrinsics
 //! available at the top level. These are raw bindings and absolutely
 //! zero error checking is performed.
 //!
