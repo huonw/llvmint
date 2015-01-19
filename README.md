@@ -32,7 +32,7 @@ To recreate the library file:
 ```sh
 cd generator
 cargo build --release
-./target/release/generator ../allintrinsics > ../src/lib.rs
+./target/release/generator < ../allintrinsics > ../src/lib.rs
 ```
 
 Why not a build script? Partly because I haven't written one, partly
