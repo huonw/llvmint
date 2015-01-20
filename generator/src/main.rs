@@ -96,38 +96,40 @@ pub mod {arch} {{
         };
 
         for intr in items.iter() {
-            let sig = match intr.signature() {
-                intrinsic::Signature::One(sig) => sig,
-                intrinsic::Signature::Many(_) => unimplemented!(),
-                intrinsic::Signature::CouldntRender => continue
-            };
+            let sigs = intr.signatures();
 
-            let link_name = intr.llvm_name.clone()
-                .unwrap_or_else(|| format!("llvm.{}", intr.name["int_".len()..].replace("_", ".")));
+            for &(ref suffix, ref sig) in sigs.iter() {
 
-            let fn_name = avoid_keywords(&intr.name[strip..]);
-            let mut docs = format!("The `{}` intrinsic", link_name);
-            if let Some(ref name) = intr.gcc_name {
-                docs.push_str("; known as `");
-                docs.push_str(&name[]);
-                docs.push_str("` in GCC");
+                let mut link_name = intr.llvm_name.clone()
+                    .unwrap_or_else(|| format!("llvm.{}",
+                                               intr.name["int_".len()..].replace("_", ".")));
+                link_name.push_str(&suffix[]);
 
-                (match gcc_reexports.entry(&name[]) {
-                    btree_map::Entry::Occupied(o) => o.into_mut(),
-                    btree_map::Entry::Vacant(v) => v.insert(vec![])
-                }).push((*module, fn_name))
-            }
-            docs.push_str(".");
+                let raw_name = format!("{}{}", &intr.name[strip..], suffix.replace(".", "_"));
+                let fn_name = avoid_keywords(&raw_name[]);
+                let mut docs = format!("The `{}` intrinsic", link_name);
+                if let Some(ref name) = intr.gcc_name {
+                    docs.push_str("; known as `");
+                    docs.push_str(&name[]);
+                    docs.push_str("` in GCC");
 
-            println!("\
+                    (match gcc_reexports.entry(&name[]) {
+                        btree_map::Entry::Occupied(o) => o.into_mut(),
+                        btree_map::Entry::Vacant(v) => v.insert(vec![])
+                    }).push((*module, fn_name.to_string()))
+                }
+                docs.push_str(".");
+
+                println!("\
 {indent}/// {docs}
 {indent}#[link_name = \"{link_name}\"]
 {indent}pub fn {fn_name}{sig};",
-                     indent = indent,
-                     docs = docs,
-                     link_name = link_name,
-                     fn_name = fn_name,
-                     sig = sig);
+                         indent = indent,
+                         docs = docs,
+                         link_name = link_name,
+                         fn_name = fn_name,
+                         sig = sig);
+            }
         }
 
         println!("{}", close);
@@ -139,7 +141,7 @@ pub mod {arch} {{
 /// <dl>");
     for (gcc_name, locations) in gcc_reexports.iter() {
         println!("/// <dt><strong><code>{}</code></strong></dt>", gcc_name);
-        for &(module, fn_name) in locations.iter() {
+        for &(module, ref fn_name) in locations.iter() {
             println!("\
 /// <dd><a href=\"../{module}{url_sep}fn.{fn_name}.html\"><code>{module}{mod_sep}{fn_name}</code></a></dd>",
                      module = module.map(|a| a.as_str()).unwrap_or(""),

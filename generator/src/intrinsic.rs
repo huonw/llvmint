@@ -4,7 +4,7 @@ use std::str::FromStr;
 
 use ast;
 
-#[derive(Show, PartialEq, Eq, Clone)]
+#[derive(Show, PartialEq, Eq, Clone, Copy)]
 pub enum MatchStyle {
     Direct, Extend, Truncate
 }
@@ -14,7 +14,7 @@ pub enum LLVMType {
     Int(Option<u32>),
     Float(Option<u32>),
     FixedPoint(u32),
-    Ptr(Box<LLVMType>),
+    Ptr(Option<Box<LLVMType>>),
 
     Vector(Option<(u32, Box<LLVMType>)>),
     Metadata,
@@ -33,7 +33,7 @@ enum TypeKind {
 
 fn int(x: u32) -> LLVMType { LLVMType::Int(Some(x)) }
 fn float(x: u32) -> LLVMType { LLVMType::Float(Some(x)) }
-fn ptr(ty: LLVMType) -> LLVMType { LLVMType::Ptr(Box::new(ty)) }
+fn ptr(ty: LLVMType) -> LLVMType { LLVMType::Ptr(Some(Box::new(ty))) }
 
 fn parse_internals(s: &str) -> Option<LLVMType> {
     match s {
@@ -42,7 +42,8 @@ fn parse_internals(s: &str) -> Option<LLVMType> {
         "anyvector" => return Some(LLVMType::Vector(None)),
         "anyfloat" => return Some(LLVMType::Float(None)),
         "anyint" => return Some(LLVMType::Int(None)),
-        "anyptr" | "ptr" => return Some(ptr(int(8))),
+        "anyptr" => return Some(LLVMType::Ptr(None)),
+        "ptr" => return Some(ptr(int(8))),
         "ptrptr" => return Some(ptr(ptr(int(8)))),
         "anyi64ptr" => return Some(ptr(int(64))),
         "metadata" => return Some(LLVMType::Metadata),
@@ -108,12 +109,85 @@ impl LLVMType {
     fn kind(&self) -> TypeKind {
         match *self {
             LLVMType::MatchedType(n, _) => TypeKind::Matched(n),
-            LLVMType::Vector(None) | LLVMType::Int(None) | LLVMType::Float(None)
+            LLVMType::Vector(None) | LLVMType::Int(None) |
+            LLVMType::Float(None) | LLVMType::Ptr(None)
                 => TypeKind::Generic,
             LLVMType::Vector(Some((_, ref ty))) |
-                LLVMType::Ptr(ref ty) | LLVMType::Mips(ref ty) => ty.kind(),
+                LLVMType::Ptr(Some(ref ty)) | LLVMType::Mips(ref ty) => ty.kind(),
 
             _ => TypeKind::Concrete
+        }
+    }
+
+    fn string(&self, dot: bool) -> String {
+        let dot = if dot {"."} else {""};
+        match *self {
+            LLVMType::Int(Some(n)) => format!("{}i{}", dot, n),
+            LLVMType::Float(Some(n)) => format!("{}f{}", dot, n),
+            LLVMType::Vector(Some((n, ref ty))) => format!("{}v{}{}", dot, n, ty.string(false)),
+            LLVMType::Ptr(Some(ref ty)) => format!("{}p0{}", dot, ty.string(false)),
+            _ => panic!("unsupported string {:?}", self),
+        }
+    }
+
+    fn choices(&self, generics: &[(usize, bool)],
+               r: &[LLVMType], p: &[LLVMType]) -> (bool, Vec<LLVMType>) {
+
+        fn vectorify(tys: &[LLVMType], include_one: bool) -> Vec<LLVMType> {
+            let count = 1 + if include_one {1} else {0};
+            let mut ret = Vec::with_capacity(count * tys.len());
+
+            for ty in tys.iter() {
+                let width = match *ty {
+                    LLVMType::Int(Some(n)) | LLVMType::Float(Some(n)) => n,
+                    _ => panic!("invalid vectorification {:?}", ty)
+                };
+                ret.push(LLVMType::Vector(Some((128 / width, Box::new(ty.clone())))));
+                if include_one {
+                    ret.push(ty.clone())
+                }
+            }
+            return ret
+            /*let lens = [2, 4, 8];
+            let mut ret = Vec::with_capacity((lens.len() + 1) * tys.len());
+            ret.extend(tys.iter().cloned());
+
+            for &len in lens.iter() {
+                for ty in tys.iter() {
+                    ret.push(LLVMType::Vector(Some((len, Box::new(ty.clone())))))
+                }
+            }
+            ret*/
+        }
+
+        match *self {
+            LLVMType::MatchedType(n, style) => {
+                if style != MatchStyle::Direct { return (false, vec![]) }
+
+                let (idx, use_r) = generics[n as usize];
+                (false, vec![if use_r {&r[idx]} else {&p[idx]}.clone()])
+            }
+            LLVMType::Int(None) => (true, vectorify(&[int(8), int(16), int(32), int(64)], true)),
+            LLVMType::Float(None) => (true, vectorify(&[float(32), float(64)], true)),
+            LLVMType::Vector(None) => {
+                (true, vectorify(&[int(8), int(16), int(32), int(64), float(32), float(64)], false))
+            }
+            LLVMType::Vector(Some((n, ref ty))) => {
+                let (generic, choices) = ty.choices(generics, r, p);
+
+                (generic,
+                 choices.into_iter()
+                 .map(|ty| LLVMType::Vector(Some((n, Box::new(ty)))))
+                 .collect())
+            }
+            LLVMType::Ptr(None) => {
+                (true, vec![ptr(int(8))])
+            }
+            LLVMType::Ptr(Some(ref ty)) => {
+                let (generic, choices) = ty.choices(generics, r, p);
+                (generic, choices.into_iter().map(ptr).collect())
+            }
+            _ => (false, vec![self.clone()]),
         }
     }
 }
@@ -124,7 +198,8 @@ impl LLVMType {
             LLVMType::Int(Some(1)) => Some("bool".to_string()),
             LLVMType::Int(Some(n)) => Some(format!("i{}", n)),
             LLVMType::Float(Some(n)) => Some(format!("f{}", n)),
-            LLVMType::Ptr(ref ty) => ty.to_concrete_rust_string().map(|s| format!("*mut {}", s)),
+            LLVMType::Ptr(Some(ref ty))
+                => ty.to_concrete_rust_string().map(|s| format!("*mut {}", s)),
             LLVMType::Vararg => Some("...".to_string()),
             LLVMType::Mips(ref ty) => ty.to_concrete_rust_string(),
 
@@ -212,12 +287,6 @@ pub struct Intrinsic {
     pub ret: Vec<LLVMType>,
 }
 
-pub enum Signature {
-    One(String),
-    Many(Vec<(String, String)>),
-    CouldntRender
-}
-
 impl Intrinsic {
     pub fn from_ast(d: &ast::Def) -> Option<Intrinsic> {
         if !d.name.starts_with("int_") { return None }
@@ -285,7 +354,7 @@ impl Intrinsic {
     }
 
 
-    pub fn signature(&self) -> Signature {
+    pub fn signatures(&self) -> Vec<(String, String)> {
         use std::iter::repeat;
         let mut generics = vec![];
 
@@ -298,9 +367,62 @@ impl Intrinsic {
                 TypeKind::Concrete => {}
             }
         }
+        let mut used_ret = self.ret.clone();
+        let mut used_params = self.params.clone();
 
-        if generics.is_empty() {
-            let params = self.params.iter()
+        let mut sigs = vec![];
+        choose_types(&mut sigs, &generics[],
+                     0, &self.ret[],
+                     0, &self.params[],
+                     &mut vec![],
+                     &mut used_ret[], &mut used_params[]);
+
+        return sigs;
+
+
+        fn choose_types(sigs: &mut Vec<(String, String)>,
+                        generics: &[(usize, bool)],
+                        ri: usize, ret: &[LLVMType],
+                        pi: usize, params: &[LLVMType],
+                        args: &mut Vec<String>,
+                        used_ret: &mut [LLVMType], used_params: &mut [LLVMType]) {
+            match ret.get(ri) {
+                Some(rty) => {
+                    let (generic, choices) = rty.choices(generics,
+                                                         used_ret, used_params);
+                    for choice in choices.into_iter() {
+                        if generic {args.push(choice.string(true))};
+                        used_ret[ri] = choice;
+                        choose_types(sigs, generics,
+                                     ri + 1, ret,
+                                     pi, params,
+                                     args,
+                                     used_ret, used_params);
+                        if generic {args.pop();};
+                    }
+                    return
+                }
+                None => match params.get(pi) {
+                    Some(pty) => {
+                        let (generic, choices) = pty.choices(generics,
+                                                             used_ret, used_params);
+                        for choice in choices.into_iter() {
+                            if generic {args.push(choice.string(true))};
+                            used_params[pi] = choice;
+                            choose_types(sigs, generics,
+                                         ri, ret,
+                                         pi + 1, params,
+                                         args,
+                                         used_ret, used_params);
+                            if generic {args.pop();}
+                        }
+                        return
+                    }
+                    None => {}
+                }
+            }
+
+            let params = used_params.iter()
                 .enumerate()
                 .map(|(i, ty)| {
                     ty.to_concrete_rust_string()
@@ -313,23 +435,22 @@ impl Intrinsic {
                         })
                 })
                 .collect::<Option<Vec<_>>>();
-            let p = match params {
+            let params = match params {
                 Some(p) => p.connect(", "),
-                None => return Signature::CouldntRender
+                None => return
             };
 
-            let ret = match &self.ret[] {
+            let ret = match &used_ret[] {
                 [] => "()".to_string(),
                 [ref ret] => match ret.to_concrete_rust_string() {
                     Some(r) => r,
-                    None => return Signature::CouldntRender
+                    None => return
                 },
-                _ => return Signature::CouldntRender
+                _ => return
             };
 
-            Signature::One(format!("({}) -> {}", p, ret))
-        } else {
-            Signature::CouldntRender
+            let sig = format!("({}) -> {}", params, ret);
+            sigs.push((args.concat(), sig));
         }
     }
 }

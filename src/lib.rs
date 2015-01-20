@@ -84,6 +84,318 @@ extern {
     /// The `llvm.stackprotectorcheck` intrinsic.
     #[link_name = "llvm.stackprotectorcheck"]
     pub fn stackprotectorcheck(a: *mut *mut i8) -> ();
+    /// The `llvm.memcpy.p0i8.p0i8.v16i8` intrinsic.
+    #[link_name = "llvm.memcpy.p0i8.p0i8.v16i8"]
+    pub fn memcpy_p0i8_p0i8_v16i8(a: *mut i8, b: *mut i8, c: ::simdty::i8x16, d: i32, e: bool) -> ();
+    /// The `llvm.memcpy.p0i8.p0i8.i8` intrinsic.
+    #[link_name = "llvm.memcpy.p0i8.p0i8.i8"]
+    pub fn memcpy_p0i8_p0i8_i8(a: *mut i8, b: *mut i8, c: i8, d: i32, e: bool) -> ();
+    /// The `llvm.memcpy.p0i8.p0i8.v8i16` intrinsic.
+    #[link_name = "llvm.memcpy.p0i8.p0i8.v8i16"]
+    pub fn memcpy_p0i8_p0i8_v8i16(a: *mut i8, b: *mut i8, c: ::simdty::i16x8, d: i32, e: bool) -> ();
+    /// The `llvm.memcpy.p0i8.p0i8.i16` intrinsic.
+    #[link_name = "llvm.memcpy.p0i8.p0i8.i16"]
+    pub fn memcpy_p0i8_p0i8_i16(a: *mut i8, b: *mut i8, c: i16, d: i32, e: bool) -> ();
+    /// The `llvm.memcpy.p0i8.p0i8.v4i32` intrinsic.
+    #[link_name = "llvm.memcpy.p0i8.p0i8.v4i32"]
+    pub fn memcpy_p0i8_p0i8_v4i32(a: *mut i8, b: *mut i8, c: ::simdty::i32x4, d: i32, e: bool) -> ();
+    /// The `llvm.memcpy.p0i8.p0i8.i32` intrinsic.
+    #[link_name = "llvm.memcpy.p0i8.p0i8.i32"]
+    pub fn memcpy_p0i8_p0i8_i32(a: *mut i8, b: *mut i8, c: i32, d: i32, e: bool) -> ();
+    /// The `llvm.memcpy.p0i8.p0i8.v2i64` intrinsic.
+    #[link_name = "llvm.memcpy.p0i8.p0i8.v2i64"]
+    pub fn memcpy_p0i8_p0i8_v2i64(a: *mut i8, b: *mut i8, c: ::simdty::i64x2, d: i32, e: bool) -> ();
+    /// The `llvm.memcpy.p0i8.p0i8.i64` intrinsic.
+    #[link_name = "llvm.memcpy.p0i8.p0i8.i64"]
+    pub fn memcpy_p0i8_p0i8_i64(a: *mut i8, b: *mut i8, c: i64, d: i32, e: bool) -> ();
+    /// The `llvm.memmove.p0i8.p0i8.v16i8` intrinsic.
+    #[link_name = "llvm.memmove.p0i8.p0i8.v16i8"]
+    pub fn memmove_p0i8_p0i8_v16i8(a: *mut i8, b: *mut i8, c: ::simdty::i8x16, d: i32, e: bool) -> ();
+    /// The `llvm.memmove.p0i8.p0i8.i8` intrinsic.
+    #[link_name = "llvm.memmove.p0i8.p0i8.i8"]
+    pub fn memmove_p0i8_p0i8_i8(a: *mut i8, b: *mut i8, c: i8, d: i32, e: bool) -> ();
+    /// The `llvm.memmove.p0i8.p0i8.v8i16` intrinsic.
+    #[link_name = "llvm.memmove.p0i8.p0i8.v8i16"]
+    pub fn memmove_p0i8_p0i8_v8i16(a: *mut i8, b: *mut i8, c: ::simdty::i16x8, d: i32, e: bool) -> ();
+    /// The `llvm.memmove.p0i8.p0i8.i16` intrinsic.
+    #[link_name = "llvm.memmove.p0i8.p0i8.i16"]
+    pub fn memmove_p0i8_p0i8_i16(a: *mut i8, b: *mut i8, c: i16, d: i32, e: bool) -> ();
+    /// The `llvm.memmove.p0i8.p0i8.v4i32` intrinsic.
+    #[link_name = "llvm.memmove.p0i8.p0i8.v4i32"]
+    pub fn memmove_p0i8_p0i8_v4i32(a: *mut i8, b: *mut i8, c: ::simdty::i32x4, d: i32, e: bool) -> ();
+    /// The `llvm.memmove.p0i8.p0i8.i32` intrinsic.
+    #[link_name = "llvm.memmove.p0i8.p0i8.i32"]
+    pub fn memmove_p0i8_p0i8_i32(a: *mut i8, b: *mut i8, c: i32, d: i32, e: bool) -> ();
+    /// The `llvm.memmove.p0i8.p0i8.v2i64` intrinsic.
+    #[link_name = "llvm.memmove.p0i8.p0i8.v2i64"]
+    pub fn memmove_p0i8_p0i8_v2i64(a: *mut i8, b: *mut i8, c: ::simdty::i64x2, d: i32, e: bool) -> ();
+    /// The `llvm.memmove.p0i8.p0i8.i64` intrinsic.
+    #[link_name = "llvm.memmove.p0i8.p0i8.i64"]
+    pub fn memmove_p0i8_p0i8_i64(a: *mut i8, b: *mut i8, c: i64, d: i32, e: bool) -> ();
+    /// The `llvm.memset.p0i8.v16i8` intrinsic.
+    #[link_name = "llvm.memset.p0i8.v16i8"]
+    pub fn memset_p0i8_v16i8(a: *mut i8, b: i8, c: ::simdty::i8x16, d: i32, e: bool) -> ();
+    /// The `llvm.memset.p0i8.i8` intrinsic.
+    #[link_name = "llvm.memset.p0i8.i8"]
+    pub fn memset_p0i8_i8(a: *mut i8, b: i8, c: i8, d: i32, e: bool) -> ();
+    /// The `llvm.memset.p0i8.v8i16` intrinsic.
+    #[link_name = "llvm.memset.p0i8.v8i16"]
+    pub fn memset_p0i8_v8i16(a: *mut i8, b: i8, c: ::simdty::i16x8, d: i32, e: bool) -> ();
+    /// The `llvm.memset.p0i8.i16` intrinsic.
+    #[link_name = "llvm.memset.p0i8.i16"]
+    pub fn memset_p0i8_i16(a: *mut i8, b: i8, c: i16, d: i32, e: bool) -> ();
+    /// The `llvm.memset.p0i8.v4i32` intrinsic.
+    #[link_name = "llvm.memset.p0i8.v4i32"]
+    pub fn memset_p0i8_v4i32(a: *mut i8, b: i8, c: ::simdty::i32x4, d: i32, e: bool) -> ();
+    /// The `llvm.memset.p0i8.i32` intrinsic.
+    #[link_name = "llvm.memset.p0i8.i32"]
+    pub fn memset_p0i8_i32(a: *mut i8, b: i8, c: i32, d: i32, e: bool) -> ();
+    /// The `llvm.memset.p0i8.v2i64` intrinsic.
+    #[link_name = "llvm.memset.p0i8.v2i64"]
+    pub fn memset_p0i8_v2i64(a: *mut i8, b: i8, c: ::simdty::i64x2, d: i32, e: bool) -> ();
+    /// The `llvm.memset.p0i8.i64` intrinsic.
+    #[link_name = "llvm.memset.p0i8.i64"]
+    pub fn memset_p0i8_i64(a: *mut i8, b: i8, c: i64, d: i32, e: bool) -> ();
+    /// The `llvm.fma.v4f32` intrinsic.
+    #[link_name = "llvm.fma.v4f32"]
+    pub fn fma_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4, c: ::simdty::f32x4) -> ::simdty::f32x4;
+    /// The `llvm.fma.f32` intrinsic.
+    #[link_name = "llvm.fma.f32"]
+    pub fn fma_f32(a: f32, b: f32, c: f32) -> f32;
+    /// The `llvm.fma.v2f64` intrinsic.
+    #[link_name = "llvm.fma.v2f64"]
+    pub fn fma_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2, c: ::simdty::f64x2) -> ::simdty::f64x2;
+    /// The `llvm.fma.f64` intrinsic.
+    #[link_name = "llvm.fma.f64"]
+    pub fn fma_f64(a: f64, b: f64, c: f64) -> f64;
+    /// The `llvm.fmuladd.v4f32` intrinsic.
+    #[link_name = "llvm.fmuladd.v4f32"]
+    pub fn fmuladd_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4, c: ::simdty::f32x4) -> ::simdty::f32x4;
+    /// The `llvm.fmuladd.f32` intrinsic.
+    #[link_name = "llvm.fmuladd.f32"]
+    pub fn fmuladd_f32(a: f32, b: f32, c: f32) -> f32;
+    /// The `llvm.fmuladd.v2f64` intrinsic.
+    #[link_name = "llvm.fmuladd.v2f64"]
+    pub fn fmuladd_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2, c: ::simdty::f64x2) -> ::simdty::f64x2;
+    /// The `llvm.fmuladd.f64` intrinsic.
+    #[link_name = "llvm.fmuladd.f64"]
+    pub fn fmuladd_f64(a: f64, b: f64, c: f64) -> f64;
+    /// The `llvm.sqrt.v4f32` intrinsic.
+    #[link_name = "llvm.sqrt.v4f32"]
+    pub fn sqrt_v4f32(a: ::simdty::f32x4) -> ::simdty::f32x4;
+    /// The `llvm.sqrt.f32` intrinsic.
+    #[link_name = "llvm.sqrt.f32"]
+    pub fn sqrt_f32(a: f32) -> f32;
+    /// The `llvm.sqrt.v2f64` intrinsic.
+    #[link_name = "llvm.sqrt.v2f64"]
+    pub fn sqrt_v2f64(a: ::simdty::f64x2) -> ::simdty::f64x2;
+    /// The `llvm.sqrt.f64` intrinsic.
+    #[link_name = "llvm.sqrt.f64"]
+    pub fn sqrt_f64(a: f64) -> f64;
+    /// The `llvm.powi.v4f32` intrinsic.
+    #[link_name = "llvm.powi.v4f32"]
+    pub fn powi_v4f32(a: ::simdty::f32x4, b: i32) -> ::simdty::f32x4;
+    /// The `llvm.powi.f32` intrinsic.
+    #[link_name = "llvm.powi.f32"]
+    pub fn powi_f32(a: f32, b: i32) -> f32;
+    /// The `llvm.powi.v2f64` intrinsic.
+    #[link_name = "llvm.powi.v2f64"]
+    pub fn powi_v2f64(a: ::simdty::f64x2, b: i32) -> ::simdty::f64x2;
+    /// The `llvm.powi.f64` intrinsic.
+    #[link_name = "llvm.powi.f64"]
+    pub fn powi_f64(a: f64, b: i32) -> f64;
+    /// The `llvm.sin.v4f32` intrinsic.
+    #[link_name = "llvm.sin.v4f32"]
+    pub fn sin_v4f32(a: ::simdty::f32x4) -> ::simdty::f32x4;
+    /// The `llvm.sin.f32` intrinsic.
+    #[link_name = "llvm.sin.f32"]
+    pub fn sin_f32(a: f32) -> f32;
+    /// The `llvm.sin.v2f64` intrinsic.
+    #[link_name = "llvm.sin.v2f64"]
+    pub fn sin_v2f64(a: ::simdty::f64x2) -> ::simdty::f64x2;
+    /// The `llvm.sin.f64` intrinsic.
+    #[link_name = "llvm.sin.f64"]
+    pub fn sin_f64(a: f64) -> f64;
+    /// The `llvm.cos.v4f32` intrinsic.
+    #[link_name = "llvm.cos.v4f32"]
+    pub fn cos_v4f32(a: ::simdty::f32x4) -> ::simdty::f32x4;
+    /// The `llvm.cos.f32` intrinsic.
+    #[link_name = "llvm.cos.f32"]
+    pub fn cos_f32(a: f32) -> f32;
+    /// The `llvm.cos.v2f64` intrinsic.
+    #[link_name = "llvm.cos.v2f64"]
+    pub fn cos_v2f64(a: ::simdty::f64x2) -> ::simdty::f64x2;
+    /// The `llvm.cos.f64` intrinsic.
+    #[link_name = "llvm.cos.f64"]
+    pub fn cos_f64(a: f64) -> f64;
+    /// The `llvm.pow.v4f32` intrinsic.
+    #[link_name = "llvm.pow.v4f32"]
+    pub fn pow_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::f32x4;
+    /// The `llvm.pow.f32` intrinsic.
+    #[link_name = "llvm.pow.f32"]
+    pub fn pow_f32(a: f32, b: f32) -> f32;
+    /// The `llvm.pow.v2f64` intrinsic.
+    #[link_name = "llvm.pow.v2f64"]
+    pub fn pow_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::f64x2;
+    /// The `llvm.pow.f64` intrinsic.
+    #[link_name = "llvm.pow.f64"]
+    pub fn pow_f64(a: f64, b: f64) -> f64;
+    /// The `llvm.log.v4f32` intrinsic.
+    #[link_name = "llvm.log.v4f32"]
+    pub fn log_v4f32(a: ::simdty::f32x4) -> ::simdty::f32x4;
+    /// The `llvm.log.f32` intrinsic.
+    #[link_name = "llvm.log.f32"]
+    pub fn log_f32(a: f32) -> f32;
+    /// The `llvm.log.v2f64` intrinsic.
+    #[link_name = "llvm.log.v2f64"]
+    pub fn log_v2f64(a: ::simdty::f64x2) -> ::simdty::f64x2;
+    /// The `llvm.log.f64` intrinsic.
+    #[link_name = "llvm.log.f64"]
+    pub fn log_f64(a: f64) -> f64;
+    /// The `llvm.log10.v4f32` intrinsic.
+    #[link_name = "llvm.log10.v4f32"]
+    pub fn log10_v4f32(a: ::simdty::f32x4) -> ::simdty::f32x4;
+    /// The `llvm.log10.f32` intrinsic.
+    #[link_name = "llvm.log10.f32"]
+    pub fn log10_f32(a: f32) -> f32;
+    /// The `llvm.log10.v2f64` intrinsic.
+    #[link_name = "llvm.log10.v2f64"]
+    pub fn log10_v2f64(a: ::simdty::f64x2) -> ::simdty::f64x2;
+    /// The `llvm.log10.f64` intrinsic.
+    #[link_name = "llvm.log10.f64"]
+    pub fn log10_f64(a: f64) -> f64;
+    /// The `llvm.log2.v4f32` intrinsic.
+    #[link_name = "llvm.log2.v4f32"]
+    pub fn log2_v4f32(a: ::simdty::f32x4) -> ::simdty::f32x4;
+    /// The `llvm.log2.f32` intrinsic.
+    #[link_name = "llvm.log2.f32"]
+    pub fn log2_f32(a: f32) -> f32;
+    /// The `llvm.log2.v2f64` intrinsic.
+    #[link_name = "llvm.log2.v2f64"]
+    pub fn log2_v2f64(a: ::simdty::f64x2) -> ::simdty::f64x2;
+    /// The `llvm.log2.f64` intrinsic.
+    #[link_name = "llvm.log2.f64"]
+    pub fn log2_f64(a: f64) -> f64;
+    /// The `llvm.exp.v4f32` intrinsic.
+    #[link_name = "llvm.exp.v4f32"]
+    pub fn exp_v4f32(a: ::simdty::f32x4) -> ::simdty::f32x4;
+    /// The `llvm.exp.f32` intrinsic.
+    #[link_name = "llvm.exp.f32"]
+    pub fn exp_f32(a: f32) -> f32;
+    /// The `llvm.exp.v2f64` intrinsic.
+    #[link_name = "llvm.exp.v2f64"]
+    pub fn exp_v2f64(a: ::simdty::f64x2) -> ::simdty::f64x2;
+    /// The `llvm.exp.f64` intrinsic.
+    #[link_name = "llvm.exp.f64"]
+    pub fn exp_f64(a: f64) -> f64;
+    /// The `llvm.exp2.v4f32` intrinsic.
+    #[link_name = "llvm.exp2.v4f32"]
+    pub fn exp2_v4f32(a: ::simdty::f32x4) -> ::simdty::f32x4;
+    /// The `llvm.exp2.f32` intrinsic.
+    #[link_name = "llvm.exp2.f32"]
+    pub fn exp2_f32(a: f32) -> f32;
+    /// The `llvm.exp2.v2f64` intrinsic.
+    #[link_name = "llvm.exp2.v2f64"]
+    pub fn exp2_v2f64(a: ::simdty::f64x2) -> ::simdty::f64x2;
+    /// The `llvm.exp2.f64` intrinsic.
+    #[link_name = "llvm.exp2.f64"]
+    pub fn exp2_f64(a: f64) -> f64;
+    /// The `llvm.fabs.v4f32` intrinsic.
+    #[link_name = "llvm.fabs.v4f32"]
+    pub fn fabs_v4f32(a: ::simdty::f32x4) -> ::simdty::f32x4;
+    /// The `llvm.fabs.f32` intrinsic.
+    #[link_name = "llvm.fabs.f32"]
+    pub fn fabs_f32(a: f32) -> f32;
+    /// The `llvm.fabs.v2f64` intrinsic.
+    #[link_name = "llvm.fabs.v2f64"]
+    pub fn fabs_v2f64(a: ::simdty::f64x2) -> ::simdty::f64x2;
+    /// The `llvm.fabs.f64` intrinsic.
+    #[link_name = "llvm.fabs.f64"]
+    pub fn fabs_f64(a: f64) -> f64;
+    /// The `llvm.copysign.v4f32` intrinsic.
+    #[link_name = "llvm.copysign.v4f32"]
+    pub fn copysign_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::f32x4;
+    /// The `llvm.copysign.f32` intrinsic.
+    #[link_name = "llvm.copysign.f32"]
+    pub fn copysign_f32(a: f32, b: f32) -> f32;
+    /// The `llvm.copysign.v2f64` intrinsic.
+    #[link_name = "llvm.copysign.v2f64"]
+    pub fn copysign_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::f64x2;
+    /// The `llvm.copysign.f64` intrinsic.
+    #[link_name = "llvm.copysign.f64"]
+    pub fn copysign_f64(a: f64, b: f64) -> f64;
+    /// The `llvm.floor.v4f32` intrinsic.
+    #[link_name = "llvm.floor.v4f32"]
+    pub fn floor_v4f32(a: ::simdty::f32x4) -> ::simdty::f32x4;
+    /// The `llvm.floor.f32` intrinsic.
+    #[link_name = "llvm.floor.f32"]
+    pub fn floor_f32(a: f32) -> f32;
+    /// The `llvm.floor.v2f64` intrinsic.
+    #[link_name = "llvm.floor.v2f64"]
+    pub fn floor_v2f64(a: ::simdty::f64x2) -> ::simdty::f64x2;
+    /// The `llvm.floor.f64` intrinsic.
+    #[link_name = "llvm.floor.f64"]
+    pub fn floor_f64(a: f64) -> f64;
+    /// The `llvm.ceil.v4f32` intrinsic.
+    #[link_name = "llvm.ceil.v4f32"]
+    pub fn ceil_v4f32(a: ::simdty::f32x4) -> ::simdty::f32x4;
+    /// The `llvm.ceil.f32` intrinsic.
+    #[link_name = "llvm.ceil.f32"]
+    pub fn ceil_f32(a: f32) -> f32;
+    /// The `llvm.ceil.v2f64` intrinsic.
+    #[link_name = "llvm.ceil.v2f64"]
+    pub fn ceil_v2f64(a: ::simdty::f64x2) -> ::simdty::f64x2;
+    /// The `llvm.ceil.f64` intrinsic.
+    #[link_name = "llvm.ceil.f64"]
+    pub fn ceil_f64(a: f64) -> f64;
+    /// The `llvm.trunc.v4f32` intrinsic.
+    #[link_name = "llvm.trunc.v4f32"]
+    pub fn trunc_v4f32(a: ::simdty::f32x4) -> ::simdty::f32x4;
+    /// The `llvm.trunc.f32` intrinsic.
+    #[link_name = "llvm.trunc.f32"]
+    pub fn trunc_f32(a: f32) -> f32;
+    /// The `llvm.trunc.v2f64` intrinsic.
+    #[link_name = "llvm.trunc.v2f64"]
+    pub fn trunc_v2f64(a: ::simdty::f64x2) -> ::simdty::f64x2;
+    /// The `llvm.trunc.f64` intrinsic.
+    #[link_name = "llvm.trunc.f64"]
+    pub fn trunc_f64(a: f64) -> f64;
+    /// The `llvm.rint.v4f32` intrinsic.
+    #[link_name = "llvm.rint.v4f32"]
+    pub fn rint_v4f32(a: ::simdty::f32x4) -> ::simdty::f32x4;
+    /// The `llvm.rint.f32` intrinsic.
+    #[link_name = "llvm.rint.f32"]
+    pub fn rint_f32(a: f32) -> f32;
+    /// The `llvm.rint.v2f64` intrinsic.
+    #[link_name = "llvm.rint.v2f64"]
+    pub fn rint_v2f64(a: ::simdty::f64x2) -> ::simdty::f64x2;
+    /// The `llvm.rint.f64` intrinsic.
+    #[link_name = "llvm.rint.f64"]
+    pub fn rint_f64(a: f64) -> f64;
+    /// The `llvm.nearbyint.v4f32` intrinsic.
+    #[link_name = "llvm.nearbyint.v4f32"]
+    pub fn nearbyint_v4f32(a: ::simdty::f32x4) -> ::simdty::f32x4;
+    /// The `llvm.nearbyint.f32` intrinsic.
+    #[link_name = "llvm.nearbyint.f32"]
+    pub fn nearbyint_f32(a: f32) -> f32;
+    /// The `llvm.nearbyint.v2f64` intrinsic.
+    #[link_name = "llvm.nearbyint.v2f64"]
+    pub fn nearbyint_v2f64(a: ::simdty::f64x2) -> ::simdty::f64x2;
+    /// The `llvm.nearbyint.f64` intrinsic.
+    #[link_name = "llvm.nearbyint.f64"]
+    pub fn nearbyint_f64(a: f64) -> f64;
+    /// The `llvm.round.v4f32` intrinsic.
+    #[link_name = "llvm.round.v4f32"]
+    pub fn round_v4f32(a: ::simdty::f32x4) -> ::simdty::f32x4;
+    /// The `llvm.round.f32` intrinsic.
+    #[link_name = "llvm.round.f32"]
+    pub fn round_f32(a: f32) -> f32;
+    /// The `llvm.round.v2f64` intrinsic.
+    #[link_name = "llvm.round.v2f64"]
+    pub fn round_v2f64(a: ::simdty::f64x2) -> ::simdty::f64x2;
+    /// The `llvm.round.f64` intrinsic.
+    #[link_name = "llvm.round.f64"]
+    pub fn round_f64(a: f64) -> f64;
     /// The `llvm.setjmp` intrinsic.
     #[link_name = "llvm.setjmp"]
     pub fn setjmp(a: *mut i8) -> i32;
@@ -96,6 +408,150 @@ extern {
     /// The `llvm.siglongjmp` intrinsic.
     #[link_name = "llvm.siglongjmp"]
     pub fn siglongjmp(a: *mut i8, b: i32) -> ();
+    /// The `llvm.objectsize.v16i8.p0i8` intrinsic; known as `__builtin_object_size` in GCC.
+    #[link_name = "llvm.objectsize.v16i8.p0i8"]
+    pub fn objectsize_v16i8_p0i8(a: *mut i8, b: bool) -> ::simdty::i8x16;
+    /// The `llvm.objectsize.i8.p0i8` intrinsic; known as `__builtin_object_size` in GCC.
+    #[link_name = "llvm.objectsize.i8.p0i8"]
+    pub fn objectsize_i8_p0i8(a: *mut i8, b: bool) -> i8;
+    /// The `llvm.objectsize.v8i16.p0i8` intrinsic; known as `__builtin_object_size` in GCC.
+    #[link_name = "llvm.objectsize.v8i16.p0i8"]
+    pub fn objectsize_v8i16_p0i8(a: *mut i8, b: bool) -> ::simdty::i16x8;
+    /// The `llvm.objectsize.i16.p0i8` intrinsic; known as `__builtin_object_size` in GCC.
+    #[link_name = "llvm.objectsize.i16.p0i8"]
+    pub fn objectsize_i16_p0i8(a: *mut i8, b: bool) -> i16;
+    /// The `llvm.objectsize.v4i32.p0i8` intrinsic; known as `__builtin_object_size` in GCC.
+    #[link_name = "llvm.objectsize.v4i32.p0i8"]
+    pub fn objectsize_v4i32_p0i8(a: *mut i8, b: bool) -> ::simdty::i32x4;
+    /// The `llvm.objectsize.i32.p0i8` intrinsic; known as `__builtin_object_size` in GCC.
+    #[link_name = "llvm.objectsize.i32.p0i8"]
+    pub fn objectsize_i32_p0i8(a: *mut i8, b: bool) -> i32;
+    /// The `llvm.objectsize.v2i64.p0i8` intrinsic; known as `__builtin_object_size` in GCC.
+    #[link_name = "llvm.objectsize.v2i64.p0i8"]
+    pub fn objectsize_v2i64_p0i8(a: *mut i8, b: bool) -> ::simdty::i64x2;
+    /// The `llvm.objectsize.i64.p0i8` intrinsic; known as `__builtin_object_size` in GCC.
+    #[link_name = "llvm.objectsize.i64.p0i8"]
+    pub fn objectsize_i64_p0i8(a: *mut i8, b: bool) -> i64;
+    /// The `llvm.expect.v16i8` intrinsic.
+    #[link_name = "llvm.expect.v16i8"]
+    pub fn expect_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i8x16;
+    /// The `llvm.expect.i8` intrinsic.
+    #[link_name = "llvm.expect.i8"]
+    pub fn expect_i8(a: i8, b: i8) -> i8;
+    /// The `llvm.expect.v8i16` intrinsic.
+    #[link_name = "llvm.expect.v8i16"]
+    pub fn expect_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i16x8;
+    /// The `llvm.expect.i16` intrinsic.
+    #[link_name = "llvm.expect.i16"]
+    pub fn expect_i16(a: i16, b: i16) -> i16;
+    /// The `llvm.expect.v4i32` intrinsic.
+    #[link_name = "llvm.expect.v4i32"]
+    pub fn expect_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i32x4;
+    /// The `llvm.expect.i32` intrinsic.
+    #[link_name = "llvm.expect.i32"]
+    pub fn expect_i32(a: i32, b: i32) -> i32;
+    /// The `llvm.expect.v2i64` intrinsic.
+    #[link_name = "llvm.expect.v2i64"]
+    pub fn expect_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i64x2;
+    /// The `llvm.expect.i64` intrinsic.
+    #[link_name = "llvm.expect.i64"]
+    pub fn expect_i64(a: i64, b: i64) -> i64;
+    /// The `llvm.bswap.v16i8` intrinsic.
+    #[link_name = "llvm.bswap.v16i8"]
+    pub fn bswap_v16i8(a: ::simdty::i8x16) -> ::simdty::i8x16;
+    /// The `llvm.bswap.i8` intrinsic.
+    #[link_name = "llvm.bswap.i8"]
+    pub fn bswap_i8(a: i8) -> i8;
+    /// The `llvm.bswap.v8i16` intrinsic.
+    #[link_name = "llvm.bswap.v8i16"]
+    pub fn bswap_v8i16(a: ::simdty::i16x8) -> ::simdty::i16x8;
+    /// The `llvm.bswap.i16` intrinsic.
+    #[link_name = "llvm.bswap.i16"]
+    pub fn bswap_i16(a: i16) -> i16;
+    /// The `llvm.bswap.v4i32` intrinsic.
+    #[link_name = "llvm.bswap.v4i32"]
+    pub fn bswap_v4i32(a: ::simdty::i32x4) -> ::simdty::i32x4;
+    /// The `llvm.bswap.i32` intrinsic.
+    #[link_name = "llvm.bswap.i32"]
+    pub fn bswap_i32(a: i32) -> i32;
+    /// The `llvm.bswap.v2i64` intrinsic.
+    #[link_name = "llvm.bswap.v2i64"]
+    pub fn bswap_v2i64(a: ::simdty::i64x2) -> ::simdty::i64x2;
+    /// The `llvm.bswap.i64` intrinsic.
+    #[link_name = "llvm.bswap.i64"]
+    pub fn bswap_i64(a: i64) -> i64;
+    /// The `llvm.ctpop.v16i8` intrinsic.
+    #[link_name = "llvm.ctpop.v16i8"]
+    pub fn ctpop_v16i8(a: ::simdty::i8x16) -> ::simdty::i8x16;
+    /// The `llvm.ctpop.i8` intrinsic.
+    #[link_name = "llvm.ctpop.i8"]
+    pub fn ctpop_i8(a: i8) -> i8;
+    /// The `llvm.ctpop.v8i16` intrinsic.
+    #[link_name = "llvm.ctpop.v8i16"]
+    pub fn ctpop_v8i16(a: ::simdty::i16x8) -> ::simdty::i16x8;
+    /// The `llvm.ctpop.i16` intrinsic.
+    #[link_name = "llvm.ctpop.i16"]
+    pub fn ctpop_i16(a: i16) -> i16;
+    /// The `llvm.ctpop.v4i32` intrinsic.
+    #[link_name = "llvm.ctpop.v4i32"]
+    pub fn ctpop_v4i32(a: ::simdty::i32x4) -> ::simdty::i32x4;
+    /// The `llvm.ctpop.i32` intrinsic.
+    #[link_name = "llvm.ctpop.i32"]
+    pub fn ctpop_i32(a: i32) -> i32;
+    /// The `llvm.ctpop.v2i64` intrinsic.
+    #[link_name = "llvm.ctpop.v2i64"]
+    pub fn ctpop_v2i64(a: ::simdty::i64x2) -> ::simdty::i64x2;
+    /// The `llvm.ctpop.i64` intrinsic.
+    #[link_name = "llvm.ctpop.i64"]
+    pub fn ctpop_i64(a: i64) -> i64;
+    /// The `llvm.ctlz.v16i8` intrinsic.
+    #[link_name = "llvm.ctlz.v16i8"]
+    pub fn ctlz_v16i8(a: ::simdty::i8x16, b: bool) -> ::simdty::i8x16;
+    /// The `llvm.ctlz.i8` intrinsic.
+    #[link_name = "llvm.ctlz.i8"]
+    pub fn ctlz_i8(a: i8, b: bool) -> i8;
+    /// The `llvm.ctlz.v8i16` intrinsic.
+    #[link_name = "llvm.ctlz.v8i16"]
+    pub fn ctlz_v8i16(a: ::simdty::i16x8, b: bool) -> ::simdty::i16x8;
+    /// The `llvm.ctlz.i16` intrinsic.
+    #[link_name = "llvm.ctlz.i16"]
+    pub fn ctlz_i16(a: i16, b: bool) -> i16;
+    /// The `llvm.ctlz.v4i32` intrinsic.
+    #[link_name = "llvm.ctlz.v4i32"]
+    pub fn ctlz_v4i32(a: ::simdty::i32x4, b: bool) -> ::simdty::i32x4;
+    /// The `llvm.ctlz.i32` intrinsic.
+    #[link_name = "llvm.ctlz.i32"]
+    pub fn ctlz_i32(a: i32, b: bool) -> i32;
+    /// The `llvm.ctlz.v2i64` intrinsic.
+    #[link_name = "llvm.ctlz.v2i64"]
+    pub fn ctlz_v2i64(a: ::simdty::i64x2, b: bool) -> ::simdty::i64x2;
+    /// The `llvm.ctlz.i64` intrinsic.
+    #[link_name = "llvm.ctlz.i64"]
+    pub fn ctlz_i64(a: i64, b: bool) -> i64;
+    /// The `llvm.cttz.v16i8` intrinsic.
+    #[link_name = "llvm.cttz.v16i8"]
+    pub fn cttz_v16i8(a: ::simdty::i8x16, b: bool) -> ::simdty::i8x16;
+    /// The `llvm.cttz.i8` intrinsic.
+    #[link_name = "llvm.cttz.i8"]
+    pub fn cttz_i8(a: i8, b: bool) -> i8;
+    /// The `llvm.cttz.v8i16` intrinsic.
+    #[link_name = "llvm.cttz.v8i16"]
+    pub fn cttz_v8i16(a: ::simdty::i16x8, b: bool) -> ::simdty::i16x8;
+    /// The `llvm.cttz.i16` intrinsic.
+    #[link_name = "llvm.cttz.i16"]
+    pub fn cttz_i16(a: i16, b: bool) -> i16;
+    /// The `llvm.cttz.v4i32` intrinsic.
+    #[link_name = "llvm.cttz.v4i32"]
+    pub fn cttz_v4i32(a: ::simdty::i32x4, b: bool) -> ::simdty::i32x4;
+    /// The `llvm.cttz.i32` intrinsic.
+    #[link_name = "llvm.cttz.i32"]
+    pub fn cttz_i32(a: i32, b: bool) -> i32;
+    /// The `llvm.cttz.v2i64` intrinsic.
+    #[link_name = "llvm.cttz.v2i64"]
+    pub fn cttz_v2i64(a: ::simdty::i64x2, b: bool) -> ::simdty::i64x2;
+    /// The `llvm.cttz.i64` intrinsic.
+    #[link_name = "llvm.cttz.i64"]
+    pub fn cttz_i64(a: i64, b: bool) -> i64;
     /// The `llvm.eh.typeid.for` intrinsic.
     #[link_name = "llvm.eh.typeid.for"]
     pub fn eh_typeid_for(a: *mut i8) -> i32;
@@ -129,6 +585,54 @@ extern {
     /// The `llvm.var.annotation` intrinsic.
     #[link_name = "llvm.var.annotation"]
     pub fn var_annotation(a: *mut i8, b: *mut i8, c: *mut i8, d: i32) -> ();
+    /// The `llvm.ptr.annotation.p0v16i8` intrinsic.
+    #[link_name = "llvm.ptr.annotation.p0v16i8"]
+    pub fn ptr_annotation_p0v16i8(a: *mut ::simdty::i8x16, b: *mut i8, c: *mut i8, d: i32) -> *mut ::simdty::i8x16;
+    /// The `llvm.ptr.annotation.p0i8` intrinsic.
+    #[link_name = "llvm.ptr.annotation.p0i8"]
+    pub fn ptr_annotation_p0i8(a: *mut i8, b: *mut i8, c: *mut i8, d: i32) -> *mut i8;
+    /// The `llvm.ptr.annotation.p0v8i16` intrinsic.
+    #[link_name = "llvm.ptr.annotation.p0v8i16"]
+    pub fn ptr_annotation_p0v8i16(a: *mut ::simdty::i16x8, b: *mut i8, c: *mut i8, d: i32) -> *mut ::simdty::i16x8;
+    /// The `llvm.ptr.annotation.p0i16` intrinsic.
+    #[link_name = "llvm.ptr.annotation.p0i16"]
+    pub fn ptr_annotation_p0i16(a: *mut i16, b: *mut i8, c: *mut i8, d: i32) -> *mut i16;
+    /// The `llvm.ptr.annotation.p0v4i32` intrinsic.
+    #[link_name = "llvm.ptr.annotation.p0v4i32"]
+    pub fn ptr_annotation_p0v4i32(a: *mut ::simdty::i32x4, b: *mut i8, c: *mut i8, d: i32) -> *mut ::simdty::i32x4;
+    /// The `llvm.ptr.annotation.p0i32` intrinsic.
+    #[link_name = "llvm.ptr.annotation.p0i32"]
+    pub fn ptr_annotation_p0i32(a: *mut i32, b: *mut i8, c: *mut i8, d: i32) -> *mut i32;
+    /// The `llvm.ptr.annotation.p0v2i64` intrinsic.
+    #[link_name = "llvm.ptr.annotation.p0v2i64"]
+    pub fn ptr_annotation_p0v2i64(a: *mut ::simdty::i64x2, b: *mut i8, c: *mut i8, d: i32) -> *mut ::simdty::i64x2;
+    /// The `llvm.ptr.annotation.p0i64` intrinsic.
+    #[link_name = "llvm.ptr.annotation.p0i64"]
+    pub fn ptr_annotation_p0i64(a: *mut i64, b: *mut i8, c: *mut i8, d: i32) -> *mut i64;
+    /// The `llvm.annotation.v16i8` intrinsic.
+    #[link_name = "llvm.annotation.v16i8"]
+    pub fn annotation_v16i8(a: ::simdty::i8x16, b: *mut i8, c: *mut i8, d: i32) -> ::simdty::i8x16;
+    /// The `llvm.annotation.i8` intrinsic.
+    #[link_name = "llvm.annotation.i8"]
+    pub fn annotation_i8(a: i8, b: *mut i8, c: *mut i8, d: i32) -> i8;
+    /// The `llvm.annotation.v8i16` intrinsic.
+    #[link_name = "llvm.annotation.v8i16"]
+    pub fn annotation_v8i16(a: ::simdty::i16x8, b: *mut i8, c: *mut i8, d: i32) -> ::simdty::i16x8;
+    /// The `llvm.annotation.i16` intrinsic.
+    #[link_name = "llvm.annotation.i16"]
+    pub fn annotation_i16(a: i16, b: *mut i8, c: *mut i8, d: i32) -> i16;
+    /// The `llvm.annotation.v4i32` intrinsic.
+    #[link_name = "llvm.annotation.v4i32"]
+    pub fn annotation_v4i32(a: ::simdty::i32x4, b: *mut i8, c: *mut i8, d: i32) -> ::simdty::i32x4;
+    /// The `llvm.annotation.i32` intrinsic.
+    #[link_name = "llvm.annotation.i32"]
+    pub fn annotation_i32(a: i32, b: *mut i8, c: *mut i8, d: i32) -> i32;
+    /// The `llvm.annotation.v2i64` intrinsic.
+    #[link_name = "llvm.annotation.v2i64"]
+    pub fn annotation_v2i64(a: ::simdty::i64x2, b: *mut i8, c: *mut i8, d: i32) -> ::simdty::i64x2;
+    /// The `llvm.annotation.i64` intrinsic.
+    #[link_name = "llvm.annotation.i64"]
+    pub fn annotation_i64(a: i64, b: *mut i8, c: *mut i8, d: i32) -> i64;
     /// The `llvm.init.trampoline` intrinsic; known as `__builtin_init_trampoline` in GCC.
     #[link_name = "llvm.init.trampoline"]
     pub fn init_trampoline(a: *mut i8, b: *mut i8, c: *mut i8) -> ();
@@ -162,6 +666,1230 @@ extern {
     /// The `llvm.donothing` intrinsic.
     #[link_name = "llvm.donothing"]
     pub fn donothing() -> ();
+    /// The `llvm.convert.to.fp16.v4f32` intrinsic.
+    #[link_name = "llvm.convert.to.fp16.v4f32"]
+    pub fn convert_to_fp16_v4f32(a: ::simdty::f32x4) -> i16;
+    /// The `llvm.convert.to.fp16.f32` intrinsic.
+    #[link_name = "llvm.convert.to.fp16.f32"]
+    pub fn convert_to_fp16_f32(a: f32) -> i16;
+    /// The `llvm.convert.to.fp16.v2f64` intrinsic.
+    #[link_name = "llvm.convert.to.fp16.v2f64"]
+    pub fn convert_to_fp16_v2f64(a: ::simdty::f64x2) -> i16;
+    /// The `llvm.convert.to.fp16.f64` intrinsic.
+    #[link_name = "llvm.convert.to.fp16.f64"]
+    pub fn convert_to_fp16_f64(a: f64) -> i16;
+    /// The `llvm.convert.from.fp16.v4f32` intrinsic.
+    #[link_name = "llvm.convert.from.fp16.v4f32"]
+    pub fn convert_from_fp16_v4f32(a: i16) -> ::simdty::f32x4;
+    /// The `llvm.convert.from.fp16.f32` intrinsic.
+    #[link_name = "llvm.convert.from.fp16.f32"]
+    pub fn convert_from_fp16_f32(a: i16) -> f32;
+    /// The `llvm.convert.from.fp16.v2f64` intrinsic.
+    #[link_name = "llvm.convert.from.fp16.v2f64"]
+    pub fn convert_from_fp16_v2f64(a: i16) -> ::simdty::f64x2;
+    /// The `llvm.convert.from.fp16.f64` intrinsic.
+    #[link_name = "llvm.convert.from.fp16.f64"]
+    pub fn convert_from_fp16_f64(a: i16) -> f64;
+    /// The `llvm.convertff.v4f32.v4f32` intrinsic.
+    #[link_name = "llvm.convertff.v4f32.v4f32"]
+    pub fn convertff_v4f32_v4f32(a: ::simdty::f32x4, b: i32, c: i32) -> ::simdty::f32x4;
+    /// The `llvm.convertff.v4f32.f32` intrinsic.
+    #[link_name = "llvm.convertff.v4f32.f32"]
+    pub fn convertff_v4f32_f32(a: f32, b: i32, c: i32) -> ::simdty::f32x4;
+    /// The `llvm.convertff.v4f32.v2f64` intrinsic.
+    #[link_name = "llvm.convertff.v4f32.v2f64"]
+    pub fn convertff_v4f32_v2f64(a: ::simdty::f64x2, b: i32, c: i32) -> ::simdty::f32x4;
+    /// The `llvm.convertff.v4f32.f64` intrinsic.
+    #[link_name = "llvm.convertff.v4f32.f64"]
+    pub fn convertff_v4f32_f64(a: f64, b: i32, c: i32) -> ::simdty::f32x4;
+    /// The `llvm.convertff.f32.v4f32` intrinsic.
+    #[link_name = "llvm.convertff.f32.v4f32"]
+    pub fn convertff_f32_v4f32(a: ::simdty::f32x4, b: i32, c: i32) -> f32;
+    /// The `llvm.convertff.f32.f32` intrinsic.
+    #[link_name = "llvm.convertff.f32.f32"]
+    pub fn convertff_f32_f32(a: f32, b: i32, c: i32) -> f32;
+    /// The `llvm.convertff.f32.v2f64` intrinsic.
+    #[link_name = "llvm.convertff.f32.v2f64"]
+    pub fn convertff_f32_v2f64(a: ::simdty::f64x2, b: i32, c: i32) -> f32;
+    /// The `llvm.convertff.f32.f64` intrinsic.
+    #[link_name = "llvm.convertff.f32.f64"]
+    pub fn convertff_f32_f64(a: f64, b: i32, c: i32) -> f32;
+    /// The `llvm.convertff.v2f64.v4f32` intrinsic.
+    #[link_name = "llvm.convertff.v2f64.v4f32"]
+    pub fn convertff_v2f64_v4f32(a: ::simdty::f32x4, b: i32, c: i32) -> ::simdty::f64x2;
+    /// The `llvm.convertff.v2f64.f32` intrinsic.
+    #[link_name = "llvm.convertff.v2f64.f32"]
+    pub fn convertff_v2f64_f32(a: f32, b: i32, c: i32) -> ::simdty::f64x2;
+    /// The `llvm.convertff.v2f64.v2f64` intrinsic.
+    #[link_name = "llvm.convertff.v2f64.v2f64"]
+    pub fn convertff_v2f64_v2f64(a: ::simdty::f64x2, b: i32, c: i32) -> ::simdty::f64x2;
+    /// The `llvm.convertff.v2f64.f64` intrinsic.
+    #[link_name = "llvm.convertff.v2f64.f64"]
+    pub fn convertff_v2f64_f64(a: f64, b: i32, c: i32) -> ::simdty::f64x2;
+    /// The `llvm.convertff.f64.v4f32` intrinsic.
+    #[link_name = "llvm.convertff.f64.v4f32"]
+    pub fn convertff_f64_v4f32(a: ::simdty::f32x4, b: i32, c: i32) -> f64;
+    /// The `llvm.convertff.f64.f32` intrinsic.
+    #[link_name = "llvm.convertff.f64.f32"]
+    pub fn convertff_f64_f32(a: f32, b: i32, c: i32) -> f64;
+    /// The `llvm.convertff.f64.v2f64` intrinsic.
+    #[link_name = "llvm.convertff.f64.v2f64"]
+    pub fn convertff_f64_v2f64(a: ::simdty::f64x2, b: i32, c: i32) -> f64;
+    /// The `llvm.convertff.f64.f64` intrinsic.
+    #[link_name = "llvm.convertff.f64.f64"]
+    pub fn convertff_f64_f64(a: f64, b: i32, c: i32) -> f64;
+    /// The `llvm.convertfsi.v4f32.v16i8` intrinsic.
+    #[link_name = "llvm.convertfsi.v4f32.v16i8"]
+    pub fn convertfsi_v4f32_v16i8(a: ::simdty::i8x16, b: i32, c: i32) -> ::simdty::f32x4;
+    /// The `llvm.convertfsi.v4f32.i8` intrinsic.
+    #[link_name = "llvm.convertfsi.v4f32.i8"]
+    pub fn convertfsi_v4f32_i8(a: i8, b: i32, c: i32) -> ::simdty::f32x4;
+    /// The `llvm.convertfsi.v4f32.v8i16` intrinsic.
+    #[link_name = "llvm.convertfsi.v4f32.v8i16"]
+    pub fn convertfsi_v4f32_v8i16(a: ::simdty::i16x8, b: i32, c: i32) -> ::simdty::f32x4;
+    /// The `llvm.convertfsi.v4f32.i16` intrinsic.
+    #[link_name = "llvm.convertfsi.v4f32.i16"]
+    pub fn convertfsi_v4f32_i16(a: i16, b: i32, c: i32) -> ::simdty::f32x4;
+    /// The `llvm.convertfsi.v4f32.v4i32` intrinsic.
+    #[link_name = "llvm.convertfsi.v4f32.v4i32"]
+    pub fn convertfsi_v4f32_v4i32(a: ::simdty::i32x4, b: i32, c: i32) -> ::simdty::f32x4;
+    /// The `llvm.convertfsi.v4f32.i32` intrinsic.
+    #[link_name = "llvm.convertfsi.v4f32.i32"]
+    pub fn convertfsi_v4f32_i32(a: i32, b: i32, c: i32) -> ::simdty::f32x4;
+    /// The `llvm.convertfsi.v4f32.v2i64` intrinsic.
+    #[link_name = "llvm.convertfsi.v4f32.v2i64"]
+    pub fn convertfsi_v4f32_v2i64(a: ::simdty::i64x2, b: i32, c: i32) -> ::simdty::f32x4;
+    /// The `llvm.convertfsi.v4f32.i64` intrinsic.
+    #[link_name = "llvm.convertfsi.v4f32.i64"]
+    pub fn convertfsi_v4f32_i64(a: i64, b: i32, c: i32) -> ::simdty::f32x4;
+    /// The `llvm.convertfsi.f32.v16i8` intrinsic.
+    #[link_name = "llvm.convertfsi.f32.v16i8"]
+    pub fn convertfsi_f32_v16i8(a: ::simdty::i8x16, b: i32, c: i32) -> f32;
+    /// The `llvm.convertfsi.f32.i8` intrinsic.
+    #[link_name = "llvm.convertfsi.f32.i8"]
+    pub fn convertfsi_f32_i8(a: i8, b: i32, c: i32) -> f32;
+    /// The `llvm.convertfsi.f32.v8i16` intrinsic.
+    #[link_name = "llvm.convertfsi.f32.v8i16"]
+    pub fn convertfsi_f32_v8i16(a: ::simdty::i16x8, b: i32, c: i32) -> f32;
+    /// The `llvm.convertfsi.f32.i16` intrinsic.
+    #[link_name = "llvm.convertfsi.f32.i16"]
+    pub fn convertfsi_f32_i16(a: i16, b: i32, c: i32) -> f32;
+    /// The `llvm.convertfsi.f32.v4i32` intrinsic.
+    #[link_name = "llvm.convertfsi.f32.v4i32"]
+    pub fn convertfsi_f32_v4i32(a: ::simdty::i32x4, b: i32, c: i32) -> f32;
+    /// The `llvm.convertfsi.f32.i32` intrinsic.
+    #[link_name = "llvm.convertfsi.f32.i32"]
+    pub fn convertfsi_f32_i32(a: i32, b: i32, c: i32) -> f32;
+    /// The `llvm.convertfsi.f32.v2i64` intrinsic.
+    #[link_name = "llvm.convertfsi.f32.v2i64"]
+    pub fn convertfsi_f32_v2i64(a: ::simdty::i64x2, b: i32, c: i32) -> f32;
+    /// The `llvm.convertfsi.f32.i64` intrinsic.
+    #[link_name = "llvm.convertfsi.f32.i64"]
+    pub fn convertfsi_f32_i64(a: i64, b: i32, c: i32) -> f32;
+    /// The `llvm.convertfsi.v2f64.v16i8` intrinsic.
+    #[link_name = "llvm.convertfsi.v2f64.v16i8"]
+    pub fn convertfsi_v2f64_v16i8(a: ::simdty::i8x16, b: i32, c: i32) -> ::simdty::f64x2;
+    /// The `llvm.convertfsi.v2f64.i8` intrinsic.
+    #[link_name = "llvm.convertfsi.v2f64.i8"]
+    pub fn convertfsi_v2f64_i8(a: i8, b: i32, c: i32) -> ::simdty::f64x2;
+    /// The `llvm.convertfsi.v2f64.v8i16` intrinsic.
+    #[link_name = "llvm.convertfsi.v2f64.v8i16"]
+    pub fn convertfsi_v2f64_v8i16(a: ::simdty::i16x8, b: i32, c: i32) -> ::simdty::f64x2;
+    /// The `llvm.convertfsi.v2f64.i16` intrinsic.
+    #[link_name = "llvm.convertfsi.v2f64.i16"]
+    pub fn convertfsi_v2f64_i16(a: i16, b: i32, c: i32) -> ::simdty::f64x2;
+    /// The `llvm.convertfsi.v2f64.v4i32` intrinsic.
+    #[link_name = "llvm.convertfsi.v2f64.v4i32"]
+    pub fn convertfsi_v2f64_v4i32(a: ::simdty::i32x4, b: i32, c: i32) -> ::simdty::f64x2;
+    /// The `llvm.convertfsi.v2f64.i32` intrinsic.
+    #[link_name = "llvm.convertfsi.v2f64.i32"]
+    pub fn convertfsi_v2f64_i32(a: i32, b: i32, c: i32) -> ::simdty::f64x2;
+    /// The `llvm.convertfsi.v2f64.v2i64` intrinsic.
+    #[link_name = "llvm.convertfsi.v2f64.v2i64"]
+    pub fn convertfsi_v2f64_v2i64(a: ::simdty::i64x2, b: i32, c: i32) -> ::simdty::f64x2;
+    /// The `llvm.convertfsi.v2f64.i64` intrinsic.
+    #[link_name = "llvm.convertfsi.v2f64.i64"]
+    pub fn convertfsi_v2f64_i64(a: i64, b: i32, c: i32) -> ::simdty::f64x2;
+    /// The `llvm.convertfsi.f64.v16i8` intrinsic.
+    #[link_name = "llvm.convertfsi.f64.v16i8"]
+    pub fn convertfsi_f64_v16i8(a: ::simdty::i8x16, b: i32, c: i32) -> f64;
+    /// The `llvm.convertfsi.f64.i8` intrinsic.
+    #[link_name = "llvm.convertfsi.f64.i8"]
+    pub fn convertfsi_f64_i8(a: i8, b: i32, c: i32) -> f64;
+    /// The `llvm.convertfsi.f64.v8i16` intrinsic.
+    #[link_name = "llvm.convertfsi.f64.v8i16"]
+    pub fn convertfsi_f64_v8i16(a: ::simdty::i16x8, b: i32, c: i32) -> f64;
+    /// The `llvm.convertfsi.f64.i16` intrinsic.
+    #[link_name = "llvm.convertfsi.f64.i16"]
+    pub fn convertfsi_f64_i16(a: i16, b: i32, c: i32) -> f64;
+    /// The `llvm.convertfsi.f64.v4i32` intrinsic.
+    #[link_name = "llvm.convertfsi.f64.v4i32"]
+    pub fn convertfsi_f64_v4i32(a: ::simdty::i32x4, b: i32, c: i32) -> f64;
+    /// The `llvm.convertfsi.f64.i32` intrinsic.
+    #[link_name = "llvm.convertfsi.f64.i32"]
+    pub fn convertfsi_f64_i32(a: i32, b: i32, c: i32) -> f64;
+    /// The `llvm.convertfsi.f64.v2i64` intrinsic.
+    #[link_name = "llvm.convertfsi.f64.v2i64"]
+    pub fn convertfsi_f64_v2i64(a: ::simdty::i64x2, b: i32, c: i32) -> f64;
+    /// The `llvm.convertfsi.f64.i64` intrinsic.
+    #[link_name = "llvm.convertfsi.f64.i64"]
+    pub fn convertfsi_f64_i64(a: i64, b: i32, c: i32) -> f64;
+    /// The `llvm.convertfui.v4f32.v16i8` intrinsic.
+    #[link_name = "llvm.convertfui.v4f32.v16i8"]
+    pub fn convertfui_v4f32_v16i8(a: ::simdty::i8x16, b: i32, c: i32) -> ::simdty::f32x4;
+    /// The `llvm.convertfui.v4f32.i8` intrinsic.
+    #[link_name = "llvm.convertfui.v4f32.i8"]
+    pub fn convertfui_v4f32_i8(a: i8, b: i32, c: i32) -> ::simdty::f32x4;
+    /// The `llvm.convertfui.v4f32.v8i16` intrinsic.
+    #[link_name = "llvm.convertfui.v4f32.v8i16"]
+    pub fn convertfui_v4f32_v8i16(a: ::simdty::i16x8, b: i32, c: i32) -> ::simdty::f32x4;
+    /// The `llvm.convertfui.v4f32.i16` intrinsic.
+    #[link_name = "llvm.convertfui.v4f32.i16"]
+    pub fn convertfui_v4f32_i16(a: i16, b: i32, c: i32) -> ::simdty::f32x4;
+    /// The `llvm.convertfui.v4f32.v4i32` intrinsic.
+    #[link_name = "llvm.convertfui.v4f32.v4i32"]
+    pub fn convertfui_v4f32_v4i32(a: ::simdty::i32x4, b: i32, c: i32) -> ::simdty::f32x4;
+    /// The `llvm.convertfui.v4f32.i32` intrinsic.
+    #[link_name = "llvm.convertfui.v4f32.i32"]
+    pub fn convertfui_v4f32_i32(a: i32, b: i32, c: i32) -> ::simdty::f32x4;
+    /// The `llvm.convertfui.v4f32.v2i64` intrinsic.
+    #[link_name = "llvm.convertfui.v4f32.v2i64"]
+    pub fn convertfui_v4f32_v2i64(a: ::simdty::i64x2, b: i32, c: i32) -> ::simdty::f32x4;
+    /// The `llvm.convertfui.v4f32.i64` intrinsic.
+    #[link_name = "llvm.convertfui.v4f32.i64"]
+    pub fn convertfui_v4f32_i64(a: i64, b: i32, c: i32) -> ::simdty::f32x4;
+    /// The `llvm.convertfui.f32.v16i8` intrinsic.
+    #[link_name = "llvm.convertfui.f32.v16i8"]
+    pub fn convertfui_f32_v16i8(a: ::simdty::i8x16, b: i32, c: i32) -> f32;
+    /// The `llvm.convertfui.f32.i8` intrinsic.
+    #[link_name = "llvm.convertfui.f32.i8"]
+    pub fn convertfui_f32_i8(a: i8, b: i32, c: i32) -> f32;
+    /// The `llvm.convertfui.f32.v8i16` intrinsic.
+    #[link_name = "llvm.convertfui.f32.v8i16"]
+    pub fn convertfui_f32_v8i16(a: ::simdty::i16x8, b: i32, c: i32) -> f32;
+    /// The `llvm.convertfui.f32.i16` intrinsic.
+    #[link_name = "llvm.convertfui.f32.i16"]
+    pub fn convertfui_f32_i16(a: i16, b: i32, c: i32) -> f32;
+    /// The `llvm.convertfui.f32.v4i32` intrinsic.
+    #[link_name = "llvm.convertfui.f32.v4i32"]
+    pub fn convertfui_f32_v4i32(a: ::simdty::i32x4, b: i32, c: i32) -> f32;
+    /// The `llvm.convertfui.f32.i32` intrinsic.
+    #[link_name = "llvm.convertfui.f32.i32"]
+    pub fn convertfui_f32_i32(a: i32, b: i32, c: i32) -> f32;
+    /// The `llvm.convertfui.f32.v2i64` intrinsic.
+    #[link_name = "llvm.convertfui.f32.v2i64"]
+    pub fn convertfui_f32_v2i64(a: ::simdty::i64x2, b: i32, c: i32) -> f32;
+    /// The `llvm.convertfui.f32.i64` intrinsic.
+    #[link_name = "llvm.convertfui.f32.i64"]
+    pub fn convertfui_f32_i64(a: i64, b: i32, c: i32) -> f32;
+    /// The `llvm.convertfui.v2f64.v16i8` intrinsic.
+    #[link_name = "llvm.convertfui.v2f64.v16i8"]
+    pub fn convertfui_v2f64_v16i8(a: ::simdty::i8x16, b: i32, c: i32) -> ::simdty::f64x2;
+    /// The `llvm.convertfui.v2f64.i8` intrinsic.
+    #[link_name = "llvm.convertfui.v2f64.i8"]
+    pub fn convertfui_v2f64_i8(a: i8, b: i32, c: i32) -> ::simdty::f64x2;
+    /// The `llvm.convertfui.v2f64.v8i16` intrinsic.
+    #[link_name = "llvm.convertfui.v2f64.v8i16"]
+    pub fn convertfui_v2f64_v8i16(a: ::simdty::i16x8, b: i32, c: i32) -> ::simdty::f64x2;
+    /// The `llvm.convertfui.v2f64.i16` intrinsic.
+    #[link_name = "llvm.convertfui.v2f64.i16"]
+    pub fn convertfui_v2f64_i16(a: i16, b: i32, c: i32) -> ::simdty::f64x2;
+    /// The `llvm.convertfui.v2f64.v4i32` intrinsic.
+    #[link_name = "llvm.convertfui.v2f64.v4i32"]
+    pub fn convertfui_v2f64_v4i32(a: ::simdty::i32x4, b: i32, c: i32) -> ::simdty::f64x2;
+    /// The `llvm.convertfui.v2f64.i32` intrinsic.
+    #[link_name = "llvm.convertfui.v2f64.i32"]
+    pub fn convertfui_v2f64_i32(a: i32, b: i32, c: i32) -> ::simdty::f64x2;
+    /// The `llvm.convertfui.v2f64.v2i64` intrinsic.
+    #[link_name = "llvm.convertfui.v2f64.v2i64"]
+    pub fn convertfui_v2f64_v2i64(a: ::simdty::i64x2, b: i32, c: i32) -> ::simdty::f64x2;
+    /// The `llvm.convertfui.v2f64.i64` intrinsic.
+    #[link_name = "llvm.convertfui.v2f64.i64"]
+    pub fn convertfui_v2f64_i64(a: i64, b: i32, c: i32) -> ::simdty::f64x2;
+    /// The `llvm.convertfui.f64.v16i8` intrinsic.
+    #[link_name = "llvm.convertfui.f64.v16i8"]
+    pub fn convertfui_f64_v16i8(a: ::simdty::i8x16, b: i32, c: i32) -> f64;
+    /// The `llvm.convertfui.f64.i8` intrinsic.
+    #[link_name = "llvm.convertfui.f64.i8"]
+    pub fn convertfui_f64_i8(a: i8, b: i32, c: i32) -> f64;
+    /// The `llvm.convertfui.f64.v8i16` intrinsic.
+    #[link_name = "llvm.convertfui.f64.v8i16"]
+    pub fn convertfui_f64_v8i16(a: ::simdty::i16x8, b: i32, c: i32) -> f64;
+    /// The `llvm.convertfui.f64.i16` intrinsic.
+    #[link_name = "llvm.convertfui.f64.i16"]
+    pub fn convertfui_f64_i16(a: i16, b: i32, c: i32) -> f64;
+    /// The `llvm.convertfui.f64.v4i32` intrinsic.
+    #[link_name = "llvm.convertfui.f64.v4i32"]
+    pub fn convertfui_f64_v4i32(a: ::simdty::i32x4, b: i32, c: i32) -> f64;
+    /// The `llvm.convertfui.f64.i32` intrinsic.
+    #[link_name = "llvm.convertfui.f64.i32"]
+    pub fn convertfui_f64_i32(a: i32, b: i32, c: i32) -> f64;
+    /// The `llvm.convertfui.f64.v2i64` intrinsic.
+    #[link_name = "llvm.convertfui.f64.v2i64"]
+    pub fn convertfui_f64_v2i64(a: ::simdty::i64x2, b: i32, c: i32) -> f64;
+    /// The `llvm.convertfui.f64.i64` intrinsic.
+    #[link_name = "llvm.convertfui.f64.i64"]
+    pub fn convertfui_f64_i64(a: i64, b: i32, c: i32) -> f64;
+    /// The `llvm.convertsif.v16i8.v4f32` intrinsic.
+    #[link_name = "llvm.convertsif.v16i8.v4f32"]
+    pub fn convertsif_v16i8_v4f32(a: ::simdty::f32x4, b: i32, c: i32) -> ::simdty::i8x16;
+    /// The `llvm.convertsif.v16i8.f32` intrinsic.
+    #[link_name = "llvm.convertsif.v16i8.f32"]
+    pub fn convertsif_v16i8_f32(a: f32, b: i32, c: i32) -> ::simdty::i8x16;
+    /// The `llvm.convertsif.v16i8.v2f64` intrinsic.
+    #[link_name = "llvm.convertsif.v16i8.v2f64"]
+    pub fn convertsif_v16i8_v2f64(a: ::simdty::f64x2, b: i32, c: i32) -> ::simdty::i8x16;
+    /// The `llvm.convertsif.v16i8.f64` intrinsic.
+    #[link_name = "llvm.convertsif.v16i8.f64"]
+    pub fn convertsif_v16i8_f64(a: f64, b: i32, c: i32) -> ::simdty::i8x16;
+    /// The `llvm.convertsif.i8.v4f32` intrinsic.
+    #[link_name = "llvm.convertsif.i8.v4f32"]
+    pub fn convertsif_i8_v4f32(a: ::simdty::f32x4, b: i32, c: i32) -> i8;
+    /// The `llvm.convertsif.i8.f32` intrinsic.
+    #[link_name = "llvm.convertsif.i8.f32"]
+    pub fn convertsif_i8_f32(a: f32, b: i32, c: i32) -> i8;
+    /// The `llvm.convertsif.i8.v2f64` intrinsic.
+    #[link_name = "llvm.convertsif.i8.v2f64"]
+    pub fn convertsif_i8_v2f64(a: ::simdty::f64x2, b: i32, c: i32) -> i8;
+    /// The `llvm.convertsif.i8.f64` intrinsic.
+    #[link_name = "llvm.convertsif.i8.f64"]
+    pub fn convertsif_i8_f64(a: f64, b: i32, c: i32) -> i8;
+    /// The `llvm.convertsif.v8i16.v4f32` intrinsic.
+    #[link_name = "llvm.convertsif.v8i16.v4f32"]
+    pub fn convertsif_v8i16_v4f32(a: ::simdty::f32x4, b: i32, c: i32) -> ::simdty::i16x8;
+    /// The `llvm.convertsif.v8i16.f32` intrinsic.
+    #[link_name = "llvm.convertsif.v8i16.f32"]
+    pub fn convertsif_v8i16_f32(a: f32, b: i32, c: i32) -> ::simdty::i16x8;
+    /// The `llvm.convertsif.v8i16.v2f64` intrinsic.
+    #[link_name = "llvm.convertsif.v8i16.v2f64"]
+    pub fn convertsif_v8i16_v2f64(a: ::simdty::f64x2, b: i32, c: i32) -> ::simdty::i16x8;
+    /// The `llvm.convertsif.v8i16.f64` intrinsic.
+    #[link_name = "llvm.convertsif.v8i16.f64"]
+    pub fn convertsif_v8i16_f64(a: f64, b: i32, c: i32) -> ::simdty::i16x8;
+    /// The `llvm.convertsif.i16.v4f32` intrinsic.
+    #[link_name = "llvm.convertsif.i16.v4f32"]
+    pub fn convertsif_i16_v4f32(a: ::simdty::f32x4, b: i32, c: i32) -> i16;
+    /// The `llvm.convertsif.i16.f32` intrinsic.
+    #[link_name = "llvm.convertsif.i16.f32"]
+    pub fn convertsif_i16_f32(a: f32, b: i32, c: i32) -> i16;
+    /// The `llvm.convertsif.i16.v2f64` intrinsic.
+    #[link_name = "llvm.convertsif.i16.v2f64"]
+    pub fn convertsif_i16_v2f64(a: ::simdty::f64x2, b: i32, c: i32) -> i16;
+    /// The `llvm.convertsif.i16.f64` intrinsic.
+    #[link_name = "llvm.convertsif.i16.f64"]
+    pub fn convertsif_i16_f64(a: f64, b: i32, c: i32) -> i16;
+    /// The `llvm.convertsif.v4i32.v4f32` intrinsic.
+    #[link_name = "llvm.convertsif.v4i32.v4f32"]
+    pub fn convertsif_v4i32_v4f32(a: ::simdty::f32x4, b: i32, c: i32) -> ::simdty::i32x4;
+    /// The `llvm.convertsif.v4i32.f32` intrinsic.
+    #[link_name = "llvm.convertsif.v4i32.f32"]
+    pub fn convertsif_v4i32_f32(a: f32, b: i32, c: i32) -> ::simdty::i32x4;
+    /// The `llvm.convertsif.v4i32.v2f64` intrinsic.
+    #[link_name = "llvm.convertsif.v4i32.v2f64"]
+    pub fn convertsif_v4i32_v2f64(a: ::simdty::f64x2, b: i32, c: i32) -> ::simdty::i32x4;
+    /// The `llvm.convertsif.v4i32.f64` intrinsic.
+    #[link_name = "llvm.convertsif.v4i32.f64"]
+    pub fn convertsif_v4i32_f64(a: f64, b: i32, c: i32) -> ::simdty::i32x4;
+    /// The `llvm.convertsif.i32.v4f32` intrinsic.
+    #[link_name = "llvm.convertsif.i32.v4f32"]
+    pub fn convertsif_i32_v4f32(a: ::simdty::f32x4, b: i32, c: i32) -> i32;
+    /// The `llvm.convertsif.i32.f32` intrinsic.
+    #[link_name = "llvm.convertsif.i32.f32"]
+    pub fn convertsif_i32_f32(a: f32, b: i32, c: i32) -> i32;
+    /// The `llvm.convertsif.i32.v2f64` intrinsic.
+    #[link_name = "llvm.convertsif.i32.v2f64"]
+    pub fn convertsif_i32_v2f64(a: ::simdty::f64x2, b: i32, c: i32) -> i32;
+    /// The `llvm.convertsif.i32.f64` intrinsic.
+    #[link_name = "llvm.convertsif.i32.f64"]
+    pub fn convertsif_i32_f64(a: f64, b: i32, c: i32) -> i32;
+    /// The `llvm.convertsif.v2i64.v4f32` intrinsic.
+    #[link_name = "llvm.convertsif.v2i64.v4f32"]
+    pub fn convertsif_v2i64_v4f32(a: ::simdty::f32x4, b: i32, c: i32) -> ::simdty::i64x2;
+    /// The `llvm.convertsif.v2i64.f32` intrinsic.
+    #[link_name = "llvm.convertsif.v2i64.f32"]
+    pub fn convertsif_v2i64_f32(a: f32, b: i32, c: i32) -> ::simdty::i64x2;
+    /// The `llvm.convertsif.v2i64.v2f64` intrinsic.
+    #[link_name = "llvm.convertsif.v2i64.v2f64"]
+    pub fn convertsif_v2i64_v2f64(a: ::simdty::f64x2, b: i32, c: i32) -> ::simdty::i64x2;
+    /// The `llvm.convertsif.v2i64.f64` intrinsic.
+    #[link_name = "llvm.convertsif.v2i64.f64"]
+    pub fn convertsif_v2i64_f64(a: f64, b: i32, c: i32) -> ::simdty::i64x2;
+    /// The `llvm.convertsif.i64.v4f32` intrinsic.
+    #[link_name = "llvm.convertsif.i64.v4f32"]
+    pub fn convertsif_i64_v4f32(a: ::simdty::f32x4, b: i32, c: i32) -> i64;
+    /// The `llvm.convertsif.i64.f32` intrinsic.
+    #[link_name = "llvm.convertsif.i64.f32"]
+    pub fn convertsif_i64_f32(a: f32, b: i32, c: i32) -> i64;
+    /// The `llvm.convertsif.i64.v2f64` intrinsic.
+    #[link_name = "llvm.convertsif.i64.v2f64"]
+    pub fn convertsif_i64_v2f64(a: ::simdty::f64x2, b: i32, c: i32) -> i64;
+    /// The `llvm.convertsif.i64.f64` intrinsic.
+    #[link_name = "llvm.convertsif.i64.f64"]
+    pub fn convertsif_i64_f64(a: f64, b: i32, c: i32) -> i64;
+    /// The `llvm.convertuif.v16i8.v4f32` intrinsic.
+    #[link_name = "llvm.convertuif.v16i8.v4f32"]
+    pub fn convertuif_v16i8_v4f32(a: ::simdty::f32x4, b: i32, c: i32) -> ::simdty::i8x16;
+    /// The `llvm.convertuif.v16i8.f32` intrinsic.
+    #[link_name = "llvm.convertuif.v16i8.f32"]
+    pub fn convertuif_v16i8_f32(a: f32, b: i32, c: i32) -> ::simdty::i8x16;
+    /// The `llvm.convertuif.v16i8.v2f64` intrinsic.
+    #[link_name = "llvm.convertuif.v16i8.v2f64"]
+    pub fn convertuif_v16i8_v2f64(a: ::simdty::f64x2, b: i32, c: i32) -> ::simdty::i8x16;
+    /// The `llvm.convertuif.v16i8.f64` intrinsic.
+    #[link_name = "llvm.convertuif.v16i8.f64"]
+    pub fn convertuif_v16i8_f64(a: f64, b: i32, c: i32) -> ::simdty::i8x16;
+    /// The `llvm.convertuif.i8.v4f32` intrinsic.
+    #[link_name = "llvm.convertuif.i8.v4f32"]
+    pub fn convertuif_i8_v4f32(a: ::simdty::f32x4, b: i32, c: i32) -> i8;
+    /// The `llvm.convertuif.i8.f32` intrinsic.
+    #[link_name = "llvm.convertuif.i8.f32"]
+    pub fn convertuif_i8_f32(a: f32, b: i32, c: i32) -> i8;
+    /// The `llvm.convertuif.i8.v2f64` intrinsic.
+    #[link_name = "llvm.convertuif.i8.v2f64"]
+    pub fn convertuif_i8_v2f64(a: ::simdty::f64x2, b: i32, c: i32) -> i8;
+    /// The `llvm.convertuif.i8.f64` intrinsic.
+    #[link_name = "llvm.convertuif.i8.f64"]
+    pub fn convertuif_i8_f64(a: f64, b: i32, c: i32) -> i8;
+    /// The `llvm.convertuif.v8i16.v4f32` intrinsic.
+    #[link_name = "llvm.convertuif.v8i16.v4f32"]
+    pub fn convertuif_v8i16_v4f32(a: ::simdty::f32x4, b: i32, c: i32) -> ::simdty::i16x8;
+    /// The `llvm.convertuif.v8i16.f32` intrinsic.
+    #[link_name = "llvm.convertuif.v8i16.f32"]
+    pub fn convertuif_v8i16_f32(a: f32, b: i32, c: i32) -> ::simdty::i16x8;
+    /// The `llvm.convertuif.v8i16.v2f64` intrinsic.
+    #[link_name = "llvm.convertuif.v8i16.v2f64"]
+    pub fn convertuif_v8i16_v2f64(a: ::simdty::f64x2, b: i32, c: i32) -> ::simdty::i16x8;
+    /// The `llvm.convertuif.v8i16.f64` intrinsic.
+    #[link_name = "llvm.convertuif.v8i16.f64"]
+    pub fn convertuif_v8i16_f64(a: f64, b: i32, c: i32) -> ::simdty::i16x8;
+    /// The `llvm.convertuif.i16.v4f32` intrinsic.
+    #[link_name = "llvm.convertuif.i16.v4f32"]
+    pub fn convertuif_i16_v4f32(a: ::simdty::f32x4, b: i32, c: i32) -> i16;
+    /// The `llvm.convertuif.i16.f32` intrinsic.
+    #[link_name = "llvm.convertuif.i16.f32"]
+    pub fn convertuif_i16_f32(a: f32, b: i32, c: i32) -> i16;
+    /// The `llvm.convertuif.i16.v2f64` intrinsic.
+    #[link_name = "llvm.convertuif.i16.v2f64"]
+    pub fn convertuif_i16_v2f64(a: ::simdty::f64x2, b: i32, c: i32) -> i16;
+    /// The `llvm.convertuif.i16.f64` intrinsic.
+    #[link_name = "llvm.convertuif.i16.f64"]
+    pub fn convertuif_i16_f64(a: f64, b: i32, c: i32) -> i16;
+    /// The `llvm.convertuif.v4i32.v4f32` intrinsic.
+    #[link_name = "llvm.convertuif.v4i32.v4f32"]
+    pub fn convertuif_v4i32_v4f32(a: ::simdty::f32x4, b: i32, c: i32) -> ::simdty::i32x4;
+    /// The `llvm.convertuif.v4i32.f32` intrinsic.
+    #[link_name = "llvm.convertuif.v4i32.f32"]
+    pub fn convertuif_v4i32_f32(a: f32, b: i32, c: i32) -> ::simdty::i32x4;
+    /// The `llvm.convertuif.v4i32.v2f64` intrinsic.
+    #[link_name = "llvm.convertuif.v4i32.v2f64"]
+    pub fn convertuif_v4i32_v2f64(a: ::simdty::f64x2, b: i32, c: i32) -> ::simdty::i32x4;
+    /// The `llvm.convertuif.v4i32.f64` intrinsic.
+    #[link_name = "llvm.convertuif.v4i32.f64"]
+    pub fn convertuif_v4i32_f64(a: f64, b: i32, c: i32) -> ::simdty::i32x4;
+    /// The `llvm.convertuif.i32.v4f32` intrinsic.
+    #[link_name = "llvm.convertuif.i32.v4f32"]
+    pub fn convertuif_i32_v4f32(a: ::simdty::f32x4, b: i32, c: i32) -> i32;
+    /// The `llvm.convertuif.i32.f32` intrinsic.
+    #[link_name = "llvm.convertuif.i32.f32"]
+    pub fn convertuif_i32_f32(a: f32, b: i32, c: i32) -> i32;
+    /// The `llvm.convertuif.i32.v2f64` intrinsic.
+    #[link_name = "llvm.convertuif.i32.v2f64"]
+    pub fn convertuif_i32_v2f64(a: ::simdty::f64x2, b: i32, c: i32) -> i32;
+    /// The `llvm.convertuif.i32.f64` intrinsic.
+    #[link_name = "llvm.convertuif.i32.f64"]
+    pub fn convertuif_i32_f64(a: f64, b: i32, c: i32) -> i32;
+    /// The `llvm.convertuif.v2i64.v4f32` intrinsic.
+    #[link_name = "llvm.convertuif.v2i64.v4f32"]
+    pub fn convertuif_v2i64_v4f32(a: ::simdty::f32x4, b: i32, c: i32) -> ::simdty::i64x2;
+    /// The `llvm.convertuif.v2i64.f32` intrinsic.
+    #[link_name = "llvm.convertuif.v2i64.f32"]
+    pub fn convertuif_v2i64_f32(a: f32, b: i32, c: i32) -> ::simdty::i64x2;
+    /// The `llvm.convertuif.v2i64.v2f64` intrinsic.
+    #[link_name = "llvm.convertuif.v2i64.v2f64"]
+    pub fn convertuif_v2i64_v2f64(a: ::simdty::f64x2, b: i32, c: i32) -> ::simdty::i64x2;
+    /// The `llvm.convertuif.v2i64.f64` intrinsic.
+    #[link_name = "llvm.convertuif.v2i64.f64"]
+    pub fn convertuif_v2i64_f64(a: f64, b: i32, c: i32) -> ::simdty::i64x2;
+    /// The `llvm.convertuif.i64.v4f32` intrinsic.
+    #[link_name = "llvm.convertuif.i64.v4f32"]
+    pub fn convertuif_i64_v4f32(a: ::simdty::f32x4, b: i32, c: i32) -> i64;
+    /// The `llvm.convertuif.i64.f32` intrinsic.
+    #[link_name = "llvm.convertuif.i64.f32"]
+    pub fn convertuif_i64_f32(a: f32, b: i32, c: i32) -> i64;
+    /// The `llvm.convertuif.i64.v2f64` intrinsic.
+    #[link_name = "llvm.convertuif.i64.v2f64"]
+    pub fn convertuif_i64_v2f64(a: ::simdty::f64x2, b: i32, c: i32) -> i64;
+    /// The `llvm.convertuif.i64.f64` intrinsic.
+    #[link_name = "llvm.convertuif.i64.f64"]
+    pub fn convertuif_i64_f64(a: f64, b: i32, c: i32) -> i64;
+    /// The `llvm.convertss.v16i8.v16i8` intrinsic.
+    #[link_name = "llvm.convertss.v16i8.v16i8"]
+    pub fn convertss_v16i8_v16i8(a: ::simdty::i8x16, b: i32, c: i32) -> ::simdty::i8x16;
+    /// The `llvm.convertss.v16i8.i8` intrinsic.
+    #[link_name = "llvm.convertss.v16i8.i8"]
+    pub fn convertss_v16i8_i8(a: i8, b: i32, c: i32) -> ::simdty::i8x16;
+    /// The `llvm.convertss.v16i8.v8i16` intrinsic.
+    #[link_name = "llvm.convertss.v16i8.v8i16"]
+    pub fn convertss_v16i8_v8i16(a: ::simdty::i16x8, b: i32, c: i32) -> ::simdty::i8x16;
+    /// The `llvm.convertss.v16i8.i16` intrinsic.
+    #[link_name = "llvm.convertss.v16i8.i16"]
+    pub fn convertss_v16i8_i16(a: i16, b: i32, c: i32) -> ::simdty::i8x16;
+    /// The `llvm.convertss.v16i8.v4i32` intrinsic.
+    #[link_name = "llvm.convertss.v16i8.v4i32"]
+    pub fn convertss_v16i8_v4i32(a: ::simdty::i32x4, b: i32, c: i32) -> ::simdty::i8x16;
+    /// The `llvm.convertss.v16i8.i32` intrinsic.
+    #[link_name = "llvm.convertss.v16i8.i32"]
+    pub fn convertss_v16i8_i32(a: i32, b: i32, c: i32) -> ::simdty::i8x16;
+    /// The `llvm.convertss.v16i8.v2i64` intrinsic.
+    #[link_name = "llvm.convertss.v16i8.v2i64"]
+    pub fn convertss_v16i8_v2i64(a: ::simdty::i64x2, b: i32, c: i32) -> ::simdty::i8x16;
+    /// The `llvm.convertss.v16i8.i64` intrinsic.
+    #[link_name = "llvm.convertss.v16i8.i64"]
+    pub fn convertss_v16i8_i64(a: i64, b: i32, c: i32) -> ::simdty::i8x16;
+    /// The `llvm.convertss.i8.v16i8` intrinsic.
+    #[link_name = "llvm.convertss.i8.v16i8"]
+    pub fn convertss_i8_v16i8(a: ::simdty::i8x16, b: i32, c: i32) -> i8;
+    /// The `llvm.convertss.i8.i8` intrinsic.
+    #[link_name = "llvm.convertss.i8.i8"]
+    pub fn convertss_i8_i8(a: i8, b: i32, c: i32) -> i8;
+    /// The `llvm.convertss.i8.v8i16` intrinsic.
+    #[link_name = "llvm.convertss.i8.v8i16"]
+    pub fn convertss_i8_v8i16(a: ::simdty::i16x8, b: i32, c: i32) -> i8;
+    /// The `llvm.convertss.i8.i16` intrinsic.
+    #[link_name = "llvm.convertss.i8.i16"]
+    pub fn convertss_i8_i16(a: i16, b: i32, c: i32) -> i8;
+    /// The `llvm.convertss.i8.v4i32` intrinsic.
+    #[link_name = "llvm.convertss.i8.v4i32"]
+    pub fn convertss_i8_v4i32(a: ::simdty::i32x4, b: i32, c: i32) -> i8;
+    /// The `llvm.convertss.i8.i32` intrinsic.
+    #[link_name = "llvm.convertss.i8.i32"]
+    pub fn convertss_i8_i32(a: i32, b: i32, c: i32) -> i8;
+    /// The `llvm.convertss.i8.v2i64` intrinsic.
+    #[link_name = "llvm.convertss.i8.v2i64"]
+    pub fn convertss_i8_v2i64(a: ::simdty::i64x2, b: i32, c: i32) -> i8;
+    /// The `llvm.convertss.i8.i64` intrinsic.
+    #[link_name = "llvm.convertss.i8.i64"]
+    pub fn convertss_i8_i64(a: i64, b: i32, c: i32) -> i8;
+    /// The `llvm.convertss.v8i16.v16i8` intrinsic.
+    #[link_name = "llvm.convertss.v8i16.v16i8"]
+    pub fn convertss_v8i16_v16i8(a: ::simdty::i8x16, b: i32, c: i32) -> ::simdty::i16x8;
+    /// The `llvm.convertss.v8i16.i8` intrinsic.
+    #[link_name = "llvm.convertss.v8i16.i8"]
+    pub fn convertss_v8i16_i8(a: i8, b: i32, c: i32) -> ::simdty::i16x8;
+    /// The `llvm.convertss.v8i16.v8i16` intrinsic.
+    #[link_name = "llvm.convertss.v8i16.v8i16"]
+    pub fn convertss_v8i16_v8i16(a: ::simdty::i16x8, b: i32, c: i32) -> ::simdty::i16x8;
+    /// The `llvm.convertss.v8i16.i16` intrinsic.
+    #[link_name = "llvm.convertss.v8i16.i16"]
+    pub fn convertss_v8i16_i16(a: i16, b: i32, c: i32) -> ::simdty::i16x8;
+    /// The `llvm.convertss.v8i16.v4i32` intrinsic.
+    #[link_name = "llvm.convertss.v8i16.v4i32"]
+    pub fn convertss_v8i16_v4i32(a: ::simdty::i32x4, b: i32, c: i32) -> ::simdty::i16x8;
+    /// The `llvm.convertss.v8i16.i32` intrinsic.
+    #[link_name = "llvm.convertss.v8i16.i32"]
+    pub fn convertss_v8i16_i32(a: i32, b: i32, c: i32) -> ::simdty::i16x8;
+    /// The `llvm.convertss.v8i16.v2i64` intrinsic.
+    #[link_name = "llvm.convertss.v8i16.v2i64"]
+    pub fn convertss_v8i16_v2i64(a: ::simdty::i64x2, b: i32, c: i32) -> ::simdty::i16x8;
+    /// The `llvm.convertss.v8i16.i64` intrinsic.
+    #[link_name = "llvm.convertss.v8i16.i64"]
+    pub fn convertss_v8i16_i64(a: i64, b: i32, c: i32) -> ::simdty::i16x8;
+    /// The `llvm.convertss.i16.v16i8` intrinsic.
+    #[link_name = "llvm.convertss.i16.v16i8"]
+    pub fn convertss_i16_v16i8(a: ::simdty::i8x16, b: i32, c: i32) -> i16;
+    /// The `llvm.convertss.i16.i8` intrinsic.
+    #[link_name = "llvm.convertss.i16.i8"]
+    pub fn convertss_i16_i8(a: i8, b: i32, c: i32) -> i16;
+    /// The `llvm.convertss.i16.v8i16` intrinsic.
+    #[link_name = "llvm.convertss.i16.v8i16"]
+    pub fn convertss_i16_v8i16(a: ::simdty::i16x8, b: i32, c: i32) -> i16;
+    /// The `llvm.convertss.i16.i16` intrinsic.
+    #[link_name = "llvm.convertss.i16.i16"]
+    pub fn convertss_i16_i16(a: i16, b: i32, c: i32) -> i16;
+    /// The `llvm.convertss.i16.v4i32` intrinsic.
+    #[link_name = "llvm.convertss.i16.v4i32"]
+    pub fn convertss_i16_v4i32(a: ::simdty::i32x4, b: i32, c: i32) -> i16;
+    /// The `llvm.convertss.i16.i32` intrinsic.
+    #[link_name = "llvm.convertss.i16.i32"]
+    pub fn convertss_i16_i32(a: i32, b: i32, c: i32) -> i16;
+    /// The `llvm.convertss.i16.v2i64` intrinsic.
+    #[link_name = "llvm.convertss.i16.v2i64"]
+    pub fn convertss_i16_v2i64(a: ::simdty::i64x2, b: i32, c: i32) -> i16;
+    /// The `llvm.convertss.i16.i64` intrinsic.
+    #[link_name = "llvm.convertss.i16.i64"]
+    pub fn convertss_i16_i64(a: i64, b: i32, c: i32) -> i16;
+    /// The `llvm.convertss.v4i32.v16i8` intrinsic.
+    #[link_name = "llvm.convertss.v4i32.v16i8"]
+    pub fn convertss_v4i32_v16i8(a: ::simdty::i8x16, b: i32, c: i32) -> ::simdty::i32x4;
+    /// The `llvm.convertss.v4i32.i8` intrinsic.
+    #[link_name = "llvm.convertss.v4i32.i8"]
+    pub fn convertss_v4i32_i8(a: i8, b: i32, c: i32) -> ::simdty::i32x4;
+    /// The `llvm.convertss.v4i32.v8i16` intrinsic.
+    #[link_name = "llvm.convertss.v4i32.v8i16"]
+    pub fn convertss_v4i32_v8i16(a: ::simdty::i16x8, b: i32, c: i32) -> ::simdty::i32x4;
+    /// The `llvm.convertss.v4i32.i16` intrinsic.
+    #[link_name = "llvm.convertss.v4i32.i16"]
+    pub fn convertss_v4i32_i16(a: i16, b: i32, c: i32) -> ::simdty::i32x4;
+    /// The `llvm.convertss.v4i32.v4i32` intrinsic.
+    #[link_name = "llvm.convertss.v4i32.v4i32"]
+    pub fn convertss_v4i32_v4i32(a: ::simdty::i32x4, b: i32, c: i32) -> ::simdty::i32x4;
+    /// The `llvm.convertss.v4i32.i32` intrinsic.
+    #[link_name = "llvm.convertss.v4i32.i32"]
+    pub fn convertss_v4i32_i32(a: i32, b: i32, c: i32) -> ::simdty::i32x4;
+    /// The `llvm.convertss.v4i32.v2i64` intrinsic.
+    #[link_name = "llvm.convertss.v4i32.v2i64"]
+    pub fn convertss_v4i32_v2i64(a: ::simdty::i64x2, b: i32, c: i32) -> ::simdty::i32x4;
+    /// The `llvm.convertss.v4i32.i64` intrinsic.
+    #[link_name = "llvm.convertss.v4i32.i64"]
+    pub fn convertss_v4i32_i64(a: i64, b: i32, c: i32) -> ::simdty::i32x4;
+    /// The `llvm.convertss.i32.v16i8` intrinsic.
+    #[link_name = "llvm.convertss.i32.v16i8"]
+    pub fn convertss_i32_v16i8(a: ::simdty::i8x16, b: i32, c: i32) -> i32;
+    /// The `llvm.convertss.i32.i8` intrinsic.
+    #[link_name = "llvm.convertss.i32.i8"]
+    pub fn convertss_i32_i8(a: i8, b: i32, c: i32) -> i32;
+    /// The `llvm.convertss.i32.v8i16` intrinsic.
+    #[link_name = "llvm.convertss.i32.v8i16"]
+    pub fn convertss_i32_v8i16(a: ::simdty::i16x8, b: i32, c: i32) -> i32;
+    /// The `llvm.convertss.i32.i16` intrinsic.
+    #[link_name = "llvm.convertss.i32.i16"]
+    pub fn convertss_i32_i16(a: i16, b: i32, c: i32) -> i32;
+    /// The `llvm.convertss.i32.v4i32` intrinsic.
+    #[link_name = "llvm.convertss.i32.v4i32"]
+    pub fn convertss_i32_v4i32(a: ::simdty::i32x4, b: i32, c: i32) -> i32;
+    /// The `llvm.convertss.i32.i32` intrinsic.
+    #[link_name = "llvm.convertss.i32.i32"]
+    pub fn convertss_i32_i32(a: i32, b: i32, c: i32) -> i32;
+    /// The `llvm.convertss.i32.v2i64` intrinsic.
+    #[link_name = "llvm.convertss.i32.v2i64"]
+    pub fn convertss_i32_v2i64(a: ::simdty::i64x2, b: i32, c: i32) -> i32;
+    /// The `llvm.convertss.i32.i64` intrinsic.
+    #[link_name = "llvm.convertss.i32.i64"]
+    pub fn convertss_i32_i64(a: i64, b: i32, c: i32) -> i32;
+    /// The `llvm.convertss.v2i64.v16i8` intrinsic.
+    #[link_name = "llvm.convertss.v2i64.v16i8"]
+    pub fn convertss_v2i64_v16i8(a: ::simdty::i8x16, b: i32, c: i32) -> ::simdty::i64x2;
+    /// The `llvm.convertss.v2i64.i8` intrinsic.
+    #[link_name = "llvm.convertss.v2i64.i8"]
+    pub fn convertss_v2i64_i8(a: i8, b: i32, c: i32) -> ::simdty::i64x2;
+    /// The `llvm.convertss.v2i64.v8i16` intrinsic.
+    #[link_name = "llvm.convertss.v2i64.v8i16"]
+    pub fn convertss_v2i64_v8i16(a: ::simdty::i16x8, b: i32, c: i32) -> ::simdty::i64x2;
+    /// The `llvm.convertss.v2i64.i16` intrinsic.
+    #[link_name = "llvm.convertss.v2i64.i16"]
+    pub fn convertss_v2i64_i16(a: i16, b: i32, c: i32) -> ::simdty::i64x2;
+    /// The `llvm.convertss.v2i64.v4i32` intrinsic.
+    #[link_name = "llvm.convertss.v2i64.v4i32"]
+    pub fn convertss_v2i64_v4i32(a: ::simdty::i32x4, b: i32, c: i32) -> ::simdty::i64x2;
+    /// The `llvm.convertss.v2i64.i32` intrinsic.
+    #[link_name = "llvm.convertss.v2i64.i32"]
+    pub fn convertss_v2i64_i32(a: i32, b: i32, c: i32) -> ::simdty::i64x2;
+    /// The `llvm.convertss.v2i64.v2i64` intrinsic.
+    #[link_name = "llvm.convertss.v2i64.v2i64"]
+    pub fn convertss_v2i64_v2i64(a: ::simdty::i64x2, b: i32, c: i32) -> ::simdty::i64x2;
+    /// The `llvm.convertss.v2i64.i64` intrinsic.
+    #[link_name = "llvm.convertss.v2i64.i64"]
+    pub fn convertss_v2i64_i64(a: i64, b: i32, c: i32) -> ::simdty::i64x2;
+    /// The `llvm.convertss.i64.v16i8` intrinsic.
+    #[link_name = "llvm.convertss.i64.v16i8"]
+    pub fn convertss_i64_v16i8(a: ::simdty::i8x16, b: i32, c: i32) -> i64;
+    /// The `llvm.convertss.i64.i8` intrinsic.
+    #[link_name = "llvm.convertss.i64.i8"]
+    pub fn convertss_i64_i8(a: i8, b: i32, c: i32) -> i64;
+    /// The `llvm.convertss.i64.v8i16` intrinsic.
+    #[link_name = "llvm.convertss.i64.v8i16"]
+    pub fn convertss_i64_v8i16(a: ::simdty::i16x8, b: i32, c: i32) -> i64;
+    /// The `llvm.convertss.i64.i16` intrinsic.
+    #[link_name = "llvm.convertss.i64.i16"]
+    pub fn convertss_i64_i16(a: i16, b: i32, c: i32) -> i64;
+    /// The `llvm.convertss.i64.v4i32` intrinsic.
+    #[link_name = "llvm.convertss.i64.v4i32"]
+    pub fn convertss_i64_v4i32(a: ::simdty::i32x4, b: i32, c: i32) -> i64;
+    /// The `llvm.convertss.i64.i32` intrinsic.
+    #[link_name = "llvm.convertss.i64.i32"]
+    pub fn convertss_i64_i32(a: i32, b: i32, c: i32) -> i64;
+    /// The `llvm.convertss.i64.v2i64` intrinsic.
+    #[link_name = "llvm.convertss.i64.v2i64"]
+    pub fn convertss_i64_v2i64(a: ::simdty::i64x2, b: i32, c: i32) -> i64;
+    /// The `llvm.convertss.i64.i64` intrinsic.
+    #[link_name = "llvm.convertss.i64.i64"]
+    pub fn convertss_i64_i64(a: i64, b: i32, c: i32) -> i64;
+    /// The `llvm.convertsu.v16i8.v16i8` intrinsic.
+    #[link_name = "llvm.convertsu.v16i8.v16i8"]
+    pub fn convertsu_v16i8_v16i8(a: ::simdty::i8x16, b: i32, c: i32) -> ::simdty::i8x16;
+    /// The `llvm.convertsu.v16i8.i8` intrinsic.
+    #[link_name = "llvm.convertsu.v16i8.i8"]
+    pub fn convertsu_v16i8_i8(a: i8, b: i32, c: i32) -> ::simdty::i8x16;
+    /// The `llvm.convertsu.v16i8.v8i16` intrinsic.
+    #[link_name = "llvm.convertsu.v16i8.v8i16"]
+    pub fn convertsu_v16i8_v8i16(a: ::simdty::i16x8, b: i32, c: i32) -> ::simdty::i8x16;
+    /// The `llvm.convertsu.v16i8.i16` intrinsic.
+    #[link_name = "llvm.convertsu.v16i8.i16"]
+    pub fn convertsu_v16i8_i16(a: i16, b: i32, c: i32) -> ::simdty::i8x16;
+    /// The `llvm.convertsu.v16i8.v4i32` intrinsic.
+    #[link_name = "llvm.convertsu.v16i8.v4i32"]
+    pub fn convertsu_v16i8_v4i32(a: ::simdty::i32x4, b: i32, c: i32) -> ::simdty::i8x16;
+    /// The `llvm.convertsu.v16i8.i32` intrinsic.
+    #[link_name = "llvm.convertsu.v16i8.i32"]
+    pub fn convertsu_v16i8_i32(a: i32, b: i32, c: i32) -> ::simdty::i8x16;
+    /// The `llvm.convertsu.v16i8.v2i64` intrinsic.
+    #[link_name = "llvm.convertsu.v16i8.v2i64"]
+    pub fn convertsu_v16i8_v2i64(a: ::simdty::i64x2, b: i32, c: i32) -> ::simdty::i8x16;
+    /// The `llvm.convertsu.v16i8.i64` intrinsic.
+    #[link_name = "llvm.convertsu.v16i8.i64"]
+    pub fn convertsu_v16i8_i64(a: i64, b: i32, c: i32) -> ::simdty::i8x16;
+    /// The `llvm.convertsu.i8.v16i8` intrinsic.
+    #[link_name = "llvm.convertsu.i8.v16i8"]
+    pub fn convertsu_i8_v16i8(a: ::simdty::i8x16, b: i32, c: i32) -> i8;
+    /// The `llvm.convertsu.i8.i8` intrinsic.
+    #[link_name = "llvm.convertsu.i8.i8"]
+    pub fn convertsu_i8_i8(a: i8, b: i32, c: i32) -> i8;
+    /// The `llvm.convertsu.i8.v8i16` intrinsic.
+    #[link_name = "llvm.convertsu.i8.v8i16"]
+    pub fn convertsu_i8_v8i16(a: ::simdty::i16x8, b: i32, c: i32) -> i8;
+    /// The `llvm.convertsu.i8.i16` intrinsic.
+    #[link_name = "llvm.convertsu.i8.i16"]
+    pub fn convertsu_i8_i16(a: i16, b: i32, c: i32) -> i8;
+    /// The `llvm.convertsu.i8.v4i32` intrinsic.
+    #[link_name = "llvm.convertsu.i8.v4i32"]
+    pub fn convertsu_i8_v4i32(a: ::simdty::i32x4, b: i32, c: i32) -> i8;
+    /// The `llvm.convertsu.i8.i32` intrinsic.
+    #[link_name = "llvm.convertsu.i8.i32"]
+    pub fn convertsu_i8_i32(a: i32, b: i32, c: i32) -> i8;
+    /// The `llvm.convertsu.i8.v2i64` intrinsic.
+    #[link_name = "llvm.convertsu.i8.v2i64"]
+    pub fn convertsu_i8_v2i64(a: ::simdty::i64x2, b: i32, c: i32) -> i8;
+    /// The `llvm.convertsu.i8.i64` intrinsic.
+    #[link_name = "llvm.convertsu.i8.i64"]
+    pub fn convertsu_i8_i64(a: i64, b: i32, c: i32) -> i8;
+    /// The `llvm.convertsu.v8i16.v16i8` intrinsic.
+    #[link_name = "llvm.convertsu.v8i16.v16i8"]
+    pub fn convertsu_v8i16_v16i8(a: ::simdty::i8x16, b: i32, c: i32) -> ::simdty::i16x8;
+    /// The `llvm.convertsu.v8i16.i8` intrinsic.
+    #[link_name = "llvm.convertsu.v8i16.i8"]
+    pub fn convertsu_v8i16_i8(a: i8, b: i32, c: i32) -> ::simdty::i16x8;
+    /// The `llvm.convertsu.v8i16.v8i16` intrinsic.
+    #[link_name = "llvm.convertsu.v8i16.v8i16"]
+    pub fn convertsu_v8i16_v8i16(a: ::simdty::i16x8, b: i32, c: i32) -> ::simdty::i16x8;
+    /// The `llvm.convertsu.v8i16.i16` intrinsic.
+    #[link_name = "llvm.convertsu.v8i16.i16"]
+    pub fn convertsu_v8i16_i16(a: i16, b: i32, c: i32) -> ::simdty::i16x8;
+    /// The `llvm.convertsu.v8i16.v4i32` intrinsic.
+    #[link_name = "llvm.convertsu.v8i16.v4i32"]
+    pub fn convertsu_v8i16_v4i32(a: ::simdty::i32x4, b: i32, c: i32) -> ::simdty::i16x8;
+    /// The `llvm.convertsu.v8i16.i32` intrinsic.
+    #[link_name = "llvm.convertsu.v8i16.i32"]
+    pub fn convertsu_v8i16_i32(a: i32, b: i32, c: i32) -> ::simdty::i16x8;
+    /// The `llvm.convertsu.v8i16.v2i64` intrinsic.
+    #[link_name = "llvm.convertsu.v8i16.v2i64"]
+    pub fn convertsu_v8i16_v2i64(a: ::simdty::i64x2, b: i32, c: i32) -> ::simdty::i16x8;
+    /// The `llvm.convertsu.v8i16.i64` intrinsic.
+    #[link_name = "llvm.convertsu.v8i16.i64"]
+    pub fn convertsu_v8i16_i64(a: i64, b: i32, c: i32) -> ::simdty::i16x8;
+    /// The `llvm.convertsu.i16.v16i8` intrinsic.
+    #[link_name = "llvm.convertsu.i16.v16i8"]
+    pub fn convertsu_i16_v16i8(a: ::simdty::i8x16, b: i32, c: i32) -> i16;
+    /// The `llvm.convertsu.i16.i8` intrinsic.
+    #[link_name = "llvm.convertsu.i16.i8"]
+    pub fn convertsu_i16_i8(a: i8, b: i32, c: i32) -> i16;
+    /// The `llvm.convertsu.i16.v8i16` intrinsic.
+    #[link_name = "llvm.convertsu.i16.v8i16"]
+    pub fn convertsu_i16_v8i16(a: ::simdty::i16x8, b: i32, c: i32) -> i16;
+    /// The `llvm.convertsu.i16.i16` intrinsic.
+    #[link_name = "llvm.convertsu.i16.i16"]
+    pub fn convertsu_i16_i16(a: i16, b: i32, c: i32) -> i16;
+    /// The `llvm.convertsu.i16.v4i32` intrinsic.
+    #[link_name = "llvm.convertsu.i16.v4i32"]
+    pub fn convertsu_i16_v4i32(a: ::simdty::i32x4, b: i32, c: i32) -> i16;
+    /// The `llvm.convertsu.i16.i32` intrinsic.
+    #[link_name = "llvm.convertsu.i16.i32"]
+    pub fn convertsu_i16_i32(a: i32, b: i32, c: i32) -> i16;
+    /// The `llvm.convertsu.i16.v2i64` intrinsic.
+    #[link_name = "llvm.convertsu.i16.v2i64"]
+    pub fn convertsu_i16_v2i64(a: ::simdty::i64x2, b: i32, c: i32) -> i16;
+    /// The `llvm.convertsu.i16.i64` intrinsic.
+    #[link_name = "llvm.convertsu.i16.i64"]
+    pub fn convertsu_i16_i64(a: i64, b: i32, c: i32) -> i16;
+    /// The `llvm.convertsu.v4i32.v16i8` intrinsic.
+    #[link_name = "llvm.convertsu.v4i32.v16i8"]
+    pub fn convertsu_v4i32_v16i8(a: ::simdty::i8x16, b: i32, c: i32) -> ::simdty::i32x4;
+    /// The `llvm.convertsu.v4i32.i8` intrinsic.
+    #[link_name = "llvm.convertsu.v4i32.i8"]
+    pub fn convertsu_v4i32_i8(a: i8, b: i32, c: i32) -> ::simdty::i32x4;
+    /// The `llvm.convertsu.v4i32.v8i16` intrinsic.
+    #[link_name = "llvm.convertsu.v4i32.v8i16"]
+    pub fn convertsu_v4i32_v8i16(a: ::simdty::i16x8, b: i32, c: i32) -> ::simdty::i32x4;
+    /// The `llvm.convertsu.v4i32.i16` intrinsic.
+    #[link_name = "llvm.convertsu.v4i32.i16"]
+    pub fn convertsu_v4i32_i16(a: i16, b: i32, c: i32) -> ::simdty::i32x4;
+    /// The `llvm.convertsu.v4i32.v4i32` intrinsic.
+    #[link_name = "llvm.convertsu.v4i32.v4i32"]
+    pub fn convertsu_v4i32_v4i32(a: ::simdty::i32x4, b: i32, c: i32) -> ::simdty::i32x4;
+    /// The `llvm.convertsu.v4i32.i32` intrinsic.
+    #[link_name = "llvm.convertsu.v4i32.i32"]
+    pub fn convertsu_v4i32_i32(a: i32, b: i32, c: i32) -> ::simdty::i32x4;
+    /// The `llvm.convertsu.v4i32.v2i64` intrinsic.
+    #[link_name = "llvm.convertsu.v4i32.v2i64"]
+    pub fn convertsu_v4i32_v2i64(a: ::simdty::i64x2, b: i32, c: i32) -> ::simdty::i32x4;
+    /// The `llvm.convertsu.v4i32.i64` intrinsic.
+    #[link_name = "llvm.convertsu.v4i32.i64"]
+    pub fn convertsu_v4i32_i64(a: i64, b: i32, c: i32) -> ::simdty::i32x4;
+    /// The `llvm.convertsu.i32.v16i8` intrinsic.
+    #[link_name = "llvm.convertsu.i32.v16i8"]
+    pub fn convertsu_i32_v16i8(a: ::simdty::i8x16, b: i32, c: i32) -> i32;
+    /// The `llvm.convertsu.i32.i8` intrinsic.
+    #[link_name = "llvm.convertsu.i32.i8"]
+    pub fn convertsu_i32_i8(a: i8, b: i32, c: i32) -> i32;
+    /// The `llvm.convertsu.i32.v8i16` intrinsic.
+    #[link_name = "llvm.convertsu.i32.v8i16"]
+    pub fn convertsu_i32_v8i16(a: ::simdty::i16x8, b: i32, c: i32) -> i32;
+    /// The `llvm.convertsu.i32.i16` intrinsic.
+    #[link_name = "llvm.convertsu.i32.i16"]
+    pub fn convertsu_i32_i16(a: i16, b: i32, c: i32) -> i32;
+    /// The `llvm.convertsu.i32.v4i32` intrinsic.
+    #[link_name = "llvm.convertsu.i32.v4i32"]
+    pub fn convertsu_i32_v4i32(a: ::simdty::i32x4, b: i32, c: i32) -> i32;
+    /// The `llvm.convertsu.i32.i32` intrinsic.
+    #[link_name = "llvm.convertsu.i32.i32"]
+    pub fn convertsu_i32_i32(a: i32, b: i32, c: i32) -> i32;
+    /// The `llvm.convertsu.i32.v2i64` intrinsic.
+    #[link_name = "llvm.convertsu.i32.v2i64"]
+    pub fn convertsu_i32_v2i64(a: ::simdty::i64x2, b: i32, c: i32) -> i32;
+    /// The `llvm.convertsu.i32.i64` intrinsic.
+    #[link_name = "llvm.convertsu.i32.i64"]
+    pub fn convertsu_i32_i64(a: i64, b: i32, c: i32) -> i32;
+    /// The `llvm.convertsu.v2i64.v16i8` intrinsic.
+    #[link_name = "llvm.convertsu.v2i64.v16i8"]
+    pub fn convertsu_v2i64_v16i8(a: ::simdty::i8x16, b: i32, c: i32) -> ::simdty::i64x2;
+    /// The `llvm.convertsu.v2i64.i8` intrinsic.
+    #[link_name = "llvm.convertsu.v2i64.i8"]
+    pub fn convertsu_v2i64_i8(a: i8, b: i32, c: i32) -> ::simdty::i64x2;
+    /// The `llvm.convertsu.v2i64.v8i16` intrinsic.
+    #[link_name = "llvm.convertsu.v2i64.v8i16"]
+    pub fn convertsu_v2i64_v8i16(a: ::simdty::i16x8, b: i32, c: i32) -> ::simdty::i64x2;
+    /// The `llvm.convertsu.v2i64.i16` intrinsic.
+    #[link_name = "llvm.convertsu.v2i64.i16"]
+    pub fn convertsu_v2i64_i16(a: i16, b: i32, c: i32) -> ::simdty::i64x2;
+    /// The `llvm.convertsu.v2i64.v4i32` intrinsic.
+    #[link_name = "llvm.convertsu.v2i64.v4i32"]
+    pub fn convertsu_v2i64_v4i32(a: ::simdty::i32x4, b: i32, c: i32) -> ::simdty::i64x2;
+    /// The `llvm.convertsu.v2i64.i32` intrinsic.
+    #[link_name = "llvm.convertsu.v2i64.i32"]
+    pub fn convertsu_v2i64_i32(a: i32, b: i32, c: i32) -> ::simdty::i64x2;
+    /// The `llvm.convertsu.v2i64.v2i64` intrinsic.
+    #[link_name = "llvm.convertsu.v2i64.v2i64"]
+    pub fn convertsu_v2i64_v2i64(a: ::simdty::i64x2, b: i32, c: i32) -> ::simdty::i64x2;
+    /// The `llvm.convertsu.v2i64.i64` intrinsic.
+    #[link_name = "llvm.convertsu.v2i64.i64"]
+    pub fn convertsu_v2i64_i64(a: i64, b: i32, c: i32) -> ::simdty::i64x2;
+    /// The `llvm.convertsu.i64.v16i8` intrinsic.
+    #[link_name = "llvm.convertsu.i64.v16i8"]
+    pub fn convertsu_i64_v16i8(a: ::simdty::i8x16, b: i32, c: i32) -> i64;
+    /// The `llvm.convertsu.i64.i8` intrinsic.
+    #[link_name = "llvm.convertsu.i64.i8"]
+    pub fn convertsu_i64_i8(a: i8, b: i32, c: i32) -> i64;
+    /// The `llvm.convertsu.i64.v8i16` intrinsic.
+    #[link_name = "llvm.convertsu.i64.v8i16"]
+    pub fn convertsu_i64_v8i16(a: ::simdty::i16x8, b: i32, c: i32) -> i64;
+    /// The `llvm.convertsu.i64.i16` intrinsic.
+    #[link_name = "llvm.convertsu.i64.i16"]
+    pub fn convertsu_i64_i16(a: i16, b: i32, c: i32) -> i64;
+    /// The `llvm.convertsu.i64.v4i32` intrinsic.
+    #[link_name = "llvm.convertsu.i64.v4i32"]
+    pub fn convertsu_i64_v4i32(a: ::simdty::i32x4, b: i32, c: i32) -> i64;
+    /// The `llvm.convertsu.i64.i32` intrinsic.
+    #[link_name = "llvm.convertsu.i64.i32"]
+    pub fn convertsu_i64_i32(a: i32, b: i32, c: i32) -> i64;
+    /// The `llvm.convertsu.i64.v2i64` intrinsic.
+    #[link_name = "llvm.convertsu.i64.v2i64"]
+    pub fn convertsu_i64_v2i64(a: ::simdty::i64x2, b: i32, c: i32) -> i64;
+    /// The `llvm.convertsu.i64.i64` intrinsic.
+    #[link_name = "llvm.convertsu.i64.i64"]
+    pub fn convertsu_i64_i64(a: i64, b: i32, c: i32) -> i64;
+    /// The `llvm.convertus.v16i8.v16i8` intrinsic.
+    #[link_name = "llvm.convertus.v16i8.v16i8"]
+    pub fn convertus_v16i8_v16i8(a: ::simdty::i8x16, b: i32, c: i32) -> ::simdty::i8x16;
+    /// The `llvm.convertus.v16i8.i8` intrinsic.
+    #[link_name = "llvm.convertus.v16i8.i8"]
+    pub fn convertus_v16i8_i8(a: i8, b: i32, c: i32) -> ::simdty::i8x16;
+    /// The `llvm.convertus.v16i8.v8i16` intrinsic.
+    #[link_name = "llvm.convertus.v16i8.v8i16"]
+    pub fn convertus_v16i8_v8i16(a: ::simdty::i16x8, b: i32, c: i32) -> ::simdty::i8x16;
+    /// The `llvm.convertus.v16i8.i16` intrinsic.
+    #[link_name = "llvm.convertus.v16i8.i16"]
+    pub fn convertus_v16i8_i16(a: i16, b: i32, c: i32) -> ::simdty::i8x16;
+    /// The `llvm.convertus.v16i8.v4i32` intrinsic.
+    #[link_name = "llvm.convertus.v16i8.v4i32"]
+    pub fn convertus_v16i8_v4i32(a: ::simdty::i32x4, b: i32, c: i32) -> ::simdty::i8x16;
+    /// The `llvm.convertus.v16i8.i32` intrinsic.
+    #[link_name = "llvm.convertus.v16i8.i32"]
+    pub fn convertus_v16i8_i32(a: i32, b: i32, c: i32) -> ::simdty::i8x16;
+    /// The `llvm.convertus.v16i8.v2i64` intrinsic.
+    #[link_name = "llvm.convertus.v16i8.v2i64"]
+    pub fn convertus_v16i8_v2i64(a: ::simdty::i64x2, b: i32, c: i32) -> ::simdty::i8x16;
+    /// The `llvm.convertus.v16i8.i64` intrinsic.
+    #[link_name = "llvm.convertus.v16i8.i64"]
+    pub fn convertus_v16i8_i64(a: i64, b: i32, c: i32) -> ::simdty::i8x16;
+    /// The `llvm.convertus.i8.v16i8` intrinsic.
+    #[link_name = "llvm.convertus.i8.v16i8"]
+    pub fn convertus_i8_v16i8(a: ::simdty::i8x16, b: i32, c: i32) -> i8;
+    /// The `llvm.convertus.i8.i8` intrinsic.
+    #[link_name = "llvm.convertus.i8.i8"]
+    pub fn convertus_i8_i8(a: i8, b: i32, c: i32) -> i8;
+    /// The `llvm.convertus.i8.v8i16` intrinsic.
+    #[link_name = "llvm.convertus.i8.v8i16"]
+    pub fn convertus_i8_v8i16(a: ::simdty::i16x8, b: i32, c: i32) -> i8;
+    /// The `llvm.convertus.i8.i16` intrinsic.
+    #[link_name = "llvm.convertus.i8.i16"]
+    pub fn convertus_i8_i16(a: i16, b: i32, c: i32) -> i8;
+    /// The `llvm.convertus.i8.v4i32` intrinsic.
+    #[link_name = "llvm.convertus.i8.v4i32"]
+    pub fn convertus_i8_v4i32(a: ::simdty::i32x4, b: i32, c: i32) -> i8;
+    /// The `llvm.convertus.i8.i32` intrinsic.
+    #[link_name = "llvm.convertus.i8.i32"]
+    pub fn convertus_i8_i32(a: i32, b: i32, c: i32) -> i8;
+    /// The `llvm.convertus.i8.v2i64` intrinsic.
+    #[link_name = "llvm.convertus.i8.v2i64"]
+    pub fn convertus_i8_v2i64(a: ::simdty::i64x2, b: i32, c: i32) -> i8;
+    /// The `llvm.convertus.i8.i64` intrinsic.
+    #[link_name = "llvm.convertus.i8.i64"]
+    pub fn convertus_i8_i64(a: i64, b: i32, c: i32) -> i8;
+    /// The `llvm.convertus.v8i16.v16i8` intrinsic.
+    #[link_name = "llvm.convertus.v8i16.v16i8"]
+    pub fn convertus_v8i16_v16i8(a: ::simdty::i8x16, b: i32, c: i32) -> ::simdty::i16x8;
+    /// The `llvm.convertus.v8i16.i8` intrinsic.
+    #[link_name = "llvm.convertus.v8i16.i8"]
+    pub fn convertus_v8i16_i8(a: i8, b: i32, c: i32) -> ::simdty::i16x8;
+    /// The `llvm.convertus.v8i16.v8i16` intrinsic.
+    #[link_name = "llvm.convertus.v8i16.v8i16"]
+    pub fn convertus_v8i16_v8i16(a: ::simdty::i16x8, b: i32, c: i32) -> ::simdty::i16x8;
+    /// The `llvm.convertus.v8i16.i16` intrinsic.
+    #[link_name = "llvm.convertus.v8i16.i16"]
+    pub fn convertus_v8i16_i16(a: i16, b: i32, c: i32) -> ::simdty::i16x8;
+    /// The `llvm.convertus.v8i16.v4i32` intrinsic.
+    #[link_name = "llvm.convertus.v8i16.v4i32"]
+    pub fn convertus_v8i16_v4i32(a: ::simdty::i32x4, b: i32, c: i32) -> ::simdty::i16x8;
+    /// The `llvm.convertus.v8i16.i32` intrinsic.
+    #[link_name = "llvm.convertus.v8i16.i32"]
+    pub fn convertus_v8i16_i32(a: i32, b: i32, c: i32) -> ::simdty::i16x8;
+    /// The `llvm.convertus.v8i16.v2i64` intrinsic.
+    #[link_name = "llvm.convertus.v8i16.v2i64"]
+    pub fn convertus_v8i16_v2i64(a: ::simdty::i64x2, b: i32, c: i32) -> ::simdty::i16x8;
+    /// The `llvm.convertus.v8i16.i64` intrinsic.
+    #[link_name = "llvm.convertus.v8i16.i64"]
+    pub fn convertus_v8i16_i64(a: i64, b: i32, c: i32) -> ::simdty::i16x8;
+    /// The `llvm.convertus.i16.v16i8` intrinsic.
+    #[link_name = "llvm.convertus.i16.v16i8"]
+    pub fn convertus_i16_v16i8(a: ::simdty::i8x16, b: i32, c: i32) -> i16;
+    /// The `llvm.convertus.i16.i8` intrinsic.
+    #[link_name = "llvm.convertus.i16.i8"]
+    pub fn convertus_i16_i8(a: i8, b: i32, c: i32) -> i16;
+    /// The `llvm.convertus.i16.v8i16` intrinsic.
+    #[link_name = "llvm.convertus.i16.v8i16"]
+    pub fn convertus_i16_v8i16(a: ::simdty::i16x8, b: i32, c: i32) -> i16;
+    /// The `llvm.convertus.i16.i16` intrinsic.
+    #[link_name = "llvm.convertus.i16.i16"]
+    pub fn convertus_i16_i16(a: i16, b: i32, c: i32) -> i16;
+    /// The `llvm.convertus.i16.v4i32` intrinsic.
+    #[link_name = "llvm.convertus.i16.v4i32"]
+    pub fn convertus_i16_v4i32(a: ::simdty::i32x4, b: i32, c: i32) -> i16;
+    /// The `llvm.convertus.i16.i32` intrinsic.
+    #[link_name = "llvm.convertus.i16.i32"]
+    pub fn convertus_i16_i32(a: i32, b: i32, c: i32) -> i16;
+    /// The `llvm.convertus.i16.v2i64` intrinsic.
+    #[link_name = "llvm.convertus.i16.v2i64"]
+    pub fn convertus_i16_v2i64(a: ::simdty::i64x2, b: i32, c: i32) -> i16;
+    /// The `llvm.convertus.i16.i64` intrinsic.
+    #[link_name = "llvm.convertus.i16.i64"]
+    pub fn convertus_i16_i64(a: i64, b: i32, c: i32) -> i16;
+    /// The `llvm.convertus.v4i32.v16i8` intrinsic.
+    #[link_name = "llvm.convertus.v4i32.v16i8"]
+    pub fn convertus_v4i32_v16i8(a: ::simdty::i8x16, b: i32, c: i32) -> ::simdty::i32x4;
+    /// The `llvm.convertus.v4i32.i8` intrinsic.
+    #[link_name = "llvm.convertus.v4i32.i8"]
+    pub fn convertus_v4i32_i8(a: i8, b: i32, c: i32) -> ::simdty::i32x4;
+    /// The `llvm.convertus.v4i32.v8i16` intrinsic.
+    #[link_name = "llvm.convertus.v4i32.v8i16"]
+    pub fn convertus_v4i32_v8i16(a: ::simdty::i16x8, b: i32, c: i32) -> ::simdty::i32x4;
+    /// The `llvm.convertus.v4i32.i16` intrinsic.
+    #[link_name = "llvm.convertus.v4i32.i16"]
+    pub fn convertus_v4i32_i16(a: i16, b: i32, c: i32) -> ::simdty::i32x4;
+    /// The `llvm.convertus.v4i32.v4i32` intrinsic.
+    #[link_name = "llvm.convertus.v4i32.v4i32"]
+    pub fn convertus_v4i32_v4i32(a: ::simdty::i32x4, b: i32, c: i32) -> ::simdty::i32x4;
+    /// The `llvm.convertus.v4i32.i32` intrinsic.
+    #[link_name = "llvm.convertus.v4i32.i32"]
+    pub fn convertus_v4i32_i32(a: i32, b: i32, c: i32) -> ::simdty::i32x4;
+    /// The `llvm.convertus.v4i32.v2i64` intrinsic.
+    #[link_name = "llvm.convertus.v4i32.v2i64"]
+    pub fn convertus_v4i32_v2i64(a: ::simdty::i64x2, b: i32, c: i32) -> ::simdty::i32x4;
+    /// The `llvm.convertus.v4i32.i64` intrinsic.
+    #[link_name = "llvm.convertus.v4i32.i64"]
+    pub fn convertus_v4i32_i64(a: i64, b: i32, c: i32) -> ::simdty::i32x4;
+    /// The `llvm.convertus.i32.v16i8` intrinsic.
+    #[link_name = "llvm.convertus.i32.v16i8"]
+    pub fn convertus_i32_v16i8(a: ::simdty::i8x16, b: i32, c: i32) -> i32;
+    /// The `llvm.convertus.i32.i8` intrinsic.
+    #[link_name = "llvm.convertus.i32.i8"]
+    pub fn convertus_i32_i8(a: i8, b: i32, c: i32) -> i32;
+    /// The `llvm.convertus.i32.v8i16` intrinsic.
+    #[link_name = "llvm.convertus.i32.v8i16"]
+    pub fn convertus_i32_v8i16(a: ::simdty::i16x8, b: i32, c: i32) -> i32;
+    /// The `llvm.convertus.i32.i16` intrinsic.
+    #[link_name = "llvm.convertus.i32.i16"]
+    pub fn convertus_i32_i16(a: i16, b: i32, c: i32) -> i32;
+    /// The `llvm.convertus.i32.v4i32` intrinsic.
+    #[link_name = "llvm.convertus.i32.v4i32"]
+    pub fn convertus_i32_v4i32(a: ::simdty::i32x4, b: i32, c: i32) -> i32;
+    /// The `llvm.convertus.i32.i32` intrinsic.
+    #[link_name = "llvm.convertus.i32.i32"]
+    pub fn convertus_i32_i32(a: i32, b: i32, c: i32) -> i32;
+    /// The `llvm.convertus.i32.v2i64` intrinsic.
+    #[link_name = "llvm.convertus.i32.v2i64"]
+    pub fn convertus_i32_v2i64(a: ::simdty::i64x2, b: i32, c: i32) -> i32;
+    /// The `llvm.convertus.i32.i64` intrinsic.
+    #[link_name = "llvm.convertus.i32.i64"]
+    pub fn convertus_i32_i64(a: i64, b: i32, c: i32) -> i32;
+    /// The `llvm.convertus.v2i64.v16i8` intrinsic.
+    #[link_name = "llvm.convertus.v2i64.v16i8"]
+    pub fn convertus_v2i64_v16i8(a: ::simdty::i8x16, b: i32, c: i32) -> ::simdty::i64x2;
+    /// The `llvm.convertus.v2i64.i8` intrinsic.
+    #[link_name = "llvm.convertus.v2i64.i8"]
+    pub fn convertus_v2i64_i8(a: i8, b: i32, c: i32) -> ::simdty::i64x2;
+    /// The `llvm.convertus.v2i64.v8i16` intrinsic.
+    #[link_name = "llvm.convertus.v2i64.v8i16"]
+    pub fn convertus_v2i64_v8i16(a: ::simdty::i16x8, b: i32, c: i32) -> ::simdty::i64x2;
+    /// The `llvm.convertus.v2i64.i16` intrinsic.
+    #[link_name = "llvm.convertus.v2i64.i16"]
+    pub fn convertus_v2i64_i16(a: i16, b: i32, c: i32) -> ::simdty::i64x2;
+    /// The `llvm.convertus.v2i64.v4i32` intrinsic.
+    #[link_name = "llvm.convertus.v2i64.v4i32"]
+    pub fn convertus_v2i64_v4i32(a: ::simdty::i32x4, b: i32, c: i32) -> ::simdty::i64x2;
+    /// The `llvm.convertus.v2i64.i32` intrinsic.
+    #[link_name = "llvm.convertus.v2i64.i32"]
+    pub fn convertus_v2i64_i32(a: i32, b: i32, c: i32) -> ::simdty::i64x2;
+    /// The `llvm.convertus.v2i64.v2i64` intrinsic.
+    #[link_name = "llvm.convertus.v2i64.v2i64"]
+    pub fn convertus_v2i64_v2i64(a: ::simdty::i64x2, b: i32, c: i32) -> ::simdty::i64x2;
+    /// The `llvm.convertus.v2i64.i64` intrinsic.
+    #[link_name = "llvm.convertus.v2i64.i64"]
+    pub fn convertus_v2i64_i64(a: i64, b: i32, c: i32) -> ::simdty::i64x2;
+    /// The `llvm.convertus.i64.v16i8` intrinsic.
+    #[link_name = "llvm.convertus.i64.v16i8"]
+    pub fn convertus_i64_v16i8(a: ::simdty::i8x16, b: i32, c: i32) -> i64;
+    /// The `llvm.convertus.i64.i8` intrinsic.
+    #[link_name = "llvm.convertus.i64.i8"]
+    pub fn convertus_i64_i8(a: i8, b: i32, c: i32) -> i64;
+    /// The `llvm.convertus.i64.v8i16` intrinsic.
+    #[link_name = "llvm.convertus.i64.v8i16"]
+    pub fn convertus_i64_v8i16(a: ::simdty::i16x8, b: i32, c: i32) -> i64;
+    /// The `llvm.convertus.i64.i16` intrinsic.
+    #[link_name = "llvm.convertus.i64.i16"]
+    pub fn convertus_i64_i16(a: i16, b: i32, c: i32) -> i64;
+    /// The `llvm.convertus.i64.v4i32` intrinsic.
+    #[link_name = "llvm.convertus.i64.v4i32"]
+    pub fn convertus_i64_v4i32(a: ::simdty::i32x4, b: i32, c: i32) -> i64;
+    /// The `llvm.convertus.i64.i32` intrinsic.
+    #[link_name = "llvm.convertus.i64.i32"]
+    pub fn convertus_i64_i32(a: i32, b: i32, c: i32) -> i64;
+    /// The `llvm.convertus.i64.v2i64` intrinsic.
+    #[link_name = "llvm.convertus.i64.v2i64"]
+    pub fn convertus_i64_v2i64(a: ::simdty::i64x2, b: i32, c: i32) -> i64;
+    /// The `llvm.convertus.i64.i64` intrinsic.
+    #[link_name = "llvm.convertus.i64.i64"]
+    pub fn convertus_i64_i64(a: i64, b: i32, c: i32) -> i64;
+    /// The `llvm.convertuu.v16i8.v16i8` intrinsic.
+    #[link_name = "llvm.convertuu.v16i8.v16i8"]
+    pub fn convertuu_v16i8_v16i8(a: ::simdty::i8x16, b: i32, c: i32) -> ::simdty::i8x16;
+    /// The `llvm.convertuu.v16i8.i8` intrinsic.
+    #[link_name = "llvm.convertuu.v16i8.i8"]
+    pub fn convertuu_v16i8_i8(a: i8, b: i32, c: i32) -> ::simdty::i8x16;
+    /// The `llvm.convertuu.v16i8.v8i16` intrinsic.
+    #[link_name = "llvm.convertuu.v16i8.v8i16"]
+    pub fn convertuu_v16i8_v8i16(a: ::simdty::i16x8, b: i32, c: i32) -> ::simdty::i8x16;
+    /// The `llvm.convertuu.v16i8.i16` intrinsic.
+    #[link_name = "llvm.convertuu.v16i8.i16"]
+    pub fn convertuu_v16i8_i16(a: i16, b: i32, c: i32) -> ::simdty::i8x16;
+    /// The `llvm.convertuu.v16i8.v4i32` intrinsic.
+    #[link_name = "llvm.convertuu.v16i8.v4i32"]
+    pub fn convertuu_v16i8_v4i32(a: ::simdty::i32x4, b: i32, c: i32) -> ::simdty::i8x16;
+    /// The `llvm.convertuu.v16i8.i32` intrinsic.
+    #[link_name = "llvm.convertuu.v16i8.i32"]
+    pub fn convertuu_v16i8_i32(a: i32, b: i32, c: i32) -> ::simdty::i8x16;
+    /// The `llvm.convertuu.v16i8.v2i64` intrinsic.
+    #[link_name = "llvm.convertuu.v16i8.v2i64"]
+    pub fn convertuu_v16i8_v2i64(a: ::simdty::i64x2, b: i32, c: i32) -> ::simdty::i8x16;
+    /// The `llvm.convertuu.v16i8.i64` intrinsic.
+    #[link_name = "llvm.convertuu.v16i8.i64"]
+    pub fn convertuu_v16i8_i64(a: i64, b: i32, c: i32) -> ::simdty::i8x16;
+    /// The `llvm.convertuu.i8.v16i8` intrinsic.
+    #[link_name = "llvm.convertuu.i8.v16i8"]
+    pub fn convertuu_i8_v16i8(a: ::simdty::i8x16, b: i32, c: i32) -> i8;
+    /// The `llvm.convertuu.i8.i8` intrinsic.
+    #[link_name = "llvm.convertuu.i8.i8"]
+    pub fn convertuu_i8_i8(a: i8, b: i32, c: i32) -> i8;
+    /// The `llvm.convertuu.i8.v8i16` intrinsic.
+    #[link_name = "llvm.convertuu.i8.v8i16"]
+    pub fn convertuu_i8_v8i16(a: ::simdty::i16x8, b: i32, c: i32) -> i8;
+    /// The `llvm.convertuu.i8.i16` intrinsic.
+    #[link_name = "llvm.convertuu.i8.i16"]
+    pub fn convertuu_i8_i16(a: i16, b: i32, c: i32) -> i8;
+    /// The `llvm.convertuu.i8.v4i32` intrinsic.
+    #[link_name = "llvm.convertuu.i8.v4i32"]
+    pub fn convertuu_i8_v4i32(a: ::simdty::i32x4, b: i32, c: i32) -> i8;
+    /// The `llvm.convertuu.i8.i32` intrinsic.
+    #[link_name = "llvm.convertuu.i8.i32"]
+    pub fn convertuu_i8_i32(a: i32, b: i32, c: i32) -> i8;
+    /// The `llvm.convertuu.i8.v2i64` intrinsic.
+    #[link_name = "llvm.convertuu.i8.v2i64"]
+    pub fn convertuu_i8_v2i64(a: ::simdty::i64x2, b: i32, c: i32) -> i8;
+    /// The `llvm.convertuu.i8.i64` intrinsic.
+    #[link_name = "llvm.convertuu.i8.i64"]
+    pub fn convertuu_i8_i64(a: i64, b: i32, c: i32) -> i8;
+    /// The `llvm.convertuu.v8i16.v16i8` intrinsic.
+    #[link_name = "llvm.convertuu.v8i16.v16i8"]
+    pub fn convertuu_v8i16_v16i8(a: ::simdty::i8x16, b: i32, c: i32) -> ::simdty::i16x8;
+    /// The `llvm.convertuu.v8i16.i8` intrinsic.
+    #[link_name = "llvm.convertuu.v8i16.i8"]
+    pub fn convertuu_v8i16_i8(a: i8, b: i32, c: i32) -> ::simdty::i16x8;
+    /// The `llvm.convertuu.v8i16.v8i16` intrinsic.
+    #[link_name = "llvm.convertuu.v8i16.v8i16"]
+    pub fn convertuu_v8i16_v8i16(a: ::simdty::i16x8, b: i32, c: i32) -> ::simdty::i16x8;
+    /// The `llvm.convertuu.v8i16.i16` intrinsic.
+    #[link_name = "llvm.convertuu.v8i16.i16"]
+    pub fn convertuu_v8i16_i16(a: i16, b: i32, c: i32) -> ::simdty::i16x8;
+    /// The `llvm.convertuu.v8i16.v4i32` intrinsic.
+    #[link_name = "llvm.convertuu.v8i16.v4i32"]
+    pub fn convertuu_v8i16_v4i32(a: ::simdty::i32x4, b: i32, c: i32) -> ::simdty::i16x8;
+    /// The `llvm.convertuu.v8i16.i32` intrinsic.
+    #[link_name = "llvm.convertuu.v8i16.i32"]
+    pub fn convertuu_v8i16_i32(a: i32, b: i32, c: i32) -> ::simdty::i16x8;
+    /// The `llvm.convertuu.v8i16.v2i64` intrinsic.
+    #[link_name = "llvm.convertuu.v8i16.v2i64"]
+    pub fn convertuu_v8i16_v2i64(a: ::simdty::i64x2, b: i32, c: i32) -> ::simdty::i16x8;
+    /// The `llvm.convertuu.v8i16.i64` intrinsic.
+    #[link_name = "llvm.convertuu.v8i16.i64"]
+    pub fn convertuu_v8i16_i64(a: i64, b: i32, c: i32) -> ::simdty::i16x8;
+    /// The `llvm.convertuu.i16.v16i8` intrinsic.
+    #[link_name = "llvm.convertuu.i16.v16i8"]
+    pub fn convertuu_i16_v16i8(a: ::simdty::i8x16, b: i32, c: i32) -> i16;
+    /// The `llvm.convertuu.i16.i8` intrinsic.
+    #[link_name = "llvm.convertuu.i16.i8"]
+    pub fn convertuu_i16_i8(a: i8, b: i32, c: i32) -> i16;
+    /// The `llvm.convertuu.i16.v8i16` intrinsic.
+    #[link_name = "llvm.convertuu.i16.v8i16"]
+    pub fn convertuu_i16_v8i16(a: ::simdty::i16x8, b: i32, c: i32) -> i16;
+    /// The `llvm.convertuu.i16.i16` intrinsic.
+    #[link_name = "llvm.convertuu.i16.i16"]
+    pub fn convertuu_i16_i16(a: i16, b: i32, c: i32) -> i16;
+    /// The `llvm.convertuu.i16.v4i32` intrinsic.
+    #[link_name = "llvm.convertuu.i16.v4i32"]
+    pub fn convertuu_i16_v4i32(a: ::simdty::i32x4, b: i32, c: i32) -> i16;
+    /// The `llvm.convertuu.i16.i32` intrinsic.
+    #[link_name = "llvm.convertuu.i16.i32"]
+    pub fn convertuu_i16_i32(a: i32, b: i32, c: i32) -> i16;
+    /// The `llvm.convertuu.i16.v2i64` intrinsic.
+    #[link_name = "llvm.convertuu.i16.v2i64"]
+    pub fn convertuu_i16_v2i64(a: ::simdty::i64x2, b: i32, c: i32) -> i16;
+    /// The `llvm.convertuu.i16.i64` intrinsic.
+    #[link_name = "llvm.convertuu.i16.i64"]
+    pub fn convertuu_i16_i64(a: i64, b: i32, c: i32) -> i16;
+    /// The `llvm.convertuu.v4i32.v16i8` intrinsic.
+    #[link_name = "llvm.convertuu.v4i32.v16i8"]
+    pub fn convertuu_v4i32_v16i8(a: ::simdty::i8x16, b: i32, c: i32) -> ::simdty::i32x4;
+    /// The `llvm.convertuu.v4i32.i8` intrinsic.
+    #[link_name = "llvm.convertuu.v4i32.i8"]
+    pub fn convertuu_v4i32_i8(a: i8, b: i32, c: i32) -> ::simdty::i32x4;
+    /// The `llvm.convertuu.v4i32.v8i16` intrinsic.
+    #[link_name = "llvm.convertuu.v4i32.v8i16"]
+    pub fn convertuu_v4i32_v8i16(a: ::simdty::i16x8, b: i32, c: i32) -> ::simdty::i32x4;
+    /// The `llvm.convertuu.v4i32.i16` intrinsic.
+    #[link_name = "llvm.convertuu.v4i32.i16"]
+    pub fn convertuu_v4i32_i16(a: i16, b: i32, c: i32) -> ::simdty::i32x4;
+    /// The `llvm.convertuu.v4i32.v4i32` intrinsic.
+    #[link_name = "llvm.convertuu.v4i32.v4i32"]
+    pub fn convertuu_v4i32_v4i32(a: ::simdty::i32x4, b: i32, c: i32) -> ::simdty::i32x4;
+    /// The `llvm.convertuu.v4i32.i32` intrinsic.
+    #[link_name = "llvm.convertuu.v4i32.i32"]
+    pub fn convertuu_v4i32_i32(a: i32, b: i32, c: i32) -> ::simdty::i32x4;
+    /// The `llvm.convertuu.v4i32.v2i64` intrinsic.
+    #[link_name = "llvm.convertuu.v4i32.v2i64"]
+    pub fn convertuu_v4i32_v2i64(a: ::simdty::i64x2, b: i32, c: i32) -> ::simdty::i32x4;
+    /// The `llvm.convertuu.v4i32.i64` intrinsic.
+    #[link_name = "llvm.convertuu.v4i32.i64"]
+    pub fn convertuu_v4i32_i64(a: i64, b: i32, c: i32) -> ::simdty::i32x4;
+    /// The `llvm.convertuu.i32.v16i8` intrinsic.
+    #[link_name = "llvm.convertuu.i32.v16i8"]
+    pub fn convertuu_i32_v16i8(a: ::simdty::i8x16, b: i32, c: i32) -> i32;
+    /// The `llvm.convertuu.i32.i8` intrinsic.
+    #[link_name = "llvm.convertuu.i32.i8"]
+    pub fn convertuu_i32_i8(a: i8, b: i32, c: i32) -> i32;
+    /// The `llvm.convertuu.i32.v8i16` intrinsic.
+    #[link_name = "llvm.convertuu.i32.v8i16"]
+    pub fn convertuu_i32_v8i16(a: ::simdty::i16x8, b: i32, c: i32) -> i32;
+    /// The `llvm.convertuu.i32.i16` intrinsic.
+    #[link_name = "llvm.convertuu.i32.i16"]
+    pub fn convertuu_i32_i16(a: i16, b: i32, c: i32) -> i32;
+    /// The `llvm.convertuu.i32.v4i32` intrinsic.
+    #[link_name = "llvm.convertuu.i32.v4i32"]
+    pub fn convertuu_i32_v4i32(a: ::simdty::i32x4, b: i32, c: i32) -> i32;
+    /// The `llvm.convertuu.i32.i32` intrinsic.
+    #[link_name = "llvm.convertuu.i32.i32"]
+    pub fn convertuu_i32_i32(a: i32, b: i32, c: i32) -> i32;
+    /// The `llvm.convertuu.i32.v2i64` intrinsic.
+    #[link_name = "llvm.convertuu.i32.v2i64"]
+    pub fn convertuu_i32_v2i64(a: ::simdty::i64x2, b: i32, c: i32) -> i32;
+    /// The `llvm.convertuu.i32.i64` intrinsic.
+    #[link_name = "llvm.convertuu.i32.i64"]
+    pub fn convertuu_i32_i64(a: i64, b: i32, c: i32) -> i32;
+    /// The `llvm.convertuu.v2i64.v16i8` intrinsic.
+    #[link_name = "llvm.convertuu.v2i64.v16i8"]
+    pub fn convertuu_v2i64_v16i8(a: ::simdty::i8x16, b: i32, c: i32) -> ::simdty::i64x2;
+    /// The `llvm.convertuu.v2i64.i8` intrinsic.
+    #[link_name = "llvm.convertuu.v2i64.i8"]
+    pub fn convertuu_v2i64_i8(a: i8, b: i32, c: i32) -> ::simdty::i64x2;
+    /// The `llvm.convertuu.v2i64.v8i16` intrinsic.
+    #[link_name = "llvm.convertuu.v2i64.v8i16"]
+    pub fn convertuu_v2i64_v8i16(a: ::simdty::i16x8, b: i32, c: i32) -> ::simdty::i64x2;
+    /// The `llvm.convertuu.v2i64.i16` intrinsic.
+    #[link_name = "llvm.convertuu.v2i64.i16"]
+    pub fn convertuu_v2i64_i16(a: i16, b: i32, c: i32) -> ::simdty::i64x2;
+    /// The `llvm.convertuu.v2i64.v4i32` intrinsic.
+    #[link_name = "llvm.convertuu.v2i64.v4i32"]
+    pub fn convertuu_v2i64_v4i32(a: ::simdty::i32x4, b: i32, c: i32) -> ::simdty::i64x2;
+    /// The `llvm.convertuu.v2i64.i32` intrinsic.
+    #[link_name = "llvm.convertuu.v2i64.i32"]
+    pub fn convertuu_v2i64_i32(a: i32, b: i32, c: i32) -> ::simdty::i64x2;
+    /// The `llvm.convertuu.v2i64.v2i64` intrinsic.
+    #[link_name = "llvm.convertuu.v2i64.v2i64"]
+    pub fn convertuu_v2i64_v2i64(a: ::simdty::i64x2, b: i32, c: i32) -> ::simdty::i64x2;
+    /// The `llvm.convertuu.v2i64.i64` intrinsic.
+    #[link_name = "llvm.convertuu.v2i64.i64"]
+    pub fn convertuu_v2i64_i64(a: i64, b: i32, c: i32) -> ::simdty::i64x2;
+    /// The `llvm.convertuu.i64.v16i8` intrinsic.
+    #[link_name = "llvm.convertuu.i64.v16i8"]
+    pub fn convertuu_i64_v16i8(a: ::simdty::i8x16, b: i32, c: i32) -> i64;
+    /// The `llvm.convertuu.i64.i8` intrinsic.
+    #[link_name = "llvm.convertuu.i64.i8"]
+    pub fn convertuu_i64_i8(a: i8, b: i32, c: i32) -> i64;
+    /// The `llvm.convertuu.i64.v8i16` intrinsic.
+    #[link_name = "llvm.convertuu.i64.v8i16"]
+    pub fn convertuu_i64_v8i16(a: ::simdty::i16x8, b: i32, c: i32) -> i64;
+    /// The `llvm.convertuu.i64.i16` intrinsic.
+    #[link_name = "llvm.convertuu.i64.i16"]
+    pub fn convertuu_i64_i16(a: i16, b: i32, c: i32) -> i64;
+    /// The `llvm.convertuu.i64.v4i32` intrinsic.
+    #[link_name = "llvm.convertuu.i64.v4i32"]
+    pub fn convertuu_i64_v4i32(a: ::simdty::i32x4, b: i32, c: i32) -> i64;
+    /// The `llvm.convertuu.i64.i32` intrinsic.
+    #[link_name = "llvm.convertuu.i64.i32"]
+    pub fn convertuu_i64_i32(a: i32, b: i32, c: i32) -> i64;
+    /// The `llvm.convertuu.i64.v2i64` intrinsic.
+    #[link_name = "llvm.convertuu.i64.v2i64"]
+    pub fn convertuu_i64_v2i64(a: ::simdty::i64x2, b: i32, c: i32) -> i64;
+    /// The `llvm.convertuu.i64.i64` intrinsic.
+    #[link_name = "llvm.convertuu.i64.i64"]
+    pub fn convertuu_i64_i64(a: i64, b: i32, c: i32) -> i64;
     /// The `llvm.clear_cache` intrinsic.
     #[link_name = "llvm.clear_cache"]
     pub fn clear_cache(a: *mut i8, b: *mut i8) -> ();
@@ -169,23 +1897,107 @@ extern {
 /// LLVM intrinsics for the AMDGPU architecture.
 pub mod AMDGPU {
     extern {
+        /// The `llvm.AMDGPU.div.fmas.v4f32` intrinsic; known as `__builtin_amdgpu_div_fmas` in GCC.
+        #[link_name = "llvm.AMDGPU.div.fmas.v4f32"]
+        pub fn div_fmas_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4, c: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.AMDGPU.div.fmas.f32` intrinsic; known as `__builtin_amdgpu_div_fmas` in GCC.
+        #[link_name = "llvm.AMDGPU.div.fmas.f32"]
+        pub fn div_fmas_f32(a: f32, b: f32, c: f32) -> f32;
+        /// The `llvm.AMDGPU.div.fmas.v2f64` intrinsic; known as `__builtin_amdgpu_div_fmas` in GCC.
+        #[link_name = "llvm.AMDGPU.div.fmas.v2f64"]
+        pub fn div_fmas_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2, c: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.AMDGPU.div.fmas.f64` intrinsic; known as `__builtin_amdgpu_div_fmas` in GCC.
+        #[link_name = "llvm.AMDGPU.div.fmas.f64"]
+        pub fn div_fmas_f64(a: f64, b: f64, c: f64) -> f64;
+        /// The `llvm.AMDGPU.div.fixup.v4f32` intrinsic; known as `__builtin_amdgpu_div_fixup` in GCC.
+        #[link_name = "llvm.AMDGPU.div.fixup.v4f32"]
+        pub fn div_fixup_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4, c: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.AMDGPU.div.fixup.f32` intrinsic; known as `__builtin_amdgpu_div_fixup` in GCC.
+        #[link_name = "llvm.AMDGPU.div.fixup.f32"]
+        pub fn div_fixup_f32(a: f32, b: f32, c: f32) -> f32;
+        /// The `llvm.AMDGPU.div.fixup.v2f64` intrinsic; known as `__builtin_amdgpu_div_fixup` in GCC.
+        #[link_name = "llvm.AMDGPU.div.fixup.v2f64"]
+        pub fn div_fixup_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2, c: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.AMDGPU.div.fixup.f64` intrinsic; known as `__builtin_amdgpu_div_fixup` in GCC.
+        #[link_name = "llvm.AMDGPU.div.fixup.f64"]
+        pub fn div_fixup_f64(a: f64, b: f64, c: f64) -> f64;
+        /// The `llvm.AMDGPU.trig.preop.v4f32` intrinsic; known as `__builtin_amdgpu_trig_preop` in GCC.
+        #[link_name = "llvm.AMDGPU.trig.preop.v4f32"]
+        pub fn trig_preop_v4f32(a: ::simdty::f32x4, b: i32) -> ::simdty::f32x4;
+        /// The `llvm.AMDGPU.trig.preop.f32` intrinsic; known as `__builtin_amdgpu_trig_preop` in GCC.
+        #[link_name = "llvm.AMDGPU.trig.preop.f32"]
+        pub fn trig_preop_f32(a: f32, b: i32) -> f32;
+        /// The `llvm.AMDGPU.trig.preop.v2f64` intrinsic; known as `__builtin_amdgpu_trig_preop` in GCC.
+        #[link_name = "llvm.AMDGPU.trig.preop.v2f64"]
+        pub fn trig_preop_v2f64(a: ::simdty::f64x2, b: i32) -> ::simdty::f64x2;
+        /// The `llvm.AMDGPU.trig.preop.f64` intrinsic; known as `__builtin_amdgpu_trig_preop` in GCC.
+        #[link_name = "llvm.AMDGPU.trig.preop.f64"]
+        pub fn trig_preop_f64(a: f64, b: i32) -> f64;
+        /// The `llvm.AMDGPU.rcp.v4f32` intrinsic; known as `__builtin_amdgpu_rcp` in GCC.
+        #[link_name = "llvm.AMDGPU.rcp.v4f32"]
+        pub fn rcp_v4f32(a: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.AMDGPU.rcp.f32` intrinsic; known as `__builtin_amdgpu_rcp` in GCC.
+        #[link_name = "llvm.AMDGPU.rcp.f32"]
+        pub fn rcp_f32(a: f32) -> f32;
+        /// The `llvm.AMDGPU.rcp.v2f64` intrinsic; known as `__builtin_amdgpu_rcp` in GCC.
+        #[link_name = "llvm.AMDGPU.rcp.v2f64"]
+        pub fn rcp_v2f64(a: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.AMDGPU.rcp.f64` intrinsic; known as `__builtin_amdgpu_rcp` in GCC.
+        #[link_name = "llvm.AMDGPU.rcp.f64"]
+        pub fn rcp_f64(a: f64) -> f64;
+        /// The `llvm.AMDGPU.rsq.v4f32` intrinsic; known as `__builtin_amdgpu_rsq` in GCC.
+        #[link_name = "llvm.AMDGPU.rsq.v4f32"]
+        pub fn rsq_v4f32(a: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.AMDGPU.rsq.f32` intrinsic; known as `__builtin_amdgpu_rsq` in GCC.
+        #[link_name = "llvm.AMDGPU.rsq.f32"]
+        pub fn rsq_f32(a: f32) -> f32;
+        /// The `llvm.AMDGPU.rsq.v2f64` intrinsic; known as `__builtin_amdgpu_rsq` in GCC.
+        #[link_name = "llvm.AMDGPU.rsq.v2f64"]
+        pub fn rsq_v2f64(a: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.AMDGPU.rsq.f64` intrinsic; known as `__builtin_amdgpu_rsq` in GCC.
+        #[link_name = "llvm.AMDGPU.rsq.f64"]
+        pub fn rsq_f64(a: f64) -> f64;
+        /// The `llvm.AMDGPU.rsq.clamped.v4f32` intrinsic; known as `__builtin_amdgpu_rsq_clamped` in GCC.
+        #[link_name = "llvm.AMDGPU.rsq.clamped.v4f32"]
+        pub fn rsq_clamped_v4f32(a: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.AMDGPU.rsq.clamped.f32` intrinsic; known as `__builtin_amdgpu_rsq_clamped` in GCC.
+        #[link_name = "llvm.AMDGPU.rsq.clamped.f32"]
+        pub fn rsq_clamped_f32(a: f32) -> f32;
+        /// The `llvm.AMDGPU.rsq.clamped.v2f64` intrinsic; known as `__builtin_amdgpu_rsq_clamped` in GCC.
+        #[link_name = "llvm.AMDGPU.rsq.clamped.v2f64"]
+        pub fn rsq_clamped_v2f64(a: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.AMDGPU.rsq.clamped.f64` intrinsic; known as `__builtin_amdgpu_rsq_clamped` in GCC.
+        #[link_name = "llvm.AMDGPU.rsq.clamped.f64"]
+        pub fn rsq_clamped_f64(a: f64) -> f64;
+        /// The `llvm.AMDGPU.ldexp.v4f32` intrinsic; known as `__builtin_amdgpu_ldexp` in GCC.
+        #[link_name = "llvm.AMDGPU.ldexp.v4f32"]
+        pub fn ldexp_v4f32(a: ::simdty::f32x4, b: i32) -> ::simdty::f32x4;
+        /// The `llvm.AMDGPU.ldexp.f32` intrinsic; known as `__builtin_amdgpu_ldexp` in GCC.
+        #[link_name = "llvm.AMDGPU.ldexp.f32"]
+        pub fn ldexp_f32(a: f32, b: i32) -> f32;
+        /// The `llvm.AMDGPU.ldexp.v2f64` intrinsic; known as `__builtin_amdgpu_ldexp` in GCC.
+        #[link_name = "llvm.AMDGPU.ldexp.v2f64"]
+        pub fn ldexp_v2f64(a: ::simdty::f64x2, b: i32) -> ::simdty::f64x2;
+        /// The `llvm.AMDGPU.ldexp.f64` intrinsic; known as `__builtin_amdgpu_ldexp` in GCC.
+        #[link_name = "llvm.AMDGPU.ldexp.f64"]
+        pub fn ldexp_f64(a: f64, b: i32) -> f64;
     }
 }
 /// LLVM intrinsics for the aarch64 architecture.
 pub mod aarch64 {
     extern {
-        /// The `llvm.aarch64.ldxr` intrinsic.
-        #[link_name = "llvm.aarch64.ldxr"]
-        pub fn ldxr(a: *mut i8) -> i64;
-        /// The `llvm.aarch64.ldaxr` intrinsic.
-        #[link_name = "llvm.aarch64.ldaxr"]
-        pub fn ldaxr(a: *mut i8) -> i64;
-        /// The `llvm.aarch64.stxr` intrinsic.
-        #[link_name = "llvm.aarch64.stxr"]
-        pub fn stxr(a: i64, b: *mut i8) -> i32;
-        /// The `llvm.aarch64.stlxr` intrinsic.
-        #[link_name = "llvm.aarch64.stlxr"]
-        pub fn stlxr(a: i64, b: *mut i8) -> i32;
+        /// The `llvm.aarch64.ldxr.p0i8` intrinsic.
+        #[link_name = "llvm.aarch64.ldxr.p0i8"]
+        pub fn ldxr_p0i8(a: *mut i8) -> i64;
+        /// The `llvm.aarch64.ldaxr.p0i8` intrinsic.
+        #[link_name = "llvm.aarch64.ldaxr.p0i8"]
+        pub fn ldaxr_p0i8(a: *mut i8) -> i64;
+        /// The `llvm.aarch64.stxr.p0i8` intrinsic.
+        #[link_name = "llvm.aarch64.stxr.p0i8"]
+        pub fn stxr_p0i8(a: i64, b: *mut i8) -> i32;
+        /// The `llvm.aarch64.stlxr.p0i8` intrinsic.
+        #[link_name = "llvm.aarch64.stlxr.p0i8"]
+        pub fn stlxr_p0i8(a: i64, b: *mut i8) -> i32;
         /// The `llvm.aarch64.stxp` intrinsic.
         #[link_name = "llvm.aarch64.stxp"]
         pub fn stxp(a: i64, b: i64, c: *mut i8) -> i32;
@@ -195,9 +2007,81 @@ pub mod aarch64 {
         /// The `llvm.aarch64.clrex` intrinsic.
         #[link_name = "llvm.aarch64.clrex"]
         pub fn clrex() -> ();
+        /// The `llvm.aarch64.sdiv.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.sdiv.v16i8"]
+        pub fn sdiv_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.sdiv.i8` intrinsic.
+        #[link_name = "llvm.aarch64.sdiv.i8"]
+        pub fn sdiv_i8(a: i8, b: i8) -> i8;
+        /// The `llvm.aarch64.sdiv.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.sdiv.v8i16"]
+        pub fn sdiv_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.sdiv.i16` intrinsic.
+        #[link_name = "llvm.aarch64.sdiv.i16"]
+        pub fn sdiv_i16(a: i16, b: i16) -> i16;
+        /// The `llvm.aarch64.sdiv.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.sdiv.v4i32"]
+        pub fn sdiv_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.sdiv.i32` intrinsic.
+        #[link_name = "llvm.aarch64.sdiv.i32"]
+        pub fn sdiv_i32(a: i32, b: i32) -> i32;
+        /// The `llvm.aarch64.sdiv.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.sdiv.v2i64"]
+        pub fn sdiv_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.sdiv.i64` intrinsic.
+        #[link_name = "llvm.aarch64.sdiv.i64"]
+        pub fn sdiv_i64(a: i64, b: i64) -> i64;
+        /// The `llvm.aarch64.udiv.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.udiv.v16i8"]
+        pub fn udiv_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.udiv.i8` intrinsic.
+        #[link_name = "llvm.aarch64.udiv.i8"]
+        pub fn udiv_i8(a: i8, b: i8) -> i8;
+        /// The `llvm.aarch64.udiv.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.udiv.v8i16"]
+        pub fn udiv_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.udiv.i16` intrinsic.
+        #[link_name = "llvm.aarch64.udiv.i16"]
+        pub fn udiv_i16(a: i16, b: i16) -> i16;
+        /// The `llvm.aarch64.udiv.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.udiv.v4i32"]
+        pub fn udiv_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.udiv.i32` intrinsic.
+        #[link_name = "llvm.aarch64.udiv.i32"]
+        pub fn udiv_i32(a: i32, b: i32) -> i32;
+        /// The `llvm.aarch64.udiv.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.udiv.v2i64"]
+        pub fn udiv_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.udiv.i64` intrinsic.
+        #[link_name = "llvm.aarch64.udiv.i64"]
+        pub fn udiv_i64(a: i64, b: i64) -> i64;
         /// The `llvm.aarch64.hint` intrinsic.
         #[link_name = "llvm.aarch64.hint"]
         pub fn hint(a: i32) -> ();
+        /// The `llvm.aarch64.rbit.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.rbit.v16i8"]
+        pub fn rbit_v16i8(a: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.rbit.i8` intrinsic.
+        #[link_name = "llvm.aarch64.rbit.i8"]
+        pub fn rbit_i8(a: i8) -> i8;
+        /// The `llvm.aarch64.rbit.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.rbit.v8i16"]
+        pub fn rbit_v8i16(a: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.rbit.i16` intrinsic.
+        #[link_name = "llvm.aarch64.rbit.i16"]
+        pub fn rbit_i16(a: i16) -> i16;
+        /// The `llvm.aarch64.rbit.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.rbit.v4i32"]
+        pub fn rbit_v4i32(a: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.rbit.i32` intrinsic.
+        #[link_name = "llvm.aarch64.rbit.i32"]
+        pub fn rbit_i32(a: i32) -> i32;
+        /// The `llvm.aarch64.rbit.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.rbit.v2i64"]
+        pub fn rbit_v2i64(a: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.rbit.i64` intrinsic.
+        #[link_name = "llvm.aarch64.rbit.i64"]
+        pub fn rbit_i64(a: i64) -> i64;
         /// The `llvm.aarch64.dmb` intrinsic; known as `__builtin_arm_dmb` in GCC.
         #[link_name = "llvm.aarch64.dmb"]
         pub fn dmb(a: i32) -> ();
@@ -207,21 +2091,5541 @@ pub mod aarch64 {
         /// The `llvm.aarch64.isb` intrinsic; known as `__builtin_arm_isb` in GCC.
         #[link_name = "llvm.aarch64.isb"]
         pub fn isb(a: i32) -> ();
+        /// The `llvm.aarch64.neon.saddv.v16i8.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddv.v16i8.v16i8"]
+        pub fn neon_saddv_v16i8_v16i8(a: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.saddv.v16i8.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddv.v16i8.v8i16"]
+        pub fn neon_saddv_v16i8_v8i16(a: ::simdty::i16x8) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.saddv.v16i8.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddv.v16i8.v4i32"]
+        pub fn neon_saddv_v16i8_v4i32(a: ::simdty::i32x4) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.saddv.v16i8.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddv.v16i8.v2i64"]
+        pub fn neon_saddv_v16i8_v2i64(a: ::simdty::i64x2) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.saddv.v16i8.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddv.v16i8.v4f32"]
+        pub fn neon_saddv_v16i8_v4f32(a: ::simdty::f32x4) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.saddv.v16i8.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddv.v16i8.v2f64"]
+        pub fn neon_saddv_v16i8_v2f64(a: ::simdty::f64x2) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.saddv.i8.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddv.i8.v16i8"]
+        pub fn neon_saddv_i8_v16i8(a: ::simdty::i8x16) -> i8;
+        /// The `llvm.aarch64.neon.saddv.i8.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddv.i8.v8i16"]
+        pub fn neon_saddv_i8_v8i16(a: ::simdty::i16x8) -> i8;
+        /// The `llvm.aarch64.neon.saddv.i8.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddv.i8.v4i32"]
+        pub fn neon_saddv_i8_v4i32(a: ::simdty::i32x4) -> i8;
+        /// The `llvm.aarch64.neon.saddv.i8.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddv.i8.v2i64"]
+        pub fn neon_saddv_i8_v2i64(a: ::simdty::i64x2) -> i8;
+        /// The `llvm.aarch64.neon.saddv.i8.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddv.i8.v4f32"]
+        pub fn neon_saddv_i8_v4f32(a: ::simdty::f32x4) -> i8;
+        /// The `llvm.aarch64.neon.saddv.i8.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddv.i8.v2f64"]
+        pub fn neon_saddv_i8_v2f64(a: ::simdty::f64x2) -> i8;
+        /// The `llvm.aarch64.neon.saddv.v8i16.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddv.v8i16.v16i8"]
+        pub fn neon_saddv_v8i16_v16i8(a: ::simdty::i8x16) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.saddv.v8i16.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddv.v8i16.v8i16"]
+        pub fn neon_saddv_v8i16_v8i16(a: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.saddv.v8i16.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddv.v8i16.v4i32"]
+        pub fn neon_saddv_v8i16_v4i32(a: ::simdty::i32x4) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.saddv.v8i16.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddv.v8i16.v2i64"]
+        pub fn neon_saddv_v8i16_v2i64(a: ::simdty::i64x2) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.saddv.v8i16.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddv.v8i16.v4f32"]
+        pub fn neon_saddv_v8i16_v4f32(a: ::simdty::f32x4) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.saddv.v8i16.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddv.v8i16.v2f64"]
+        pub fn neon_saddv_v8i16_v2f64(a: ::simdty::f64x2) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.saddv.i16.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddv.i16.v16i8"]
+        pub fn neon_saddv_i16_v16i8(a: ::simdty::i8x16) -> i16;
+        /// The `llvm.aarch64.neon.saddv.i16.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddv.i16.v8i16"]
+        pub fn neon_saddv_i16_v8i16(a: ::simdty::i16x8) -> i16;
+        /// The `llvm.aarch64.neon.saddv.i16.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddv.i16.v4i32"]
+        pub fn neon_saddv_i16_v4i32(a: ::simdty::i32x4) -> i16;
+        /// The `llvm.aarch64.neon.saddv.i16.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddv.i16.v2i64"]
+        pub fn neon_saddv_i16_v2i64(a: ::simdty::i64x2) -> i16;
+        /// The `llvm.aarch64.neon.saddv.i16.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddv.i16.v4f32"]
+        pub fn neon_saddv_i16_v4f32(a: ::simdty::f32x4) -> i16;
+        /// The `llvm.aarch64.neon.saddv.i16.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddv.i16.v2f64"]
+        pub fn neon_saddv_i16_v2f64(a: ::simdty::f64x2) -> i16;
+        /// The `llvm.aarch64.neon.saddv.v4i32.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddv.v4i32.v16i8"]
+        pub fn neon_saddv_v4i32_v16i8(a: ::simdty::i8x16) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.saddv.v4i32.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddv.v4i32.v8i16"]
+        pub fn neon_saddv_v4i32_v8i16(a: ::simdty::i16x8) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.saddv.v4i32.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddv.v4i32.v4i32"]
+        pub fn neon_saddv_v4i32_v4i32(a: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.saddv.v4i32.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddv.v4i32.v2i64"]
+        pub fn neon_saddv_v4i32_v2i64(a: ::simdty::i64x2) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.saddv.v4i32.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddv.v4i32.v4f32"]
+        pub fn neon_saddv_v4i32_v4f32(a: ::simdty::f32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.saddv.v4i32.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddv.v4i32.v2f64"]
+        pub fn neon_saddv_v4i32_v2f64(a: ::simdty::f64x2) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.saddv.i32.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddv.i32.v16i8"]
+        pub fn neon_saddv_i32_v16i8(a: ::simdty::i8x16) -> i32;
+        /// The `llvm.aarch64.neon.saddv.i32.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddv.i32.v8i16"]
+        pub fn neon_saddv_i32_v8i16(a: ::simdty::i16x8) -> i32;
+        /// The `llvm.aarch64.neon.saddv.i32.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddv.i32.v4i32"]
+        pub fn neon_saddv_i32_v4i32(a: ::simdty::i32x4) -> i32;
+        /// The `llvm.aarch64.neon.saddv.i32.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddv.i32.v2i64"]
+        pub fn neon_saddv_i32_v2i64(a: ::simdty::i64x2) -> i32;
+        /// The `llvm.aarch64.neon.saddv.i32.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddv.i32.v4f32"]
+        pub fn neon_saddv_i32_v4f32(a: ::simdty::f32x4) -> i32;
+        /// The `llvm.aarch64.neon.saddv.i32.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddv.i32.v2f64"]
+        pub fn neon_saddv_i32_v2f64(a: ::simdty::f64x2) -> i32;
+        /// The `llvm.aarch64.neon.saddv.v2i64.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddv.v2i64.v16i8"]
+        pub fn neon_saddv_v2i64_v16i8(a: ::simdty::i8x16) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.saddv.v2i64.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddv.v2i64.v8i16"]
+        pub fn neon_saddv_v2i64_v8i16(a: ::simdty::i16x8) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.saddv.v2i64.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddv.v2i64.v4i32"]
+        pub fn neon_saddv_v2i64_v4i32(a: ::simdty::i32x4) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.saddv.v2i64.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddv.v2i64.v2i64"]
+        pub fn neon_saddv_v2i64_v2i64(a: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.saddv.v2i64.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddv.v2i64.v4f32"]
+        pub fn neon_saddv_v2i64_v4f32(a: ::simdty::f32x4) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.saddv.v2i64.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddv.v2i64.v2f64"]
+        pub fn neon_saddv_v2i64_v2f64(a: ::simdty::f64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.saddv.i64.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddv.i64.v16i8"]
+        pub fn neon_saddv_i64_v16i8(a: ::simdty::i8x16) -> i64;
+        /// The `llvm.aarch64.neon.saddv.i64.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddv.i64.v8i16"]
+        pub fn neon_saddv_i64_v8i16(a: ::simdty::i16x8) -> i64;
+        /// The `llvm.aarch64.neon.saddv.i64.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddv.i64.v4i32"]
+        pub fn neon_saddv_i64_v4i32(a: ::simdty::i32x4) -> i64;
+        /// The `llvm.aarch64.neon.saddv.i64.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddv.i64.v2i64"]
+        pub fn neon_saddv_i64_v2i64(a: ::simdty::i64x2) -> i64;
+        /// The `llvm.aarch64.neon.saddv.i64.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddv.i64.v4f32"]
+        pub fn neon_saddv_i64_v4f32(a: ::simdty::f32x4) -> i64;
+        /// The `llvm.aarch64.neon.saddv.i64.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddv.i64.v2f64"]
+        pub fn neon_saddv_i64_v2f64(a: ::simdty::f64x2) -> i64;
+        /// The `llvm.aarch64.neon.uaddv.v16i8.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddv.v16i8.v16i8"]
+        pub fn neon_uaddv_v16i8_v16i8(a: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.uaddv.v16i8.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddv.v16i8.v8i16"]
+        pub fn neon_uaddv_v16i8_v8i16(a: ::simdty::i16x8) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.uaddv.v16i8.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddv.v16i8.v4i32"]
+        pub fn neon_uaddv_v16i8_v4i32(a: ::simdty::i32x4) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.uaddv.v16i8.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddv.v16i8.v2i64"]
+        pub fn neon_uaddv_v16i8_v2i64(a: ::simdty::i64x2) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.uaddv.v16i8.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddv.v16i8.v4f32"]
+        pub fn neon_uaddv_v16i8_v4f32(a: ::simdty::f32x4) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.uaddv.v16i8.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddv.v16i8.v2f64"]
+        pub fn neon_uaddv_v16i8_v2f64(a: ::simdty::f64x2) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.uaddv.i8.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddv.i8.v16i8"]
+        pub fn neon_uaddv_i8_v16i8(a: ::simdty::i8x16) -> i8;
+        /// The `llvm.aarch64.neon.uaddv.i8.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddv.i8.v8i16"]
+        pub fn neon_uaddv_i8_v8i16(a: ::simdty::i16x8) -> i8;
+        /// The `llvm.aarch64.neon.uaddv.i8.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddv.i8.v4i32"]
+        pub fn neon_uaddv_i8_v4i32(a: ::simdty::i32x4) -> i8;
+        /// The `llvm.aarch64.neon.uaddv.i8.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddv.i8.v2i64"]
+        pub fn neon_uaddv_i8_v2i64(a: ::simdty::i64x2) -> i8;
+        /// The `llvm.aarch64.neon.uaddv.i8.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddv.i8.v4f32"]
+        pub fn neon_uaddv_i8_v4f32(a: ::simdty::f32x4) -> i8;
+        /// The `llvm.aarch64.neon.uaddv.i8.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddv.i8.v2f64"]
+        pub fn neon_uaddv_i8_v2f64(a: ::simdty::f64x2) -> i8;
+        /// The `llvm.aarch64.neon.uaddv.v8i16.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddv.v8i16.v16i8"]
+        pub fn neon_uaddv_v8i16_v16i8(a: ::simdty::i8x16) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.uaddv.v8i16.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddv.v8i16.v8i16"]
+        pub fn neon_uaddv_v8i16_v8i16(a: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.uaddv.v8i16.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddv.v8i16.v4i32"]
+        pub fn neon_uaddv_v8i16_v4i32(a: ::simdty::i32x4) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.uaddv.v8i16.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddv.v8i16.v2i64"]
+        pub fn neon_uaddv_v8i16_v2i64(a: ::simdty::i64x2) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.uaddv.v8i16.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddv.v8i16.v4f32"]
+        pub fn neon_uaddv_v8i16_v4f32(a: ::simdty::f32x4) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.uaddv.v8i16.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddv.v8i16.v2f64"]
+        pub fn neon_uaddv_v8i16_v2f64(a: ::simdty::f64x2) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.uaddv.i16.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddv.i16.v16i8"]
+        pub fn neon_uaddv_i16_v16i8(a: ::simdty::i8x16) -> i16;
+        /// The `llvm.aarch64.neon.uaddv.i16.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddv.i16.v8i16"]
+        pub fn neon_uaddv_i16_v8i16(a: ::simdty::i16x8) -> i16;
+        /// The `llvm.aarch64.neon.uaddv.i16.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddv.i16.v4i32"]
+        pub fn neon_uaddv_i16_v4i32(a: ::simdty::i32x4) -> i16;
+        /// The `llvm.aarch64.neon.uaddv.i16.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddv.i16.v2i64"]
+        pub fn neon_uaddv_i16_v2i64(a: ::simdty::i64x2) -> i16;
+        /// The `llvm.aarch64.neon.uaddv.i16.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddv.i16.v4f32"]
+        pub fn neon_uaddv_i16_v4f32(a: ::simdty::f32x4) -> i16;
+        /// The `llvm.aarch64.neon.uaddv.i16.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddv.i16.v2f64"]
+        pub fn neon_uaddv_i16_v2f64(a: ::simdty::f64x2) -> i16;
+        /// The `llvm.aarch64.neon.uaddv.v4i32.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddv.v4i32.v16i8"]
+        pub fn neon_uaddv_v4i32_v16i8(a: ::simdty::i8x16) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.uaddv.v4i32.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddv.v4i32.v8i16"]
+        pub fn neon_uaddv_v4i32_v8i16(a: ::simdty::i16x8) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.uaddv.v4i32.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddv.v4i32.v4i32"]
+        pub fn neon_uaddv_v4i32_v4i32(a: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.uaddv.v4i32.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddv.v4i32.v2i64"]
+        pub fn neon_uaddv_v4i32_v2i64(a: ::simdty::i64x2) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.uaddv.v4i32.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddv.v4i32.v4f32"]
+        pub fn neon_uaddv_v4i32_v4f32(a: ::simdty::f32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.uaddv.v4i32.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddv.v4i32.v2f64"]
+        pub fn neon_uaddv_v4i32_v2f64(a: ::simdty::f64x2) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.uaddv.i32.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddv.i32.v16i8"]
+        pub fn neon_uaddv_i32_v16i8(a: ::simdty::i8x16) -> i32;
+        /// The `llvm.aarch64.neon.uaddv.i32.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddv.i32.v8i16"]
+        pub fn neon_uaddv_i32_v8i16(a: ::simdty::i16x8) -> i32;
+        /// The `llvm.aarch64.neon.uaddv.i32.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddv.i32.v4i32"]
+        pub fn neon_uaddv_i32_v4i32(a: ::simdty::i32x4) -> i32;
+        /// The `llvm.aarch64.neon.uaddv.i32.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddv.i32.v2i64"]
+        pub fn neon_uaddv_i32_v2i64(a: ::simdty::i64x2) -> i32;
+        /// The `llvm.aarch64.neon.uaddv.i32.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddv.i32.v4f32"]
+        pub fn neon_uaddv_i32_v4f32(a: ::simdty::f32x4) -> i32;
+        /// The `llvm.aarch64.neon.uaddv.i32.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddv.i32.v2f64"]
+        pub fn neon_uaddv_i32_v2f64(a: ::simdty::f64x2) -> i32;
+        /// The `llvm.aarch64.neon.uaddv.v2i64.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddv.v2i64.v16i8"]
+        pub fn neon_uaddv_v2i64_v16i8(a: ::simdty::i8x16) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.uaddv.v2i64.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddv.v2i64.v8i16"]
+        pub fn neon_uaddv_v2i64_v8i16(a: ::simdty::i16x8) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.uaddv.v2i64.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddv.v2i64.v4i32"]
+        pub fn neon_uaddv_v2i64_v4i32(a: ::simdty::i32x4) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.uaddv.v2i64.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddv.v2i64.v2i64"]
+        pub fn neon_uaddv_v2i64_v2i64(a: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.uaddv.v2i64.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddv.v2i64.v4f32"]
+        pub fn neon_uaddv_v2i64_v4f32(a: ::simdty::f32x4) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.uaddv.v2i64.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddv.v2i64.v2f64"]
+        pub fn neon_uaddv_v2i64_v2f64(a: ::simdty::f64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.uaddv.i64.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddv.i64.v16i8"]
+        pub fn neon_uaddv_i64_v16i8(a: ::simdty::i8x16) -> i64;
+        /// The `llvm.aarch64.neon.uaddv.i64.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddv.i64.v8i16"]
+        pub fn neon_uaddv_i64_v8i16(a: ::simdty::i16x8) -> i64;
+        /// The `llvm.aarch64.neon.uaddv.i64.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddv.i64.v4i32"]
+        pub fn neon_uaddv_i64_v4i32(a: ::simdty::i32x4) -> i64;
+        /// The `llvm.aarch64.neon.uaddv.i64.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddv.i64.v2i64"]
+        pub fn neon_uaddv_i64_v2i64(a: ::simdty::i64x2) -> i64;
+        /// The `llvm.aarch64.neon.uaddv.i64.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddv.i64.v4f32"]
+        pub fn neon_uaddv_i64_v4f32(a: ::simdty::f32x4) -> i64;
+        /// The `llvm.aarch64.neon.uaddv.i64.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddv.i64.v2f64"]
+        pub fn neon_uaddv_i64_v2f64(a: ::simdty::f64x2) -> i64;
+        /// The `llvm.aarch64.neon.faddv.v4f32.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.faddv.v4f32.v16i8"]
+        pub fn neon_faddv_v4f32_v16i8(a: ::simdty::i8x16) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.faddv.v4f32.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.faddv.v4f32.v8i16"]
+        pub fn neon_faddv_v4f32_v8i16(a: ::simdty::i16x8) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.faddv.v4f32.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.faddv.v4f32.v4i32"]
+        pub fn neon_faddv_v4f32_v4i32(a: ::simdty::i32x4) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.faddv.v4f32.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.faddv.v4f32.v2i64"]
+        pub fn neon_faddv_v4f32_v2i64(a: ::simdty::i64x2) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.faddv.v4f32.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.faddv.v4f32.v4f32"]
+        pub fn neon_faddv_v4f32_v4f32(a: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.faddv.v4f32.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.faddv.v4f32.v2f64"]
+        pub fn neon_faddv_v4f32_v2f64(a: ::simdty::f64x2) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.faddv.f32.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.faddv.f32.v16i8"]
+        pub fn neon_faddv_f32_v16i8(a: ::simdty::i8x16) -> f32;
+        /// The `llvm.aarch64.neon.faddv.f32.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.faddv.f32.v8i16"]
+        pub fn neon_faddv_f32_v8i16(a: ::simdty::i16x8) -> f32;
+        /// The `llvm.aarch64.neon.faddv.f32.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.faddv.f32.v4i32"]
+        pub fn neon_faddv_f32_v4i32(a: ::simdty::i32x4) -> f32;
+        /// The `llvm.aarch64.neon.faddv.f32.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.faddv.f32.v2i64"]
+        pub fn neon_faddv_f32_v2i64(a: ::simdty::i64x2) -> f32;
+        /// The `llvm.aarch64.neon.faddv.f32.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.faddv.f32.v4f32"]
+        pub fn neon_faddv_f32_v4f32(a: ::simdty::f32x4) -> f32;
+        /// The `llvm.aarch64.neon.faddv.f32.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.faddv.f32.v2f64"]
+        pub fn neon_faddv_f32_v2f64(a: ::simdty::f64x2) -> f32;
+        /// The `llvm.aarch64.neon.faddv.v2f64.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.faddv.v2f64.v16i8"]
+        pub fn neon_faddv_v2f64_v16i8(a: ::simdty::i8x16) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.faddv.v2f64.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.faddv.v2f64.v8i16"]
+        pub fn neon_faddv_v2f64_v8i16(a: ::simdty::i16x8) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.faddv.v2f64.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.faddv.v2f64.v4i32"]
+        pub fn neon_faddv_v2f64_v4i32(a: ::simdty::i32x4) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.faddv.v2f64.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.faddv.v2f64.v2i64"]
+        pub fn neon_faddv_v2f64_v2i64(a: ::simdty::i64x2) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.faddv.v2f64.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.faddv.v2f64.v4f32"]
+        pub fn neon_faddv_v2f64_v4f32(a: ::simdty::f32x4) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.faddv.v2f64.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.faddv.v2f64.v2f64"]
+        pub fn neon_faddv_v2f64_v2f64(a: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.faddv.f64.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.faddv.f64.v16i8"]
+        pub fn neon_faddv_f64_v16i8(a: ::simdty::i8x16) -> f64;
+        /// The `llvm.aarch64.neon.faddv.f64.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.faddv.f64.v8i16"]
+        pub fn neon_faddv_f64_v8i16(a: ::simdty::i16x8) -> f64;
+        /// The `llvm.aarch64.neon.faddv.f64.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.faddv.f64.v4i32"]
+        pub fn neon_faddv_f64_v4i32(a: ::simdty::i32x4) -> f64;
+        /// The `llvm.aarch64.neon.faddv.f64.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.faddv.f64.v2i64"]
+        pub fn neon_faddv_f64_v2i64(a: ::simdty::i64x2) -> f64;
+        /// The `llvm.aarch64.neon.faddv.f64.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.faddv.f64.v4f32"]
+        pub fn neon_faddv_f64_v4f32(a: ::simdty::f32x4) -> f64;
+        /// The `llvm.aarch64.neon.faddv.f64.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.faddv.f64.v2f64"]
+        pub fn neon_faddv_f64_v2f64(a: ::simdty::f64x2) -> f64;
+        /// The `llvm.aarch64.neon.saddlv.v16i8.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddlv.v16i8.v16i8"]
+        pub fn neon_saddlv_v16i8_v16i8(a: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.saddlv.v16i8.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddlv.v16i8.v8i16"]
+        pub fn neon_saddlv_v16i8_v8i16(a: ::simdty::i16x8) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.saddlv.v16i8.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddlv.v16i8.v4i32"]
+        pub fn neon_saddlv_v16i8_v4i32(a: ::simdty::i32x4) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.saddlv.v16i8.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddlv.v16i8.v2i64"]
+        pub fn neon_saddlv_v16i8_v2i64(a: ::simdty::i64x2) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.saddlv.v16i8.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddlv.v16i8.v4f32"]
+        pub fn neon_saddlv_v16i8_v4f32(a: ::simdty::f32x4) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.saddlv.v16i8.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddlv.v16i8.v2f64"]
+        pub fn neon_saddlv_v16i8_v2f64(a: ::simdty::f64x2) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.saddlv.i8.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddlv.i8.v16i8"]
+        pub fn neon_saddlv_i8_v16i8(a: ::simdty::i8x16) -> i8;
+        /// The `llvm.aarch64.neon.saddlv.i8.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddlv.i8.v8i16"]
+        pub fn neon_saddlv_i8_v8i16(a: ::simdty::i16x8) -> i8;
+        /// The `llvm.aarch64.neon.saddlv.i8.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddlv.i8.v4i32"]
+        pub fn neon_saddlv_i8_v4i32(a: ::simdty::i32x4) -> i8;
+        /// The `llvm.aarch64.neon.saddlv.i8.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddlv.i8.v2i64"]
+        pub fn neon_saddlv_i8_v2i64(a: ::simdty::i64x2) -> i8;
+        /// The `llvm.aarch64.neon.saddlv.i8.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddlv.i8.v4f32"]
+        pub fn neon_saddlv_i8_v4f32(a: ::simdty::f32x4) -> i8;
+        /// The `llvm.aarch64.neon.saddlv.i8.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddlv.i8.v2f64"]
+        pub fn neon_saddlv_i8_v2f64(a: ::simdty::f64x2) -> i8;
+        /// The `llvm.aarch64.neon.saddlv.v8i16.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddlv.v8i16.v16i8"]
+        pub fn neon_saddlv_v8i16_v16i8(a: ::simdty::i8x16) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.saddlv.v8i16.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddlv.v8i16.v8i16"]
+        pub fn neon_saddlv_v8i16_v8i16(a: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.saddlv.v8i16.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddlv.v8i16.v4i32"]
+        pub fn neon_saddlv_v8i16_v4i32(a: ::simdty::i32x4) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.saddlv.v8i16.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddlv.v8i16.v2i64"]
+        pub fn neon_saddlv_v8i16_v2i64(a: ::simdty::i64x2) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.saddlv.v8i16.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddlv.v8i16.v4f32"]
+        pub fn neon_saddlv_v8i16_v4f32(a: ::simdty::f32x4) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.saddlv.v8i16.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddlv.v8i16.v2f64"]
+        pub fn neon_saddlv_v8i16_v2f64(a: ::simdty::f64x2) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.saddlv.i16.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddlv.i16.v16i8"]
+        pub fn neon_saddlv_i16_v16i8(a: ::simdty::i8x16) -> i16;
+        /// The `llvm.aarch64.neon.saddlv.i16.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddlv.i16.v8i16"]
+        pub fn neon_saddlv_i16_v8i16(a: ::simdty::i16x8) -> i16;
+        /// The `llvm.aarch64.neon.saddlv.i16.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddlv.i16.v4i32"]
+        pub fn neon_saddlv_i16_v4i32(a: ::simdty::i32x4) -> i16;
+        /// The `llvm.aarch64.neon.saddlv.i16.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddlv.i16.v2i64"]
+        pub fn neon_saddlv_i16_v2i64(a: ::simdty::i64x2) -> i16;
+        /// The `llvm.aarch64.neon.saddlv.i16.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddlv.i16.v4f32"]
+        pub fn neon_saddlv_i16_v4f32(a: ::simdty::f32x4) -> i16;
+        /// The `llvm.aarch64.neon.saddlv.i16.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddlv.i16.v2f64"]
+        pub fn neon_saddlv_i16_v2f64(a: ::simdty::f64x2) -> i16;
+        /// The `llvm.aarch64.neon.saddlv.v4i32.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddlv.v4i32.v16i8"]
+        pub fn neon_saddlv_v4i32_v16i8(a: ::simdty::i8x16) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.saddlv.v4i32.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddlv.v4i32.v8i16"]
+        pub fn neon_saddlv_v4i32_v8i16(a: ::simdty::i16x8) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.saddlv.v4i32.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddlv.v4i32.v4i32"]
+        pub fn neon_saddlv_v4i32_v4i32(a: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.saddlv.v4i32.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddlv.v4i32.v2i64"]
+        pub fn neon_saddlv_v4i32_v2i64(a: ::simdty::i64x2) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.saddlv.v4i32.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddlv.v4i32.v4f32"]
+        pub fn neon_saddlv_v4i32_v4f32(a: ::simdty::f32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.saddlv.v4i32.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddlv.v4i32.v2f64"]
+        pub fn neon_saddlv_v4i32_v2f64(a: ::simdty::f64x2) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.saddlv.i32.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddlv.i32.v16i8"]
+        pub fn neon_saddlv_i32_v16i8(a: ::simdty::i8x16) -> i32;
+        /// The `llvm.aarch64.neon.saddlv.i32.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddlv.i32.v8i16"]
+        pub fn neon_saddlv_i32_v8i16(a: ::simdty::i16x8) -> i32;
+        /// The `llvm.aarch64.neon.saddlv.i32.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddlv.i32.v4i32"]
+        pub fn neon_saddlv_i32_v4i32(a: ::simdty::i32x4) -> i32;
+        /// The `llvm.aarch64.neon.saddlv.i32.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddlv.i32.v2i64"]
+        pub fn neon_saddlv_i32_v2i64(a: ::simdty::i64x2) -> i32;
+        /// The `llvm.aarch64.neon.saddlv.i32.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddlv.i32.v4f32"]
+        pub fn neon_saddlv_i32_v4f32(a: ::simdty::f32x4) -> i32;
+        /// The `llvm.aarch64.neon.saddlv.i32.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddlv.i32.v2f64"]
+        pub fn neon_saddlv_i32_v2f64(a: ::simdty::f64x2) -> i32;
+        /// The `llvm.aarch64.neon.saddlv.v2i64.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddlv.v2i64.v16i8"]
+        pub fn neon_saddlv_v2i64_v16i8(a: ::simdty::i8x16) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.saddlv.v2i64.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddlv.v2i64.v8i16"]
+        pub fn neon_saddlv_v2i64_v8i16(a: ::simdty::i16x8) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.saddlv.v2i64.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddlv.v2i64.v4i32"]
+        pub fn neon_saddlv_v2i64_v4i32(a: ::simdty::i32x4) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.saddlv.v2i64.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddlv.v2i64.v2i64"]
+        pub fn neon_saddlv_v2i64_v2i64(a: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.saddlv.v2i64.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddlv.v2i64.v4f32"]
+        pub fn neon_saddlv_v2i64_v4f32(a: ::simdty::f32x4) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.saddlv.v2i64.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddlv.v2i64.v2f64"]
+        pub fn neon_saddlv_v2i64_v2f64(a: ::simdty::f64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.saddlv.i64.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddlv.i64.v16i8"]
+        pub fn neon_saddlv_i64_v16i8(a: ::simdty::i8x16) -> i64;
+        /// The `llvm.aarch64.neon.saddlv.i64.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddlv.i64.v8i16"]
+        pub fn neon_saddlv_i64_v8i16(a: ::simdty::i16x8) -> i64;
+        /// The `llvm.aarch64.neon.saddlv.i64.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddlv.i64.v4i32"]
+        pub fn neon_saddlv_i64_v4i32(a: ::simdty::i32x4) -> i64;
+        /// The `llvm.aarch64.neon.saddlv.i64.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddlv.i64.v2i64"]
+        pub fn neon_saddlv_i64_v2i64(a: ::simdty::i64x2) -> i64;
+        /// The `llvm.aarch64.neon.saddlv.i64.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddlv.i64.v4f32"]
+        pub fn neon_saddlv_i64_v4f32(a: ::simdty::f32x4) -> i64;
+        /// The `llvm.aarch64.neon.saddlv.i64.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddlv.i64.v2f64"]
+        pub fn neon_saddlv_i64_v2f64(a: ::simdty::f64x2) -> i64;
+        /// The `llvm.aarch64.neon.uaddlv.v16i8.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddlv.v16i8.v16i8"]
+        pub fn neon_uaddlv_v16i8_v16i8(a: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.uaddlv.v16i8.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddlv.v16i8.v8i16"]
+        pub fn neon_uaddlv_v16i8_v8i16(a: ::simdty::i16x8) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.uaddlv.v16i8.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddlv.v16i8.v4i32"]
+        pub fn neon_uaddlv_v16i8_v4i32(a: ::simdty::i32x4) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.uaddlv.v16i8.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddlv.v16i8.v2i64"]
+        pub fn neon_uaddlv_v16i8_v2i64(a: ::simdty::i64x2) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.uaddlv.v16i8.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddlv.v16i8.v4f32"]
+        pub fn neon_uaddlv_v16i8_v4f32(a: ::simdty::f32x4) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.uaddlv.v16i8.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddlv.v16i8.v2f64"]
+        pub fn neon_uaddlv_v16i8_v2f64(a: ::simdty::f64x2) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.uaddlv.i8.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddlv.i8.v16i8"]
+        pub fn neon_uaddlv_i8_v16i8(a: ::simdty::i8x16) -> i8;
+        /// The `llvm.aarch64.neon.uaddlv.i8.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddlv.i8.v8i16"]
+        pub fn neon_uaddlv_i8_v8i16(a: ::simdty::i16x8) -> i8;
+        /// The `llvm.aarch64.neon.uaddlv.i8.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddlv.i8.v4i32"]
+        pub fn neon_uaddlv_i8_v4i32(a: ::simdty::i32x4) -> i8;
+        /// The `llvm.aarch64.neon.uaddlv.i8.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddlv.i8.v2i64"]
+        pub fn neon_uaddlv_i8_v2i64(a: ::simdty::i64x2) -> i8;
+        /// The `llvm.aarch64.neon.uaddlv.i8.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddlv.i8.v4f32"]
+        pub fn neon_uaddlv_i8_v4f32(a: ::simdty::f32x4) -> i8;
+        /// The `llvm.aarch64.neon.uaddlv.i8.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddlv.i8.v2f64"]
+        pub fn neon_uaddlv_i8_v2f64(a: ::simdty::f64x2) -> i8;
+        /// The `llvm.aarch64.neon.uaddlv.v8i16.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddlv.v8i16.v16i8"]
+        pub fn neon_uaddlv_v8i16_v16i8(a: ::simdty::i8x16) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.uaddlv.v8i16.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddlv.v8i16.v8i16"]
+        pub fn neon_uaddlv_v8i16_v8i16(a: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.uaddlv.v8i16.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddlv.v8i16.v4i32"]
+        pub fn neon_uaddlv_v8i16_v4i32(a: ::simdty::i32x4) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.uaddlv.v8i16.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddlv.v8i16.v2i64"]
+        pub fn neon_uaddlv_v8i16_v2i64(a: ::simdty::i64x2) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.uaddlv.v8i16.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddlv.v8i16.v4f32"]
+        pub fn neon_uaddlv_v8i16_v4f32(a: ::simdty::f32x4) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.uaddlv.v8i16.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddlv.v8i16.v2f64"]
+        pub fn neon_uaddlv_v8i16_v2f64(a: ::simdty::f64x2) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.uaddlv.i16.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddlv.i16.v16i8"]
+        pub fn neon_uaddlv_i16_v16i8(a: ::simdty::i8x16) -> i16;
+        /// The `llvm.aarch64.neon.uaddlv.i16.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddlv.i16.v8i16"]
+        pub fn neon_uaddlv_i16_v8i16(a: ::simdty::i16x8) -> i16;
+        /// The `llvm.aarch64.neon.uaddlv.i16.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddlv.i16.v4i32"]
+        pub fn neon_uaddlv_i16_v4i32(a: ::simdty::i32x4) -> i16;
+        /// The `llvm.aarch64.neon.uaddlv.i16.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddlv.i16.v2i64"]
+        pub fn neon_uaddlv_i16_v2i64(a: ::simdty::i64x2) -> i16;
+        /// The `llvm.aarch64.neon.uaddlv.i16.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddlv.i16.v4f32"]
+        pub fn neon_uaddlv_i16_v4f32(a: ::simdty::f32x4) -> i16;
+        /// The `llvm.aarch64.neon.uaddlv.i16.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddlv.i16.v2f64"]
+        pub fn neon_uaddlv_i16_v2f64(a: ::simdty::f64x2) -> i16;
+        /// The `llvm.aarch64.neon.uaddlv.v4i32.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddlv.v4i32.v16i8"]
+        pub fn neon_uaddlv_v4i32_v16i8(a: ::simdty::i8x16) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.uaddlv.v4i32.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddlv.v4i32.v8i16"]
+        pub fn neon_uaddlv_v4i32_v8i16(a: ::simdty::i16x8) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.uaddlv.v4i32.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddlv.v4i32.v4i32"]
+        pub fn neon_uaddlv_v4i32_v4i32(a: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.uaddlv.v4i32.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddlv.v4i32.v2i64"]
+        pub fn neon_uaddlv_v4i32_v2i64(a: ::simdty::i64x2) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.uaddlv.v4i32.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddlv.v4i32.v4f32"]
+        pub fn neon_uaddlv_v4i32_v4f32(a: ::simdty::f32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.uaddlv.v4i32.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddlv.v4i32.v2f64"]
+        pub fn neon_uaddlv_v4i32_v2f64(a: ::simdty::f64x2) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.uaddlv.i32.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddlv.i32.v16i8"]
+        pub fn neon_uaddlv_i32_v16i8(a: ::simdty::i8x16) -> i32;
+        /// The `llvm.aarch64.neon.uaddlv.i32.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddlv.i32.v8i16"]
+        pub fn neon_uaddlv_i32_v8i16(a: ::simdty::i16x8) -> i32;
+        /// The `llvm.aarch64.neon.uaddlv.i32.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddlv.i32.v4i32"]
+        pub fn neon_uaddlv_i32_v4i32(a: ::simdty::i32x4) -> i32;
+        /// The `llvm.aarch64.neon.uaddlv.i32.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddlv.i32.v2i64"]
+        pub fn neon_uaddlv_i32_v2i64(a: ::simdty::i64x2) -> i32;
+        /// The `llvm.aarch64.neon.uaddlv.i32.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddlv.i32.v4f32"]
+        pub fn neon_uaddlv_i32_v4f32(a: ::simdty::f32x4) -> i32;
+        /// The `llvm.aarch64.neon.uaddlv.i32.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddlv.i32.v2f64"]
+        pub fn neon_uaddlv_i32_v2f64(a: ::simdty::f64x2) -> i32;
+        /// The `llvm.aarch64.neon.uaddlv.v2i64.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddlv.v2i64.v16i8"]
+        pub fn neon_uaddlv_v2i64_v16i8(a: ::simdty::i8x16) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.uaddlv.v2i64.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddlv.v2i64.v8i16"]
+        pub fn neon_uaddlv_v2i64_v8i16(a: ::simdty::i16x8) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.uaddlv.v2i64.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddlv.v2i64.v4i32"]
+        pub fn neon_uaddlv_v2i64_v4i32(a: ::simdty::i32x4) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.uaddlv.v2i64.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddlv.v2i64.v2i64"]
+        pub fn neon_uaddlv_v2i64_v2i64(a: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.uaddlv.v2i64.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddlv.v2i64.v4f32"]
+        pub fn neon_uaddlv_v2i64_v4f32(a: ::simdty::f32x4) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.uaddlv.v2i64.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddlv.v2i64.v2f64"]
+        pub fn neon_uaddlv_v2i64_v2f64(a: ::simdty::f64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.uaddlv.i64.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddlv.i64.v16i8"]
+        pub fn neon_uaddlv_i64_v16i8(a: ::simdty::i8x16) -> i64;
+        /// The `llvm.aarch64.neon.uaddlv.i64.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddlv.i64.v8i16"]
+        pub fn neon_uaddlv_i64_v8i16(a: ::simdty::i16x8) -> i64;
+        /// The `llvm.aarch64.neon.uaddlv.i64.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddlv.i64.v4i32"]
+        pub fn neon_uaddlv_i64_v4i32(a: ::simdty::i32x4) -> i64;
+        /// The `llvm.aarch64.neon.uaddlv.i64.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddlv.i64.v2i64"]
+        pub fn neon_uaddlv_i64_v2i64(a: ::simdty::i64x2) -> i64;
+        /// The `llvm.aarch64.neon.uaddlv.i64.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddlv.i64.v4f32"]
+        pub fn neon_uaddlv_i64_v4f32(a: ::simdty::f32x4) -> i64;
+        /// The `llvm.aarch64.neon.uaddlv.i64.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddlv.i64.v2f64"]
+        pub fn neon_uaddlv_i64_v2f64(a: ::simdty::f64x2) -> i64;
+        /// The `llvm.aarch64.neon.shadd.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.shadd.v16i8"]
+        pub fn neon_shadd_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.shadd.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.shadd.v8i16"]
+        pub fn neon_shadd_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.shadd.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.shadd.v4i32"]
+        pub fn neon_shadd_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.shadd.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.shadd.v2i64"]
+        pub fn neon_shadd_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.shadd.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.shadd.v4f32"]
+        pub fn neon_shadd_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.shadd.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.shadd.v2f64"]
+        pub fn neon_shadd_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.uhadd.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uhadd.v16i8"]
+        pub fn neon_uhadd_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.uhadd.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uhadd.v8i16"]
+        pub fn neon_uhadd_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.uhadd.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uhadd.v4i32"]
+        pub fn neon_uhadd_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.uhadd.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uhadd.v2i64"]
+        pub fn neon_uhadd_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.uhadd.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uhadd.v4f32"]
+        pub fn neon_uhadd_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.uhadd.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uhadd.v2f64"]
+        pub fn neon_uhadd_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.srhadd.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.srhadd.v16i8"]
+        pub fn neon_srhadd_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.srhadd.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.srhadd.v8i16"]
+        pub fn neon_srhadd_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.srhadd.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.srhadd.v4i32"]
+        pub fn neon_srhadd_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.srhadd.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.srhadd.v2i64"]
+        pub fn neon_srhadd_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.srhadd.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.srhadd.v4f32"]
+        pub fn neon_srhadd_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.srhadd.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.srhadd.v2f64"]
+        pub fn neon_srhadd_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.urhadd.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.urhadd.v16i8"]
+        pub fn neon_urhadd_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.urhadd.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.urhadd.v8i16"]
+        pub fn neon_urhadd_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.urhadd.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.urhadd.v4i32"]
+        pub fn neon_urhadd_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.urhadd.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.urhadd.v2i64"]
+        pub fn neon_urhadd_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.urhadd.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.urhadd.v4f32"]
+        pub fn neon_urhadd_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.urhadd.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.urhadd.v2f64"]
+        pub fn neon_urhadd_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.sqadd.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sqadd.v16i8"]
+        pub fn neon_sqadd_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.sqadd.i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sqadd.i8"]
+        pub fn neon_sqadd_i8(a: i8, b: i8) -> i8;
+        /// The `llvm.aarch64.neon.sqadd.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sqadd.v8i16"]
+        pub fn neon_sqadd_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.sqadd.i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sqadd.i16"]
+        pub fn neon_sqadd_i16(a: i16, b: i16) -> i16;
+        /// The `llvm.aarch64.neon.sqadd.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sqadd.v4i32"]
+        pub fn neon_sqadd_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.sqadd.i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sqadd.i32"]
+        pub fn neon_sqadd_i32(a: i32, b: i32) -> i32;
+        /// The `llvm.aarch64.neon.sqadd.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sqadd.v2i64"]
+        pub fn neon_sqadd_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.sqadd.i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sqadd.i64"]
+        pub fn neon_sqadd_i64(a: i64, b: i64) -> i64;
+        /// The `llvm.aarch64.neon.suqadd.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.suqadd.v16i8"]
+        pub fn neon_suqadd_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.suqadd.i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.suqadd.i8"]
+        pub fn neon_suqadd_i8(a: i8, b: i8) -> i8;
+        /// The `llvm.aarch64.neon.suqadd.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.suqadd.v8i16"]
+        pub fn neon_suqadd_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.suqadd.i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.suqadd.i16"]
+        pub fn neon_suqadd_i16(a: i16, b: i16) -> i16;
+        /// The `llvm.aarch64.neon.suqadd.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.suqadd.v4i32"]
+        pub fn neon_suqadd_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.suqadd.i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.suqadd.i32"]
+        pub fn neon_suqadd_i32(a: i32, b: i32) -> i32;
+        /// The `llvm.aarch64.neon.suqadd.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.suqadd.v2i64"]
+        pub fn neon_suqadd_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.suqadd.i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.suqadd.i64"]
+        pub fn neon_suqadd_i64(a: i64, b: i64) -> i64;
+        /// The `llvm.aarch64.neon.usqadd.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.usqadd.v16i8"]
+        pub fn neon_usqadd_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.usqadd.i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.usqadd.i8"]
+        pub fn neon_usqadd_i8(a: i8, b: i8) -> i8;
+        /// The `llvm.aarch64.neon.usqadd.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.usqadd.v8i16"]
+        pub fn neon_usqadd_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.usqadd.i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.usqadd.i16"]
+        pub fn neon_usqadd_i16(a: i16, b: i16) -> i16;
+        /// The `llvm.aarch64.neon.usqadd.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.usqadd.v4i32"]
+        pub fn neon_usqadd_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.usqadd.i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.usqadd.i32"]
+        pub fn neon_usqadd_i32(a: i32, b: i32) -> i32;
+        /// The `llvm.aarch64.neon.usqadd.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.usqadd.v2i64"]
+        pub fn neon_usqadd_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.usqadd.i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.usqadd.i64"]
+        pub fn neon_usqadd_i64(a: i64, b: i64) -> i64;
+        /// The `llvm.aarch64.neon.uqadd.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uqadd.v16i8"]
+        pub fn neon_uqadd_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.uqadd.i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uqadd.i8"]
+        pub fn neon_uqadd_i8(a: i8, b: i8) -> i8;
+        /// The `llvm.aarch64.neon.uqadd.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uqadd.v8i16"]
+        pub fn neon_uqadd_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.uqadd.i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uqadd.i16"]
+        pub fn neon_uqadd_i16(a: i16, b: i16) -> i16;
+        /// The `llvm.aarch64.neon.uqadd.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uqadd.v4i32"]
+        pub fn neon_uqadd_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.uqadd.i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uqadd.i32"]
+        pub fn neon_uqadd_i32(a: i32, b: i32) -> i32;
+        /// The `llvm.aarch64.neon.uqadd.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uqadd.v2i64"]
+        pub fn neon_uqadd_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.uqadd.i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uqadd.i64"]
+        pub fn neon_uqadd_i64(a: i64, b: i64) -> i64;
+        /// The `llvm.aarch64.neon.sqdmulh.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sqdmulh.v16i8"]
+        pub fn neon_sqdmulh_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.sqdmulh.i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sqdmulh.i8"]
+        pub fn neon_sqdmulh_i8(a: i8, b: i8) -> i8;
+        /// The `llvm.aarch64.neon.sqdmulh.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sqdmulh.v8i16"]
+        pub fn neon_sqdmulh_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.sqdmulh.i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sqdmulh.i16"]
+        pub fn neon_sqdmulh_i16(a: i16, b: i16) -> i16;
+        /// The `llvm.aarch64.neon.sqdmulh.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sqdmulh.v4i32"]
+        pub fn neon_sqdmulh_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.sqdmulh.i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sqdmulh.i32"]
+        pub fn neon_sqdmulh_i32(a: i32, b: i32) -> i32;
+        /// The `llvm.aarch64.neon.sqdmulh.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sqdmulh.v2i64"]
+        pub fn neon_sqdmulh_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.sqdmulh.i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sqdmulh.i64"]
+        pub fn neon_sqdmulh_i64(a: i64, b: i64) -> i64;
+        /// The `llvm.aarch64.neon.sqrdmulh.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sqrdmulh.v16i8"]
+        pub fn neon_sqrdmulh_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.sqrdmulh.i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sqrdmulh.i8"]
+        pub fn neon_sqrdmulh_i8(a: i8, b: i8) -> i8;
+        /// The `llvm.aarch64.neon.sqrdmulh.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sqrdmulh.v8i16"]
+        pub fn neon_sqrdmulh_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.sqrdmulh.i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sqrdmulh.i16"]
+        pub fn neon_sqrdmulh_i16(a: i16, b: i16) -> i16;
+        /// The `llvm.aarch64.neon.sqrdmulh.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sqrdmulh.v4i32"]
+        pub fn neon_sqrdmulh_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.sqrdmulh.i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sqrdmulh.i32"]
+        pub fn neon_sqrdmulh_i32(a: i32, b: i32) -> i32;
+        /// The `llvm.aarch64.neon.sqrdmulh.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sqrdmulh.v2i64"]
+        pub fn neon_sqrdmulh_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.sqrdmulh.i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sqrdmulh.i64"]
+        pub fn neon_sqrdmulh_i64(a: i64, b: i64) -> i64;
+        /// The `llvm.aarch64.neon.pmul.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.pmul.v16i8"]
+        pub fn neon_pmul_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.pmul.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.pmul.v8i16"]
+        pub fn neon_pmul_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.pmul.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.pmul.v4i32"]
+        pub fn neon_pmul_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.pmul.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.pmul.v2i64"]
+        pub fn neon_pmul_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.pmul.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.pmul.v4f32"]
+        pub fn neon_pmul_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.pmul.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.pmul.v2f64"]
+        pub fn neon_pmul_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::f64x2;
         /// The `llvm.aarch64.neon.pmull64` intrinsic.
         #[link_name = "llvm.aarch64.neon.pmull64"]
         pub fn neon_pmull64(a: i64, b: i64) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.fmulx.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fmulx.v4f32"]
+        pub fn neon_fmulx_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.fmulx.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fmulx.f32"]
+        pub fn neon_fmulx_f32(a: f32, b: f32) -> f32;
+        /// The `llvm.aarch64.neon.fmulx.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fmulx.v2f64"]
+        pub fn neon_fmulx_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.fmulx.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fmulx.f64"]
+        pub fn neon_fmulx_f64(a: f64, b: f64) -> f64;
         /// The `llvm.aarch64.neon.sqdmulls.scalar` intrinsic.
         #[link_name = "llvm.aarch64.neon.sqdmulls.scalar"]
         pub fn neon_sqdmulls_scalar(a: i32, b: i32) -> i64;
+        /// The `llvm.aarch64.neon.shsub.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.shsub.v16i8"]
+        pub fn neon_shsub_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.shsub.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.shsub.v8i16"]
+        pub fn neon_shsub_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.shsub.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.shsub.v4i32"]
+        pub fn neon_shsub_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.shsub.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.shsub.v2i64"]
+        pub fn neon_shsub_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.shsub.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.shsub.v4f32"]
+        pub fn neon_shsub_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.shsub.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.shsub.v2f64"]
+        pub fn neon_shsub_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.uhsub.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uhsub.v16i8"]
+        pub fn neon_uhsub_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.uhsub.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uhsub.v8i16"]
+        pub fn neon_uhsub_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.uhsub.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uhsub.v4i32"]
+        pub fn neon_uhsub_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.uhsub.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uhsub.v2i64"]
+        pub fn neon_uhsub_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.uhsub.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uhsub.v4f32"]
+        pub fn neon_uhsub_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.uhsub.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uhsub.v2f64"]
+        pub fn neon_uhsub_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.sqsub.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sqsub.v16i8"]
+        pub fn neon_sqsub_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.sqsub.i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sqsub.i8"]
+        pub fn neon_sqsub_i8(a: i8, b: i8) -> i8;
+        /// The `llvm.aarch64.neon.sqsub.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sqsub.v8i16"]
+        pub fn neon_sqsub_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.sqsub.i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sqsub.i16"]
+        pub fn neon_sqsub_i16(a: i16, b: i16) -> i16;
+        /// The `llvm.aarch64.neon.sqsub.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sqsub.v4i32"]
+        pub fn neon_sqsub_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.sqsub.i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sqsub.i32"]
+        pub fn neon_sqsub_i32(a: i32, b: i32) -> i32;
+        /// The `llvm.aarch64.neon.sqsub.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sqsub.v2i64"]
+        pub fn neon_sqsub_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.sqsub.i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sqsub.i64"]
+        pub fn neon_sqsub_i64(a: i64, b: i64) -> i64;
+        /// The `llvm.aarch64.neon.uqsub.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uqsub.v16i8"]
+        pub fn neon_uqsub_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.uqsub.i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uqsub.i8"]
+        pub fn neon_uqsub_i8(a: i8, b: i8) -> i8;
+        /// The `llvm.aarch64.neon.uqsub.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uqsub.v8i16"]
+        pub fn neon_uqsub_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.uqsub.i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uqsub.i16"]
+        pub fn neon_uqsub_i16(a: i16, b: i16) -> i16;
+        /// The `llvm.aarch64.neon.uqsub.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uqsub.v4i32"]
+        pub fn neon_uqsub_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.uqsub.i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uqsub.i32"]
+        pub fn neon_uqsub_i32(a: i32, b: i32) -> i32;
+        /// The `llvm.aarch64.neon.uqsub.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uqsub.v2i64"]
+        pub fn neon_uqsub_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.uqsub.i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uqsub.i64"]
+        pub fn neon_uqsub_i64(a: i64, b: i64) -> i64;
+        /// The `llvm.aarch64.neon.facge.v16i8.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.facge.v16i8.v4f32"]
+        pub fn neon_facge_v16i8_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.facge.v16i8.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.facge.v16i8.f32"]
+        pub fn neon_facge_v16i8_f32(a: f32, b: f32) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.facge.v16i8.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.facge.v16i8.v2f64"]
+        pub fn neon_facge_v16i8_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.facge.v16i8.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.facge.v16i8.f64"]
+        pub fn neon_facge_v16i8_f64(a: f64, b: f64) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.facge.i8.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.facge.i8.v4f32"]
+        pub fn neon_facge_i8_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> i8;
+        /// The `llvm.aarch64.neon.facge.i8.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.facge.i8.f32"]
+        pub fn neon_facge_i8_f32(a: f32, b: f32) -> i8;
+        /// The `llvm.aarch64.neon.facge.i8.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.facge.i8.v2f64"]
+        pub fn neon_facge_i8_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> i8;
+        /// The `llvm.aarch64.neon.facge.i8.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.facge.i8.f64"]
+        pub fn neon_facge_i8_f64(a: f64, b: f64) -> i8;
+        /// The `llvm.aarch64.neon.facge.v8i16.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.facge.v8i16.v4f32"]
+        pub fn neon_facge_v8i16_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.facge.v8i16.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.facge.v8i16.f32"]
+        pub fn neon_facge_v8i16_f32(a: f32, b: f32) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.facge.v8i16.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.facge.v8i16.v2f64"]
+        pub fn neon_facge_v8i16_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.facge.v8i16.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.facge.v8i16.f64"]
+        pub fn neon_facge_v8i16_f64(a: f64, b: f64) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.facge.i16.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.facge.i16.v4f32"]
+        pub fn neon_facge_i16_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> i16;
+        /// The `llvm.aarch64.neon.facge.i16.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.facge.i16.f32"]
+        pub fn neon_facge_i16_f32(a: f32, b: f32) -> i16;
+        /// The `llvm.aarch64.neon.facge.i16.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.facge.i16.v2f64"]
+        pub fn neon_facge_i16_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> i16;
+        /// The `llvm.aarch64.neon.facge.i16.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.facge.i16.f64"]
+        pub fn neon_facge_i16_f64(a: f64, b: f64) -> i16;
+        /// The `llvm.aarch64.neon.facge.v4i32.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.facge.v4i32.v4f32"]
+        pub fn neon_facge_v4i32_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.facge.v4i32.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.facge.v4i32.f32"]
+        pub fn neon_facge_v4i32_f32(a: f32, b: f32) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.facge.v4i32.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.facge.v4i32.v2f64"]
+        pub fn neon_facge_v4i32_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.facge.v4i32.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.facge.v4i32.f64"]
+        pub fn neon_facge_v4i32_f64(a: f64, b: f64) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.facge.i32.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.facge.i32.v4f32"]
+        pub fn neon_facge_i32_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> i32;
+        /// The `llvm.aarch64.neon.facge.i32.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.facge.i32.f32"]
+        pub fn neon_facge_i32_f32(a: f32, b: f32) -> i32;
+        /// The `llvm.aarch64.neon.facge.i32.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.facge.i32.v2f64"]
+        pub fn neon_facge_i32_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> i32;
+        /// The `llvm.aarch64.neon.facge.i32.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.facge.i32.f64"]
+        pub fn neon_facge_i32_f64(a: f64, b: f64) -> i32;
+        /// The `llvm.aarch64.neon.facge.v2i64.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.facge.v2i64.v4f32"]
+        pub fn neon_facge_v2i64_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.facge.v2i64.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.facge.v2i64.f32"]
+        pub fn neon_facge_v2i64_f32(a: f32, b: f32) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.facge.v2i64.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.facge.v2i64.v2f64"]
+        pub fn neon_facge_v2i64_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.facge.v2i64.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.facge.v2i64.f64"]
+        pub fn neon_facge_v2i64_f64(a: f64, b: f64) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.facge.i64.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.facge.i64.v4f32"]
+        pub fn neon_facge_i64_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> i64;
+        /// The `llvm.aarch64.neon.facge.i64.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.facge.i64.f32"]
+        pub fn neon_facge_i64_f32(a: f32, b: f32) -> i64;
+        /// The `llvm.aarch64.neon.facge.i64.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.facge.i64.v2f64"]
+        pub fn neon_facge_i64_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> i64;
+        /// The `llvm.aarch64.neon.facge.i64.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.facge.i64.f64"]
+        pub fn neon_facge_i64_f64(a: f64, b: f64) -> i64;
+        /// The `llvm.aarch64.neon.facgt.v16i8.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.facgt.v16i8.v4f32"]
+        pub fn neon_facgt_v16i8_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.facgt.v16i8.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.facgt.v16i8.f32"]
+        pub fn neon_facgt_v16i8_f32(a: f32, b: f32) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.facgt.v16i8.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.facgt.v16i8.v2f64"]
+        pub fn neon_facgt_v16i8_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.facgt.v16i8.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.facgt.v16i8.f64"]
+        pub fn neon_facgt_v16i8_f64(a: f64, b: f64) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.facgt.i8.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.facgt.i8.v4f32"]
+        pub fn neon_facgt_i8_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> i8;
+        /// The `llvm.aarch64.neon.facgt.i8.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.facgt.i8.f32"]
+        pub fn neon_facgt_i8_f32(a: f32, b: f32) -> i8;
+        /// The `llvm.aarch64.neon.facgt.i8.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.facgt.i8.v2f64"]
+        pub fn neon_facgt_i8_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> i8;
+        /// The `llvm.aarch64.neon.facgt.i8.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.facgt.i8.f64"]
+        pub fn neon_facgt_i8_f64(a: f64, b: f64) -> i8;
+        /// The `llvm.aarch64.neon.facgt.v8i16.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.facgt.v8i16.v4f32"]
+        pub fn neon_facgt_v8i16_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.facgt.v8i16.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.facgt.v8i16.f32"]
+        pub fn neon_facgt_v8i16_f32(a: f32, b: f32) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.facgt.v8i16.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.facgt.v8i16.v2f64"]
+        pub fn neon_facgt_v8i16_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.facgt.v8i16.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.facgt.v8i16.f64"]
+        pub fn neon_facgt_v8i16_f64(a: f64, b: f64) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.facgt.i16.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.facgt.i16.v4f32"]
+        pub fn neon_facgt_i16_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> i16;
+        /// The `llvm.aarch64.neon.facgt.i16.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.facgt.i16.f32"]
+        pub fn neon_facgt_i16_f32(a: f32, b: f32) -> i16;
+        /// The `llvm.aarch64.neon.facgt.i16.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.facgt.i16.v2f64"]
+        pub fn neon_facgt_i16_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> i16;
+        /// The `llvm.aarch64.neon.facgt.i16.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.facgt.i16.f64"]
+        pub fn neon_facgt_i16_f64(a: f64, b: f64) -> i16;
+        /// The `llvm.aarch64.neon.facgt.v4i32.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.facgt.v4i32.v4f32"]
+        pub fn neon_facgt_v4i32_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.facgt.v4i32.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.facgt.v4i32.f32"]
+        pub fn neon_facgt_v4i32_f32(a: f32, b: f32) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.facgt.v4i32.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.facgt.v4i32.v2f64"]
+        pub fn neon_facgt_v4i32_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.facgt.v4i32.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.facgt.v4i32.f64"]
+        pub fn neon_facgt_v4i32_f64(a: f64, b: f64) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.facgt.i32.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.facgt.i32.v4f32"]
+        pub fn neon_facgt_i32_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> i32;
+        /// The `llvm.aarch64.neon.facgt.i32.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.facgt.i32.f32"]
+        pub fn neon_facgt_i32_f32(a: f32, b: f32) -> i32;
+        /// The `llvm.aarch64.neon.facgt.i32.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.facgt.i32.v2f64"]
+        pub fn neon_facgt_i32_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> i32;
+        /// The `llvm.aarch64.neon.facgt.i32.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.facgt.i32.f64"]
+        pub fn neon_facgt_i32_f64(a: f64, b: f64) -> i32;
+        /// The `llvm.aarch64.neon.facgt.v2i64.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.facgt.v2i64.v4f32"]
+        pub fn neon_facgt_v2i64_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.facgt.v2i64.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.facgt.v2i64.f32"]
+        pub fn neon_facgt_v2i64_f32(a: f32, b: f32) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.facgt.v2i64.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.facgt.v2i64.v2f64"]
+        pub fn neon_facgt_v2i64_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.facgt.v2i64.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.facgt.v2i64.f64"]
+        pub fn neon_facgt_v2i64_f64(a: f64, b: f64) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.facgt.i64.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.facgt.i64.v4f32"]
+        pub fn neon_facgt_i64_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> i64;
+        /// The `llvm.aarch64.neon.facgt.i64.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.facgt.i64.f32"]
+        pub fn neon_facgt_i64_f32(a: f32, b: f32) -> i64;
+        /// The `llvm.aarch64.neon.facgt.i64.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.facgt.i64.v2f64"]
+        pub fn neon_facgt_i64_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> i64;
+        /// The `llvm.aarch64.neon.facgt.i64.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.facgt.i64.f64"]
+        pub fn neon_facgt_i64_f64(a: f64, b: f64) -> i64;
+        /// The `llvm.aarch64.neon.sabd.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sabd.v16i8"]
+        pub fn neon_sabd_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.sabd.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sabd.v8i16"]
+        pub fn neon_sabd_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.sabd.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sabd.v4i32"]
+        pub fn neon_sabd_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.sabd.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sabd.v2i64"]
+        pub fn neon_sabd_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.sabd.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sabd.v4f32"]
+        pub fn neon_sabd_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.sabd.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sabd.v2f64"]
+        pub fn neon_sabd_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.uabd.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uabd.v16i8"]
+        pub fn neon_uabd_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.uabd.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uabd.v8i16"]
+        pub fn neon_uabd_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.uabd.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uabd.v4i32"]
+        pub fn neon_uabd_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.uabd.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uabd.v2i64"]
+        pub fn neon_uabd_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.uabd.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uabd.v4f32"]
+        pub fn neon_uabd_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.uabd.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uabd.v2f64"]
+        pub fn neon_uabd_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.fabd.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fabd.v16i8"]
+        pub fn neon_fabd_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.fabd.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fabd.v8i16"]
+        pub fn neon_fabd_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.fabd.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fabd.v4i32"]
+        pub fn neon_fabd_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.fabd.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fabd.v2i64"]
+        pub fn neon_fabd_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.fabd.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fabd.v4f32"]
+        pub fn neon_fabd_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.fabd.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fabd.v2f64"]
+        pub fn neon_fabd_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.sisd.fabd.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.sisd.fabd.v4f32"]
+        pub fn sisd_fabd_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.sisd.fabd.f32` intrinsic.
+        #[link_name = "llvm.aarch64.sisd.fabd.f32"]
+        pub fn sisd_fabd_f32(a: f32, b: f32) -> f32;
+        /// The `llvm.aarch64.sisd.fabd.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.sisd.fabd.v2f64"]
+        pub fn sisd_fabd_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.sisd.fabd.f64` intrinsic.
+        #[link_name = "llvm.aarch64.sisd.fabd.f64"]
+        pub fn sisd_fabd_f64(a: f64, b: f64) -> f64;
+        /// The `llvm.aarch64.neon.smax.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.smax.v16i8"]
+        pub fn neon_smax_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.smax.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.smax.v8i16"]
+        pub fn neon_smax_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.smax.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.smax.v4i32"]
+        pub fn neon_smax_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.smax.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.smax.v2i64"]
+        pub fn neon_smax_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.smax.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.smax.v4f32"]
+        pub fn neon_smax_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.smax.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.smax.v2f64"]
+        pub fn neon_smax_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.umax.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.umax.v16i8"]
+        pub fn neon_umax_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.umax.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.umax.v8i16"]
+        pub fn neon_umax_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.umax.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.umax.v4i32"]
+        pub fn neon_umax_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.umax.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.umax.v2i64"]
+        pub fn neon_umax_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.umax.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.umax.v4f32"]
+        pub fn neon_umax_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.umax.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.umax.v2f64"]
+        pub fn neon_umax_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.fmax.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fmax.v16i8"]
+        pub fn neon_fmax_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.fmax.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fmax.v8i16"]
+        pub fn neon_fmax_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.fmax.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fmax.v4i32"]
+        pub fn neon_fmax_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.fmax.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fmax.v2i64"]
+        pub fn neon_fmax_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.fmax.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fmax.v4f32"]
+        pub fn neon_fmax_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.fmax.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fmax.v2f64"]
+        pub fn neon_fmax_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.fmaxnmp.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fmaxnmp.v16i8"]
+        pub fn neon_fmaxnmp_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.fmaxnmp.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fmaxnmp.v8i16"]
+        pub fn neon_fmaxnmp_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.fmaxnmp.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fmaxnmp.v4i32"]
+        pub fn neon_fmaxnmp_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.fmaxnmp.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fmaxnmp.v2i64"]
+        pub fn neon_fmaxnmp_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.fmaxnmp.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fmaxnmp.v4f32"]
+        pub fn neon_fmaxnmp_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.fmaxnmp.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fmaxnmp.v2f64"]
+        pub fn neon_fmaxnmp_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.smaxv.v16i8.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.smaxv.v16i8.v16i8"]
+        pub fn neon_smaxv_v16i8_v16i8(a: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.smaxv.v16i8.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.smaxv.v16i8.v8i16"]
+        pub fn neon_smaxv_v16i8_v8i16(a: ::simdty::i16x8) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.smaxv.v16i8.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.smaxv.v16i8.v4i32"]
+        pub fn neon_smaxv_v16i8_v4i32(a: ::simdty::i32x4) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.smaxv.v16i8.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.smaxv.v16i8.v2i64"]
+        pub fn neon_smaxv_v16i8_v2i64(a: ::simdty::i64x2) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.smaxv.v16i8.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.smaxv.v16i8.v4f32"]
+        pub fn neon_smaxv_v16i8_v4f32(a: ::simdty::f32x4) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.smaxv.v16i8.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.smaxv.v16i8.v2f64"]
+        pub fn neon_smaxv_v16i8_v2f64(a: ::simdty::f64x2) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.smaxv.i8.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.smaxv.i8.v16i8"]
+        pub fn neon_smaxv_i8_v16i8(a: ::simdty::i8x16) -> i8;
+        /// The `llvm.aarch64.neon.smaxv.i8.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.smaxv.i8.v8i16"]
+        pub fn neon_smaxv_i8_v8i16(a: ::simdty::i16x8) -> i8;
+        /// The `llvm.aarch64.neon.smaxv.i8.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.smaxv.i8.v4i32"]
+        pub fn neon_smaxv_i8_v4i32(a: ::simdty::i32x4) -> i8;
+        /// The `llvm.aarch64.neon.smaxv.i8.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.smaxv.i8.v2i64"]
+        pub fn neon_smaxv_i8_v2i64(a: ::simdty::i64x2) -> i8;
+        /// The `llvm.aarch64.neon.smaxv.i8.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.smaxv.i8.v4f32"]
+        pub fn neon_smaxv_i8_v4f32(a: ::simdty::f32x4) -> i8;
+        /// The `llvm.aarch64.neon.smaxv.i8.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.smaxv.i8.v2f64"]
+        pub fn neon_smaxv_i8_v2f64(a: ::simdty::f64x2) -> i8;
+        /// The `llvm.aarch64.neon.smaxv.v8i16.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.smaxv.v8i16.v16i8"]
+        pub fn neon_smaxv_v8i16_v16i8(a: ::simdty::i8x16) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.smaxv.v8i16.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.smaxv.v8i16.v8i16"]
+        pub fn neon_smaxv_v8i16_v8i16(a: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.smaxv.v8i16.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.smaxv.v8i16.v4i32"]
+        pub fn neon_smaxv_v8i16_v4i32(a: ::simdty::i32x4) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.smaxv.v8i16.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.smaxv.v8i16.v2i64"]
+        pub fn neon_smaxv_v8i16_v2i64(a: ::simdty::i64x2) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.smaxv.v8i16.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.smaxv.v8i16.v4f32"]
+        pub fn neon_smaxv_v8i16_v4f32(a: ::simdty::f32x4) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.smaxv.v8i16.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.smaxv.v8i16.v2f64"]
+        pub fn neon_smaxv_v8i16_v2f64(a: ::simdty::f64x2) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.smaxv.i16.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.smaxv.i16.v16i8"]
+        pub fn neon_smaxv_i16_v16i8(a: ::simdty::i8x16) -> i16;
+        /// The `llvm.aarch64.neon.smaxv.i16.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.smaxv.i16.v8i16"]
+        pub fn neon_smaxv_i16_v8i16(a: ::simdty::i16x8) -> i16;
+        /// The `llvm.aarch64.neon.smaxv.i16.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.smaxv.i16.v4i32"]
+        pub fn neon_smaxv_i16_v4i32(a: ::simdty::i32x4) -> i16;
+        /// The `llvm.aarch64.neon.smaxv.i16.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.smaxv.i16.v2i64"]
+        pub fn neon_smaxv_i16_v2i64(a: ::simdty::i64x2) -> i16;
+        /// The `llvm.aarch64.neon.smaxv.i16.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.smaxv.i16.v4f32"]
+        pub fn neon_smaxv_i16_v4f32(a: ::simdty::f32x4) -> i16;
+        /// The `llvm.aarch64.neon.smaxv.i16.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.smaxv.i16.v2f64"]
+        pub fn neon_smaxv_i16_v2f64(a: ::simdty::f64x2) -> i16;
+        /// The `llvm.aarch64.neon.smaxv.v4i32.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.smaxv.v4i32.v16i8"]
+        pub fn neon_smaxv_v4i32_v16i8(a: ::simdty::i8x16) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.smaxv.v4i32.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.smaxv.v4i32.v8i16"]
+        pub fn neon_smaxv_v4i32_v8i16(a: ::simdty::i16x8) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.smaxv.v4i32.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.smaxv.v4i32.v4i32"]
+        pub fn neon_smaxv_v4i32_v4i32(a: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.smaxv.v4i32.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.smaxv.v4i32.v2i64"]
+        pub fn neon_smaxv_v4i32_v2i64(a: ::simdty::i64x2) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.smaxv.v4i32.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.smaxv.v4i32.v4f32"]
+        pub fn neon_smaxv_v4i32_v4f32(a: ::simdty::f32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.smaxv.v4i32.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.smaxv.v4i32.v2f64"]
+        pub fn neon_smaxv_v4i32_v2f64(a: ::simdty::f64x2) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.smaxv.i32.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.smaxv.i32.v16i8"]
+        pub fn neon_smaxv_i32_v16i8(a: ::simdty::i8x16) -> i32;
+        /// The `llvm.aarch64.neon.smaxv.i32.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.smaxv.i32.v8i16"]
+        pub fn neon_smaxv_i32_v8i16(a: ::simdty::i16x8) -> i32;
+        /// The `llvm.aarch64.neon.smaxv.i32.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.smaxv.i32.v4i32"]
+        pub fn neon_smaxv_i32_v4i32(a: ::simdty::i32x4) -> i32;
+        /// The `llvm.aarch64.neon.smaxv.i32.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.smaxv.i32.v2i64"]
+        pub fn neon_smaxv_i32_v2i64(a: ::simdty::i64x2) -> i32;
+        /// The `llvm.aarch64.neon.smaxv.i32.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.smaxv.i32.v4f32"]
+        pub fn neon_smaxv_i32_v4f32(a: ::simdty::f32x4) -> i32;
+        /// The `llvm.aarch64.neon.smaxv.i32.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.smaxv.i32.v2f64"]
+        pub fn neon_smaxv_i32_v2f64(a: ::simdty::f64x2) -> i32;
+        /// The `llvm.aarch64.neon.smaxv.v2i64.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.smaxv.v2i64.v16i8"]
+        pub fn neon_smaxv_v2i64_v16i8(a: ::simdty::i8x16) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.smaxv.v2i64.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.smaxv.v2i64.v8i16"]
+        pub fn neon_smaxv_v2i64_v8i16(a: ::simdty::i16x8) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.smaxv.v2i64.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.smaxv.v2i64.v4i32"]
+        pub fn neon_smaxv_v2i64_v4i32(a: ::simdty::i32x4) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.smaxv.v2i64.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.smaxv.v2i64.v2i64"]
+        pub fn neon_smaxv_v2i64_v2i64(a: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.smaxv.v2i64.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.smaxv.v2i64.v4f32"]
+        pub fn neon_smaxv_v2i64_v4f32(a: ::simdty::f32x4) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.smaxv.v2i64.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.smaxv.v2i64.v2f64"]
+        pub fn neon_smaxv_v2i64_v2f64(a: ::simdty::f64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.smaxv.i64.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.smaxv.i64.v16i8"]
+        pub fn neon_smaxv_i64_v16i8(a: ::simdty::i8x16) -> i64;
+        /// The `llvm.aarch64.neon.smaxv.i64.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.smaxv.i64.v8i16"]
+        pub fn neon_smaxv_i64_v8i16(a: ::simdty::i16x8) -> i64;
+        /// The `llvm.aarch64.neon.smaxv.i64.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.smaxv.i64.v4i32"]
+        pub fn neon_smaxv_i64_v4i32(a: ::simdty::i32x4) -> i64;
+        /// The `llvm.aarch64.neon.smaxv.i64.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.smaxv.i64.v2i64"]
+        pub fn neon_smaxv_i64_v2i64(a: ::simdty::i64x2) -> i64;
+        /// The `llvm.aarch64.neon.smaxv.i64.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.smaxv.i64.v4f32"]
+        pub fn neon_smaxv_i64_v4f32(a: ::simdty::f32x4) -> i64;
+        /// The `llvm.aarch64.neon.smaxv.i64.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.smaxv.i64.v2f64"]
+        pub fn neon_smaxv_i64_v2f64(a: ::simdty::f64x2) -> i64;
+        /// The `llvm.aarch64.neon.umaxv.v16i8.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.umaxv.v16i8.v16i8"]
+        pub fn neon_umaxv_v16i8_v16i8(a: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.umaxv.v16i8.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.umaxv.v16i8.v8i16"]
+        pub fn neon_umaxv_v16i8_v8i16(a: ::simdty::i16x8) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.umaxv.v16i8.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.umaxv.v16i8.v4i32"]
+        pub fn neon_umaxv_v16i8_v4i32(a: ::simdty::i32x4) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.umaxv.v16i8.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.umaxv.v16i8.v2i64"]
+        pub fn neon_umaxv_v16i8_v2i64(a: ::simdty::i64x2) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.umaxv.v16i8.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.umaxv.v16i8.v4f32"]
+        pub fn neon_umaxv_v16i8_v4f32(a: ::simdty::f32x4) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.umaxv.v16i8.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.umaxv.v16i8.v2f64"]
+        pub fn neon_umaxv_v16i8_v2f64(a: ::simdty::f64x2) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.umaxv.i8.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.umaxv.i8.v16i8"]
+        pub fn neon_umaxv_i8_v16i8(a: ::simdty::i8x16) -> i8;
+        /// The `llvm.aarch64.neon.umaxv.i8.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.umaxv.i8.v8i16"]
+        pub fn neon_umaxv_i8_v8i16(a: ::simdty::i16x8) -> i8;
+        /// The `llvm.aarch64.neon.umaxv.i8.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.umaxv.i8.v4i32"]
+        pub fn neon_umaxv_i8_v4i32(a: ::simdty::i32x4) -> i8;
+        /// The `llvm.aarch64.neon.umaxv.i8.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.umaxv.i8.v2i64"]
+        pub fn neon_umaxv_i8_v2i64(a: ::simdty::i64x2) -> i8;
+        /// The `llvm.aarch64.neon.umaxv.i8.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.umaxv.i8.v4f32"]
+        pub fn neon_umaxv_i8_v4f32(a: ::simdty::f32x4) -> i8;
+        /// The `llvm.aarch64.neon.umaxv.i8.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.umaxv.i8.v2f64"]
+        pub fn neon_umaxv_i8_v2f64(a: ::simdty::f64x2) -> i8;
+        /// The `llvm.aarch64.neon.umaxv.v8i16.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.umaxv.v8i16.v16i8"]
+        pub fn neon_umaxv_v8i16_v16i8(a: ::simdty::i8x16) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.umaxv.v8i16.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.umaxv.v8i16.v8i16"]
+        pub fn neon_umaxv_v8i16_v8i16(a: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.umaxv.v8i16.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.umaxv.v8i16.v4i32"]
+        pub fn neon_umaxv_v8i16_v4i32(a: ::simdty::i32x4) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.umaxv.v8i16.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.umaxv.v8i16.v2i64"]
+        pub fn neon_umaxv_v8i16_v2i64(a: ::simdty::i64x2) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.umaxv.v8i16.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.umaxv.v8i16.v4f32"]
+        pub fn neon_umaxv_v8i16_v4f32(a: ::simdty::f32x4) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.umaxv.v8i16.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.umaxv.v8i16.v2f64"]
+        pub fn neon_umaxv_v8i16_v2f64(a: ::simdty::f64x2) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.umaxv.i16.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.umaxv.i16.v16i8"]
+        pub fn neon_umaxv_i16_v16i8(a: ::simdty::i8x16) -> i16;
+        /// The `llvm.aarch64.neon.umaxv.i16.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.umaxv.i16.v8i16"]
+        pub fn neon_umaxv_i16_v8i16(a: ::simdty::i16x8) -> i16;
+        /// The `llvm.aarch64.neon.umaxv.i16.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.umaxv.i16.v4i32"]
+        pub fn neon_umaxv_i16_v4i32(a: ::simdty::i32x4) -> i16;
+        /// The `llvm.aarch64.neon.umaxv.i16.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.umaxv.i16.v2i64"]
+        pub fn neon_umaxv_i16_v2i64(a: ::simdty::i64x2) -> i16;
+        /// The `llvm.aarch64.neon.umaxv.i16.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.umaxv.i16.v4f32"]
+        pub fn neon_umaxv_i16_v4f32(a: ::simdty::f32x4) -> i16;
+        /// The `llvm.aarch64.neon.umaxv.i16.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.umaxv.i16.v2f64"]
+        pub fn neon_umaxv_i16_v2f64(a: ::simdty::f64x2) -> i16;
+        /// The `llvm.aarch64.neon.umaxv.v4i32.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.umaxv.v4i32.v16i8"]
+        pub fn neon_umaxv_v4i32_v16i8(a: ::simdty::i8x16) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.umaxv.v4i32.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.umaxv.v4i32.v8i16"]
+        pub fn neon_umaxv_v4i32_v8i16(a: ::simdty::i16x8) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.umaxv.v4i32.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.umaxv.v4i32.v4i32"]
+        pub fn neon_umaxv_v4i32_v4i32(a: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.umaxv.v4i32.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.umaxv.v4i32.v2i64"]
+        pub fn neon_umaxv_v4i32_v2i64(a: ::simdty::i64x2) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.umaxv.v4i32.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.umaxv.v4i32.v4f32"]
+        pub fn neon_umaxv_v4i32_v4f32(a: ::simdty::f32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.umaxv.v4i32.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.umaxv.v4i32.v2f64"]
+        pub fn neon_umaxv_v4i32_v2f64(a: ::simdty::f64x2) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.umaxv.i32.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.umaxv.i32.v16i8"]
+        pub fn neon_umaxv_i32_v16i8(a: ::simdty::i8x16) -> i32;
+        /// The `llvm.aarch64.neon.umaxv.i32.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.umaxv.i32.v8i16"]
+        pub fn neon_umaxv_i32_v8i16(a: ::simdty::i16x8) -> i32;
+        /// The `llvm.aarch64.neon.umaxv.i32.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.umaxv.i32.v4i32"]
+        pub fn neon_umaxv_i32_v4i32(a: ::simdty::i32x4) -> i32;
+        /// The `llvm.aarch64.neon.umaxv.i32.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.umaxv.i32.v2i64"]
+        pub fn neon_umaxv_i32_v2i64(a: ::simdty::i64x2) -> i32;
+        /// The `llvm.aarch64.neon.umaxv.i32.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.umaxv.i32.v4f32"]
+        pub fn neon_umaxv_i32_v4f32(a: ::simdty::f32x4) -> i32;
+        /// The `llvm.aarch64.neon.umaxv.i32.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.umaxv.i32.v2f64"]
+        pub fn neon_umaxv_i32_v2f64(a: ::simdty::f64x2) -> i32;
+        /// The `llvm.aarch64.neon.umaxv.v2i64.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.umaxv.v2i64.v16i8"]
+        pub fn neon_umaxv_v2i64_v16i8(a: ::simdty::i8x16) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.umaxv.v2i64.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.umaxv.v2i64.v8i16"]
+        pub fn neon_umaxv_v2i64_v8i16(a: ::simdty::i16x8) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.umaxv.v2i64.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.umaxv.v2i64.v4i32"]
+        pub fn neon_umaxv_v2i64_v4i32(a: ::simdty::i32x4) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.umaxv.v2i64.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.umaxv.v2i64.v2i64"]
+        pub fn neon_umaxv_v2i64_v2i64(a: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.umaxv.v2i64.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.umaxv.v2i64.v4f32"]
+        pub fn neon_umaxv_v2i64_v4f32(a: ::simdty::f32x4) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.umaxv.v2i64.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.umaxv.v2i64.v2f64"]
+        pub fn neon_umaxv_v2i64_v2f64(a: ::simdty::f64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.umaxv.i64.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.umaxv.i64.v16i8"]
+        pub fn neon_umaxv_i64_v16i8(a: ::simdty::i8x16) -> i64;
+        /// The `llvm.aarch64.neon.umaxv.i64.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.umaxv.i64.v8i16"]
+        pub fn neon_umaxv_i64_v8i16(a: ::simdty::i16x8) -> i64;
+        /// The `llvm.aarch64.neon.umaxv.i64.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.umaxv.i64.v4i32"]
+        pub fn neon_umaxv_i64_v4i32(a: ::simdty::i32x4) -> i64;
+        /// The `llvm.aarch64.neon.umaxv.i64.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.umaxv.i64.v2i64"]
+        pub fn neon_umaxv_i64_v2i64(a: ::simdty::i64x2) -> i64;
+        /// The `llvm.aarch64.neon.umaxv.i64.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.umaxv.i64.v4f32"]
+        pub fn neon_umaxv_i64_v4f32(a: ::simdty::f32x4) -> i64;
+        /// The `llvm.aarch64.neon.umaxv.i64.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.umaxv.i64.v2f64"]
+        pub fn neon_umaxv_i64_v2f64(a: ::simdty::f64x2) -> i64;
+        /// The `llvm.aarch64.neon.fmaxv.v4f32.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fmaxv.v4f32.v16i8"]
+        pub fn neon_fmaxv_v4f32_v16i8(a: ::simdty::i8x16) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.fmaxv.v4f32.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fmaxv.v4f32.v8i16"]
+        pub fn neon_fmaxv_v4f32_v8i16(a: ::simdty::i16x8) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.fmaxv.v4f32.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fmaxv.v4f32.v4i32"]
+        pub fn neon_fmaxv_v4f32_v4i32(a: ::simdty::i32x4) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.fmaxv.v4f32.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fmaxv.v4f32.v2i64"]
+        pub fn neon_fmaxv_v4f32_v2i64(a: ::simdty::i64x2) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.fmaxv.v4f32.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fmaxv.v4f32.v4f32"]
+        pub fn neon_fmaxv_v4f32_v4f32(a: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.fmaxv.v4f32.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fmaxv.v4f32.v2f64"]
+        pub fn neon_fmaxv_v4f32_v2f64(a: ::simdty::f64x2) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.fmaxv.f32.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fmaxv.f32.v16i8"]
+        pub fn neon_fmaxv_f32_v16i8(a: ::simdty::i8x16) -> f32;
+        /// The `llvm.aarch64.neon.fmaxv.f32.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fmaxv.f32.v8i16"]
+        pub fn neon_fmaxv_f32_v8i16(a: ::simdty::i16x8) -> f32;
+        /// The `llvm.aarch64.neon.fmaxv.f32.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fmaxv.f32.v4i32"]
+        pub fn neon_fmaxv_f32_v4i32(a: ::simdty::i32x4) -> f32;
+        /// The `llvm.aarch64.neon.fmaxv.f32.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fmaxv.f32.v2i64"]
+        pub fn neon_fmaxv_f32_v2i64(a: ::simdty::i64x2) -> f32;
+        /// The `llvm.aarch64.neon.fmaxv.f32.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fmaxv.f32.v4f32"]
+        pub fn neon_fmaxv_f32_v4f32(a: ::simdty::f32x4) -> f32;
+        /// The `llvm.aarch64.neon.fmaxv.f32.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fmaxv.f32.v2f64"]
+        pub fn neon_fmaxv_f32_v2f64(a: ::simdty::f64x2) -> f32;
+        /// The `llvm.aarch64.neon.fmaxv.v2f64.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fmaxv.v2f64.v16i8"]
+        pub fn neon_fmaxv_v2f64_v16i8(a: ::simdty::i8x16) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.fmaxv.v2f64.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fmaxv.v2f64.v8i16"]
+        pub fn neon_fmaxv_v2f64_v8i16(a: ::simdty::i16x8) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.fmaxv.v2f64.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fmaxv.v2f64.v4i32"]
+        pub fn neon_fmaxv_v2f64_v4i32(a: ::simdty::i32x4) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.fmaxv.v2f64.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fmaxv.v2f64.v2i64"]
+        pub fn neon_fmaxv_v2f64_v2i64(a: ::simdty::i64x2) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.fmaxv.v2f64.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fmaxv.v2f64.v4f32"]
+        pub fn neon_fmaxv_v2f64_v4f32(a: ::simdty::f32x4) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.fmaxv.v2f64.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fmaxv.v2f64.v2f64"]
+        pub fn neon_fmaxv_v2f64_v2f64(a: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.fmaxv.f64.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fmaxv.f64.v16i8"]
+        pub fn neon_fmaxv_f64_v16i8(a: ::simdty::i8x16) -> f64;
+        /// The `llvm.aarch64.neon.fmaxv.f64.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fmaxv.f64.v8i16"]
+        pub fn neon_fmaxv_f64_v8i16(a: ::simdty::i16x8) -> f64;
+        /// The `llvm.aarch64.neon.fmaxv.f64.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fmaxv.f64.v4i32"]
+        pub fn neon_fmaxv_f64_v4i32(a: ::simdty::i32x4) -> f64;
+        /// The `llvm.aarch64.neon.fmaxv.f64.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fmaxv.f64.v2i64"]
+        pub fn neon_fmaxv_f64_v2i64(a: ::simdty::i64x2) -> f64;
+        /// The `llvm.aarch64.neon.fmaxv.f64.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fmaxv.f64.v4f32"]
+        pub fn neon_fmaxv_f64_v4f32(a: ::simdty::f32x4) -> f64;
+        /// The `llvm.aarch64.neon.fmaxv.f64.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fmaxv.f64.v2f64"]
+        pub fn neon_fmaxv_f64_v2f64(a: ::simdty::f64x2) -> f64;
+        /// The `llvm.aarch64.neon.fmaxnmv.v4f32.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fmaxnmv.v4f32.v16i8"]
+        pub fn neon_fmaxnmv_v4f32_v16i8(a: ::simdty::i8x16) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.fmaxnmv.v4f32.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fmaxnmv.v4f32.v8i16"]
+        pub fn neon_fmaxnmv_v4f32_v8i16(a: ::simdty::i16x8) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.fmaxnmv.v4f32.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fmaxnmv.v4f32.v4i32"]
+        pub fn neon_fmaxnmv_v4f32_v4i32(a: ::simdty::i32x4) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.fmaxnmv.v4f32.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fmaxnmv.v4f32.v2i64"]
+        pub fn neon_fmaxnmv_v4f32_v2i64(a: ::simdty::i64x2) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.fmaxnmv.v4f32.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fmaxnmv.v4f32.v4f32"]
+        pub fn neon_fmaxnmv_v4f32_v4f32(a: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.fmaxnmv.v4f32.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fmaxnmv.v4f32.v2f64"]
+        pub fn neon_fmaxnmv_v4f32_v2f64(a: ::simdty::f64x2) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.fmaxnmv.f32.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fmaxnmv.f32.v16i8"]
+        pub fn neon_fmaxnmv_f32_v16i8(a: ::simdty::i8x16) -> f32;
+        /// The `llvm.aarch64.neon.fmaxnmv.f32.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fmaxnmv.f32.v8i16"]
+        pub fn neon_fmaxnmv_f32_v8i16(a: ::simdty::i16x8) -> f32;
+        /// The `llvm.aarch64.neon.fmaxnmv.f32.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fmaxnmv.f32.v4i32"]
+        pub fn neon_fmaxnmv_f32_v4i32(a: ::simdty::i32x4) -> f32;
+        /// The `llvm.aarch64.neon.fmaxnmv.f32.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fmaxnmv.f32.v2i64"]
+        pub fn neon_fmaxnmv_f32_v2i64(a: ::simdty::i64x2) -> f32;
+        /// The `llvm.aarch64.neon.fmaxnmv.f32.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fmaxnmv.f32.v4f32"]
+        pub fn neon_fmaxnmv_f32_v4f32(a: ::simdty::f32x4) -> f32;
+        /// The `llvm.aarch64.neon.fmaxnmv.f32.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fmaxnmv.f32.v2f64"]
+        pub fn neon_fmaxnmv_f32_v2f64(a: ::simdty::f64x2) -> f32;
+        /// The `llvm.aarch64.neon.fmaxnmv.v2f64.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fmaxnmv.v2f64.v16i8"]
+        pub fn neon_fmaxnmv_v2f64_v16i8(a: ::simdty::i8x16) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.fmaxnmv.v2f64.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fmaxnmv.v2f64.v8i16"]
+        pub fn neon_fmaxnmv_v2f64_v8i16(a: ::simdty::i16x8) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.fmaxnmv.v2f64.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fmaxnmv.v2f64.v4i32"]
+        pub fn neon_fmaxnmv_v2f64_v4i32(a: ::simdty::i32x4) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.fmaxnmv.v2f64.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fmaxnmv.v2f64.v2i64"]
+        pub fn neon_fmaxnmv_v2f64_v2i64(a: ::simdty::i64x2) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.fmaxnmv.v2f64.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fmaxnmv.v2f64.v4f32"]
+        pub fn neon_fmaxnmv_v2f64_v4f32(a: ::simdty::f32x4) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.fmaxnmv.v2f64.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fmaxnmv.v2f64.v2f64"]
+        pub fn neon_fmaxnmv_v2f64_v2f64(a: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.fmaxnmv.f64.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fmaxnmv.f64.v16i8"]
+        pub fn neon_fmaxnmv_f64_v16i8(a: ::simdty::i8x16) -> f64;
+        /// The `llvm.aarch64.neon.fmaxnmv.f64.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fmaxnmv.f64.v8i16"]
+        pub fn neon_fmaxnmv_f64_v8i16(a: ::simdty::i16x8) -> f64;
+        /// The `llvm.aarch64.neon.fmaxnmv.f64.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fmaxnmv.f64.v4i32"]
+        pub fn neon_fmaxnmv_f64_v4i32(a: ::simdty::i32x4) -> f64;
+        /// The `llvm.aarch64.neon.fmaxnmv.f64.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fmaxnmv.f64.v2i64"]
+        pub fn neon_fmaxnmv_f64_v2i64(a: ::simdty::i64x2) -> f64;
+        /// The `llvm.aarch64.neon.fmaxnmv.f64.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fmaxnmv.f64.v4f32"]
+        pub fn neon_fmaxnmv_f64_v4f32(a: ::simdty::f32x4) -> f64;
+        /// The `llvm.aarch64.neon.fmaxnmv.f64.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fmaxnmv.f64.v2f64"]
+        pub fn neon_fmaxnmv_f64_v2f64(a: ::simdty::f64x2) -> f64;
+        /// The `llvm.aarch64.neon.smin.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.smin.v16i8"]
+        pub fn neon_smin_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.smin.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.smin.v8i16"]
+        pub fn neon_smin_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.smin.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.smin.v4i32"]
+        pub fn neon_smin_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.smin.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.smin.v2i64"]
+        pub fn neon_smin_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.smin.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.smin.v4f32"]
+        pub fn neon_smin_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.smin.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.smin.v2f64"]
+        pub fn neon_smin_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.umin.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.umin.v16i8"]
+        pub fn neon_umin_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.umin.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.umin.v8i16"]
+        pub fn neon_umin_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.umin.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.umin.v4i32"]
+        pub fn neon_umin_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.umin.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.umin.v2i64"]
+        pub fn neon_umin_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.umin.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.umin.v4f32"]
+        pub fn neon_umin_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.umin.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.umin.v2f64"]
+        pub fn neon_umin_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.fmin.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fmin.v16i8"]
+        pub fn neon_fmin_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.fmin.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fmin.v8i16"]
+        pub fn neon_fmin_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.fmin.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fmin.v4i32"]
+        pub fn neon_fmin_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.fmin.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fmin.v2i64"]
+        pub fn neon_fmin_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.fmin.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fmin.v4f32"]
+        pub fn neon_fmin_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.fmin.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fmin.v2f64"]
+        pub fn neon_fmin_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.fminnmp.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fminnmp.v16i8"]
+        pub fn neon_fminnmp_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.fminnmp.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fminnmp.v8i16"]
+        pub fn neon_fminnmp_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.fminnmp.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fminnmp.v4i32"]
+        pub fn neon_fminnmp_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.fminnmp.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fminnmp.v2i64"]
+        pub fn neon_fminnmp_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.fminnmp.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fminnmp.v4f32"]
+        pub fn neon_fminnmp_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.fminnmp.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fminnmp.v2f64"]
+        pub fn neon_fminnmp_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.fminnm.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fminnm.v4f32"]
+        pub fn neon_fminnm_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.fminnm.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fminnm.f32"]
+        pub fn neon_fminnm_f32(a: f32, b: f32) -> f32;
+        /// The `llvm.aarch64.neon.fminnm.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fminnm.v2f64"]
+        pub fn neon_fminnm_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.fminnm.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fminnm.f64"]
+        pub fn neon_fminnm_f64(a: f64, b: f64) -> f64;
+        /// The `llvm.aarch64.neon.fmaxnm.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fmaxnm.v4f32"]
+        pub fn neon_fmaxnm_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.fmaxnm.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fmaxnm.f32"]
+        pub fn neon_fmaxnm_f32(a: f32, b: f32) -> f32;
+        /// The `llvm.aarch64.neon.fmaxnm.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fmaxnm.v2f64"]
+        pub fn neon_fmaxnm_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.fmaxnm.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fmaxnm.f64"]
+        pub fn neon_fmaxnm_f64(a: f64, b: f64) -> f64;
+        /// The `llvm.aarch64.neon.sminv.v16i8.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sminv.v16i8.v16i8"]
+        pub fn neon_sminv_v16i8_v16i8(a: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.sminv.v16i8.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sminv.v16i8.v8i16"]
+        pub fn neon_sminv_v16i8_v8i16(a: ::simdty::i16x8) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.sminv.v16i8.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sminv.v16i8.v4i32"]
+        pub fn neon_sminv_v16i8_v4i32(a: ::simdty::i32x4) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.sminv.v16i8.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sminv.v16i8.v2i64"]
+        pub fn neon_sminv_v16i8_v2i64(a: ::simdty::i64x2) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.sminv.v16i8.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sminv.v16i8.v4f32"]
+        pub fn neon_sminv_v16i8_v4f32(a: ::simdty::f32x4) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.sminv.v16i8.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sminv.v16i8.v2f64"]
+        pub fn neon_sminv_v16i8_v2f64(a: ::simdty::f64x2) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.sminv.i8.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sminv.i8.v16i8"]
+        pub fn neon_sminv_i8_v16i8(a: ::simdty::i8x16) -> i8;
+        /// The `llvm.aarch64.neon.sminv.i8.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sminv.i8.v8i16"]
+        pub fn neon_sminv_i8_v8i16(a: ::simdty::i16x8) -> i8;
+        /// The `llvm.aarch64.neon.sminv.i8.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sminv.i8.v4i32"]
+        pub fn neon_sminv_i8_v4i32(a: ::simdty::i32x4) -> i8;
+        /// The `llvm.aarch64.neon.sminv.i8.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sminv.i8.v2i64"]
+        pub fn neon_sminv_i8_v2i64(a: ::simdty::i64x2) -> i8;
+        /// The `llvm.aarch64.neon.sminv.i8.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sminv.i8.v4f32"]
+        pub fn neon_sminv_i8_v4f32(a: ::simdty::f32x4) -> i8;
+        /// The `llvm.aarch64.neon.sminv.i8.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sminv.i8.v2f64"]
+        pub fn neon_sminv_i8_v2f64(a: ::simdty::f64x2) -> i8;
+        /// The `llvm.aarch64.neon.sminv.v8i16.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sminv.v8i16.v16i8"]
+        pub fn neon_sminv_v8i16_v16i8(a: ::simdty::i8x16) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.sminv.v8i16.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sminv.v8i16.v8i16"]
+        pub fn neon_sminv_v8i16_v8i16(a: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.sminv.v8i16.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sminv.v8i16.v4i32"]
+        pub fn neon_sminv_v8i16_v4i32(a: ::simdty::i32x4) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.sminv.v8i16.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sminv.v8i16.v2i64"]
+        pub fn neon_sminv_v8i16_v2i64(a: ::simdty::i64x2) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.sminv.v8i16.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sminv.v8i16.v4f32"]
+        pub fn neon_sminv_v8i16_v4f32(a: ::simdty::f32x4) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.sminv.v8i16.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sminv.v8i16.v2f64"]
+        pub fn neon_sminv_v8i16_v2f64(a: ::simdty::f64x2) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.sminv.i16.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sminv.i16.v16i8"]
+        pub fn neon_sminv_i16_v16i8(a: ::simdty::i8x16) -> i16;
+        /// The `llvm.aarch64.neon.sminv.i16.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sminv.i16.v8i16"]
+        pub fn neon_sminv_i16_v8i16(a: ::simdty::i16x8) -> i16;
+        /// The `llvm.aarch64.neon.sminv.i16.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sminv.i16.v4i32"]
+        pub fn neon_sminv_i16_v4i32(a: ::simdty::i32x4) -> i16;
+        /// The `llvm.aarch64.neon.sminv.i16.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sminv.i16.v2i64"]
+        pub fn neon_sminv_i16_v2i64(a: ::simdty::i64x2) -> i16;
+        /// The `llvm.aarch64.neon.sminv.i16.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sminv.i16.v4f32"]
+        pub fn neon_sminv_i16_v4f32(a: ::simdty::f32x4) -> i16;
+        /// The `llvm.aarch64.neon.sminv.i16.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sminv.i16.v2f64"]
+        pub fn neon_sminv_i16_v2f64(a: ::simdty::f64x2) -> i16;
+        /// The `llvm.aarch64.neon.sminv.v4i32.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sminv.v4i32.v16i8"]
+        pub fn neon_sminv_v4i32_v16i8(a: ::simdty::i8x16) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.sminv.v4i32.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sminv.v4i32.v8i16"]
+        pub fn neon_sminv_v4i32_v8i16(a: ::simdty::i16x8) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.sminv.v4i32.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sminv.v4i32.v4i32"]
+        pub fn neon_sminv_v4i32_v4i32(a: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.sminv.v4i32.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sminv.v4i32.v2i64"]
+        pub fn neon_sminv_v4i32_v2i64(a: ::simdty::i64x2) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.sminv.v4i32.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sminv.v4i32.v4f32"]
+        pub fn neon_sminv_v4i32_v4f32(a: ::simdty::f32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.sminv.v4i32.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sminv.v4i32.v2f64"]
+        pub fn neon_sminv_v4i32_v2f64(a: ::simdty::f64x2) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.sminv.i32.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sminv.i32.v16i8"]
+        pub fn neon_sminv_i32_v16i8(a: ::simdty::i8x16) -> i32;
+        /// The `llvm.aarch64.neon.sminv.i32.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sminv.i32.v8i16"]
+        pub fn neon_sminv_i32_v8i16(a: ::simdty::i16x8) -> i32;
+        /// The `llvm.aarch64.neon.sminv.i32.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sminv.i32.v4i32"]
+        pub fn neon_sminv_i32_v4i32(a: ::simdty::i32x4) -> i32;
+        /// The `llvm.aarch64.neon.sminv.i32.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sminv.i32.v2i64"]
+        pub fn neon_sminv_i32_v2i64(a: ::simdty::i64x2) -> i32;
+        /// The `llvm.aarch64.neon.sminv.i32.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sminv.i32.v4f32"]
+        pub fn neon_sminv_i32_v4f32(a: ::simdty::f32x4) -> i32;
+        /// The `llvm.aarch64.neon.sminv.i32.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sminv.i32.v2f64"]
+        pub fn neon_sminv_i32_v2f64(a: ::simdty::f64x2) -> i32;
+        /// The `llvm.aarch64.neon.sminv.v2i64.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sminv.v2i64.v16i8"]
+        pub fn neon_sminv_v2i64_v16i8(a: ::simdty::i8x16) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.sminv.v2i64.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sminv.v2i64.v8i16"]
+        pub fn neon_sminv_v2i64_v8i16(a: ::simdty::i16x8) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.sminv.v2i64.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sminv.v2i64.v4i32"]
+        pub fn neon_sminv_v2i64_v4i32(a: ::simdty::i32x4) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.sminv.v2i64.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sminv.v2i64.v2i64"]
+        pub fn neon_sminv_v2i64_v2i64(a: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.sminv.v2i64.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sminv.v2i64.v4f32"]
+        pub fn neon_sminv_v2i64_v4f32(a: ::simdty::f32x4) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.sminv.v2i64.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sminv.v2i64.v2f64"]
+        pub fn neon_sminv_v2i64_v2f64(a: ::simdty::f64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.sminv.i64.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sminv.i64.v16i8"]
+        pub fn neon_sminv_i64_v16i8(a: ::simdty::i8x16) -> i64;
+        /// The `llvm.aarch64.neon.sminv.i64.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sminv.i64.v8i16"]
+        pub fn neon_sminv_i64_v8i16(a: ::simdty::i16x8) -> i64;
+        /// The `llvm.aarch64.neon.sminv.i64.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sminv.i64.v4i32"]
+        pub fn neon_sminv_i64_v4i32(a: ::simdty::i32x4) -> i64;
+        /// The `llvm.aarch64.neon.sminv.i64.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sminv.i64.v2i64"]
+        pub fn neon_sminv_i64_v2i64(a: ::simdty::i64x2) -> i64;
+        /// The `llvm.aarch64.neon.sminv.i64.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sminv.i64.v4f32"]
+        pub fn neon_sminv_i64_v4f32(a: ::simdty::f32x4) -> i64;
+        /// The `llvm.aarch64.neon.sminv.i64.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sminv.i64.v2f64"]
+        pub fn neon_sminv_i64_v2f64(a: ::simdty::f64x2) -> i64;
+        /// The `llvm.aarch64.neon.uminv.v16i8.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uminv.v16i8.v16i8"]
+        pub fn neon_uminv_v16i8_v16i8(a: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.uminv.v16i8.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uminv.v16i8.v8i16"]
+        pub fn neon_uminv_v16i8_v8i16(a: ::simdty::i16x8) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.uminv.v16i8.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uminv.v16i8.v4i32"]
+        pub fn neon_uminv_v16i8_v4i32(a: ::simdty::i32x4) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.uminv.v16i8.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uminv.v16i8.v2i64"]
+        pub fn neon_uminv_v16i8_v2i64(a: ::simdty::i64x2) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.uminv.v16i8.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uminv.v16i8.v4f32"]
+        pub fn neon_uminv_v16i8_v4f32(a: ::simdty::f32x4) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.uminv.v16i8.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uminv.v16i8.v2f64"]
+        pub fn neon_uminv_v16i8_v2f64(a: ::simdty::f64x2) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.uminv.i8.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uminv.i8.v16i8"]
+        pub fn neon_uminv_i8_v16i8(a: ::simdty::i8x16) -> i8;
+        /// The `llvm.aarch64.neon.uminv.i8.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uminv.i8.v8i16"]
+        pub fn neon_uminv_i8_v8i16(a: ::simdty::i16x8) -> i8;
+        /// The `llvm.aarch64.neon.uminv.i8.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uminv.i8.v4i32"]
+        pub fn neon_uminv_i8_v4i32(a: ::simdty::i32x4) -> i8;
+        /// The `llvm.aarch64.neon.uminv.i8.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uminv.i8.v2i64"]
+        pub fn neon_uminv_i8_v2i64(a: ::simdty::i64x2) -> i8;
+        /// The `llvm.aarch64.neon.uminv.i8.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uminv.i8.v4f32"]
+        pub fn neon_uminv_i8_v4f32(a: ::simdty::f32x4) -> i8;
+        /// The `llvm.aarch64.neon.uminv.i8.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uminv.i8.v2f64"]
+        pub fn neon_uminv_i8_v2f64(a: ::simdty::f64x2) -> i8;
+        /// The `llvm.aarch64.neon.uminv.v8i16.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uminv.v8i16.v16i8"]
+        pub fn neon_uminv_v8i16_v16i8(a: ::simdty::i8x16) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.uminv.v8i16.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uminv.v8i16.v8i16"]
+        pub fn neon_uminv_v8i16_v8i16(a: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.uminv.v8i16.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uminv.v8i16.v4i32"]
+        pub fn neon_uminv_v8i16_v4i32(a: ::simdty::i32x4) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.uminv.v8i16.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uminv.v8i16.v2i64"]
+        pub fn neon_uminv_v8i16_v2i64(a: ::simdty::i64x2) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.uminv.v8i16.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uminv.v8i16.v4f32"]
+        pub fn neon_uminv_v8i16_v4f32(a: ::simdty::f32x4) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.uminv.v8i16.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uminv.v8i16.v2f64"]
+        pub fn neon_uminv_v8i16_v2f64(a: ::simdty::f64x2) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.uminv.i16.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uminv.i16.v16i8"]
+        pub fn neon_uminv_i16_v16i8(a: ::simdty::i8x16) -> i16;
+        /// The `llvm.aarch64.neon.uminv.i16.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uminv.i16.v8i16"]
+        pub fn neon_uminv_i16_v8i16(a: ::simdty::i16x8) -> i16;
+        /// The `llvm.aarch64.neon.uminv.i16.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uminv.i16.v4i32"]
+        pub fn neon_uminv_i16_v4i32(a: ::simdty::i32x4) -> i16;
+        /// The `llvm.aarch64.neon.uminv.i16.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uminv.i16.v2i64"]
+        pub fn neon_uminv_i16_v2i64(a: ::simdty::i64x2) -> i16;
+        /// The `llvm.aarch64.neon.uminv.i16.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uminv.i16.v4f32"]
+        pub fn neon_uminv_i16_v4f32(a: ::simdty::f32x4) -> i16;
+        /// The `llvm.aarch64.neon.uminv.i16.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uminv.i16.v2f64"]
+        pub fn neon_uminv_i16_v2f64(a: ::simdty::f64x2) -> i16;
+        /// The `llvm.aarch64.neon.uminv.v4i32.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uminv.v4i32.v16i8"]
+        pub fn neon_uminv_v4i32_v16i8(a: ::simdty::i8x16) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.uminv.v4i32.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uminv.v4i32.v8i16"]
+        pub fn neon_uminv_v4i32_v8i16(a: ::simdty::i16x8) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.uminv.v4i32.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uminv.v4i32.v4i32"]
+        pub fn neon_uminv_v4i32_v4i32(a: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.uminv.v4i32.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uminv.v4i32.v2i64"]
+        pub fn neon_uminv_v4i32_v2i64(a: ::simdty::i64x2) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.uminv.v4i32.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uminv.v4i32.v4f32"]
+        pub fn neon_uminv_v4i32_v4f32(a: ::simdty::f32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.uminv.v4i32.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uminv.v4i32.v2f64"]
+        pub fn neon_uminv_v4i32_v2f64(a: ::simdty::f64x2) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.uminv.i32.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uminv.i32.v16i8"]
+        pub fn neon_uminv_i32_v16i8(a: ::simdty::i8x16) -> i32;
+        /// The `llvm.aarch64.neon.uminv.i32.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uminv.i32.v8i16"]
+        pub fn neon_uminv_i32_v8i16(a: ::simdty::i16x8) -> i32;
+        /// The `llvm.aarch64.neon.uminv.i32.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uminv.i32.v4i32"]
+        pub fn neon_uminv_i32_v4i32(a: ::simdty::i32x4) -> i32;
+        /// The `llvm.aarch64.neon.uminv.i32.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uminv.i32.v2i64"]
+        pub fn neon_uminv_i32_v2i64(a: ::simdty::i64x2) -> i32;
+        /// The `llvm.aarch64.neon.uminv.i32.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uminv.i32.v4f32"]
+        pub fn neon_uminv_i32_v4f32(a: ::simdty::f32x4) -> i32;
+        /// The `llvm.aarch64.neon.uminv.i32.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uminv.i32.v2f64"]
+        pub fn neon_uminv_i32_v2f64(a: ::simdty::f64x2) -> i32;
+        /// The `llvm.aarch64.neon.uminv.v2i64.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uminv.v2i64.v16i8"]
+        pub fn neon_uminv_v2i64_v16i8(a: ::simdty::i8x16) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.uminv.v2i64.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uminv.v2i64.v8i16"]
+        pub fn neon_uminv_v2i64_v8i16(a: ::simdty::i16x8) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.uminv.v2i64.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uminv.v2i64.v4i32"]
+        pub fn neon_uminv_v2i64_v4i32(a: ::simdty::i32x4) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.uminv.v2i64.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uminv.v2i64.v2i64"]
+        pub fn neon_uminv_v2i64_v2i64(a: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.uminv.v2i64.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uminv.v2i64.v4f32"]
+        pub fn neon_uminv_v2i64_v4f32(a: ::simdty::f32x4) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.uminv.v2i64.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uminv.v2i64.v2f64"]
+        pub fn neon_uminv_v2i64_v2f64(a: ::simdty::f64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.uminv.i64.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uminv.i64.v16i8"]
+        pub fn neon_uminv_i64_v16i8(a: ::simdty::i8x16) -> i64;
+        /// The `llvm.aarch64.neon.uminv.i64.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uminv.i64.v8i16"]
+        pub fn neon_uminv_i64_v8i16(a: ::simdty::i16x8) -> i64;
+        /// The `llvm.aarch64.neon.uminv.i64.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uminv.i64.v4i32"]
+        pub fn neon_uminv_i64_v4i32(a: ::simdty::i32x4) -> i64;
+        /// The `llvm.aarch64.neon.uminv.i64.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uminv.i64.v2i64"]
+        pub fn neon_uminv_i64_v2i64(a: ::simdty::i64x2) -> i64;
+        /// The `llvm.aarch64.neon.uminv.i64.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uminv.i64.v4f32"]
+        pub fn neon_uminv_i64_v4f32(a: ::simdty::f32x4) -> i64;
+        /// The `llvm.aarch64.neon.uminv.i64.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uminv.i64.v2f64"]
+        pub fn neon_uminv_i64_v2f64(a: ::simdty::f64x2) -> i64;
+        /// The `llvm.aarch64.neon.fminv.v4f32.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fminv.v4f32.v16i8"]
+        pub fn neon_fminv_v4f32_v16i8(a: ::simdty::i8x16) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.fminv.v4f32.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fminv.v4f32.v8i16"]
+        pub fn neon_fminv_v4f32_v8i16(a: ::simdty::i16x8) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.fminv.v4f32.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fminv.v4f32.v4i32"]
+        pub fn neon_fminv_v4f32_v4i32(a: ::simdty::i32x4) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.fminv.v4f32.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fminv.v4f32.v2i64"]
+        pub fn neon_fminv_v4f32_v2i64(a: ::simdty::i64x2) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.fminv.v4f32.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fminv.v4f32.v4f32"]
+        pub fn neon_fminv_v4f32_v4f32(a: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.fminv.v4f32.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fminv.v4f32.v2f64"]
+        pub fn neon_fminv_v4f32_v2f64(a: ::simdty::f64x2) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.fminv.f32.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fminv.f32.v16i8"]
+        pub fn neon_fminv_f32_v16i8(a: ::simdty::i8x16) -> f32;
+        /// The `llvm.aarch64.neon.fminv.f32.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fminv.f32.v8i16"]
+        pub fn neon_fminv_f32_v8i16(a: ::simdty::i16x8) -> f32;
+        /// The `llvm.aarch64.neon.fminv.f32.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fminv.f32.v4i32"]
+        pub fn neon_fminv_f32_v4i32(a: ::simdty::i32x4) -> f32;
+        /// The `llvm.aarch64.neon.fminv.f32.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fminv.f32.v2i64"]
+        pub fn neon_fminv_f32_v2i64(a: ::simdty::i64x2) -> f32;
+        /// The `llvm.aarch64.neon.fminv.f32.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fminv.f32.v4f32"]
+        pub fn neon_fminv_f32_v4f32(a: ::simdty::f32x4) -> f32;
+        /// The `llvm.aarch64.neon.fminv.f32.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fminv.f32.v2f64"]
+        pub fn neon_fminv_f32_v2f64(a: ::simdty::f64x2) -> f32;
+        /// The `llvm.aarch64.neon.fminv.v2f64.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fminv.v2f64.v16i8"]
+        pub fn neon_fminv_v2f64_v16i8(a: ::simdty::i8x16) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.fminv.v2f64.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fminv.v2f64.v8i16"]
+        pub fn neon_fminv_v2f64_v8i16(a: ::simdty::i16x8) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.fminv.v2f64.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fminv.v2f64.v4i32"]
+        pub fn neon_fminv_v2f64_v4i32(a: ::simdty::i32x4) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.fminv.v2f64.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fminv.v2f64.v2i64"]
+        pub fn neon_fminv_v2f64_v2i64(a: ::simdty::i64x2) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.fminv.v2f64.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fminv.v2f64.v4f32"]
+        pub fn neon_fminv_v2f64_v4f32(a: ::simdty::f32x4) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.fminv.v2f64.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fminv.v2f64.v2f64"]
+        pub fn neon_fminv_v2f64_v2f64(a: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.fminv.f64.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fminv.f64.v16i8"]
+        pub fn neon_fminv_f64_v16i8(a: ::simdty::i8x16) -> f64;
+        /// The `llvm.aarch64.neon.fminv.f64.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fminv.f64.v8i16"]
+        pub fn neon_fminv_f64_v8i16(a: ::simdty::i16x8) -> f64;
+        /// The `llvm.aarch64.neon.fminv.f64.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fminv.f64.v4i32"]
+        pub fn neon_fminv_f64_v4i32(a: ::simdty::i32x4) -> f64;
+        /// The `llvm.aarch64.neon.fminv.f64.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fminv.f64.v2i64"]
+        pub fn neon_fminv_f64_v2i64(a: ::simdty::i64x2) -> f64;
+        /// The `llvm.aarch64.neon.fminv.f64.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fminv.f64.v4f32"]
+        pub fn neon_fminv_f64_v4f32(a: ::simdty::f32x4) -> f64;
+        /// The `llvm.aarch64.neon.fminv.f64.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fminv.f64.v2f64"]
+        pub fn neon_fminv_f64_v2f64(a: ::simdty::f64x2) -> f64;
+        /// The `llvm.aarch64.neon.fminnmv.v4f32.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fminnmv.v4f32.v16i8"]
+        pub fn neon_fminnmv_v4f32_v16i8(a: ::simdty::i8x16) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.fminnmv.v4f32.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fminnmv.v4f32.v8i16"]
+        pub fn neon_fminnmv_v4f32_v8i16(a: ::simdty::i16x8) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.fminnmv.v4f32.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fminnmv.v4f32.v4i32"]
+        pub fn neon_fminnmv_v4f32_v4i32(a: ::simdty::i32x4) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.fminnmv.v4f32.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fminnmv.v4f32.v2i64"]
+        pub fn neon_fminnmv_v4f32_v2i64(a: ::simdty::i64x2) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.fminnmv.v4f32.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fminnmv.v4f32.v4f32"]
+        pub fn neon_fminnmv_v4f32_v4f32(a: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.fminnmv.v4f32.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fminnmv.v4f32.v2f64"]
+        pub fn neon_fminnmv_v4f32_v2f64(a: ::simdty::f64x2) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.fminnmv.f32.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fminnmv.f32.v16i8"]
+        pub fn neon_fminnmv_f32_v16i8(a: ::simdty::i8x16) -> f32;
+        /// The `llvm.aarch64.neon.fminnmv.f32.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fminnmv.f32.v8i16"]
+        pub fn neon_fminnmv_f32_v8i16(a: ::simdty::i16x8) -> f32;
+        /// The `llvm.aarch64.neon.fminnmv.f32.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fminnmv.f32.v4i32"]
+        pub fn neon_fminnmv_f32_v4i32(a: ::simdty::i32x4) -> f32;
+        /// The `llvm.aarch64.neon.fminnmv.f32.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fminnmv.f32.v2i64"]
+        pub fn neon_fminnmv_f32_v2i64(a: ::simdty::i64x2) -> f32;
+        /// The `llvm.aarch64.neon.fminnmv.f32.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fminnmv.f32.v4f32"]
+        pub fn neon_fminnmv_f32_v4f32(a: ::simdty::f32x4) -> f32;
+        /// The `llvm.aarch64.neon.fminnmv.f32.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fminnmv.f32.v2f64"]
+        pub fn neon_fminnmv_f32_v2f64(a: ::simdty::f64x2) -> f32;
+        /// The `llvm.aarch64.neon.fminnmv.v2f64.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fminnmv.v2f64.v16i8"]
+        pub fn neon_fminnmv_v2f64_v16i8(a: ::simdty::i8x16) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.fminnmv.v2f64.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fminnmv.v2f64.v8i16"]
+        pub fn neon_fminnmv_v2f64_v8i16(a: ::simdty::i16x8) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.fminnmv.v2f64.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fminnmv.v2f64.v4i32"]
+        pub fn neon_fminnmv_v2f64_v4i32(a: ::simdty::i32x4) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.fminnmv.v2f64.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fminnmv.v2f64.v2i64"]
+        pub fn neon_fminnmv_v2f64_v2i64(a: ::simdty::i64x2) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.fminnmv.v2f64.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fminnmv.v2f64.v4f32"]
+        pub fn neon_fminnmv_v2f64_v4f32(a: ::simdty::f32x4) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.fminnmv.v2f64.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fminnmv.v2f64.v2f64"]
+        pub fn neon_fminnmv_v2f64_v2f64(a: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.fminnmv.f64.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fminnmv.f64.v16i8"]
+        pub fn neon_fminnmv_f64_v16i8(a: ::simdty::i8x16) -> f64;
+        /// The `llvm.aarch64.neon.fminnmv.f64.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fminnmv.f64.v8i16"]
+        pub fn neon_fminnmv_f64_v8i16(a: ::simdty::i16x8) -> f64;
+        /// The `llvm.aarch64.neon.fminnmv.f64.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fminnmv.f64.v4i32"]
+        pub fn neon_fminnmv_f64_v4i32(a: ::simdty::i32x4) -> f64;
+        /// The `llvm.aarch64.neon.fminnmv.f64.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fminnmv.f64.v2i64"]
+        pub fn neon_fminnmv_f64_v2i64(a: ::simdty::i64x2) -> f64;
+        /// The `llvm.aarch64.neon.fminnmv.f64.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fminnmv.f64.v4f32"]
+        pub fn neon_fminnmv_f64_v4f32(a: ::simdty::f32x4) -> f64;
+        /// The `llvm.aarch64.neon.fminnmv.f64.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fminnmv.f64.v2f64"]
+        pub fn neon_fminnmv_f64_v2f64(a: ::simdty::f64x2) -> f64;
+        /// The `llvm.aarch64.neon.addp.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.addp.v16i8"]
+        pub fn neon_addp_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.addp.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.addp.v8i16"]
+        pub fn neon_addp_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.addp.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.addp.v4i32"]
+        pub fn neon_addp_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.addp.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.addp.v2i64"]
+        pub fn neon_addp_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.addp.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.addp.v4f32"]
+        pub fn neon_addp_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.addp.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.addp.v2f64"]
+        pub fn neon_addp_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.saddlp.v16i8.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddlp.v16i8.v16i8"]
+        pub fn neon_saddlp_v16i8_v16i8(a: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.saddlp.v16i8.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddlp.v16i8.v8i16"]
+        pub fn neon_saddlp_v16i8_v8i16(a: ::simdty::i16x8) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.saddlp.v16i8.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddlp.v16i8.v4i32"]
+        pub fn neon_saddlp_v16i8_v4i32(a: ::simdty::i32x4) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.saddlp.v16i8.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddlp.v16i8.v2i64"]
+        pub fn neon_saddlp_v16i8_v2i64(a: ::simdty::i64x2) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.saddlp.v16i8.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddlp.v16i8.v4f32"]
+        pub fn neon_saddlp_v16i8_v4f32(a: ::simdty::f32x4) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.saddlp.v16i8.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddlp.v16i8.v2f64"]
+        pub fn neon_saddlp_v16i8_v2f64(a: ::simdty::f64x2) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.saddlp.v8i16.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddlp.v8i16.v16i8"]
+        pub fn neon_saddlp_v8i16_v16i8(a: ::simdty::i8x16) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.saddlp.v8i16.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddlp.v8i16.v8i16"]
+        pub fn neon_saddlp_v8i16_v8i16(a: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.saddlp.v8i16.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddlp.v8i16.v4i32"]
+        pub fn neon_saddlp_v8i16_v4i32(a: ::simdty::i32x4) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.saddlp.v8i16.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddlp.v8i16.v2i64"]
+        pub fn neon_saddlp_v8i16_v2i64(a: ::simdty::i64x2) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.saddlp.v8i16.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddlp.v8i16.v4f32"]
+        pub fn neon_saddlp_v8i16_v4f32(a: ::simdty::f32x4) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.saddlp.v8i16.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddlp.v8i16.v2f64"]
+        pub fn neon_saddlp_v8i16_v2f64(a: ::simdty::f64x2) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.saddlp.v4i32.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddlp.v4i32.v16i8"]
+        pub fn neon_saddlp_v4i32_v16i8(a: ::simdty::i8x16) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.saddlp.v4i32.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddlp.v4i32.v8i16"]
+        pub fn neon_saddlp_v4i32_v8i16(a: ::simdty::i16x8) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.saddlp.v4i32.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddlp.v4i32.v4i32"]
+        pub fn neon_saddlp_v4i32_v4i32(a: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.saddlp.v4i32.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddlp.v4i32.v2i64"]
+        pub fn neon_saddlp_v4i32_v2i64(a: ::simdty::i64x2) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.saddlp.v4i32.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddlp.v4i32.v4f32"]
+        pub fn neon_saddlp_v4i32_v4f32(a: ::simdty::f32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.saddlp.v4i32.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddlp.v4i32.v2f64"]
+        pub fn neon_saddlp_v4i32_v2f64(a: ::simdty::f64x2) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.saddlp.v2i64.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddlp.v2i64.v16i8"]
+        pub fn neon_saddlp_v2i64_v16i8(a: ::simdty::i8x16) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.saddlp.v2i64.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddlp.v2i64.v8i16"]
+        pub fn neon_saddlp_v2i64_v8i16(a: ::simdty::i16x8) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.saddlp.v2i64.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddlp.v2i64.v4i32"]
+        pub fn neon_saddlp_v2i64_v4i32(a: ::simdty::i32x4) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.saddlp.v2i64.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddlp.v2i64.v2i64"]
+        pub fn neon_saddlp_v2i64_v2i64(a: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.saddlp.v2i64.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddlp.v2i64.v4f32"]
+        pub fn neon_saddlp_v2i64_v4f32(a: ::simdty::f32x4) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.saddlp.v2i64.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddlp.v2i64.v2f64"]
+        pub fn neon_saddlp_v2i64_v2f64(a: ::simdty::f64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.saddlp.v4f32.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddlp.v4f32.v16i8"]
+        pub fn neon_saddlp_v4f32_v16i8(a: ::simdty::i8x16) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.saddlp.v4f32.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddlp.v4f32.v8i16"]
+        pub fn neon_saddlp_v4f32_v8i16(a: ::simdty::i16x8) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.saddlp.v4f32.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddlp.v4f32.v4i32"]
+        pub fn neon_saddlp_v4f32_v4i32(a: ::simdty::i32x4) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.saddlp.v4f32.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddlp.v4f32.v2i64"]
+        pub fn neon_saddlp_v4f32_v2i64(a: ::simdty::i64x2) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.saddlp.v4f32.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddlp.v4f32.v4f32"]
+        pub fn neon_saddlp_v4f32_v4f32(a: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.saddlp.v4f32.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddlp.v4f32.v2f64"]
+        pub fn neon_saddlp_v4f32_v2f64(a: ::simdty::f64x2) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.saddlp.v2f64.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddlp.v2f64.v16i8"]
+        pub fn neon_saddlp_v2f64_v16i8(a: ::simdty::i8x16) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.saddlp.v2f64.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddlp.v2f64.v8i16"]
+        pub fn neon_saddlp_v2f64_v8i16(a: ::simdty::i16x8) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.saddlp.v2f64.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddlp.v2f64.v4i32"]
+        pub fn neon_saddlp_v2f64_v4i32(a: ::simdty::i32x4) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.saddlp.v2f64.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddlp.v2f64.v2i64"]
+        pub fn neon_saddlp_v2f64_v2i64(a: ::simdty::i64x2) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.saddlp.v2f64.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddlp.v2f64.v4f32"]
+        pub fn neon_saddlp_v2f64_v4f32(a: ::simdty::f32x4) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.saddlp.v2f64.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.saddlp.v2f64.v2f64"]
+        pub fn neon_saddlp_v2f64_v2f64(a: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.uaddlp.v16i8.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddlp.v16i8.v16i8"]
+        pub fn neon_uaddlp_v16i8_v16i8(a: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.uaddlp.v16i8.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddlp.v16i8.v8i16"]
+        pub fn neon_uaddlp_v16i8_v8i16(a: ::simdty::i16x8) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.uaddlp.v16i8.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddlp.v16i8.v4i32"]
+        pub fn neon_uaddlp_v16i8_v4i32(a: ::simdty::i32x4) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.uaddlp.v16i8.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddlp.v16i8.v2i64"]
+        pub fn neon_uaddlp_v16i8_v2i64(a: ::simdty::i64x2) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.uaddlp.v16i8.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddlp.v16i8.v4f32"]
+        pub fn neon_uaddlp_v16i8_v4f32(a: ::simdty::f32x4) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.uaddlp.v16i8.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddlp.v16i8.v2f64"]
+        pub fn neon_uaddlp_v16i8_v2f64(a: ::simdty::f64x2) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.uaddlp.v8i16.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddlp.v8i16.v16i8"]
+        pub fn neon_uaddlp_v8i16_v16i8(a: ::simdty::i8x16) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.uaddlp.v8i16.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddlp.v8i16.v8i16"]
+        pub fn neon_uaddlp_v8i16_v8i16(a: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.uaddlp.v8i16.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddlp.v8i16.v4i32"]
+        pub fn neon_uaddlp_v8i16_v4i32(a: ::simdty::i32x4) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.uaddlp.v8i16.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddlp.v8i16.v2i64"]
+        pub fn neon_uaddlp_v8i16_v2i64(a: ::simdty::i64x2) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.uaddlp.v8i16.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddlp.v8i16.v4f32"]
+        pub fn neon_uaddlp_v8i16_v4f32(a: ::simdty::f32x4) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.uaddlp.v8i16.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddlp.v8i16.v2f64"]
+        pub fn neon_uaddlp_v8i16_v2f64(a: ::simdty::f64x2) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.uaddlp.v4i32.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddlp.v4i32.v16i8"]
+        pub fn neon_uaddlp_v4i32_v16i8(a: ::simdty::i8x16) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.uaddlp.v4i32.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddlp.v4i32.v8i16"]
+        pub fn neon_uaddlp_v4i32_v8i16(a: ::simdty::i16x8) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.uaddlp.v4i32.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddlp.v4i32.v4i32"]
+        pub fn neon_uaddlp_v4i32_v4i32(a: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.uaddlp.v4i32.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddlp.v4i32.v2i64"]
+        pub fn neon_uaddlp_v4i32_v2i64(a: ::simdty::i64x2) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.uaddlp.v4i32.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddlp.v4i32.v4f32"]
+        pub fn neon_uaddlp_v4i32_v4f32(a: ::simdty::f32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.uaddlp.v4i32.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddlp.v4i32.v2f64"]
+        pub fn neon_uaddlp_v4i32_v2f64(a: ::simdty::f64x2) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.uaddlp.v2i64.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddlp.v2i64.v16i8"]
+        pub fn neon_uaddlp_v2i64_v16i8(a: ::simdty::i8x16) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.uaddlp.v2i64.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddlp.v2i64.v8i16"]
+        pub fn neon_uaddlp_v2i64_v8i16(a: ::simdty::i16x8) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.uaddlp.v2i64.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddlp.v2i64.v4i32"]
+        pub fn neon_uaddlp_v2i64_v4i32(a: ::simdty::i32x4) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.uaddlp.v2i64.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddlp.v2i64.v2i64"]
+        pub fn neon_uaddlp_v2i64_v2i64(a: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.uaddlp.v2i64.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddlp.v2i64.v4f32"]
+        pub fn neon_uaddlp_v2i64_v4f32(a: ::simdty::f32x4) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.uaddlp.v2i64.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddlp.v2i64.v2f64"]
+        pub fn neon_uaddlp_v2i64_v2f64(a: ::simdty::f64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.uaddlp.v4f32.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddlp.v4f32.v16i8"]
+        pub fn neon_uaddlp_v4f32_v16i8(a: ::simdty::i8x16) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.uaddlp.v4f32.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddlp.v4f32.v8i16"]
+        pub fn neon_uaddlp_v4f32_v8i16(a: ::simdty::i16x8) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.uaddlp.v4f32.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddlp.v4f32.v4i32"]
+        pub fn neon_uaddlp_v4f32_v4i32(a: ::simdty::i32x4) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.uaddlp.v4f32.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddlp.v4f32.v2i64"]
+        pub fn neon_uaddlp_v4f32_v2i64(a: ::simdty::i64x2) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.uaddlp.v4f32.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddlp.v4f32.v4f32"]
+        pub fn neon_uaddlp_v4f32_v4f32(a: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.uaddlp.v4f32.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddlp.v4f32.v2f64"]
+        pub fn neon_uaddlp_v4f32_v2f64(a: ::simdty::f64x2) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.uaddlp.v2f64.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddlp.v2f64.v16i8"]
+        pub fn neon_uaddlp_v2f64_v16i8(a: ::simdty::i8x16) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.uaddlp.v2f64.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddlp.v2f64.v8i16"]
+        pub fn neon_uaddlp_v2f64_v8i16(a: ::simdty::i16x8) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.uaddlp.v2f64.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddlp.v2f64.v4i32"]
+        pub fn neon_uaddlp_v2f64_v4i32(a: ::simdty::i32x4) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.uaddlp.v2f64.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddlp.v2f64.v2i64"]
+        pub fn neon_uaddlp_v2f64_v2i64(a: ::simdty::i64x2) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.uaddlp.v2f64.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddlp.v2f64.v4f32"]
+        pub fn neon_uaddlp_v2f64_v4f32(a: ::simdty::f32x4) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.uaddlp.v2f64.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uaddlp.v2f64.v2f64"]
+        pub fn neon_uaddlp_v2f64_v2f64(a: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.smaxp.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.smaxp.v16i8"]
+        pub fn neon_smaxp_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.smaxp.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.smaxp.v8i16"]
+        pub fn neon_smaxp_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.smaxp.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.smaxp.v4i32"]
+        pub fn neon_smaxp_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.smaxp.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.smaxp.v2i64"]
+        pub fn neon_smaxp_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.smaxp.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.smaxp.v4f32"]
+        pub fn neon_smaxp_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.smaxp.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.smaxp.v2f64"]
+        pub fn neon_smaxp_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.umaxp.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.umaxp.v16i8"]
+        pub fn neon_umaxp_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.umaxp.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.umaxp.v8i16"]
+        pub fn neon_umaxp_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.umaxp.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.umaxp.v4i32"]
+        pub fn neon_umaxp_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.umaxp.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.umaxp.v2i64"]
+        pub fn neon_umaxp_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.umaxp.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.umaxp.v4f32"]
+        pub fn neon_umaxp_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.umaxp.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.umaxp.v2f64"]
+        pub fn neon_umaxp_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.fmaxp.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fmaxp.v16i8"]
+        pub fn neon_fmaxp_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.fmaxp.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fmaxp.v8i16"]
+        pub fn neon_fmaxp_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.fmaxp.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fmaxp.v4i32"]
+        pub fn neon_fmaxp_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.fmaxp.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fmaxp.v2i64"]
+        pub fn neon_fmaxp_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.fmaxp.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fmaxp.v4f32"]
+        pub fn neon_fmaxp_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.fmaxp.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fmaxp.v2f64"]
+        pub fn neon_fmaxp_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.sminp.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sminp.v16i8"]
+        pub fn neon_sminp_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.sminp.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sminp.v8i16"]
+        pub fn neon_sminp_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.sminp.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sminp.v4i32"]
+        pub fn neon_sminp_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.sminp.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sminp.v2i64"]
+        pub fn neon_sminp_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.sminp.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sminp.v4f32"]
+        pub fn neon_sminp_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.sminp.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sminp.v2f64"]
+        pub fn neon_sminp_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.uminp.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uminp.v16i8"]
+        pub fn neon_uminp_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.uminp.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uminp.v8i16"]
+        pub fn neon_uminp_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.uminp.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uminp.v4i32"]
+        pub fn neon_uminp_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.uminp.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uminp.v2i64"]
+        pub fn neon_uminp_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.uminp.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uminp.v4f32"]
+        pub fn neon_uminp_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.uminp.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uminp.v2f64"]
+        pub fn neon_uminp_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.fminp.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fminp.v16i8"]
+        pub fn neon_fminp_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.fminp.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fminp.v8i16"]
+        pub fn neon_fminp_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.fminp.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fminp.v4i32"]
+        pub fn neon_fminp_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.fminp.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fminp.v2i64"]
+        pub fn neon_fminp_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.fminp.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fminp.v4f32"]
+        pub fn neon_fminp_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.fminp.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fminp.v2f64"]
+        pub fn neon_fminp_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.frecps.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.frecps.v4f32"]
+        pub fn neon_frecps_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.frecps.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.frecps.f32"]
+        pub fn neon_frecps_f32(a: f32, b: f32) -> f32;
+        /// The `llvm.aarch64.neon.frecps.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.frecps.v2f64"]
+        pub fn neon_frecps_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.frecps.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.frecps.f64"]
+        pub fn neon_frecps_f64(a: f64, b: f64) -> f64;
+        /// The `llvm.aarch64.neon.frsqrts.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.frsqrts.v4f32"]
+        pub fn neon_frsqrts_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.frsqrts.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.frsqrts.f32"]
+        pub fn neon_frsqrts_f32(a: f32, b: f32) -> f32;
+        /// The `llvm.aarch64.neon.frsqrts.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.frsqrts.v2f64"]
+        pub fn neon_frsqrts_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.frsqrts.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.frsqrts.f64"]
+        pub fn neon_frsqrts_f64(a: f64, b: f64) -> f64;
+        /// The `llvm.aarch64.neon.frecpx.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.frecpx.v4f32"]
+        pub fn neon_frecpx_v4f32(a: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.frecpx.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.frecpx.f32"]
+        pub fn neon_frecpx_f32(a: f32) -> f32;
+        /// The `llvm.aarch64.neon.frecpx.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.frecpx.v2f64"]
+        pub fn neon_frecpx_v2f64(a: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.frecpx.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.frecpx.f64"]
+        pub fn neon_frecpx_f64(a: f64) -> f64;
+        /// The `llvm.aarch64.neon.sqshl.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sqshl.v16i8"]
+        pub fn neon_sqshl_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.sqshl.i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sqshl.i8"]
+        pub fn neon_sqshl_i8(a: i8, b: i8) -> i8;
+        /// The `llvm.aarch64.neon.sqshl.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sqshl.v8i16"]
+        pub fn neon_sqshl_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.sqshl.i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sqshl.i16"]
+        pub fn neon_sqshl_i16(a: i16, b: i16) -> i16;
+        /// The `llvm.aarch64.neon.sqshl.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sqshl.v4i32"]
+        pub fn neon_sqshl_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.sqshl.i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sqshl.i32"]
+        pub fn neon_sqshl_i32(a: i32, b: i32) -> i32;
+        /// The `llvm.aarch64.neon.sqshl.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sqshl.v2i64"]
+        pub fn neon_sqshl_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.sqshl.i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sqshl.i64"]
+        pub fn neon_sqshl_i64(a: i64, b: i64) -> i64;
+        /// The `llvm.aarch64.neon.uqshl.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uqshl.v16i8"]
+        pub fn neon_uqshl_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.uqshl.i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uqshl.i8"]
+        pub fn neon_uqshl_i8(a: i8, b: i8) -> i8;
+        /// The `llvm.aarch64.neon.uqshl.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uqshl.v8i16"]
+        pub fn neon_uqshl_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.uqshl.i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uqshl.i16"]
+        pub fn neon_uqshl_i16(a: i16, b: i16) -> i16;
+        /// The `llvm.aarch64.neon.uqshl.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uqshl.v4i32"]
+        pub fn neon_uqshl_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.uqshl.i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uqshl.i32"]
+        pub fn neon_uqshl_i32(a: i32, b: i32) -> i32;
+        /// The `llvm.aarch64.neon.uqshl.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uqshl.v2i64"]
+        pub fn neon_uqshl_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.uqshl.i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uqshl.i64"]
+        pub fn neon_uqshl_i64(a: i64, b: i64) -> i64;
+        /// The `llvm.aarch64.neon.srshl.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.srshl.v16i8"]
+        pub fn neon_srshl_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.srshl.i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.srshl.i8"]
+        pub fn neon_srshl_i8(a: i8, b: i8) -> i8;
+        /// The `llvm.aarch64.neon.srshl.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.srshl.v8i16"]
+        pub fn neon_srshl_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.srshl.i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.srshl.i16"]
+        pub fn neon_srshl_i16(a: i16, b: i16) -> i16;
+        /// The `llvm.aarch64.neon.srshl.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.srshl.v4i32"]
+        pub fn neon_srshl_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.srshl.i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.srshl.i32"]
+        pub fn neon_srshl_i32(a: i32, b: i32) -> i32;
+        /// The `llvm.aarch64.neon.srshl.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.srshl.v2i64"]
+        pub fn neon_srshl_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.srshl.i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.srshl.i64"]
+        pub fn neon_srshl_i64(a: i64, b: i64) -> i64;
+        /// The `llvm.aarch64.neon.urshl.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.urshl.v16i8"]
+        pub fn neon_urshl_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.urshl.i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.urshl.i8"]
+        pub fn neon_urshl_i8(a: i8, b: i8) -> i8;
+        /// The `llvm.aarch64.neon.urshl.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.urshl.v8i16"]
+        pub fn neon_urshl_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.urshl.i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.urshl.i16"]
+        pub fn neon_urshl_i16(a: i16, b: i16) -> i16;
+        /// The `llvm.aarch64.neon.urshl.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.urshl.v4i32"]
+        pub fn neon_urshl_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.urshl.i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.urshl.i32"]
+        pub fn neon_urshl_i32(a: i32, b: i32) -> i32;
+        /// The `llvm.aarch64.neon.urshl.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.urshl.v2i64"]
+        pub fn neon_urshl_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.urshl.i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.urshl.i64"]
+        pub fn neon_urshl_i64(a: i64, b: i64) -> i64;
+        /// The `llvm.aarch64.neon.sqrshl.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sqrshl.v16i8"]
+        pub fn neon_sqrshl_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.sqrshl.i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sqrshl.i8"]
+        pub fn neon_sqrshl_i8(a: i8, b: i8) -> i8;
+        /// The `llvm.aarch64.neon.sqrshl.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sqrshl.v8i16"]
+        pub fn neon_sqrshl_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.sqrshl.i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sqrshl.i16"]
+        pub fn neon_sqrshl_i16(a: i16, b: i16) -> i16;
+        /// The `llvm.aarch64.neon.sqrshl.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sqrshl.v4i32"]
+        pub fn neon_sqrshl_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.sqrshl.i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sqrshl.i32"]
+        pub fn neon_sqrshl_i32(a: i32, b: i32) -> i32;
+        /// The `llvm.aarch64.neon.sqrshl.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sqrshl.v2i64"]
+        pub fn neon_sqrshl_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.sqrshl.i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sqrshl.i64"]
+        pub fn neon_sqrshl_i64(a: i64, b: i64) -> i64;
+        /// The `llvm.aarch64.neon.uqrshl.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uqrshl.v16i8"]
+        pub fn neon_uqrshl_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.uqrshl.i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uqrshl.i8"]
+        pub fn neon_uqrshl_i8(a: i8, b: i8) -> i8;
+        /// The `llvm.aarch64.neon.uqrshl.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uqrshl.v8i16"]
+        pub fn neon_uqrshl_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.uqrshl.i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uqrshl.i16"]
+        pub fn neon_uqrshl_i16(a: i16, b: i16) -> i16;
+        /// The `llvm.aarch64.neon.uqrshl.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uqrshl.v4i32"]
+        pub fn neon_uqrshl_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.uqrshl.i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uqrshl.i32"]
+        pub fn neon_uqrshl_i32(a: i32, b: i32) -> i32;
+        /// The `llvm.aarch64.neon.uqrshl.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uqrshl.v2i64"]
+        pub fn neon_uqrshl_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.uqrshl.i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.uqrshl.i64"]
+        pub fn neon_uqrshl_i64(a: i64, b: i64) -> i64;
+        /// The `llvm.aarch64.neon.sqshlu.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sqshlu.v16i8"]
+        pub fn neon_sqshlu_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.sqshlu.i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sqshlu.i8"]
+        pub fn neon_sqshlu_i8(a: i8, b: i8) -> i8;
+        /// The `llvm.aarch64.neon.sqshlu.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sqshlu.v8i16"]
+        pub fn neon_sqshlu_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.sqshlu.i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sqshlu.i16"]
+        pub fn neon_sqshlu_i16(a: i16, b: i16) -> i16;
+        /// The `llvm.aarch64.neon.sqshlu.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sqshlu.v4i32"]
+        pub fn neon_sqshlu_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.sqshlu.i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sqshlu.i32"]
+        pub fn neon_sqshlu_i32(a: i32, b: i32) -> i32;
+        /// The `llvm.aarch64.neon.sqshlu.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sqshlu.v2i64"]
+        pub fn neon_sqshlu_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.sqshlu.i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sqshlu.i64"]
+        pub fn neon_sqshlu_i64(a: i64, b: i64) -> i64;
+        /// The `llvm.aarch64.neon.sshl.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sshl.v16i8"]
+        pub fn neon_sshl_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.sshl.i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sshl.i8"]
+        pub fn neon_sshl_i8(a: i8, b: i8) -> i8;
+        /// The `llvm.aarch64.neon.sshl.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sshl.v8i16"]
+        pub fn neon_sshl_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.sshl.i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sshl.i16"]
+        pub fn neon_sshl_i16(a: i16, b: i16) -> i16;
+        /// The `llvm.aarch64.neon.sshl.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sshl.v4i32"]
+        pub fn neon_sshl_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.sshl.i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sshl.i32"]
+        pub fn neon_sshl_i32(a: i32, b: i32) -> i32;
+        /// The `llvm.aarch64.neon.sshl.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sshl.v2i64"]
+        pub fn neon_sshl_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.sshl.i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sshl.i64"]
+        pub fn neon_sshl_i64(a: i64, b: i64) -> i64;
+        /// The `llvm.aarch64.neon.ushl.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.ushl.v16i8"]
+        pub fn neon_ushl_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.ushl.i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.ushl.i8"]
+        pub fn neon_ushl_i8(a: i8, b: i8) -> i8;
+        /// The `llvm.aarch64.neon.ushl.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.ushl.v8i16"]
+        pub fn neon_ushl_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.ushl.i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.ushl.i16"]
+        pub fn neon_ushl_i16(a: i16, b: i16) -> i16;
+        /// The `llvm.aarch64.neon.ushl.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.ushl.v4i32"]
+        pub fn neon_ushl_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.ushl.i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.ushl.i32"]
+        pub fn neon_ushl_i32(a: i32, b: i32) -> i32;
+        /// The `llvm.aarch64.neon.ushl.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.ushl.v2i64"]
+        pub fn neon_ushl_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.ushl.i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.ushl.i64"]
+        pub fn neon_ushl_i64(a: i64, b: i64) -> i64;
+        /// The `llvm.aarch64.neon.vsri.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vsri.v16i8"]
+        pub fn neon_vsri_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16, c: i32) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.vsri.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vsri.v8i16"]
+        pub fn neon_vsri_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8, c: i32) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.vsri.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vsri.v4i32"]
+        pub fn neon_vsri_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4, c: i32) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.vsri.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vsri.v2i64"]
+        pub fn neon_vsri_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2, c: i32) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.vsri.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vsri.v4f32"]
+        pub fn neon_vsri_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4, c: i32) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.vsri.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vsri.v2f64"]
+        pub fn neon_vsri_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2, c: i32) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.vsli.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vsli.v16i8"]
+        pub fn neon_vsli_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16, c: i32) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.vsli.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vsli.v8i16"]
+        pub fn neon_vsli_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8, c: i32) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.vsli.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vsli.v4i32"]
+        pub fn neon_vsli_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4, c: i32) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.vsli.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vsli.v2i64"]
+        pub fn neon_vsli_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2, c: i32) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.vsli.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vsli.v4f32"]
+        pub fn neon_vsli_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4, c: i32) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.vsli.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vsli.v2f64"]
+        pub fn neon_vsli_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2, c: i32) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.scalar.sqxtn.v16i8.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtn.v16i8.v16i8"]
+        pub fn neon_scalar_sqxtn_v16i8_v16i8(a: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.scalar.sqxtn.v16i8.i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtn.v16i8.i8"]
+        pub fn neon_scalar_sqxtn_v16i8_i8(a: i8) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.scalar.sqxtn.v16i8.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtn.v16i8.v8i16"]
+        pub fn neon_scalar_sqxtn_v16i8_v8i16(a: ::simdty::i16x8) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.scalar.sqxtn.v16i8.i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtn.v16i8.i16"]
+        pub fn neon_scalar_sqxtn_v16i8_i16(a: i16) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.scalar.sqxtn.v16i8.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtn.v16i8.v4i32"]
+        pub fn neon_scalar_sqxtn_v16i8_v4i32(a: ::simdty::i32x4) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.scalar.sqxtn.v16i8.i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtn.v16i8.i32"]
+        pub fn neon_scalar_sqxtn_v16i8_i32(a: i32) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.scalar.sqxtn.v16i8.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtn.v16i8.v2i64"]
+        pub fn neon_scalar_sqxtn_v16i8_v2i64(a: ::simdty::i64x2) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.scalar.sqxtn.v16i8.i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtn.v16i8.i64"]
+        pub fn neon_scalar_sqxtn_v16i8_i64(a: i64) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.scalar.sqxtn.i8.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtn.i8.v16i8"]
+        pub fn neon_scalar_sqxtn_i8_v16i8(a: ::simdty::i8x16) -> i8;
+        /// The `llvm.aarch64.neon.scalar.sqxtn.i8.i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtn.i8.i8"]
+        pub fn neon_scalar_sqxtn_i8_i8(a: i8) -> i8;
+        /// The `llvm.aarch64.neon.scalar.sqxtn.i8.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtn.i8.v8i16"]
+        pub fn neon_scalar_sqxtn_i8_v8i16(a: ::simdty::i16x8) -> i8;
+        /// The `llvm.aarch64.neon.scalar.sqxtn.i8.i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtn.i8.i16"]
+        pub fn neon_scalar_sqxtn_i8_i16(a: i16) -> i8;
+        /// The `llvm.aarch64.neon.scalar.sqxtn.i8.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtn.i8.v4i32"]
+        pub fn neon_scalar_sqxtn_i8_v4i32(a: ::simdty::i32x4) -> i8;
+        /// The `llvm.aarch64.neon.scalar.sqxtn.i8.i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtn.i8.i32"]
+        pub fn neon_scalar_sqxtn_i8_i32(a: i32) -> i8;
+        /// The `llvm.aarch64.neon.scalar.sqxtn.i8.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtn.i8.v2i64"]
+        pub fn neon_scalar_sqxtn_i8_v2i64(a: ::simdty::i64x2) -> i8;
+        /// The `llvm.aarch64.neon.scalar.sqxtn.i8.i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtn.i8.i64"]
+        pub fn neon_scalar_sqxtn_i8_i64(a: i64) -> i8;
+        /// The `llvm.aarch64.neon.scalar.sqxtn.v8i16.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtn.v8i16.v16i8"]
+        pub fn neon_scalar_sqxtn_v8i16_v16i8(a: ::simdty::i8x16) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.scalar.sqxtn.v8i16.i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtn.v8i16.i8"]
+        pub fn neon_scalar_sqxtn_v8i16_i8(a: i8) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.scalar.sqxtn.v8i16.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtn.v8i16.v8i16"]
+        pub fn neon_scalar_sqxtn_v8i16_v8i16(a: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.scalar.sqxtn.v8i16.i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtn.v8i16.i16"]
+        pub fn neon_scalar_sqxtn_v8i16_i16(a: i16) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.scalar.sqxtn.v8i16.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtn.v8i16.v4i32"]
+        pub fn neon_scalar_sqxtn_v8i16_v4i32(a: ::simdty::i32x4) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.scalar.sqxtn.v8i16.i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtn.v8i16.i32"]
+        pub fn neon_scalar_sqxtn_v8i16_i32(a: i32) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.scalar.sqxtn.v8i16.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtn.v8i16.v2i64"]
+        pub fn neon_scalar_sqxtn_v8i16_v2i64(a: ::simdty::i64x2) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.scalar.sqxtn.v8i16.i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtn.v8i16.i64"]
+        pub fn neon_scalar_sqxtn_v8i16_i64(a: i64) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.scalar.sqxtn.i16.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtn.i16.v16i8"]
+        pub fn neon_scalar_sqxtn_i16_v16i8(a: ::simdty::i8x16) -> i16;
+        /// The `llvm.aarch64.neon.scalar.sqxtn.i16.i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtn.i16.i8"]
+        pub fn neon_scalar_sqxtn_i16_i8(a: i8) -> i16;
+        /// The `llvm.aarch64.neon.scalar.sqxtn.i16.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtn.i16.v8i16"]
+        pub fn neon_scalar_sqxtn_i16_v8i16(a: ::simdty::i16x8) -> i16;
+        /// The `llvm.aarch64.neon.scalar.sqxtn.i16.i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtn.i16.i16"]
+        pub fn neon_scalar_sqxtn_i16_i16(a: i16) -> i16;
+        /// The `llvm.aarch64.neon.scalar.sqxtn.i16.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtn.i16.v4i32"]
+        pub fn neon_scalar_sqxtn_i16_v4i32(a: ::simdty::i32x4) -> i16;
+        /// The `llvm.aarch64.neon.scalar.sqxtn.i16.i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtn.i16.i32"]
+        pub fn neon_scalar_sqxtn_i16_i32(a: i32) -> i16;
+        /// The `llvm.aarch64.neon.scalar.sqxtn.i16.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtn.i16.v2i64"]
+        pub fn neon_scalar_sqxtn_i16_v2i64(a: ::simdty::i64x2) -> i16;
+        /// The `llvm.aarch64.neon.scalar.sqxtn.i16.i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtn.i16.i64"]
+        pub fn neon_scalar_sqxtn_i16_i64(a: i64) -> i16;
+        /// The `llvm.aarch64.neon.scalar.sqxtn.v4i32.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtn.v4i32.v16i8"]
+        pub fn neon_scalar_sqxtn_v4i32_v16i8(a: ::simdty::i8x16) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.scalar.sqxtn.v4i32.i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtn.v4i32.i8"]
+        pub fn neon_scalar_sqxtn_v4i32_i8(a: i8) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.scalar.sqxtn.v4i32.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtn.v4i32.v8i16"]
+        pub fn neon_scalar_sqxtn_v4i32_v8i16(a: ::simdty::i16x8) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.scalar.sqxtn.v4i32.i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtn.v4i32.i16"]
+        pub fn neon_scalar_sqxtn_v4i32_i16(a: i16) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.scalar.sqxtn.v4i32.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtn.v4i32.v4i32"]
+        pub fn neon_scalar_sqxtn_v4i32_v4i32(a: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.scalar.sqxtn.v4i32.i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtn.v4i32.i32"]
+        pub fn neon_scalar_sqxtn_v4i32_i32(a: i32) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.scalar.sqxtn.v4i32.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtn.v4i32.v2i64"]
+        pub fn neon_scalar_sqxtn_v4i32_v2i64(a: ::simdty::i64x2) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.scalar.sqxtn.v4i32.i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtn.v4i32.i64"]
+        pub fn neon_scalar_sqxtn_v4i32_i64(a: i64) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.scalar.sqxtn.i32.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtn.i32.v16i8"]
+        pub fn neon_scalar_sqxtn_i32_v16i8(a: ::simdty::i8x16) -> i32;
+        /// The `llvm.aarch64.neon.scalar.sqxtn.i32.i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtn.i32.i8"]
+        pub fn neon_scalar_sqxtn_i32_i8(a: i8) -> i32;
+        /// The `llvm.aarch64.neon.scalar.sqxtn.i32.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtn.i32.v8i16"]
+        pub fn neon_scalar_sqxtn_i32_v8i16(a: ::simdty::i16x8) -> i32;
+        /// The `llvm.aarch64.neon.scalar.sqxtn.i32.i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtn.i32.i16"]
+        pub fn neon_scalar_sqxtn_i32_i16(a: i16) -> i32;
+        /// The `llvm.aarch64.neon.scalar.sqxtn.i32.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtn.i32.v4i32"]
+        pub fn neon_scalar_sqxtn_i32_v4i32(a: ::simdty::i32x4) -> i32;
+        /// The `llvm.aarch64.neon.scalar.sqxtn.i32.i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtn.i32.i32"]
+        pub fn neon_scalar_sqxtn_i32_i32(a: i32) -> i32;
+        /// The `llvm.aarch64.neon.scalar.sqxtn.i32.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtn.i32.v2i64"]
+        pub fn neon_scalar_sqxtn_i32_v2i64(a: ::simdty::i64x2) -> i32;
+        /// The `llvm.aarch64.neon.scalar.sqxtn.i32.i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtn.i32.i64"]
+        pub fn neon_scalar_sqxtn_i32_i64(a: i64) -> i32;
+        /// The `llvm.aarch64.neon.scalar.sqxtn.v2i64.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtn.v2i64.v16i8"]
+        pub fn neon_scalar_sqxtn_v2i64_v16i8(a: ::simdty::i8x16) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.scalar.sqxtn.v2i64.i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtn.v2i64.i8"]
+        pub fn neon_scalar_sqxtn_v2i64_i8(a: i8) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.scalar.sqxtn.v2i64.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtn.v2i64.v8i16"]
+        pub fn neon_scalar_sqxtn_v2i64_v8i16(a: ::simdty::i16x8) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.scalar.sqxtn.v2i64.i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtn.v2i64.i16"]
+        pub fn neon_scalar_sqxtn_v2i64_i16(a: i16) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.scalar.sqxtn.v2i64.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtn.v2i64.v4i32"]
+        pub fn neon_scalar_sqxtn_v2i64_v4i32(a: ::simdty::i32x4) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.scalar.sqxtn.v2i64.i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtn.v2i64.i32"]
+        pub fn neon_scalar_sqxtn_v2i64_i32(a: i32) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.scalar.sqxtn.v2i64.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtn.v2i64.v2i64"]
+        pub fn neon_scalar_sqxtn_v2i64_v2i64(a: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.scalar.sqxtn.v2i64.i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtn.v2i64.i64"]
+        pub fn neon_scalar_sqxtn_v2i64_i64(a: i64) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.scalar.sqxtn.i64.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtn.i64.v16i8"]
+        pub fn neon_scalar_sqxtn_i64_v16i8(a: ::simdty::i8x16) -> i64;
+        /// The `llvm.aarch64.neon.scalar.sqxtn.i64.i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtn.i64.i8"]
+        pub fn neon_scalar_sqxtn_i64_i8(a: i8) -> i64;
+        /// The `llvm.aarch64.neon.scalar.sqxtn.i64.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtn.i64.v8i16"]
+        pub fn neon_scalar_sqxtn_i64_v8i16(a: ::simdty::i16x8) -> i64;
+        /// The `llvm.aarch64.neon.scalar.sqxtn.i64.i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtn.i64.i16"]
+        pub fn neon_scalar_sqxtn_i64_i16(a: i16) -> i64;
+        /// The `llvm.aarch64.neon.scalar.sqxtn.i64.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtn.i64.v4i32"]
+        pub fn neon_scalar_sqxtn_i64_v4i32(a: ::simdty::i32x4) -> i64;
+        /// The `llvm.aarch64.neon.scalar.sqxtn.i64.i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtn.i64.i32"]
+        pub fn neon_scalar_sqxtn_i64_i32(a: i32) -> i64;
+        /// The `llvm.aarch64.neon.scalar.sqxtn.i64.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtn.i64.v2i64"]
+        pub fn neon_scalar_sqxtn_i64_v2i64(a: ::simdty::i64x2) -> i64;
+        /// The `llvm.aarch64.neon.scalar.sqxtn.i64.i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtn.i64.i64"]
+        pub fn neon_scalar_sqxtn_i64_i64(a: i64) -> i64;
+        /// The `llvm.aarch64.neon.scalar.uqxtn.v16i8.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.uqxtn.v16i8.v16i8"]
+        pub fn neon_scalar_uqxtn_v16i8_v16i8(a: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.scalar.uqxtn.v16i8.i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.uqxtn.v16i8.i8"]
+        pub fn neon_scalar_uqxtn_v16i8_i8(a: i8) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.scalar.uqxtn.v16i8.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.uqxtn.v16i8.v8i16"]
+        pub fn neon_scalar_uqxtn_v16i8_v8i16(a: ::simdty::i16x8) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.scalar.uqxtn.v16i8.i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.uqxtn.v16i8.i16"]
+        pub fn neon_scalar_uqxtn_v16i8_i16(a: i16) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.scalar.uqxtn.v16i8.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.uqxtn.v16i8.v4i32"]
+        pub fn neon_scalar_uqxtn_v16i8_v4i32(a: ::simdty::i32x4) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.scalar.uqxtn.v16i8.i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.uqxtn.v16i8.i32"]
+        pub fn neon_scalar_uqxtn_v16i8_i32(a: i32) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.scalar.uqxtn.v16i8.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.uqxtn.v16i8.v2i64"]
+        pub fn neon_scalar_uqxtn_v16i8_v2i64(a: ::simdty::i64x2) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.scalar.uqxtn.v16i8.i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.uqxtn.v16i8.i64"]
+        pub fn neon_scalar_uqxtn_v16i8_i64(a: i64) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.scalar.uqxtn.i8.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.uqxtn.i8.v16i8"]
+        pub fn neon_scalar_uqxtn_i8_v16i8(a: ::simdty::i8x16) -> i8;
+        /// The `llvm.aarch64.neon.scalar.uqxtn.i8.i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.uqxtn.i8.i8"]
+        pub fn neon_scalar_uqxtn_i8_i8(a: i8) -> i8;
+        /// The `llvm.aarch64.neon.scalar.uqxtn.i8.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.uqxtn.i8.v8i16"]
+        pub fn neon_scalar_uqxtn_i8_v8i16(a: ::simdty::i16x8) -> i8;
+        /// The `llvm.aarch64.neon.scalar.uqxtn.i8.i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.uqxtn.i8.i16"]
+        pub fn neon_scalar_uqxtn_i8_i16(a: i16) -> i8;
+        /// The `llvm.aarch64.neon.scalar.uqxtn.i8.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.uqxtn.i8.v4i32"]
+        pub fn neon_scalar_uqxtn_i8_v4i32(a: ::simdty::i32x4) -> i8;
+        /// The `llvm.aarch64.neon.scalar.uqxtn.i8.i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.uqxtn.i8.i32"]
+        pub fn neon_scalar_uqxtn_i8_i32(a: i32) -> i8;
+        /// The `llvm.aarch64.neon.scalar.uqxtn.i8.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.uqxtn.i8.v2i64"]
+        pub fn neon_scalar_uqxtn_i8_v2i64(a: ::simdty::i64x2) -> i8;
+        /// The `llvm.aarch64.neon.scalar.uqxtn.i8.i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.uqxtn.i8.i64"]
+        pub fn neon_scalar_uqxtn_i8_i64(a: i64) -> i8;
+        /// The `llvm.aarch64.neon.scalar.uqxtn.v8i16.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.uqxtn.v8i16.v16i8"]
+        pub fn neon_scalar_uqxtn_v8i16_v16i8(a: ::simdty::i8x16) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.scalar.uqxtn.v8i16.i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.uqxtn.v8i16.i8"]
+        pub fn neon_scalar_uqxtn_v8i16_i8(a: i8) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.scalar.uqxtn.v8i16.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.uqxtn.v8i16.v8i16"]
+        pub fn neon_scalar_uqxtn_v8i16_v8i16(a: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.scalar.uqxtn.v8i16.i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.uqxtn.v8i16.i16"]
+        pub fn neon_scalar_uqxtn_v8i16_i16(a: i16) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.scalar.uqxtn.v8i16.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.uqxtn.v8i16.v4i32"]
+        pub fn neon_scalar_uqxtn_v8i16_v4i32(a: ::simdty::i32x4) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.scalar.uqxtn.v8i16.i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.uqxtn.v8i16.i32"]
+        pub fn neon_scalar_uqxtn_v8i16_i32(a: i32) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.scalar.uqxtn.v8i16.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.uqxtn.v8i16.v2i64"]
+        pub fn neon_scalar_uqxtn_v8i16_v2i64(a: ::simdty::i64x2) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.scalar.uqxtn.v8i16.i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.uqxtn.v8i16.i64"]
+        pub fn neon_scalar_uqxtn_v8i16_i64(a: i64) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.scalar.uqxtn.i16.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.uqxtn.i16.v16i8"]
+        pub fn neon_scalar_uqxtn_i16_v16i8(a: ::simdty::i8x16) -> i16;
+        /// The `llvm.aarch64.neon.scalar.uqxtn.i16.i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.uqxtn.i16.i8"]
+        pub fn neon_scalar_uqxtn_i16_i8(a: i8) -> i16;
+        /// The `llvm.aarch64.neon.scalar.uqxtn.i16.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.uqxtn.i16.v8i16"]
+        pub fn neon_scalar_uqxtn_i16_v8i16(a: ::simdty::i16x8) -> i16;
+        /// The `llvm.aarch64.neon.scalar.uqxtn.i16.i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.uqxtn.i16.i16"]
+        pub fn neon_scalar_uqxtn_i16_i16(a: i16) -> i16;
+        /// The `llvm.aarch64.neon.scalar.uqxtn.i16.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.uqxtn.i16.v4i32"]
+        pub fn neon_scalar_uqxtn_i16_v4i32(a: ::simdty::i32x4) -> i16;
+        /// The `llvm.aarch64.neon.scalar.uqxtn.i16.i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.uqxtn.i16.i32"]
+        pub fn neon_scalar_uqxtn_i16_i32(a: i32) -> i16;
+        /// The `llvm.aarch64.neon.scalar.uqxtn.i16.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.uqxtn.i16.v2i64"]
+        pub fn neon_scalar_uqxtn_i16_v2i64(a: ::simdty::i64x2) -> i16;
+        /// The `llvm.aarch64.neon.scalar.uqxtn.i16.i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.uqxtn.i16.i64"]
+        pub fn neon_scalar_uqxtn_i16_i64(a: i64) -> i16;
+        /// The `llvm.aarch64.neon.scalar.uqxtn.v4i32.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.uqxtn.v4i32.v16i8"]
+        pub fn neon_scalar_uqxtn_v4i32_v16i8(a: ::simdty::i8x16) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.scalar.uqxtn.v4i32.i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.uqxtn.v4i32.i8"]
+        pub fn neon_scalar_uqxtn_v4i32_i8(a: i8) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.scalar.uqxtn.v4i32.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.uqxtn.v4i32.v8i16"]
+        pub fn neon_scalar_uqxtn_v4i32_v8i16(a: ::simdty::i16x8) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.scalar.uqxtn.v4i32.i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.uqxtn.v4i32.i16"]
+        pub fn neon_scalar_uqxtn_v4i32_i16(a: i16) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.scalar.uqxtn.v4i32.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.uqxtn.v4i32.v4i32"]
+        pub fn neon_scalar_uqxtn_v4i32_v4i32(a: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.scalar.uqxtn.v4i32.i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.uqxtn.v4i32.i32"]
+        pub fn neon_scalar_uqxtn_v4i32_i32(a: i32) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.scalar.uqxtn.v4i32.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.uqxtn.v4i32.v2i64"]
+        pub fn neon_scalar_uqxtn_v4i32_v2i64(a: ::simdty::i64x2) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.scalar.uqxtn.v4i32.i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.uqxtn.v4i32.i64"]
+        pub fn neon_scalar_uqxtn_v4i32_i64(a: i64) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.scalar.uqxtn.i32.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.uqxtn.i32.v16i8"]
+        pub fn neon_scalar_uqxtn_i32_v16i8(a: ::simdty::i8x16) -> i32;
+        /// The `llvm.aarch64.neon.scalar.uqxtn.i32.i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.uqxtn.i32.i8"]
+        pub fn neon_scalar_uqxtn_i32_i8(a: i8) -> i32;
+        /// The `llvm.aarch64.neon.scalar.uqxtn.i32.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.uqxtn.i32.v8i16"]
+        pub fn neon_scalar_uqxtn_i32_v8i16(a: ::simdty::i16x8) -> i32;
+        /// The `llvm.aarch64.neon.scalar.uqxtn.i32.i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.uqxtn.i32.i16"]
+        pub fn neon_scalar_uqxtn_i32_i16(a: i16) -> i32;
+        /// The `llvm.aarch64.neon.scalar.uqxtn.i32.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.uqxtn.i32.v4i32"]
+        pub fn neon_scalar_uqxtn_i32_v4i32(a: ::simdty::i32x4) -> i32;
+        /// The `llvm.aarch64.neon.scalar.uqxtn.i32.i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.uqxtn.i32.i32"]
+        pub fn neon_scalar_uqxtn_i32_i32(a: i32) -> i32;
+        /// The `llvm.aarch64.neon.scalar.uqxtn.i32.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.uqxtn.i32.v2i64"]
+        pub fn neon_scalar_uqxtn_i32_v2i64(a: ::simdty::i64x2) -> i32;
+        /// The `llvm.aarch64.neon.scalar.uqxtn.i32.i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.uqxtn.i32.i64"]
+        pub fn neon_scalar_uqxtn_i32_i64(a: i64) -> i32;
+        /// The `llvm.aarch64.neon.scalar.uqxtn.v2i64.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.uqxtn.v2i64.v16i8"]
+        pub fn neon_scalar_uqxtn_v2i64_v16i8(a: ::simdty::i8x16) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.scalar.uqxtn.v2i64.i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.uqxtn.v2i64.i8"]
+        pub fn neon_scalar_uqxtn_v2i64_i8(a: i8) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.scalar.uqxtn.v2i64.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.uqxtn.v2i64.v8i16"]
+        pub fn neon_scalar_uqxtn_v2i64_v8i16(a: ::simdty::i16x8) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.scalar.uqxtn.v2i64.i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.uqxtn.v2i64.i16"]
+        pub fn neon_scalar_uqxtn_v2i64_i16(a: i16) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.scalar.uqxtn.v2i64.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.uqxtn.v2i64.v4i32"]
+        pub fn neon_scalar_uqxtn_v2i64_v4i32(a: ::simdty::i32x4) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.scalar.uqxtn.v2i64.i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.uqxtn.v2i64.i32"]
+        pub fn neon_scalar_uqxtn_v2i64_i32(a: i32) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.scalar.uqxtn.v2i64.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.uqxtn.v2i64.v2i64"]
+        pub fn neon_scalar_uqxtn_v2i64_v2i64(a: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.scalar.uqxtn.v2i64.i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.uqxtn.v2i64.i64"]
+        pub fn neon_scalar_uqxtn_v2i64_i64(a: i64) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.scalar.uqxtn.i64.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.uqxtn.i64.v16i8"]
+        pub fn neon_scalar_uqxtn_i64_v16i8(a: ::simdty::i8x16) -> i64;
+        /// The `llvm.aarch64.neon.scalar.uqxtn.i64.i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.uqxtn.i64.i8"]
+        pub fn neon_scalar_uqxtn_i64_i8(a: i8) -> i64;
+        /// The `llvm.aarch64.neon.scalar.uqxtn.i64.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.uqxtn.i64.v8i16"]
+        pub fn neon_scalar_uqxtn_i64_v8i16(a: ::simdty::i16x8) -> i64;
+        /// The `llvm.aarch64.neon.scalar.uqxtn.i64.i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.uqxtn.i64.i16"]
+        pub fn neon_scalar_uqxtn_i64_i16(a: i16) -> i64;
+        /// The `llvm.aarch64.neon.scalar.uqxtn.i64.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.uqxtn.i64.v4i32"]
+        pub fn neon_scalar_uqxtn_i64_v4i32(a: ::simdty::i32x4) -> i64;
+        /// The `llvm.aarch64.neon.scalar.uqxtn.i64.i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.uqxtn.i64.i32"]
+        pub fn neon_scalar_uqxtn_i64_i32(a: i32) -> i64;
+        /// The `llvm.aarch64.neon.scalar.uqxtn.i64.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.uqxtn.i64.v2i64"]
+        pub fn neon_scalar_uqxtn_i64_v2i64(a: ::simdty::i64x2) -> i64;
+        /// The `llvm.aarch64.neon.scalar.uqxtn.i64.i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.uqxtn.i64.i64"]
+        pub fn neon_scalar_uqxtn_i64_i64(a: i64) -> i64;
+        /// The `llvm.aarch64.neon.scalar.sqxtun.v16i8.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtun.v16i8.v16i8"]
+        pub fn neon_scalar_sqxtun_v16i8_v16i8(a: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.scalar.sqxtun.v16i8.i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtun.v16i8.i8"]
+        pub fn neon_scalar_sqxtun_v16i8_i8(a: i8) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.scalar.sqxtun.v16i8.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtun.v16i8.v8i16"]
+        pub fn neon_scalar_sqxtun_v16i8_v8i16(a: ::simdty::i16x8) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.scalar.sqxtun.v16i8.i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtun.v16i8.i16"]
+        pub fn neon_scalar_sqxtun_v16i8_i16(a: i16) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.scalar.sqxtun.v16i8.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtun.v16i8.v4i32"]
+        pub fn neon_scalar_sqxtun_v16i8_v4i32(a: ::simdty::i32x4) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.scalar.sqxtun.v16i8.i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtun.v16i8.i32"]
+        pub fn neon_scalar_sqxtun_v16i8_i32(a: i32) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.scalar.sqxtun.v16i8.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtun.v16i8.v2i64"]
+        pub fn neon_scalar_sqxtun_v16i8_v2i64(a: ::simdty::i64x2) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.scalar.sqxtun.v16i8.i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtun.v16i8.i64"]
+        pub fn neon_scalar_sqxtun_v16i8_i64(a: i64) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.scalar.sqxtun.i8.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtun.i8.v16i8"]
+        pub fn neon_scalar_sqxtun_i8_v16i8(a: ::simdty::i8x16) -> i8;
+        /// The `llvm.aarch64.neon.scalar.sqxtun.i8.i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtun.i8.i8"]
+        pub fn neon_scalar_sqxtun_i8_i8(a: i8) -> i8;
+        /// The `llvm.aarch64.neon.scalar.sqxtun.i8.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtun.i8.v8i16"]
+        pub fn neon_scalar_sqxtun_i8_v8i16(a: ::simdty::i16x8) -> i8;
+        /// The `llvm.aarch64.neon.scalar.sqxtun.i8.i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtun.i8.i16"]
+        pub fn neon_scalar_sqxtun_i8_i16(a: i16) -> i8;
+        /// The `llvm.aarch64.neon.scalar.sqxtun.i8.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtun.i8.v4i32"]
+        pub fn neon_scalar_sqxtun_i8_v4i32(a: ::simdty::i32x4) -> i8;
+        /// The `llvm.aarch64.neon.scalar.sqxtun.i8.i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtun.i8.i32"]
+        pub fn neon_scalar_sqxtun_i8_i32(a: i32) -> i8;
+        /// The `llvm.aarch64.neon.scalar.sqxtun.i8.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtun.i8.v2i64"]
+        pub fn neon_scalar_sqxtun_i8_v2i64(a: ::simdty::i64x2) -> i8;
+        /// The `llvm.aarch64.neon.scalar.sqxtun.i8.i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtun.i8.i64"]
+        pub fn neon_scalar_sqxtun_i8_i64(a: i64) -> i8;
+        /// The `llvm.aarch64.neon.scalar.sqxtun.v8i16.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtun.v8i16.v16i8"]
+        pub fn neon_scalar_sqxtun_v8i16_v16i8(a: ::simdty::i8x16) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.scalar.sqxtun.v8i16.i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtun.v8i16.i8"]
+        pub fn neon_scalar_sqxtun_v8i16_i8(a: i8) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.scalar.sqxtun.v8i16.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtun.v8i16.v8i16"]
+        pub fn neon_scalar_sqxtun_v8i16_v8i16(a: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.scalar.sqxtun.v8i16.i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtun.v8i16.i16"]
+        pub fn neon_scalar_sqxtun_v8i16_i16(a: i16) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.scalar.sqxtun.v8i16.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtun.v8i16.v4i32"]
+        pub fn neon_scalar_sqxtun_v8i16_v4i32(a: ::simdty::i32x4) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.scalar.sqxtun.v8i16.i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtun.v8i16.i32"]
+        pub fn neon_scalar_sqxtun_v8i16_i32(a: i32) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.scalar.sqxtun.v8i16.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtun.v8i16.v2i64"]
+        pub fn neon_scalar_sqxtun_v8i16_v2i64(a: ::simdty::i64x2) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.scalar.sqxtun.v8i16.i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtun.v8i16.i64"]
+        pub fn neon_scalar_sqxtun_v8i16_i64(a: i64) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.scalar.sqxtun.i16.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtun.i16.v16i8"]
+        pub fn neon_scalar_sqxtun_i16_v16i8(a: ::simdty::i8x16) -> i16;
+        /// The `llvm.aarch64.neon.scalar.sqxtun.i16.i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtun.i16.i8"]
+        pub fn neon_scalar_sqxtun_i16_i8(a: i8) -> i16;
+        /// The `llvm.aarch64.neon.scalar.sqxtun.i16.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtun.i16.v8i16"]
+        pub fn neon_scalar_sqxtun_i16_v8i16(a: ::simdty::i16x8) -> i16;
+        /// The `llvm.aarch64.neon.scalar.sqxtun.i16.i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtun.i16.i16"]
+        pub fn neon_scalar_sqxtun_i16_i16(a: i16) -> i16;
+        /// The `llvm.aarch64.neon.scalar.sqxtun.i16.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtun.i16.v4i32"]
+        pub fn neon_scalar_sqxtun_i16_v4i32(a: ::simdty::i32x4) -> i16;
+        /// The `llvm.aarch64.neon.scalar.sqxtun.i16.i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtun.i16.i32"]
+        pub fn neon_scalar_sqxtun_i16_i32(a: i32) -> i16;
+        /// The `llvm.aarch64.neon.scalar.sqxtun.i16.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtun.i16.v2i64"]
+        pub fn neon_scalar_sqxtun_i16_v2i64(a: ::simdty::i64x2) -> i16;
+        /// The `llvm.aarch64.neon.scalar.sqxtun.i16.i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtun.i16.i64"]
+        pub fn neon_scalar_sqxtun_i16_i64(a: i64) -> i16;
+        /// The `llvm.aarch64.neon.scalar.sqxtun.v4i32.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtun.v4i32.v16i8"]
+        pub fn neon_scalar_sqxtun_v4i32_v16i8(a: ::simdty::i8x16) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.scalar.sqxtun.v4i32.i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtun.v4i32.i8"]
+        pub fn neon_scalar_sqxtun_v4i32_i8(a: i8) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.scalar.sqxtun.v4i32.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtun.v4i32.v8i16"]
+        pub fn neon_scalar_sqxtun_v4i32_v8i16(a: ::simdty::i16x8) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.scalar.sqxtun.v4i32.i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtun.v4i32.i16"]
+        pub fn neon_scalar_sqxtun_v4i32_i16(a: i16) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.scalar.sqxtun.v4i32.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtun.v4i32.v4i32"]
+        pub fn neon_scalar_sqxtun_v4i32_v4i32(a: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.scalar.sqxtun.v4i32.i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtun.v4i32.i32"]
+        pub fn neon_scalar_sqxtun_v4i32_i32(a: i32) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.scalar.sqxtun.v4i32.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtun.v4i32.v2i64"]
+        pub fn neon_scalar_sqxtun_v4i32_v2i64(a: ::simdty::i64x2) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.scalar.sqxtun.v4i32.i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtun.v4i32.i64"]
+        pub fn neon_scalar_sqxtun_v4i32_i64(a: i64) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.scalar.sqxtun.i32.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtun.i32.v16i8"]
+        pub fn neon_scalar_sqxtun_i32_v16i8(a: ::simdty::i8x16) -> i32;
+        /// The `llvm.aarch64.neon.scalar.sqxtun.i32.i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtun.i32.i8"]
+        pub fn neon_scalar_sqxtun_i32_i8(a: i8) -> i32;
+        /// The `llvm.aarch64.neon.scalar.sqxtun.i32.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtun.i32.v8i16"]
+        pub fn neon_scalar_sqxtun_i32_v8i16(a: ::simdty::i16x8) -> i32;
+        /// The `llvm.aarch64.neon.scalar.sqxtun.i32.i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtun.i32.i16"]
+        pub fn neon_scalar_sqxtun_i32_i16(a: i16) -> i32;
+        /// The `llvm.aarch64.neon.scalar.sqxtun.i32.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtun.i32.v4i32"]
+        pub fn neon_scalar_sqxtun_i32_v4i32(a: ::simdty::i32x4) -> i32;
+        /// The `llvm.aarch64.neon.scalar.sqxtun.i32.i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtun.i32.i32"]
+        pub fn neon_scalar_sqxtun_i32_i32(a: i32) -> i32;
+        /// The `llvm.aarch64.neon.scalar.sqxtun.i32.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtun.i32.v2i64"]
+        pub fn neon_scalar_sqxtun_i32_v2i64(a: ::simdty::i64x2) -> i32;
+        /// The `llvm.aarch64.neon.scalar.sqxtun.i32.i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtun.i32.i64"]
+        pub fn neon_scalar_sqxtun_i32_i64(a: i64) -> i32;
+        /// The `llvm.aarch64.neon.scalar.sqxtun.v2i64.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtun.v2i64.v16i8"]
+        pub fn neon_scalar_sqxtun_v2i64_v16i8(a: ::simdty::i8x16) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.scalar.sqxtun.v2i64.i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtun.v2i64.i8"]
+        pub fn neon_scalar_sqxtun_v2i64_i8(a: i8) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.scalar.sqxtun.v2i64.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtun.v2i64.v8i16"]
+        pub fn neon_scalar_sqxtun_v2i64_v8i16(a: ::simdty::i16x8) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.scalar.sqxtun.v2i64.i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtun.v2i64.i16"]
+        pub fn neon_scalar_sqxtun_v2i64_i16(a: i16) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.scalar.sqxtun.v2i64.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtun.v2i64.v4i32"]
+        pub fn neon_scalar_sqxtun_v2i64_v4i32(a: ::simdty::i32x4) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.scalar.sqxtun.v2i64.i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtun.v2i64.i32"]
+        pub fn neon_scalar_sqxtun_v2i64_i32(a: i32) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.scalar.sqxtun.v2i64.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtun.v2i64.v2i64"]
+        pub fn neon_scalar_sqxtun_v2i64_v2i64(a: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.scalar.sqxtun.v2i64.i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtun.v2i64.i64"]
+        pub fn neon_scalar_sqxtun_v2i64_i64(a: i64) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.scalar.sqxtun.i64.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtun.i64.v16i8"]
+        pub fn neon_scalar_sqxtun_i64_v16i8(a: ::simdty::i8x16) -> i64;
+        /// The `llvm.aarch64.neon.scalar.sqxtun.i64.i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtun.i64.i8"]
+        pub fn neon_scalar_sqxtun_i64_i8(a: i8) -> i64;
+        /// The `llvm.aarch64.neon.scalar.sqxtun.i64.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtun.i64.v8i16"]
+        pub fn neon_scalar_sqxtun_i64_v8i16(a: ::simdty::i16x8) -> i64;
+        /// The `llvm.aarch64.neon.scalar.sqxtun.i64.i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtun.i64.i16"]
+        pub fn neon_scalar_sqxtun_i64_i16(a: i16) -> i64;
+        /// The `llvm.aarch64.neon.scalar.sqxtun.i64.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtun.i64.v4i32"]
+        pub fn neon_scalar_sqxtun_i64_v4i32(a: ::simdty::i32x4) -> i64;
+        /// The `llvm.aarch64.neon.scalar.sqxtun.i64.i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtun.i64.i32"]
+        pub fn neon_scalar_sqxtun_i64_i32(a: i32) -> i64;
+        /// The `llvm.aarch64.neon.scalar.sqxtun.i64.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtun.i64.v2i64"]
+        pub fn neon_scalar_sqxtun_i64_v2i64(a: ::simdty::i64x2) -> i64;
+        /// The `llvm.aarch64.neon.scalar.sqxtun.i64.i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.scalar.sqxtun.i64.i64"]
+        pub fn neon_scalar_sqxtun_i64_i64(a: i64) -> i64;
+        /// The `llvm.aarch64.neon.abs.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.abs.v16i8"]
+        pub fn neon_abs_v16i8(a: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.abs.i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.abs.i8"]
+        pub fn neon_abs_i8(a: i8) -> i8;
+        /// The `llvm.aarch64.neon.abs.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.abs.v8i16"]
+        pub fn neon_abs_v8i16(a: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.abs.i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.abs.i16"]
+        pub fn neon_abs_i16(a: i16) -> i16;
+        /// The `llvm.aarch64.neon.abs.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.abs.v4i32"]
+        pub fn neon_abs_v4i32(a: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.abs.i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.abs.i32"]
+        pub fn neon_abs_i32(a: i32) -> i32;
+        /// The `llvm.aarch64.neon.abs.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.abs.v2i64"]
+        pub fn neon_abs_v2i64(a: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.abs.i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.abs.i64"]
+        pub fn neon_abs_i64(a: i64) -> i64;
+        /// The `llvm.aarch64.neon.sqabs.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sqabs.v16i8"]
+        pub fn neon_sqabs_v16i8(a: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.sqabs.i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sqabs.i8"]
+        pub fn neon_sqabs_i8(a: i8) -> i8;
+        /// The `llvm.aarch64.neon.sqabs.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sqabs.v8i16"]
+        pub fn neon_sqabs_v8i16(a: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.sqabs.i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sqabs.i16"]
+        pub fn neon_sqabs_i16(a: i16) -> i16;
+        /// The `llvm.aarch64.neon.sqabs.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sqabs.v4i32"]
+        pub fn neon_sqabs_v4i32(a: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.sqabs.i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sqabs.i32"]
+        pub fn neon_sqabs_i32(a: i32) -> i32;
+        /// The `llvm.aarch64.neon.sqabs.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sqabs.v2i64"]
+        pub fn neon_sqabs_v2i64(a: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.sqabs.i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sqabs.i64"]
+        pub fn neon_sqabs_i64(a: i64) -> i64;
+        /// The `llvm.aarch64.neon.sqneg.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sqneg.v16i8"]
+        pub fn neon_sqneg_v16i8(a: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.sqneg.i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sqneg.i8"]
+        pub fn neon_sqneg_i8(a: i8) -> i8;
+        /// The `llvm.aarch64.neon.sqneg.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sqneg.v8i16"]
+        pub fn neon_sqneg_v8i16(a: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.sqneg.i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sqneg.i16"]
+        pub fn neon_sqneg_i16(a: i16) -> i16;
+        /// The `llvm.aarch64.neon.sqneg.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sqneg.v4i32"]
+        pub fn neon_sqneg_v4i32(a: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.sqneg.i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sqneg.i32"]
+        pub fn neon_sqneg_i32(a: i32) -> i32;
+        /// The `llvm.aarch64.neon.sqneg.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sqneg.v2i64"]
+        pub fn neon_sqneg_v2i64(a: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.sqneg.i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.sqneg.i64"]
+        pub fn neon_sqneg_i64(a: i64) -> i64;
+        /// The `llvm.aarch64.neon.cls.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.cls.v16i8"]
+        pub fn neon_cls_v16i8(a: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.cls.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.cls.v8i16"]
+        pub fn neon_cls_v8i16(a: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.cls.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.cls.v4i32"]
+        pub fn neon_cls_v4i32(a: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.cls.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.cls.v2i64"]
+        pub fn neon_cls_v2i64(a: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.cls.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.cls.v4f32"]
+        pub fn neon_cls_v4f32(a: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.cls.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.cls.v2f64"]
+        pub fn neon_cls_v2f64(a: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.urecpe.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.urecpe.v16i8"]
+        pub fn neon_urecpe_v16i8(a: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.urecpe.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.urecpe.v8i16"]
+        pub fn neon_urecpe_v8i16(a: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.urecpe.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.urecpe.v4i32"]
+        pub fn neon_urecpe_v4i32(a: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.urecpe.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.urecpe.v2i64"]
+        pub fn neon_urecpe_v2i64(a: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.urecpe.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.urecpe.v4f32"]
+        pub fn neon_urecpe_v4f32(a: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.urecpe.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.urecpe.v2f64"]
+        pub fn neon_urecpe_v2f64(a: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.frecpe.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.frecpe.v4f32"]
+        pub fn neon_frecpe_v4f32(a: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.frecpe.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.frecpe.f32"]
+        pub fn neon_frecpe_f32(a: f32) -> f32;
+        /// The `llvm.aarch64.neon.frecpe.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.frecpe.v2f64"]
+        pub fn neon_frecpe_v2f64(a: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.frecpe.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.frecpe.f64"]
+        pub fn neon_frecpe_f64(a: f64) -> f64;
+        /// The `llvm.aarch64.neon.ursqrte.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.ursqrte.v16i8"]
+        pub fn neon_ursqrte_v16i8(a: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.ursqrte.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.ursqrte.v8i16"]
+        pub fn neon_ursqrte_v8i16(a: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.ursqrte.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.ursqrte.v4i32"]
+        pub fn neon_ursqrte_v4i32(a: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.ursqrte.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.ursqrte.v2i64"]
+        pub fn neon_ursqrte_v2i64(a: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.ursqrte.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.ursqrte.v4f32"]
+        pub fn neon_ursqrte_v4f32(a: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.ursqrte.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.ursqrte.v2f64"]
+        pub fn neon_ursqrte_v2f64(a: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.frsqrte.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.frsqrte.v4f32"]
+        pub fn neon_frsqrte_v4f32(a: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.frsqrte.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.frsqrte.f32"]
+        pub fn neon_frsqrte_f32(a: f32) -> f32;
+        /// The `llvm.aarch64.neon.frsqrte.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.frsqrte.v2f64"]
+        pub fn neon_frsqrte_v2f64(a: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.frsqrte.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.frsqrte.f64"]
+        pub fn neon_frsqrte_f64(a: f64) -> f64;
+        /// The `llvm.aarch64.neon.rbit.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.rbit.v16i8"]
+        pub fn neon_rbit_v16i8(a: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.rbit.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.rbit.v8i16"]
+        pub fn neon_rbit_v8i16(a: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.rbit.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.rbit.v4i32"]
+        pub fn neon_rbit_v4i32(a: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.rbit.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.rbit.v2i64"]
+        pub fn neon_rbit_v2i64(a: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.rbit.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.rbit.v4f32"]
+        pub fn neon_rbit_v4f32(a: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.rbit.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.rbit.v2f64"]
+        pub fn neon_rbit_v2f64(a: ::simdty::f64x2) -> ::simdty::f64x2;
         /// The `llvm.aarch64.neon.vcvtfp2hf` intrinsic.
         #[link_name = "llvm.aarch64.neon.vcvtfp2hf"]
         pub fn neon_vcvtfp2hf(a: ::simdty::f32x4) -> ::simdty::i16x4;
         /// The `llvm.aarch64.neon.vcvthf2fp` intrinsic.
         #[link_name = "llvm.aarch64.neon.vcvthf2fp"]
         pub fn neon_vcvthf2fp(a: ::simdty::i16x4) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.vcvtfp2fxs.v16i8.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfp2fxs.v16i8.v4f32"]
+        pub fn neon_vcvtfp2fxs_v16i8_v4f32(a: ::simdty::f32x4, b: i32) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.vcvtfp2fxs.v16i8.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfp2fxs.v16i8.f32"]
+        pub fn neon_vcvtfp2fxs_v16i8_f32(a: f32, b: i32) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.vcvtfp2fxs.v16i8.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfp2fxs.v16i8.v2f64"]
+        pub fn neon_vcvtfp2fxs_v16i8_v2f64(a: ::simdty::f64x2, b: i32) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.vcvtfp2fxs.v16i8.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfp2fxs.v16i8.f64"]
+        pub fn neon_vcvtfp2fxs_v16i8_f64(a: f64, b: i32) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.vcvtfp2fxs.i8.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfp2fxs.i8.v4f32"]
+        pub fn neon_vcvtfp2fxs_i8_v4f32(a: ::simdty::f32x4, b: i32) -> i8;
+        /// The `llvm.aarch64.neon.vcvtfp2fxs.i8.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfp2fxs.i8.f32"]
+        pub fn neon_vcvtfp2fxs_i8_f32(a: f32, b: i32) -> i8;
+        /// The `llvm.aarch64.neon.vcvtfp2fxs.i8.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfp2fxs.i8.v2f64"]
+        pub fn neon_vcvtfp2fxs_i8_v2f64(a: ::simdty::f64x2, b: i32) -> i8;
+        /// The `llvm.aarch64.neon.vcvtfp2fxs.i8.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfp2fxs.i8.f64"]
+        pub fn neon_vcvtfp2fxs_i8_f64(a: f64, b: i32) -> i8;
+        /// The `llvm.aarch64.neon.vcvtfp2fxs.v8i16.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfp2fxs.v8i16.v4f32"]
+        pub fn neon_vcvtfp2fxs_v8i16_v4f32(a: ::simdty::f32x4, b: i32) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.vcvtfp2fxs.v8i16.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfp2fxs.v8i16.f32"]
+        pub fn neon_vcvtfp2fxs_v8i16_f32(a: f32, b: i32) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.vcvtfp2fxs.v8i16.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfp2fxs.v8i16.v2f64"]
+        pub fn neon_vcvtfp2fxs_v8i16_v2f64(a: ::simdty::f64x2, b: i32) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.vcvtfp2fxs.v8i16.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfp2fxs.v8i16.f64"]
+        pub fn neon_vcvtfp2fxs_v8i16_f64(a: f64, b: i32) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.vcvtfp2fxs.i16.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfp2fxs.i16.v4f32"]
+        pub fn neon_vcvtfp2fxs_i16_v4f32(a: ::simdty::f32x4, b: i32) -> i16;
+        /// The `llvm.aarch64.neon.vcvtfp2fxs.i16.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfp2fxs.i16.f32"]
+        pub fn neon_vcvtfp2fxs_i16_f32(a: f32, b: i32) -> i16;
+        /// The `llvm.aarch64.neon.vcvtfp2fxs.i16.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfp2fxs.i16.v2f64"]
+        pub fn neon_vcvtfp2fxs_i16_v2f64(a: ::simdty::f64x2, b: i32) -> i16;
+        /// The `llvm.aarch64.neon.vcvtfp2fxs.i16.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfp2fxs.i16.f64"]
+        pub fn neon_vcvtfp2fxs_i16_f64(a: f64, b: i32) -> i16;
+        /// The `llvm.aarch64.neon.vcvtfp2fxs.v4i32.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfp2fxs.v4i32.v4f32"]
+        pub fn neon_vcvtfp2fxs_v4i32_v4f32(a: ::simdty::f32x4, b: i32) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.vcvtfp2fxs.v4i32.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfp2fxs.v4i32.f32"]
+        pub fn neon_vcvtfp2fxs_v4i32_f32(a: f32, b: i32) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.vcvtfp2fxs.v4i32.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfp2fxs.v4i32.v2f64"]
+        pub fn neon_vcvtfp2fxs_v4i32_v2f64(a: ::simdty::f64x2, b: i32) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.vcvtfp2fxs.v4i32.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfp2fxs.v4i32.f64"]
+        pub fn neon_vcvtfp2fxs_v4i32_f64(a: f64, b: i32) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.vcvtfp2fxs.i32.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfp2fxs.i32.v4f32"]
+        pub fn neon_vcvtfp2fxs_i32_v4f32(a: ::simdty::f32x4, b: i32) -> i32;
+        /// The `llvm.aarch64.neon.vcvtfp2fxs.i32.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfp2fxs.i32.f32"]
+        pub fn neon_vcvtfp2fxs_i32_f32(a: f32, b: i32) -> i32;
+        /// The `llvm.aarch64.neon.vcvtfp2fxs.i32.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfp2fxs.i32.v2f64"]
+        pub fn neon_vcvtfp2fxs_i32_v2f64(a: ::simdty::f64x2, b: i32) -> i32;
+        /// The `llvm.aarch64.neon.vcvtfp2fxs.i32.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfp2fxs.i32.f64"]
+        pub fn neon_vcvtfp2fxs_i32_f64(a: f64, b: i32) -> i32;
+        /// The `llvm.aarch64.neon.vcvtfp2fxs.v2i64.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfp2fxs.v2i64.v4f32"]
+        pub fn neon_vcvtfp2fxs_v2i64_v4f32(a: ::simdty::f32x4, b: i32) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.vcvtfp2fxs.v2i64.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfp2fxs.v2i64.f32"]
+        pub fn neon_vcvtfp2fxs_v2i64_f32(a: f32, b: i32) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.vcvtfp2fxs.v2i64.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfp2fxs.v2i64.v2f64"]
+        pub fn neon_vcvtfp2fxs_v2i64_v2f64(a: ::simdty::f64x2, b: i32) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.vcvtfp2fxs.v2i64.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfp2fxs.v2i64.f64"]
+        pub fn neon_vcvtfp2fxs_v2i64_f64(a: f64, b: i32) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.vcvtfp2fxs.i64.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfp2fxs.i64.v4f32"]
+        pub fn neon_vcvtfp2fxs_i64_v4f32(a: ::simdty::f32x4, b: i32) -> i64;
+        /// The `llvm.aarch64.neon.vcvtfp2fxs.i64.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfp2fxs.i64.f32"]
+        pub fn neon_vcvtfp2fxs_i64_f32(a: f32, b: i32) -> i64;
+        /// The `llvm.aarch64.neon.vcvtfp2fxs.i64.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfp2fxs.i64.v2f64"]
+        pub fn neon_vcvtfp2fxs_i64_v2f64(a: ::simdty::f64x2, b: i32) -> i64;
+        /// The `llvm.aarch64.neon.vcvtfp2fxs.i64.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfp2fxs.i64.f64"]
+        pub fn neon_vcvtfp2fxs_i64_f64(a: f64, b: i32) -> i64;
+        /// The `llvm.aarch64.neon.vcvtfp2fxu.v16i8.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfp2fxu.v16i8.v4f32"]
+        pub fn neon_vcvtfp2fxu_v16i8_v4f32(a: ::simdty::f32x4, b: i32) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.vcvtfp2fxu.v16i8.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfp2fxu.v16i8.f32"]
+        pub fn neon_vcvtfp2fxu_v16i8_f32(a: f32, b: i32) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.vcvtfp2fxu.v16i8.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfp2fxu.v16i8.v2f64"]
+        pub fn neon_vcvtfp2fxu_v16i8_v2f64(a: ::simdty::f64x2, b: i32) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.vcvtfp2fxu.v16i8.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfp2fxu.v16i8.f64"]
+        pub fn neon_vcvtfp2fxu_v16i8_f64(a: f64, b: i32) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.vcvtfp2fxu.i8.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfp2fxu.i8.v4f32"]
+        pub fn neon_vcvtfp2fxu_i8_v4f32(a: ::simdty::f32x4, b: i32) -> i8;
+        /// The `llvm.aarch64.neon.vcvtfp2fxu.i8.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfp2fxu.i8.f32"]
+        pub fn neon_vcvtfp2fxu_i8_f32(a: f32, b: i32) -> i8;
+        /// The `llvm.aarch64.neon.vcvtfp2fxu.i8.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfp2fxu.i8.v2f64"]
+        pub fn neon_vcvtfp2fxu_i8_v2f64(a: ::simdty::f64x2, b: i32) -> i8;
+        /// The `llvm.aarch64.neon.vcvtfp2fxu.i8.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfp2fxu.i8.f64"]
+        pub fn neon_vcvtfp2fxu_i8_f64(a: f64, b: i32) -> i8;
+        /// The `llvm.aarch64.neon.vcvtfp2fxu.v8i16.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfp2fxu.v8i16.v4f32"]
+        pub fn neon_vcvtfp2fxu_v8i16_v4f32(a: ::simdty::f32x4, b: i32) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.vcvtfp2fxu.v8i16.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfp2fxu.v8i16.f32"]
+        pub fn neon_vcvtfp2fxu_v8i16_f32(a: f32, b: i32) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.vcvtfp2fxu.v8i16.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfp2fxu.v8i16.v2f64"]
+        pub fn neon_vcvtfp2fxu_v8i16_v2f64(a: ::simdty::f64x2, b: i32) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.vcvtfp2fxu.v8i16.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfp2fxu.v8i16.f64"]
+        pub fn neon_vcvtfp2fxu_v8i16_f64(a: f64, b: i32) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.vcvtfp2fxu.i16.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfp2fxu.i16.v4f32"]
+        pub fn neon_vcvtfp2fxu_i16_v4f32(a: ::simdty::f32x4, b: i32) -> i16;
+        /// The `llvm.aarch64.neon.vcvtfp2fxu.i16.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfp2fxu.i16.f32"]
+        pub fn neon_vcvtfp2fxu_i16_f32(a: f32, b: i32) -> i16;
+        /// The `llvm.aarch64.neon.vcvtfp2fxu.i16.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfp2fxu.i16.v2f64"]
+        pub fn neon_vcvtfp2fxu_i16_v2f64(a: ::simdty::f64x2, b: i32) -> i16;
+        /// The `llvm.aarch64.neon.vcvtfp2fxu.i16.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfp2fxu.i16.f64"]
+        pub fn neon_vcvtfp2fxu_i16_f64(a: f64, b: i32) -> i16;
+        /// The `llvm.aarch64.neon.vcvtfp2fxu.v4i32.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfp2fxu.v4i32.v4f32"]
+        pub fn neon_vcvtfp2fxu_v4i32_v4f32(a: ::simdty::f32x4, b: i32) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.vcvtfp2fxu.v4i32.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfp2fxu.v4i32.f32"]
+        pub fn neon_vcvtfp2fxu_v4i32_f32(a: f32, b: i32) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.vcvtfp2fxu.v4i32.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfp2fxu.v4i32.v2f64"]
+        pub fn neon_vcvtfp2fxu_v4i32_v2f64(a: ::simdty::f64x2, b: i32) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.vcvtfp2fxu.v4i32.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfp2fxu.v4i32.f64"]
+        pub fn neon_vcvtfp2fxu_v4i32_f64(a: f64, b: i32) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.vcvtfp2fxu.i32.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfp2fxu.i32.v4f32"]
+        pub fn neon_vcvtfp2fxu_i32_v4f32(a: ::simdty::f32x4, b: i32) -> i32;
+        /// The `llvm.aarch64.neon.vcvtfp2fxu.i32.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfp2fxu.i32.f32"]
+        pub fn neon_vcvtfp2fxu_i32_f32(a: f32, b: i32) -> i32;
+        /// The `llvm.aarch64.neon.vcvtfp2fxu.i32.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfp2fxu.i32.v2f64"]
+        pub fn neon_vcvtfp2fxu_i32_v2f64(a: ::simdty::f64x2, b: i32) -> i32;
+        /// The `llvm.aarch64.neon.vcvtfp2fxu.i32.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfp2fxu.i32.f64"]
+        pub fn neon_vcvtfp2fxu_i32_f64(a: f64, b: i32) -> i32;
+        /// The `llvm.aarch64.neon.vcvtfp2fxu.v2i64.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfp2fxu.v2i64.v4f32"]
+        pub fn neon_vcvtfp2fxu_v2i64_v4f32(a: ::simdty::f32x4, b: i32) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.vcvtfp2fxu.v2i64.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfp2fxu.v2i64.f32"]
+        pub fn neon_vcvtfp2fxu_v2i64_f32(a: f32, b: i32) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.vcvtfp2fxu.v2i64.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfp2fxu.v2i64.v2f64"]
+        pub fn neon_vcvtfp2fxu_v2i64_v2f64(a: ::simdty::f64x2, b: i32) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.vcvtfp2fxu.v2i64.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfp2fxu.v2i64.f64"]
+        pub fn neon_vcvtfp2fxu_v2i64_f64(a: f64, b: i32) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.vcvtfp2fxu.i64.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfp2fxu.i64.v4f32"]
+        pub fn neon_vcvtfp2fxu_i64_v4f32(a: ::simdty::f32x4, b: i32) -> i64;
+        /// The `llvm.aarch64.neon.vcvtfp2fxu.i64.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfp2fxu.i64.f32"]
+        pub fn neon_vcvtfp2fxu_i64_f32(a: f32, b: i32) -> i64;
+        /// The `llvm.aarch64.neon.vcvtfp2fxu.i64.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfp2fxu.i64.v2f64"]
+        pub fn neon_vcvtfp2fxu_i64_v2f64(a: ::simdty::f64x2, b: i32) -> i64;
+        /// The `llvm.aarch64.neon.vcvtfp2fxu.i64.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfp2fxu.i64.f64"]
+        pub fn neon_vcvtfp2fxu_i64_f64(a: f64, b: i32) -> i64;
+        /// The `llvm.aarch64.neon.vcvtfxs2fp.v4f32.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfxs2fp.v4f32.v16i8"]
+        pub fn neon_vcvtfxs2fp_v4f32_v16i8(a: ::simdty::i8x16, b: i32) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.vcvtfxs2fp.v4f32.i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfxs2fp.v4f32.i8"]
+        pub fn neon_vcvtfxs2fp_v4f32_i8(a: i8, b: i32) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.vcvtfxs2fp.v4f32.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfxs2fp.v4f32.v8i16"]
+        pub fn neon_vcvtfxs2fp_v4f32_v8i16(a: ::simdty::i16x8, b: i32) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.vcvtfxs2fp.v4f32.i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfxs2fp.v4f32.i16"]
+        pub fn neon_vcvtfxs2fp_v4f32_i16(a: i16, b: i32) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.vcvtfxs2fp.v4f32.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfxs2fp.v4f32.v4i32"]
+        pub fn neon_vcvtfxs2fp_v4f32_v4i32(a: ::simdty::i32x4, b: i32) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.vcvtfxs2fp.v4f32.i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfxs2fp.v4f32.i32"]
+        pub fn neon_vcvtfxs2fp_v4f32_i32(a: i32, b: i32) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.vcvtfxs2fp.v4f32.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfxs2fp.v4f32.v2i64"]
+        pub fn neon_vcvtfxs2fp_v4f32_v2i64(a: ::simdty::i64x2, b: i32) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.vcvtfxs2fp.v4f32.i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfxs2fp.v4f32.i64"]
+        pub fn neon_vcvtfxs2fp_v4f32_i64(a: i64, b: i32) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.vcvtfxs2fp.f32.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfxs2fp.f32.v16i8"]
+        pub fn neon_vcvtfxs2fp_f32_v16i8(a: ::simdty::i8x16, b: i32) -> f32;
+        /// The `llvm.aarch64.neon.vcvtfxs2fp.f32.i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfxs2fp.f32.i8"]
+        pub fn neon_vcvtfxs2fp_f32_i8(a: i8, b: i32) -> f32;
+        /// The `llvm.aarch64.neon.vcvtfxs2fp.f32.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfxs2fp.f32.v8i16"]
+        pub fn neon_vcvtfxs2fp_f32_v8i16(a: ::simdty::i16x8, b: i32) -> f32;
+        /// The `llvm.aarch64.neon.vcvtfxs2fp.f32.i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfxs2fp.f32.i16"]
+        pub fn neon_vcvtfxs2fp_f32_i16(a: i16, b: i32) -> f32;
+        /// The `llvm.aarch64.neon.vcvtfxs2fp.f32.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfxs2fp.f32.v4i32"]
+        pub fn neon_vcvtfxs2fp_f32_v4i32(a: ::simdty::i32x4, b: i32) -> f32;
+        /// The `llvm.aarch64.neon.vcvtfxs2fp.f32.i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfxs2fp.f32.i32"]
+        pub fn neon_vcvtfxs2fp_f32_i32(a: i32, b: i32) -> f32;
+        /// The `llvm.aarch64.neon.vcvtfxs2fp.f32.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfxs2fp.f32.v2i64"]
+        pub fn neon_vcvtfxs2fp_f32_v2i64(a: ::simdty::i64x2, b: i32) -> f32;
+        /// The `llvm.aarch64.neon.vcvtfxs2fp.f32.i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfxs2fp.f32.i64"]
+        pub fn neon_vcvtfxs2fp_f32_i64(a: i64, b: i32) -> f32;
+        /// The `llvm.aarch64.neon.vcvtfxs2fp.v2f64.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfxs2fp.v2f64.v16i8"]
+        pub fn neon_vcvtfxs2fp_v2f64_v16i8(a: ::simdty::i8x16, b: i32) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.vcvtfxs2fp.v2f64.i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfxs2fp.v2f64.i8"]
+        pub fn neon_vcvtfxs2fp_v2f64_i8(a: i8, b: i32) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.vcvtfxs2fp.v2f64.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfxs2fp.v2f64.v8i16"]
+        pub fn neon_vcvtfxs2fp_v2f64_v8i16(a: ::simdty::i16x8, b: i32) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.vcvtfxs2fp.v2f64.i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfxs2fp.v2f64.i16"]
+        pub fn neon_vcvtfxs2fp_v2f64_i16(a: i16, b: i32) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.vcvtfxs2fp.v2f64.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfxs2fp.v2f64.v4i32"]
+        pub fn neon_vcvtfxs2fp_v2f64_v4i32(a: ::simdty::i32x4, b: i32) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.vcvtfxs2fp.v2f64.i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfxs2fp.v2f64.i32"]
+        pub fn neon_vcvtfxs2fp_v2f64_i32(a: i32, b: i32) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.vcvtfxs2fp.v2f64.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfxs2fp.v2f64.v2i64"]
+        pub fn neon_vcvtfxs2fp_v2f64_v2i64(a: ::simdty::i64x2, b: i32) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.vcvtfxs2fp.v2f64.i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfxs2fp.v2f64.i64"]
+        pub fn neon_vcvtfxs2fp_v2f64_i64(a: i64, b: i32) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.vcvtfxs2fp.f64.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfxs2fp.f64.v16i8"]
+        pub fn neon_vcvtfxs2fp_f64_v16i8(a: ::simdty::i8x16, b: i32) -> f64;
+        /// The `llvm.aarch64.neon.vcvtfxs2fp.f64.i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfxs2fp.f64.i8"]
+        pub fn neon_vcvtfxs2fp_f64_i8(a: i8, b: i32) -> f64;
+        /// The `llvm.aarch64.neon.vcvtfxs2fp.f64.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfxs2fp.f64.v8i16"]
+        pub fn neon_vcvtfxs2fp_f64_v8i16(a: ::simdty::i16x8, b: i32) -> f64;
+        /// The `llvm.aarch64.neon.vcvtfxs2fp.f64.i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfxs2fp.f64.i16"]
+        pub fn neon_vcvtfxs2fp_f64_i16(a: i16, b: i32) -> f64;
+        /// The `llvm.aarch64.neon.vcvtfxs2fp.f64.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfxs2fp.f64.v4i32"]
+        pub fn neon_vcvtfxs2fp_f64_v4i32(a: ::simdty::i32x4, b: i32) -> f64;
+        /// The `llvm.aarch64.neon.vcvtfxs2fp.f64.i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfxs2fp.f64.i32"]
+        pub fn neon_vcvtfxs2fp_f64_i32(a: i32, b: i32) -> f64;
+        /// The `llvm.aarch64.neon.vcvtfxs2fp.f64.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfxs2fp.f64.v2i64"]
+        pub fn neon_vcvtfxs2fp_f64_v2i64(a: ::simdty::i64x2, b: i32) -> f64;
+        /// The `llvm.aarch64.neon.vcvtfxs2fp.f64.i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfxs2fp.f64.i64"]
+        pub fn neon_vcvtfxs2fp_f64_i64(a: i64, b: i32) -> f64;
+        /// The `llvm.aarch64.neon.vcvtfxu2fp.v4f32.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfxu2fp.v4f32.v16i8"]
+        pub fn neon_vcvtfxu2fp_v4f32_v16i8(a: ::simdty::i8x16, b: i32) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.vcvtfxu2fp.v4f32.i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfxu2fp.v4f32.i8"]
+        pub fn neon_vcvtfxu2fp_v4f32_i8(a: i8, b: i32) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.vcvtfxu2fp.v4f32.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfxu2fp.v4f32.v8i16"]
+        pub fn neon_vcvtfxu2fp_v4f32_v8i16(a: ::simdty::i16x8, b: i32) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.vcvtfxu2fp.v4f32.i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfxu2fp.v4f32.i16"]
+        pub fn neon_vcvtfxu2fp_v4f32_i16(a: i16, b: i32) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.vcvtfxu2fp.v4f32.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfxu2fp.v4f32.v4i32"]
+        pub fn neon_vcvtfxu2fp_v4f32_v4i32(a: ::simdty::i32x4, b: i32) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.vcvtfxu2fp.v4f32.i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfxu2fp.v4f32.i32"]
+        pub fn neon_vcvtfxu2fp_v4f32_i32(a: i32, b: i32) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.vcvtfxu2fp.v4f32.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfxu2fp.v4f32.v2i64"]
+        pub fn neon_vcvtfxu2fp_v4f32_v2i64(a: ::simdty::i64x2, b: i32) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.vcvtfxu2fp.v4f32.i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfxu2fp.v4f32.i64"]
+        pub fn neon_vcvtfxu2fp_v4f32_i64(a: i64, b: i32) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.vcvtfxu2fp.f32.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfxu2fp.f32.v16i8"]
+        pub fn neon_vcvtfxu2fp_f32_v16i8(a: ::simdty::i8x16, b: i32) -> f32;
+        /// The `llvm.aarch64.neon.vcvtfxu2fp.f32.i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfxu2fp.f32.i8"]
+        pub fn neon_vcvtfxu2fp_f32_i8(a: i8, b: i32) -> f32;
+        /// The `llvm.aarch64.neon.vcvtfxu2fp.f32.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfxu2fp.f32.v8i16"]
+        pub fn neon_vcvtfxu2fp_f32_v8i16(a: ::simdty::i16x8, b: i32) -> f32;
+        /// The `llvm.aarch64.neon.vcvtfxu2fp.f32.i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfxu2fp.f32.i16"]
+        pub fn neon_vcvtfxu2fp_f32_i16(a: i16, b: i32) -> f32;
+        /// The `llvm.aarch64.neon.vcvtfxu2fp.f32.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfxu2fp.f32.v4i32"]
+        pub fn neon_vcvtfxu2fp_f32_v4i32(a: ::simdty::i32x4, b: i32) -> f32;
+        /// The `llvm.aarch64.neon.vcvtfxu2fp.f32.i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfxu2fp.f32.i32"]
+        pub fn neon_vcvtfxu2fp_f32_i32(a: i32, b: i32) -> f32;
+        /// The `llvm.aarch64.neon.vcvtfxu2fp.f32.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfxu2fp.f32.v2i64"]
+        pub fn neon_vcvtfxu2fp_f32_v2i64(a: ::simdty::i64x2, b: i32) -> f32;
+        /// The `llvm.aarch64.neon.vcvtfxu2fp.f32.i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfxu2fp.f32.i64"]
+        pub fn neon_vcvtfxu2fp_f32_i64(a: i64, b: i32) -> f32;
+        /// The `llvm.aarch64.neon.vcvtfxu2fp.v2f64.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfxu2fp.v2f64.v16i8"]
+        pub fn neon_vcvtfxu2fp_v2f64_v16i8(a: ::simdty::i8x16, b: i32) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.vcvtfxu2fp.v2f64.i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfxu2fp.v2f64.i8"]
+        pub fn neon_vcvtfxu2fp_v2f64_i8(a: i8, b: i32) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.vcvtfxu2fp.v2f64.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfxu2fp.v2f64.v8i16"]
+        pub fn neon_vcvtfxu2fp_v2f64_v8i16(a: ::simdty::i16x8, b: i32) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.vcvtfxu2fp.v2f64.i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfxu2fp.v2f64.i16"]
+        pub fn neon_vcvtfxu2fp_v2f64_i16(a: i16, b: i32) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.vcvtfxu2fp.v2f64.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfxu2fp.v2f64.v4i32"]
+        pub fn neon_vcvtfxu2fp_v2f64_v4i32(a: ::simdty::i32x4, b: i32) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.vcvtfxu2fp.v2f64.i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfxu2fp.v2f64.i32"]
+        pub fn neon_vcvtfxu2fp_v2f64_i32(a: i32, b: i32) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.vcvtfxu2fp.v2f64.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfxu2fp.v2f64.v2i64"]
+        pub fn neon_vcvtfxu2fp_v2f64_v2i64(a: ::simdty::i64x2, b: i32) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.vcvtfxu2fp.v2f64.i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfxu2fp.v2f64.i64"]
+        pub fn neon_vcvtfxu2fp_v2f64_i64(a: i64, b: i32) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.vcvtfxu2fp.f64.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfxu2fp.f64.v16i8"]
+        pub fn neon_vcvtfxu2fp_f64_v16i8(a: ::simdty::i8x16, b: i32) -> f64;
+        /// The `llvm.aarch64.neon.vcvtfxu2fp.f64.i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfxu2fp.f64.i8"]
+        pub fn neon_vcvtfxu2fp_f64_i8(a: i8, b: i32) -> f64;
+        /// The `llvm.aarch64.neon.vcvtfxu2fp.f64.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfxu2fp.f64.v8i16"]
+        pub fn neon_vcvtfxu2fp_f64_v8i16(a: ::simdty::i16x8, b: i32) -> f64;
+        /// The `llvm.aarch64.neon.vcvtfxu2fp.f64.i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfxu2fp.f64.i16"]
+        pub fn neon_vcvtfxu2fp_f64_i16(a: i16, b: i32) -> f64;
+        /// The `llvm.aarch64.neon.vcvtfxu2fp.f64.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfxu2fp.f64.v4i32"]
+        pub fn neon_vcvtfxu2fp_f64_v4i32(a: ::simdty::i32x4, b: i32) -> f64;
+        /// The `llvm.aarch64.neon.vcvtfxu2fp.f64.i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfxu2fp.f64.i32"]
+        pub fn neon_vcvtfxu2fp_f64_i32(a: i32, b: i32) -> f64;
+        /// The `llvm.aarch64.neon.vcvtfxu2fp.f64.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfxu2fp.f64.v2i64"]
+        pub fn neon_vcvtfxu2fp_f64_v2i64(a: ::simdty::i64x2, b: i32) -> f64;
+        /// The `llvm.aarch64.neon.vcvtfxu2fp.f64.i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcvtfxu2fp.f64.i64"]
+        pub fn neon_vcvtfxu2fp_f64_i64(a: i64, b: i32) -> f64;
+        /// The `llvm.aarch64.neon.fcvtas.v16i8.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtas.v16i8.v4f32"]
+        pub fn neon_fcvtas_v16i8_v4f32(a: ::simdty::f32x4) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.fcvtas.v16i8.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtas.v16i8.f32"]
+        pub fn neon_fcvtas_v16i8_f32(a: f32) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.fcvtas.v16i8.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtas.v16i8.v2f64"]
+        pub fn neon_fcvtas_v16i8_v2f64(a: ::simdty::f64x2) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.fcvtas.v16i8.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtas.v16i8.f64"]
+        pub fn neon_fcvtas_v16i8_f64(a: f64) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.fcvtas.i8.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtas.i8.v4f32"]
+        pub fn neon_fcvtas_i8_v4f32(a: ::simdty::f32x4) -> i8;
+        /// The `llvm.aarch64.neon.fcvtas.i8.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtas.i8.f32"]
+        pub fn neon_fcvtas_i8_f32(a: f32) -> i8;
+        /// The `llvm.aarch64.neon.fcvtas.i8.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtas.i8.v2f64"]
+        pub fn neon_fcvtas_i8_v2f64(a: ::simdty::f64x2) -> i8;
+        /// The `llvm.aarch64.neon.fcvtas.i8.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtas.i8.f64"]
+        pub fn neon_fcvtas_i8_f64(a: f64) -> i8;
+        /// The `llvm.aarch64.neon.fcvtas.v8i16.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtas.v8i16.v4f32"]
+        pub fn neon_fcvtas_v8i16_v4f32(a: ::simdty::f32x4) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.fcvtas.v8i16.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtas.v8i16.f32"]
+        pub fn neon_fcvtas_v8i16_f32(a: f32) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.fcvtas.v8i16.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtas.v8i16.v2f64"]
+        pub fn neon_fcvtas_v8i16_v2f64(a: ::simdty::f64x2) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.fcvtas.v8i16.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtas.v8i16.f64"]
+        pub fn neon_fcvtas_v8i16_f64(a: f64) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.fcvtas.i16.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtas.i16.v4f32"]
+        pub fn neon_fcvtas_i16_v4f32(a: ::simdty::f32x4) -> i16;
+        /// The `llvm.aarch64.neon.fcvtas.i16.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtas.i16.f32"]
+        pub fn neon_fcvtas_i16_f32(a: f32) -> i16;
+        /// The `llvm.aarch64.neon.fcvtas.i16.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtas.i16.v2f64"]
+        pub fn neon_fcvtas_i16_v2f64(a: ::simdty::f64x2) -> i16;
+        /// The `llvm.aarch64.neon.fcvtas.i16.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtas.i16.f64"]
+        pub fn neon_fcvtas_i16_f64(a: f64) -> i16;
+        /// The `llvm.aarch64.neon.fcvtas.v4i32.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtas.v4i32.v4f32"]
+        pub fn neon_fcvtas_v4i32_v4f32(a: ::simdty::f32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.fcvtas.v4i32.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtas.v4i32.f32"]
+        pub fn neon_fcvtas_v4i32_f32(a: f32) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.fcvtas.v4i32.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtas.v4i32.v2f64"]
+        pub fn neon_fcvtas_v4i32_v2f64(a: ::simdty::f64x2) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.fcvtas.v4i32.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtas.v4i32.f64"]
+        pub fn neon_fcvtas_v4i32_f64(a: f64) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.fcvtas.i32.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtas.i32.v4f32"]
+        pub fn neon_fcvtas_i32_v4f32(a: ::simdty::f32x4) -> i32;
+        /// The `llvm.aarch64.neon.fcvtas.i32.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtas.i32.f32"]
+        pub fn neon_fcvtas_i32_f32(a: f32) -> i32;
+        /// The `llvm.aarch64.neon.fcvtas.i32.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtas.i32.v2f64"]
+        pub fn neon_fcvtas_i32_v2f64(a: ::simdty::f64x2) -> i32;
+        /// The `llvm.aarch64.neon.fcvtas.i32.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtas.i32.f64"]
+        pub fn neon_fcvtas_i32_f64(a: f64) -> i32;
+        /// The `llvm.aarch64.neon.fcvtas.v2i64.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtas.v2i64.v4f32"]
+        pub fn neon_fcvtas_v2i64_v4f32(a: ::simdty::f32x4) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.fcvtas.v2i64.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtas.v2i64.f32"]
+        pub fn neon_fcvtas_v2i64_f32(a: f32) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.fcvtas.v2i64.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtas.v2i64.v2f64"]
+        pub fn neon_fcvtas_v2i64_v2f64(a: ::simdty::f64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.fcvtas.v2i64.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtas.v2i64.f64"]
+        pub fn neon_fcvtas_v2i64_f64(a: f64) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.fcvtas.i64.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtas.i64.v4f32"]
+        pub fn neon_fcvtas_i64_v4f32(a: ::simdty::f32x4) -> i64;
+        /// The `llvm.aarch64.neon.fcvtas.i64.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtas.i64.f32"]
+        pub fn neon_fcvtas_i64_f32(a: f32) -> i64;
+        /// The `llvm.aarch64.neon.fcvtas.i64.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtas.i64.v2f64"]
+        pub fn neon_fcvtas_i64_v2f64(a: ::simdty::f64x2) -> i64;
+        /// The `llvm.aarch64.neon.fcvtas.i64.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtas.i64.f64"]
+        pub fn neon_fcvtas_i64_f64(a: f64) -> i64;
+        /// The `llvm.aarch64.neon.fcvtau.v16i8.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtau.v16i8.v4f32"]
+        pub fn neon_fcvtau_v16i8_v4f32(a: ::simdty::f32x4) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.fcvtau.v16i8.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtau.v16i8.f32"]
+        pub fn neon_fcvtau_v16i8_f32(a: f32) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.fcvtau.v16i8.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtau.v16i8.v2f64"]
+        pub fn neon_fcvtau_v16i8_v2f64(a: ::simdty::f64x2) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.fcvtau.v16i8.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtau.v16i8.f64"]
+        pub fn neon_fcvtau_v16i8_f64(a: f64) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.fcvtau.i8.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtau.i8.v4f32"]
+        pub fn neon_fcvtau_i8_v4f32(a: ::simdty::f32x4) -> i8;
+        /// The `llvm.aarch64.neon.fcvtau.i8.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtau.i8.f32"]
+        pub fn neon_fcvtau_i8_f32(a: f32) -> i8;
+        /// The `llvm.aarch64.neon.fcvtau.i8.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtau.i8.v2f64"]
+        pub fn neon_fcvtau_i8_v2f64(a: ::simdty::f64x2) -> i8;
+        /// The `llvm.aarch64.neon.fcvtau.i8.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtau.i8.f64"]
+        pub fn neon_fcvtau_i8_f64(a: f64) -> i8;
+        /// The `llvm.aarch64.neon.fcvtau.v8i16.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtau.v8i16.v4f32"]
+        pub fn neon_fcvtau_v8i16_v4f32(a: ::simdty::f32x4) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.fcvtau.v8i16.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtau.v8i16.f32"]
+        pub fn neon_fcvtau_v8i16_f32(a: f32) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.fcvtau.v8i16.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtau.v8i16.v2f64"]
+        pub fn neon_fcvtau_v8i16_v2f64(a: ::simdty::f64x2) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.fcvtau.v8i16.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtau.v8i16.f64"]
+        pub fn neon_fcvtau_v8i16_f64(a: f64) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.fcvtau.i16.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtau.i16.v4f32"]
+        pub fn neon_fcvtau_i16_v4f32(a: ::simdty::f32x4) -> i16;
+        /// The `llvm.aarch64.neon.fcvtau.i16.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtau.i16.f32"]
+        pub fn neon_fcvtau_i16_f32(a: f32) -> i16;
+        /// The `llvm.aarch64.neon.fcvtau.i16.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtau.i16.v2f64"]
+        pub fn neon_fcvtau_i16_v2f64(a: ::simdty::f64x2) -> i16;
+        /// The `llvm.aarch64.neon.fcvtau.i16.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtau.i16.f64"]
+        pub fn neon_fcvtau_i16_f64(a: f64) -> i16;
+        /// The `llvm.aarch64.neon.fcvtau.v4i32.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtau.v4i32.v4f32"]
+        pub fn neon_fcvtau_v4i32_v4f32(a: ::simdty::f32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.fcvtau.v4i32.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtau.v4i32.f32"]
+        pub fn neon_fcvtau_v4i32_f32(a: f32) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.fcvtau.v4i32.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtau.v4i32.v2f64"]
+        pub fn neon_fcvtau_v4i32_v2f64(a: ::simdty::f64x2) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.fcvtau.v4i32.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtau.v4i32.f64"]
+        pub fn neon_fcvtau_v4i32_f64(a: f64) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.fcvtau.i32.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtau.i32.v4f32"]
+        pub fn neon_fcvtau_i32_v4f32(a: ::simdty::f32x4) -> i32;
+        /// The `llvm.aarch64.neon.fcvtau.i32.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtau.i32.f32"]
+        pub fn neon_fcvtau_i32_f32(a: f32) -> i32;
+        /// The `llvm.aarch64.neon.fcvtau.i32.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtau.i32.v2f64"]
+        pub fn neon_fcvtau_i32_v2f64(a: ::simdty::f64x2) -> i32;
+        /// The `llvm.aarch64.neon.fcvtau.i32.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtau.i32.f64"]
+        pub fn neon_fcvtau_i32_f64(a: f64) -> i32;
+        /// The `llvm.aarch64.neon.fcvtau.v2i64.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtau.v2i64.v4f32"]
+        pub fn neon_fcvtau_v2i64_v4f32(a: ::simdty::f32x4) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.fcvtau.v2i64.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtau.v2i64.f32"]
+        pub fn neon_fcvtau_v2i64_f32(a: f32) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.fcvtau.v2i64.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtau.v2i64.v2f64"]
+        pub fn neon_fcvtau_v2i64_v2f64(a: ::simdty::f64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.fcvtau.v2i64.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtau.v2i64.f64"]
+        pub fn neon_fcvtau_v2i64_f64(a: f64) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.fcvtau.i64.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtau.i64.v4f32"]
+        pub fn neon_fcvtau_i64_v4f32(a: ::simdty::f32x4) -> i64;
+        /// The `llvm.aarch64.neon.fcvtau.i64.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtau.i64.f32"]
+        pub fn neon_fcvtau_i64_f32(a: f32) -> i64;
+        /// The `llvm.aarch64.neon.fcvtau.i64.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtau.i64.v2f64"]
+        pub fn neon_fcvtau_i64_v2f64(a: ::simdty::f64x2) -> i64;
+        /// The `llvm.aarch64.neon.fcvtau.i64.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtau.i64.f64"]
+        pub fn neon_fcvtau_i64_f64(a: f64) -> i64;
+        /// The `llvm.aarch64.neon.fcvtms.v16i8.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtms.v16i8.v4f32"]
+        pub fn neon_fcvtms_v16i8_v4f32(a: ::simdty::f32x4) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.fcvtms.v16i8.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtms.v16i8.f32"]
+        pub fn neon_fcvtms_v16i8_f32(a: f32) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.fcvtms.v16i8.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtms.v16i8.v2f64"]
+        pub fn neon_fcvtms_v16i8_v2f64(a: ::simdty::f64x2) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.fcvtms.v16i8.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtms.v16i8.f64"]
+        pub fn neon_fcvtms_v16i8_f64(a: f64) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.fcvtms.i8.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtms.i8.v4f32"]
+        pub fn neon_fcvtms_i8_v4f32(a: ::simdty::f32x4) -> i8;
+        /// The `llvm.aarch64.neon.fcvtms.i8.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtms.i8.f32"]
+        pub fn neon_fcvtms_i8_f32(a: f32) -> i8;
+        /// The `llvm.aarch64.neon.fcvtms.i8.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtms.i8.v2f64"]
+        pub fn neon_fcvtms_i8_v2f64(a: ::simdty::f64x2) -> i8;
+        /// The `llvm.aarch64.neon.fcvtms.i8.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtms.i8.f64"]
+        pub fn neon_fcvtms_i8_f64(a: f64) -> i8;
+        /// The `llvm.aarch64.neon.fcvtms.v8i16.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtms.v8i16.v4f32"]
+        pub fn neon_fcvtms_v8i16_v4f32(a: ::simdty::f32x4) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.fcvtms.v8i16.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtms.v8i16.f32"]
+        pub fn neon_fcvtms_v8i16_f32(a: f32) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.fcvtms.v8i16.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtms.v8i16.v2f64"]
+        pub fn neon_fcvtms_v8i16_v2f64(a: ::simdty::f64x2) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.fcvtms.v8i16.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtms.v8i16.f64"]
+        pub fn neon_fcvtms_v8i16_f64(a: f64) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.fcvtms.i16.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtms.i16.v4f32"]
+        pub fn neon_fcvtms_i16_v4f32(a: ::simdty::f32x4) -> i16;
+        /// The `llvm.aarch64.neon.fcvtms.i16.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtms.i16.f32"]
+        pub fn neon_fcvtms_i16_f32(a: f32) -> i16;
+        /// The `llvm.aarch64.neon.fcvtms.i16.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtms.i16.v2f64"]
+        pub fn neon_fcvtms_i16_v2f64(a: ::simdty::f64x2) -> i16;
+        /// The `llvm.aarch64.neon.fcvtms.i16.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtms.i16.f64"]
+        pub fn neon_fcvtms_i16_f64(a: f64) -> i16;
+        /// The `llvm.aarch64.neon.fcvtms.v4i32.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtms.v4i32.v4f32"]
+        pub fn neon_fcvtms_v4i32_v4f32(a: ::simdty::f32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.fcvtms.v4i32.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtms.v4i32.f32"]
+        pub fn neon_fcvtms_v4i32_f32(a: f32) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.fcvtms.v4i32.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtms.v4i32.v2f64"]
+        pub fn neon_fcvtms_v4i32_v2f64(a: ::simdty::f64x2) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.fcvtms.v4i32.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtms.v4i32.f64"]
+        pub fn neon_fcvtms_v4i32_f64(a: f64) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.fcvtms.i32.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtms.i32.v4f32"]
+        pub fn neon_fcvtms_i32_v4f32(a: ::simdty::f32x4) -> i32;
+        /// The `llvm.aarch64.neon.fcvtms.i32.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtms.i32.f32"]
+        pub fn neon_fcvtms_i32_f32(a: f32) -> i32;
+        /// The `llvm.aarch64.neon.fcvtms.i32.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtms.i32.v2f64"]
+        pub fn neon_fcvtms_i32_v2f64(a: ::simdty::f64x2) -> i32;
+        /// The `llvm.aarch64.neon.fcvtms.i32.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtms.i32.f64"]
+        pub fn neon_fcvtms_i32_f64(a: f64) -> i32;
+        /// The `llvm.aarch64.neon.fcvtms.v2i64.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtms.v2i64.v4f32"]
+        pub fn neon_fcvtms_v2i64_v4f32(a: ::simdty::f32x4) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.fcvtms.v2i64.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtms.v2i64.f32"]
+        pub fn neon_fcvtms_v2i64_f32(a: f32) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.fcvtms.v2i64.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtms.v2i64.v2f64"]
+        pub fn neon_fcvtms_v2i64_v2f64(a: ::simdty::f64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.fcvtms.v2i64.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtms.v2i64.f64"]
+        pub fn neon_fcvtms_v2i64_f64(a: f64) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.fcvtms.i64.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtms.i64.v4f32"]
+        pub fn neon_fcvtms_i64_v4f32(a: ::simdty::f32x4) -> i64;
+        /// The `llvm.aarch64.neon.fcvtms.i64.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtms.i64.f32"]
+        pub fn neon_fcvtms_i64_f32(a: f32) -> i64;
+        /// The `llvm.aarch64.neon.fcvtms.i64.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtms.i64.v2f64"]
+        pub fn neon_fcvtms_i64_v2f64(a: ::simdty::f64x2) -> i64;
+        /// The `llvm.aarch64.neon.fcvtms.i64.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtms.i64.f64"]
+        pub fn neon_fcvtms_i64_f64(a: f64) -> i64;
+        /// The `llvm.aarch64.neon.fcvtmu.v16i8.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtmu.v16i8.v4f32"]
+        pub fn neon_fcvtmu_v16i8_v4f32(a: ::simdty::f32x4) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.fcvtmu.v16i8.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtmu.v16i8.f32"]
+        pub fn neon_fcvtmu_v16i8_f32(a: f32) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.fcvtmu.v16i8.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtmu.v16i8.v2f64"]
+        pub fn neon_fcvtmu_v16i8_v2f64(a: ::simdty::f64x2) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.fcvtmu.v16i8.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtmu.v16i8.f64"]
+        pub fn neon_fcvtmu_v16i8_f64(a: f64) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.fcvtmu.i8.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtmu.i8.v4f32"]
+        pub fn neon_fcvtmu_i8_v4f32(a: ::simdty::f32x4) -> i8;
+        /// The `llvm.aarch64.neon.fcvtmu.i8.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtmu.i8.f32"]
+        pub fn neon_fcvtmu_i8_f32(a: f32) -> i8;
+        /// The `llvm.aarch64.neon.fcvtmu.i8.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtmu.i8.v2f64"]
+        pub fn neon_fcvtmu_i8_v2f64(a: ::simdty::f64x2) -> i8;
+        /// The `llvm.aarch64.neon.fcvtmu.i8.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtmu.i8.f64"]
+        pub fn neon_fcvtmu_i8_f64(a: f64) -> i8;
+        /// The `llvm.aarch64.neon.fcvtmu.v8i16.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtmu.v8i16.v4f32"]
+        pub fn neon_fcvtmu_v8i16_v4f32(a: ::simdty::f32x4) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.fcvtmu.v8i16.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtmu.v8i16.f32"]
+        pub fn neon_fcvtmu_v8i16_f32(a: f32) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.fcvtmu.v8i16.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtmu.v8i16.v2f64"]
+        pub fn neon_fcvtmu_v8i16_v2f64(a: ::simdty::f64x2) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.fcvtmu.v8i16.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtmu.v8i16.f64"]
+        pub fn neon_fcvtmu_v8i16_f64(a: f64) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.fcvtmu.i16.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtmu.i16.v4f32"]
+        pub fn neon_fcvtmu_i16_v4f32(a: ::simdty::f32x4) -> i16;
+        /// The `llvm.aarch64.neon.fcvtmu.i16.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtmu.i16.f32"]
+        pub fn neon_fcvtmu_i16_f32(a: f32) -> i16;
+        /// The `llvm.aarch64.neon.fcvtmu.i16.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtmu.i16.v2f64"]
+        pub fn neon_fcvtmu_i16_v2f64(a: ::simdty::f64x2) -> i16;
+        /// The `llvm.aarch64.neon.fcvtmu.i16.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtmu.i16.f64"]
+        pub fn neon_fcvtmu_i16_f64(a: f64) -> i16;
+        /// The `llvm.aarch64.neon.fcvtmu.v4i32.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtmu.v4i32.v4f32"]
+        pub fn neon_fcvtmu_v4i32_v4f32(a: ::simdty::f32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.fcvtmu.v4i32.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtmu.v4i32.f32"]
+        pub fn neon_fcvtmu_v4i32_f32(a: f32) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.fcvtmu.v4i32.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtmu.v4i32.v2f64"]
+        pub fn neon_fcvtmu_v4i32_v2f64(a: ::simdty::f64x2) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.fcvtmu.v4i32.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtmu.v4i32.f64"]
+        pub fn neon_fcvtmu_v4i32_f64(a: f64) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.fcvtmu.i32.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtmu.i32.v4f32"]
+        pub fn neon_fcvtmu_i32_v4f32(a: ::simdty::f32x4) -> i32;
+        /// The `llvm.aarch64.neon.fcvtmu.i32.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtmu.i32.f32"]
+        pub fn neon_fcvtmu_i32_f32(a: f32) -> i32;
+        /// The `llvm.aarch64.neon.fcvtmu.i32.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtmu.i32.v2f64"]
+        pub fn neon_fcvtmu_i32_v2f64(a: ::simdty::f64x2) -> i32;
+        /// The `llvm.aarch64.neon.fcvtmu.i32.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtmu.i32.f64"]
+        pub fn neon_fcvtmu_i32_f64(a: f64) -> i32;
+        /// The `llvm.aarch64.neon.fcvtmu.v2i64.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtmu.v2i64.v4f32"]
+        pub fn neon_fcvtmu_v2i64_v4f32(a: ::simdty::f32x4) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.fcvtmu.v2i64.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtmu.v2i64.f32"]
+        pub fn neon_fcvtmu_v2i64_f32(a: f32) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.fcvtmu.v2i64.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtmu.v2i64.v2f64"]
+        pub fn neon_fcvtmu_v2i64_v2f64(a: ::simdty::f64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.fcvtmu.v2i64.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtmu.v2i64.f64"]
+        pub fn neon_fcvtmu_v2i64_f64(a: f64) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.fcvtmu.i64.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtmu.i64.v4f32"]
+        pub fn neon_fcvtmu_i64_v4f32(a: ::simdty::f32x4) -> i64;
+        /// The `llvm.aarch64.neon.fcvtmu.i64.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtmu.i64.f32"]
+        pub fn neon_fcvtmu_i64_f32(a: f32) -> i64;
+        /// The `llvm.aarch64.neon.fcvtmu.i64.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtmu.i64.v2f64"]
+        pub fn neon_fcvtmu_i64_v2f64(a: ::simdty::f64x2) -> i64;
+        /// The `llvm.aarch64.neon.fcvtmu.i64.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtmu.i64.f64"]
+        pub fn neon_fcvtmu_i64_f64(a: f64) -> i64;
+        /// The `llvm.aarch64.neon.fcvtns.v16i8.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtns.v16i8.v4f32"]
+        pub fn neon_fcvtns_v16i8_v4f32(a: ::simdty::f32x4) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.fcvtns.v16i8.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtns.v16i8.f32"]
+        pub fn neon_fcvtns_v16i8_f32(a: f32) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.fcvtns.v16i8.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtns.v16i8.v2f64"]
+        pub fn neon_fcvtns_v16i8_v2f64(a: ::simdty::f64x2) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.fcvtns.v16i8.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtns.v16i8.f64"]
+        pub fn neon_fcvtns_v16i8_f64(a: f64) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.fcvtns.i8.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtns.i8.v4f32"]
+        pub fn neon_fcvtns_i8_v4f32(a: ::simdty::f32x4) -> i8;
+        /// The `llvm.aarch64.neon.fcvtns.i8.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtns.i8.f32"]
+        pub fn neon_fcvtns_i8_f32(a: f32) -> i8;
+        /// The `llvm.aarch64.neon.fcvtns.i8.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtns.i8.v2f64"]
+        pub fn neon_fcvtns_i8_v2f64(a: ::simdty::f64x2) -> i8;
+        /// The `llvm.aarch64.neon.fcvtns.i8.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtns.i8.f64"]
+        pub fn neon_fcvtns_i8_f64(a: f64) -> i8;
+        /// The `llvm.aarch64.neon.fcvtns.v8i16.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtns.v8i16.v4f32"]
+        pub fn neon_fcvtns_v8i16_v4f32(a: ::simdty::f32x4) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.fcvtns.v8i16.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtns.v8i16.f32"]
+        pub fn neon_fcvtns_v8i16_f32(a: f32) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.fcvtns.v8i16.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtns.v8i16.v2f64"]
+        pub fn neon_fcvtns_v8i16_v2f64(a: ::simdty::f64x2) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.fcvtns.v8i16.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtns.v8i16.f64"]
+        pub fn neon_fcvtns_v8i16_f64(a: f64) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.fcvtns.i16.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtns.i16.v4f32"]
+        pub fn neon_fcvtns_i16_v4f32(a: ::simdty::f32x4) -> i16;
+        /// The `llvm.aarch64.neon.fcvtns.i16.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtns.i16.f32"]
+        pub fn neon_fcvtns_i16_f32(a: f32) -> i16;
+        /// The `llvm.aarch64.neon.fcvtns.i16.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtns.i16.v2f64"]
+        pub fn neon_fcvtns_i16_v2f64(a: ::simdty::f64x2) -> i16;
+        /// The `llvm.aarch64.neon.fcvtns.i16.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtns.i16.f64"]
+        pub fn neon_fcvtns_i16_f64(a: f64) -> i16;
+        /// The `llvm.aarch64.neon.fcvtns.v4i32.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtns.v4i32.v4f32"]
+        pub fn neon_fcvtns_v4i32_v4f32(a: ::simdty::f32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.fcvtns.v4i32.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtns.v4i32.f32"]
+        pub fn neon_fcvtns_v4i32_f32(a: f32) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.fcvtns.v4i32.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtns.v4i32.v2f64"]
+        pub fn neon_fcvtns_v4i32_v2f64(a: ::simdty::f64x2) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.fcvtns.v4i32.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtns.v4i32.f64"]
+        pub fn neon_fcvtns_v4i32_f64(a: f64) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.fcvtns.i32.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtns.i32.v4f32"]
+        pub fn neon_fcvtns_i32_v4f32(a: ::simdty::f32x4) -> i32;
+        /// The `llvm.aarch64.neon.fcvtns.i32.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtns.i32.f32"]
+        pub fn neon_fcvtns_i32_f32(a: f32) -> i32;
+        /// The `llvm.aarch64.neon.fcvtns.i32.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtns.i32.v2f64"]
+        pub fn neon_fcvtns_i32_v2f64(a: ::simdty::f64x2) -> i32;
+        /// The `llvm.aarch64.neon.fcvtns.i32.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtns.i32.f64"]
+        pub fn neon_fcvtns_i32_f64(a: f64) -> i32;
+        /// The `llvm.aarch64.neon.fcvtns.v2i64.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtns.v2i64.v4f32"]
+        pub fn neon_fcvtns_v2i64_v4f32(a: ::simdty::f32x4) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.fcvtns.v2i64.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtns.v2i64.f32"]
+        pub fn neon_fcvtns_v2i64_f32(a: f32) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.fcvtns.v2i64.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtns.v2i64.v2f64"]
+        pub fn neon_fcvtns_v2i64_v2f64(a: ::simdty::f64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.fcvtns.v2i64.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtns.v2i64.f64"]
+        pub fn neon_fcvtns_v2i64_f64(a: f64) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.fcvtns.i64.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtns.i64.v4f32"]
+        pub fn neon_fcvtns_i64_v4f32(a: ::simdty::f32x4) -> i64;
+        /// The `llvm.aarch64.neon.fcvtns.i64.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtns.i64.f32"]
+        pub fn neon_fcvtns_i64_f32(a: f32) -> i64;
+        /// The `llvm.aarch64.neon.fcvtns.i64.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtns.i64.v2f64"]
+        pub fn neon_fcvtns_i64_v2f64(a: ::simdty::f64x2) -> i64;
+        /// The `llvm.aarch64.neon.fcvtns.i64.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtns.i64.f64"]
+        pub fn neon_fcvtns_i64_f64(a: f64) -> i64;
+        /// The `llvm.aarch64.neon.fcvtnu.v16i8.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtnu.v16i8.v4f32"]
+        pub fn neon_fcvtnu_v16i8_v4f32(a: ::simdty::f32x4) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.fcvtnu.v16i8.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtnu.v16i8.f32"]
+        pub fn neon_fcvtnu_v16i8_f32(a: f32) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.fcvtnu.v16i8.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtnu.v16i8.v2f64"]
+        pub fn neon_fcvtnu_v16i8_v2f64(a: ::simdty::f64x2) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.fcvtnu.v16i8.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtnu.v16i8.f64"]
+        pub fn neon_fcvtnu_v16i8_f64(a: f64) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.fcvtnu.i8.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtnu.i8.v4f32"]
+        pub fn neon_fcvtnu_i8_v4f32(a: ::simdty::f32x4) -> i8;
+        /// The `llvm.aarch64.neon.fcvtnu.i8.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtnu.i8.f32"]
+        pub fn neon_fcvtnu_i8_f32(a: f32) -> i8;
+        /// The `llvm.aarch64.neon.fcvtnu.i8.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtnu.i8.v2f64"]
+        pub fn neon_fcvtnu_i8_v2f64(a: ::simdty::f64x2) -> i8;
+        /// The `llvm.aarch64.neon.fcvtnu.i8.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtnu.i8.f64"]
+        pub fn neon_fcvtnu_i8_f64(a: f64) -> i8;
+        /// The `llvm.aarch64.neon.fcvtnu.v8i16.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtnu.v8i16.v4f32"]
+        pub fn neon_fcvtnu_v8i16_v4f32(a: ::simdty::f32x4) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.fcvtnu.v8i16.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtnu.v8i16.f32"]
+        pub fn neon_fcvtnu_v8i16_f32(a: f32) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.fcvtnu.v8i16.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtnu.v8i16.v2f64"]
+        pub fn neon_fcvtnu_v8i16_v2f64(a: ::simdty::f64x2) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.fcvtnu.v8i16.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtnu.v8i16.f64"]
+        pub fn neon_fcvtnu_v8i16_f64(a: f64) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.fcvtnu.i16.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtnu.i16.v4f32"]
+        pub fn neon_fcvtnu_i16_v4f32(a: ::simdty::f32x4) -> i16;
+        /// The `llvm.aarch64.neon.fcvtnu.i16.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtnu.i16.f32"]
+        pub fn neon_fcvtnu_i16_f32(a: f32) -> i16;
+        /// The `llvm.aarch64.neon.fcvtnu.i16.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtnu.i16.v2f64"]
+        pub fn neon_fcvtnu_i16_v2f64(a: ::simdty::f64x2) -> i16;
+        /// The `llvm.aarch64.neon.fcvtnu.i16.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtnu.i16.f64"]
+        pub fn neon_fcvtnu_i16_f64(a: f64) -> i16;
+        /// The `llvm.aarch64.neon.fcvtnu.v4i32.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtnu.v4i32.v4f32"]
+        pub fn neon_fcvtnu_v4i32_v4f32(a: ::simdty::f32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.fcvtnu.v4i32.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtnu.v4i32.f32"]
+        pub fn neon_fcvtnu_v4i32_f32(a: f32) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.fcvtnu.v4i32.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtnu.v4i32.v2f64"]
+        pub fn neon_fcvtnu_v4i32_v2f64(a: ::simdty::f64x2) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.fcvtnu.v4i32.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtnu.v4i32.f64"]
+        pub fn neon_fcvtnu_v4i32_f64(a: f64) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.fcvtnu.i32.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtnu.i32.v4f32"]
+        pub fn neon_fcvtnu_i32_v4f32(a: ::simdty::f32x4) -> i32;
+        /// The `llvm.aarch64.neon.fcvtnu.i32.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtnu.i32.f32"]
+        pub fn neon_fcvtnu_i32_f32(a: f32) -> i32;
+        /// The `llvm.aarch64.neon.fcvtnu.i32.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtnu.i32.v2f64"]
+        pub fn neon_fcvtnu_i32_v2f64(a: ::simdty::f64x2) -> i32;
+        /// The `llvm.aarch64.neon.fcvtnu.i32.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtnu.i32.f64"]
+        pub fn neon_fcvtnu_i32_f64(a: f64) -> i32;
+        /// The `llvm.aarch64.neon.fcvtnu.v2i64.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtnu.v2i64.v4f32"]
+        pub fn neon_fcvtnu_v2i64_v4f32(a: ::simdty::f32x4) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.fcvtnu.v2i64.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtnu.v2i64.f32"]
+        pub fn neon_fcvtnu_v2i64_f32(a: f32) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.fcvtnu.v2i64.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtnu.v2i64.v2f64"]
+        pub fn neon_fcvtnu_v2i64_v2f64(a: ::simdty::f64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.fcvtnu.v2i64.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtnu.v2i64.f64"]
+        pub fn neon_fcvtnu_v2i64_f64(a: f64) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.fcvtnu.i64.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtnu.i64.v4f32"]
+        pub fn neon_fcvtnu_i64_v4f32(a: ::simdty::f32x4) -> i64;
+        /// The `llvm.aarch64.neon.fcvtnu.i64.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtnu.i64.f32"]
+        pub fn neon_fcvtnu_i64_f32(a: f32) -> i64;
+        /// The `llvm.aarch64.neon.fcvtnu.i64.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtnu.i64.v2f64"]
+        pub fn neon_fcvtnu_i64_v2f64(a: ::simdty::f64x2) -> i64;
+        /// The `llvm.aarch64.neon.fcvtnu.i64.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtnu.i64.f64"]
+        pub fn neon_fcvtnu_i64_f64(a: f64) -> i64;
+        /// The `llvm.aarch64.neon.fcvtps.v16i8.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtps.v16i8.v4f32"]
+        pub fn neon_fcvtps_v16i8_v4f32(a: ::simdty::f32x4) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.fcvtps.v16i8.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtps.v16i8.f32"]
+        pub fn neon_fcvtps_v16i8_f32(a: f32) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.fcvtps.v16i8.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtps.v16i8.v2f64"]
+        pub fn neon_fcvtps_v16i8_v2f64(a: ::simdty::f64x2) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.fcvtps.v16i8.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtps.v16i8.f64"]
+        pub fn neon_fcvtps_v16i8_f64(a: f64) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.fcvtps.i8.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtps.i8.v4f32"]
+        pub fn neon_fcvtps_i8_v4f32(a: ::simdty::f32x4) -> i8;
+        /// The `llvm.aarch64.neon.fcvtps.i8.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtps.i8.f32"]
+        pub fn neon_fcvtps_i8_f32(a: f32) -> i8;
+        /// The `llvm.aarch64.neon.fcvtps.i8.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtps.i8.v2f64"]
+        pub fn neon_fcvtps_i8_v2f64(a: ::simdty::f64x2) -> i8;
+        /// The `llvm.aarch64.neon.fcvtps.i8.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtps.i8.f64"]
+        pub fn neon_fcvtps_i8_f64(a: f64) -> i8;
+        /// The `llvm.aarch64.neon.fcvtps.v8i16.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtps.v8i16.v4f32"]
+        pub fn neon_fcvtps_v8i16_v4f32(a: ::simdty::f32x4) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.fcvtps.v8i16.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtps.v8i16.f32"]
+        pub fn neon_fcvtps_v8i16_f32(a: f32) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.fcvtps.v8i16.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtps.v8i16.v2f64"]
+        pub fn neon_fcvtps_v8i16_v2f64(a: ::simdty::f64x2) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.fcvtps.v8i16.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtps.v8i16.f64"]
+        pub fn neon_fcvtps_v8i16_f64(a: f64) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.fcvtps.i16.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtps.i16.v4f32"]
+        pub fn neon_fcvtps_i16_v4f32(a: ::simdty::f32x4) -> i16;
+        /// The `llvm.aarch64.neon.fcvtps.i16.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtps.i16.f32"]
+        pub fn neon_fcvtps_i16_f32(a: f32) -> i16;
+        /// The `llvm.aarch64.neon.fcvtps.i16.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtps.i16.v2f64"]
+        pub fn neon_fcvtps_i16_v2f64(a: ::simdty::f64x2) -> i16;
+        /// The `llvm.aarch64.neon.fcvtps.i16.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtps.i16.f64"]
+        pub fn neon_fcvtps_i16_f64(a: f64) -> i16;
+        /// The `llvm.aarch64.neon.fcvtps.v4i32.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtps.v4i32.v4f32"]
+        pub fn neon_fcvtps_v4i32_v4f32(a: ::simdty::f32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.fcvtps.v4i32.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtps.v4i32.f32"]
+        pub fn neon_fcvtps_v4i32_f32(a: f32) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.fcvtps.v4i32.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtps.v4i32.v2f64"]
+        pub fn neon_fcvtps_v4i32_v2f64(a: ::simdty::f64x2) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.fcvtps.v4i32.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtps.v4i32.f64"]
+        pub fn neon_fcvtps_v4i32_f64(a: f64) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.fcvtps.i32.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtps.i32.v4f32"]
+        pub fn neon_fcvtps_i32_v4f32(a: ::simdty::f32x4) -> i32;
+        /// The `llvm.aarch64.neon.fcvtps.i32.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtps.i32.f32"]
+        pub fn neon_fcvtps_i32_f32(a: f32) -> i32;
+        /// The `llvm.aarch64.neon.fcvtps.i32.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtps.i32.v2f64"]
+        pub fn neon_fcvtps_i32_v2f64(a: ::simdty::f64x2) -> i32;
+        /// The `llvm.aarch64.neon.fcvtps.i32.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtps.i32.f64"]
+        pub fn neon_fcvtps_i32_f64(a: f64) -> i32;
+        /// The `llvm.aarch64.neon.fcvtps.v2i64.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtps.v2i64.v4f32"]
+        pub fn neon_fcvtps_v2i64_v4f32(a: ::simdty::f32x4) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.fcvtps.v2i64.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtps.v2i64.f32"]
+        pub fn neon_fcvtps_v2i64_f32(a: f32) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.fcvtps.v2i64.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtps.v2i64.v2f64"]
+        pub fn neon_fcvtps_v2i64_v2f64(a: ::simdty::f64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.fcvtps.v2i64.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtps.v2i64.f64"]
+        pub fn neon_fcvtps_v2i64_f64(a: f64) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.fcvtps.i64.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtps.i64.v4f32"]
+        pub fn neon_fcvtps_i64_v4f32(a: ::simdty::f32x4) -> i64;
+        /// The `llvm.aarch64.neon.fcvtps.i64.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtps.i64.f32"]
+        pub fn neon_fcvtps_i64_f32(a: f32) -> i64;
+        /// The `llvm.aarch64.neon.fcvtps.i64.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtps.i64.v2f64"]
+        pub fn neon_fcvtps_i64_v2f64(a: ::simdty::f64x2) -> i64;
+        /// The `llvm.aarch64.neon.fcvtps.i64.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtps.i64.f64"]
+        pub fn neon_fcvtps_i64_f64(a: f64) -> i64;
+        /// The `llvm.aarch64.neon.fcvtpu.v16i8.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtpu.v16i8.v4f32"]
+        pub fn neon_fcvtpu_v16i8_v4f32(a: ::simdty::f32x4) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.fcvtpu.v16i8.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtpu.v16i8.f32"]
+        pub fn neon_fcvtpu_v16i8_f32(a: f32) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.fcvtpu.v16i8.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtpu.v16i8.v2f64"]
+        pub fn neon_fcvtpu_v16i8_v2f64(a: ::simdty::f64x2) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.fcvtpu.v16i8.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtpu.v16i8.f64"]
+        pub fn neon_fcvtpu_v16i8_f64(a: f64) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.fcvtpu.i8.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtpu.i8.v4f32"]
+        pub fn neon_fcvtpu_i8_v4f32(a: ::simdty::f32x4) -> i8;
+        /// The `llvm.aarch64.neon.fcvtpu.i8.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtpu.i8.f32"]
+        pub fn neon_fcvtpu_i8_f32(a: f32) -> i8;
+        /// The `llvm.aarch64.neon.fcvtpu.i8.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtpu.i8.v2f64"]
+        pub fn neon_fcvtpu_i8_v2f64(a: ::simdty::f64x2) -> i8;
+        /// The `llvm.aarch64.neon.fcvtpu.i8.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtpu.i8.f64"]
+        pub fn neon_fcvtpu_i8_f64(a: f64) -> i8;
+        /// The `llvm.aarch64.neon.fcvtpu.v8i16.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtpu.v8i16.v4f32"]
+        pub fn neon_fcvtpu_v8i16_v4f32(a: ::simdty::f32x4) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.fcvtpu.v8i16.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtpu.v8i16.f32"]
+        pub fn neon_fcvtpu_v8i16_f32(a: f32) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.fcvtpu.v8i16.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtpu.v8i16.v2f64"]
+        pub fn neon_fcvtpu_v8i16_v2f64(a: ::simdty::f64x2) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.fcvtpu.v8i16.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtpu.v8i16.f64"]
+        pub fn neon_fcvtpu_v8i16_f64(a: f64) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.fcvtpu.i16.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtpu.i16.v4f32"]
+        pub fn neon_fcvtpu_i16_v4f32(a: ::simdty::f32x4) -> i16;
+        /// The `llvm.aarch64.neon.fcvtpu.i16.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtpu.i16.f32"]
+        pub fn neon_fcvtpu_i16_f32(a: f32) -> i16;
+        /// The `llvm.aarch64.neon.fcvtpu.i16.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtpu.i16.v2f64"]
+        pub fn neon_fcvtpu_i16_v2f64(a: ::simdty::f64x2) -> i16;
+        /// The `llvm.aarch64.neon.fcvtpu.i16.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtpu.i16.f64"]
+        pub fn neon_fcvtpu_i16_f64(a: f64) -> i16;
+        /// The `llvm.aarch64.neon.fcvtpu.v4i32.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtpu.v4i32.v4f32"]
+        pub fn neon_fcvtpu_v4i32_v4f32(a: ::simdty::f32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.fcvtpu.v4i32.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtpu.v4i32.f32"]
+        pub fn neon_fcvtpu_v4i32_f32(a: f32) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.fcvtpu.v4i32.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtpu.v4i32.v2f64"]
+        pub fn neon_fcvtpu_v4i32_v2f64(a: ::simdty::f64x2) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.fcvtpu.v4i32.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtpu.v4i32.f64"]
+        pub fn neon_fcvtpu_v4i32_f64(a: f64) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.fcvtpu.i32.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtpu.i32.v4f32"]
+        pub fn neon_fcvtpu_i32_v4f32(a: ::simdty::f32x4) -> i32;
+        /// The `llvm.aarch64.neon.fcvtpu.i32.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtpu.i32.f32"]
+        pub fn neon_fcvtpu_i32_f32(a: f32) -> i32;
+        /// The `llvm.aarch64.neon.fcvtpu.i32.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtpu.i32.v2f64"]
+        pub fn neon_fcvtpu_i32_v2f64(a: ::simdty::f64x2) -> i32;
+        /// The `llvm.aarch64.neon.fcvtpu.i32.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtpu.i32.f64"]
+        pub fn neon_fcvtpu_i32_f64(a: f64) -> i32;
+        /// The `llvm.aarch64.neon.fcvtpu.v2i64.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtpu.v2i64.v4f32"]
+        pub fn neon_fcvtpu_v2i64_v4f32(a: ::simdty::f32x4) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.fcvtpu.v2i64.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtpu.v2i64.f32"]
+        pub fn neon_fcvtpu_v2i64_f32(a: f32) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.fcvtpu.v2i64.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtpu.v2i64.v2f64"]
+        pub fn neon_fcvtpu_v2i64_v2f64(a: ::simdty::f64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.fcvtpu.v2i64.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtpu.v2i64.f64"]
+        pub fn neon_fcvtpu_v2i64_f64(a: f64) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.fcvtpu.i64.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtpu.i64.v4f32"]
+        pub fn neon_fcvtpu_i64_v4f32(a: ::simdty::f32x4) -> i64;
+        /// The `llvm.aarch64.neon.fcvtpu.i64.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtpu.i64.f32"]
+        pub fn neon_fcvtpu_i64_f32(a: f32) -> i64;
+        /// The `llvm.aarch64.neon.fcvtpu.i64.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtpu.i64.v2f64"]
+        pub fn neon_fcvtpu_i64_v2f64(a: ::simdty::f64x2) -> i64;
+        /// The `llvm.aarch64.neon.fcvtpu.i64.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtpu.i64.f64"]
+        pub fn neon_fcvtpu_i64_f64(a: f64) -> i64;
+        /// The `llvm.aarch64.neon.fcvtzs.v16i8.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtzs.v16i8.v4f32"]
+        pub fn neon_fcvtzs_v16i8_v4f32(a: ::simdty::f32x4) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.fcvtzs.v16i8.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtzs.v16i8.f32"]
+        pub fn neon_fcvtzs_v16i8_f32(a: f32) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.fcvtzs.v16i8.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtzs.v16i8.v2f64"]
+        pub fn neon_fcvtzs_v16i8_v2f64(a: ::simdty::f64x2) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.fcvtzs.v16i8.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtzs.v16i8.f64"]
+        pub fn neon_fcvtzs_v16i8_f64(a: f64) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.fcvtzs.i8.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtzs.i8.v4f32"]
+        pub fn neon_fcvtzs_i8_v4f32(a: ::simdty::f32x4) -> i8;
+        /// The `llvm.aarch64.neon.fcvtzs.i8.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtzs.i8.f32"]
+        pub fn neon_fcvtzs_i8_f32(a: f32) -> i8;
+        /// The `llvm.aarch64.neon.fcvtzs.i8.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtzs.i8.v2f64"]
+        pub fn neon_fcvtzs_i8_v2f64(a: ::simdty::f64x2) -> i8;
+        /// The `llvm.aarch64.neon.fcvtzs.i8.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtzs.i8.f64"]
+        pub fn neon_fcvtzs_i8_f64(a: f64) -> i8;
+        /// The `llvm.aarch64.neon.fcvtzs.v8i16.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtzs.v8i16.v4f32"]
+        pub fn neon_fcvtzs_v8i16_v4f32(a: ::simdty::f32x4) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.fcvtzs.v8i16.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtzs.v8i16.f32"]
+        pub fn neon_fcvtzs_v8i16_f32(a: f32) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.fcvtzs.v8i16.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtzs.v8i16.v2f64"]
+        pub fn neon_fcvtzs_v8i16_v2f64(a: ::simdty::f64x2) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.fcvtzs.v8i16.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtzs.v8i16.f64"]
+        pub fn neon_fcvtzs_v8i16_f64(a: f64) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.fcvtzs.i16.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtzs.i16.v4f32"]
+        pub fn neon_fcvtzs_i16_v4f32(a: ::simdty::f32x4) -> i16;
+        /// The `llvm.aarch64.neon.fcvtzs.i16.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtzs.i16.f32"]
+        pub fn neon_fcvtzs_i16_f32(a: f32) -> i16;
+        /// The `llvm.aarch64.neon.fcvtzs.i16.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtzs.i16.v2f64"]
+        pub fn neon_fcvtzs_i16_v2f64(a: ::simdty::f64x2) -> i16;
+        /// The `llvm.aarch64.neon.fcvtzs.i16.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtzs.i16.f64"]
+        pub fn neon_fcvtzs_i16_f64(a: f64) -> i16;
+        /// The `llvm.aarch64.neon.fcvtzs.v4i32.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtzs.v4i32.v4f32"]
+        pub fn neon_fcvtzs_v4i32_v4f32(a: ::simdty::f32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.fcvtzs.v4i32.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtzs.v4i32.f32"]
+        pub fn neon_fcvtzs_v4i32_f32(a: f32) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.fcvtzs.v4i32.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtzs.v4i32.v2f64"]
+        pub fn neon_fcvtzs_v4i32_v2f64(a: ::simdty::f64x2) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.fcvtzs.v4i32.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtzs.v4i32.f64"]
+        pub fn neon_fcvtzs_v4i32_f64(a: f64) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.fcvtzs.i32.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtzs.i32.v4f32"]
+        pub fn neon_fcvtzs_i32_v4f32(a: ::simdty::f32x4) -> i32;
+        /// The `llvm.aarch64.neon.fcvtzs.i32.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtzs.i32.f32"]
+        pub fn neon_fcvtzs_i32_f32(a: f32) -> i32;
+        /// The `llvm.aarch64.neon.fcvtzs.i32.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtzs.i32.v2f64"]
+        pub fn neon_fcvtzs_i32_v2f64(a: ::simdty::f64x2) -> i32;
+        /// The `llvm.aarch64.neon.fcvtzs.i32.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtzs.i32.f64"]
+        pub fn neon_fcvtzs_i32_f64(a: f64) -> i32;
+        /// The `llvm.aarch64.neon.fcvtzs.v2i64.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtzs.v2i64.v4f32"]
+        pub fn neon_fcvtzs_v2i64_v4f32(a: ::simdty::f32x4) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.fcvtzs.v2i64.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtzs.v2i64.f32"]
+        pub fn neon_fcvtzs_v2i64_f32(a: f32) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.fcvtzs.v2i64.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtzs.v2i64.v2f64"]
+        pub fn neon_fcvtzs_v2i64_v2f64(a: ::simdty::f64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.fcvtzs.v2i64.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtzs.v2i64.f64"]
+        pub fn neon_fcvtzs_v2i64_f64(a: f64) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.fcvtzs.i64.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtzs.i64.v4f32"]
+        pub fn neon_fcvtzs_i64_v4f32(a: ::simdty::f32x4) -> i64;
+        /// The `llvm.aarch64.neon.fcvtzs.i64.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtzs.i64.f32"]
+        pub fn neon_fcvtzs_i64_f32(a: f32) -> i64;
+        /// The `llvm.aarch64.neon.fcvtzs.i64.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtzs.i64.v2f64"]
+        pub fn neon_fcvtzs_i64_v2f64(a: ::simdty::f64x2) -> i64;
+        /// The `llvm.aarch64.neon.fcvtzs.i64.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtzs.i64.f64"]
+        pub fn neon_fcvtzs_i64_f64(a: f64) -> i64;
+        /// The `llvm.aarch64.neon.fcvtzu.v16i8.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtzu.v16i8.v4f32"]
+        pub fn neon_fcvtzu_v16i8_v4f32(a: ::simdty::f32x4) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.fcvtzu.v16i8.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtzu.v16i8.f32"]
+        pub fn neon_fcvtzu_v16i8_f32(a: f32) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.fcvtzu.v16i8.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtzu.v16i8.v2f64"]
+        pub fn neon_fcvtzu_v16i8_v2f64(a: ::simdty::f64x2) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.fcvtzu.v16i8.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtzu.v16i8.f64"]
+        pub fn neon_fcvtzu_v16i8_f64(a: f64) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.fcvtzu.i8.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtzu.i8.v4f32"]
+        pub fn neon_fcvtzu_i8_v4f32(a: ::simdty::f32x4) -> i8;
+        /// The `llvm.aarch64.neon.fcvtzu.i8.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtzu.i8.f32"]
+        pub fn neon_fcvtzu_i8_f32(a: f32) -> i8;
+        /// The `llvm.aarch64.neon.fcvtzu.i8.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtzu.i8.v2f64"]
+        pub fn neon_fcvtzu_i8_v2f64(a: ::simdty::f64x2) -> i8;
+        /// The `llvm.aarch64.neon.fcvtzu.i8.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtzu.i8.f64"]
+        pub fn neon_fcvtzu_i8_f64(a: f64) -> i8;
+        /// The `llvm.aarch64.neon.fcvtzu.v8i16.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtzu.v8i16.v4f32"]
+        pub fn neon_fcvtzu_v8i16_v4f32(a: ::simdty::f32x4) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.fcvtzu.v8i16.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtzu.v8i16.f32"]
+        pub fn neon_fcvtzu_v8i16_f32(a: f32) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.fcvtzu.v8i16.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtzu.v8i16.v2f64"]
+        pub fn neon_fcvtzu_v8i16_v2f64(a: ::simdty::f64x2) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.fcvtzu.v8i16.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtzu.v8i16.f64"]
+        pub fn neon_fcvtzu_v8i16_f64(a: f64) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.fcvtzu.i16.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtzu.i16.v4f32"]
+        pub fn neon_fcvtzu_i16_v4f32(a: ::simdty::f32x4) -> i16;
+        /// The `llvm.aarch64.neon.fcvtzu.i16.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtzu.i16.f32"]
+        pub fn neon_fcvtzu_i16_f32(a: f32) -> i16;
+        /// The `llvm.aarch64.neon.fcvtzu.i16.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtzu.i16.v2f64"]
+        pub fn neon_fcvtzu_i16_v2f64(a: ::simdty::f64x2) -> i16;
+        /// The `llvm.aarch64.neon.fcvtzu.i16.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtzu.i16.f64"]
+        pub fn neon_fcvtzu_i16_f64(a: f64) -> i16;
+        /// The `llvm.aarch64.neon.fcvtzu.v4i32.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtzu.v4i32.v4f32"]
+        pub fn neon_fcvtzu_v4i32_v4f32(a: ::simdty::f32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.fcvtzu.v4i32.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtzu.v4i32.f32"]
+        pub fn neon_fcvtzu_v4i32_f32(a: f32) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.fcvtzu.v4i32.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtzu.v4i32.v2f64"]
+        pub fn neon_fcvtzu_v4i32_v2f64(a: ::simdty::f64x2) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.fcvtzu.v4i32.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtzu.v4i32.f64"]
+        pub fn neon_fcvtzu_v4i32_f64(a: f64) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.fcvtzu.i32.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtzu.i32.v4f32"]
+        pub fn neon_fcvtzu_i32_v4f32(a: ::simdty::f32x4) -> i32;
+        /// The `llvm.aarch64.neon.fcvtzu.i32.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtzu.i32.f32"]
+        pub fn neon_fcvtzu_i32_f32(a: f32) -> i32;
+        /// The `llvm.aarch64.neon.fcvtzu.i32.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtzu.i32.v2f64"]
+        pub fn neon_fcvtzu_i32_v2f64(a: ::simdty::f64x2) -> i32;
+        /// The `llvm.aarch64.neon.fcvtzu.i32.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtzu.i32.f64"]
+        pub fn neon_fcvtzu_i32_f64(a: f64) -> i32;
+        /// The `llvm.aarch64.neon.fcvtzu.v2i64.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtzu.v2i64.v4f32"]
+        pub fn neon_fcvtzu_v2i64_v4f32(a: ::simdty::f32x4) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.fcvtzu.v2i64.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtzu.v2i64.f32"]
+        pub fn neon_fcvtzu_v2i64_f32(a: f32) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.fcvtzu.v2i64.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtzu.v2i64.v2f64"]
+        pub fn neon_fcvtzu_v2i64_v2f64(a: ::simdty::f64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.fcvtzu.v2i64.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtzu.v2i64.f64"]
+        pub fn neon_fcvtzu_v2i64_f64(a: f64) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.fcvtzu.i64.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtzu.i64.v4f32"]
+        pub fn neon_fcvtzu_i64_v4f32(a: ::simdty::f32x4) -> i64;
+        /// The `llvm.aarch64.neon.fcvtzu.i64.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtzu.i64.f32"]
+        pub fn neon_fcvtzu_i64_f32(a: f32) -> i64;
+        /// The `llvm.aarch64.neon.fcvtzu.i64.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtzu.i64.v2f64"]
+        pub fn neon_fcvtzu_i64_v2f64(a: ::simdty::f64x2) -> i64;
+        /// The `llvm.aarch64.neon.fcvtzu.i64.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtzu.i64.f64"]
+        pub fn neon_fcvtzu_i64_f64(a: f64) -> i64;
+        /// The `llvm.aarch64.neon.frintn.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.frintn.v4f32"]
+        pub fn neon_frintn_v4f32(a: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.frintn.f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.frintn.f32"]
+        pub fn neon_frintn_f32(a: f32) -> f32;
+        /// The `llvm.aarch64.neon.frintn.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.frintn.v2f64"]
+        pub fn neon_frintn_v2f64(a: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.frintn.f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.frintn.f64"]
+        pub fn neon_frintn_f64(a: f64) -> f64;
+        /// The `llvm.aarch64.neon.fcvtxn.v16i8.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtxn.v16i8.v16i8"]
+        pub fn neon_fcvtxn_v16i8_v16i8(a: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.fcvtxn.v16i8.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtxn.v16i8.v8i16"]
+        pub fn neon_fcvtxn_v16i8_v8i16(a: ::simdty::i16x8) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.fcvtxn.v16i8.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtxn.v16i8.v4i32"]
+        pub fn neon_fcvtxn_v16i8_v4i32(a: ::simdty::i32x4) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.fcvtxn.v16i8.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtxn.v16i8.v2i64"]
+        pub fn neon_fcvtxn_v16i8_v2i64(a: ::simdty::i64x2) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.fcvtxn.v16i8.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtxn.v16i8.v4f32"]
+        pub fn neon_fcvtxn_v16i8_v4f32(a: ::simdty::f32x4) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.fcvtxn.v16i8.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtxn.v16i8.v2f64"]
+        pub fn neon_fcvtxn_v16i8_v2f64(a: ::simdty::f64x2) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.fcvtxn.v8i16.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtxn.v8i16.v16i8"]
+        pub fn neon_fcvtxn_v8i16_v16i8(a: ::simdty::i8x16) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.fcvtxn.v8i16.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtxn.v8i16.v8i16"]
+        pub fn neon_fcvtxn_v8i16_v8i16(a: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.fcvtxn.v8i16.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtxn.v8i16.v4i32"]
+        pub fn neon_fcvtxn_v8i16_v4i32(a: ::simdty::i32x4) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.fcvtxn.v8i16.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtxn.v8i16.v2i64"]
+        pub fn neon_fcvtxn_v8i16_v2i64(a: ::simdty::i64x2) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.fcvtxn.v8i16.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtxn.v8i16.v4f32"]
+        pub fn neon_fcvtxn_v8i16_v4f32(a: ::simdty::f32x4) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.fcvtxn.v8i16.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtxn.v8i16.v2f64"]
+        pub fn neon_fcvtxn_v8i16_v2f64(a: ::simdty::f64x2) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.fcvtxn.v4i32.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtxn.v4i32.v16i8"]
+        pub fn neon_fcvtxn_v4i32_v16i8(a: ::simdty::i8x16) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.fcvtxn.v4i32.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtxn.v4i32.v8i16"]
+        pub fn neon_fcvtxn_v4i32_v8i16(a: ::simdty::i16x8) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.fcvtxn.v4i32.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtxn.v4i32.v4i32"]
+        pub fn neon_fcvtxn_v4i32_v4i32(a: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.fcvtxn.v4i32.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtxn.v4i32.v2i64"]
+        pub fn neon_fcvtxn_v4i32_v2i64(a: ::simdty::i64x2) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.fcvtxn.v4i32.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtxn.v4i32.v4f32"]
+        pub fn neon_fcvtxn_v4i32_v4f32(a: ::simdty::f32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.fcvtxn.v4i32.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtxn.v4i32.v2f64"]
+        pub fn neon_fcvtxn_v4i32_v2f64(a: ::simdty::f64x2) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.fcvtxn.v2i64.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtxn.v2i64.v16i8"]
+        pub fn neon_fcvtxn_v2i64_v16i8(a: ::simdty::i8x16) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.fcvtxn.v2i64.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtxn.v2i64.v8i16"]
+        pub fn neon_fcvtxn_v2i64_v8i16(a: ::simdty::i16x8) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.fcvtxn.v2i64.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtxn.v2i64.v4i32"]
+        pub fn neon_fcvtxn_v2i64_v4i32(a: ::simdty::i32x4) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.fcvtxn.v2i64.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtxn.v2i64.v2i64"]
+        pub fn neon_fcvtxn_v2i64_v2i64(a: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.fcvtxn.v2i64.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtxn.v2i64.v4f32"]
+        pub fn neon_fcvtxn_v2i64_v4f32(a: ::simdty::f32x4) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.fcvtxn.v2i64.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtxn.v2i64.v2f64"]
+        pub fn neon_fcvtxn_v2i64_v2f64(a: ::simdty::f64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.fcvtxn.v4f32.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtxn.v4f32.v16i8"]
+        pub fn neon_fcvtxn_v4f32_v16i8(a: ::simdty::i8x16) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.fcvtxn.v4f32.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtxn.v4f32.v8i16"]
+        pub fn neon_fcvtxn_v4f32_v8i16(a: ::simdty::i16x8) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.fcvtxn.v4f32.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtxn.v4f32.v4i32"]
+        pub fn neon_fcvtxn_v4f32_v4i32(a: ::simdty::i32x4) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.fcvtxn.v4f32.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtxn.v4f32.v2i64"]
+        pub fn neon_fcvtxn_v4f32_v2i64(a: ::simdty::i64x2) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.fcvtxn.v4f32.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtxn.v4f32.v4f32"]
+        pub fn neon_fcvtxn_v4f32_v4f32(a: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.fcvtxn.v4f32.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtxn.v4f32.v2f64"]
+        pub fn neon_fcvtxn_v4f32_v2f64(a: ::simdty::f64x2) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.fcvtxn.v2f64.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtxn.v2f64.v16i8"]
+        pub fn neon_fcvtxn_v2f64_v16i8(a: ::simdty::i8x16) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.fcvtxn.v2f64.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtxn.v2f64.v8i16"]
+        pub fn neon_fcvtxn_v2f64_v8i16(a: ::simdty::i16x8) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.fcvtxn.v2f64.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtxn.v2f64.v4i32"]
+        pub fn neon_fcvtxn_v2f64_v4i32(a: ::simdty::i32x4) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.fcvtxn.v2f64.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtxn.v2f64.v2i64"]
+        pub fn neon_fcvtxn_v2f64_v2i64(a: ::simdty::i64x2) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.fcvtxn.v2f64.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtxn.v2f64.v4f32"]
+        pub fn neon_fcvtxn_v2f64_v4f32(a: ::simdty::f32x4) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.fcvtxn.v2f64.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.fcvtxn.v2f64.v2f64"]
+        pub fn neon_fcvtxn_v2f64_v2f64(a: ::simdty::f64x2) -> ::simdty::f64x2;
         /// The `llvm.aarch64.sisd.fcvtxn` intrinsic.
         #[link_name = "llvm.aarch64.sisd.fcvtxn"]
         pub fn sisd_fcvtxn(a: f64) -> f32;
+        /// The `llvm.aarch64.neon.vcopy.lane.v16i8.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcopy.lane.v16i8.v16i8"]
+        pub fn neon_vcopy_lane_v16i8_v16i8(a: ::simdty::i8x16, b: i64, c: ::simdty::i8x16, d: i64) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.vcopy.lane.v16i8.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcopy.lane.v16i8.v8i16"]
+        pub fn neon_vcopy_lane_v16i8_v8i16(a: ::simdty::i16x8, b: i64, c: ::simdty::i8x16, d: i64) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.vcopy.lane.v16i8.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcopy.lane.v16i8.v4i32"]
+        pub fn neon_vcopy_lane_v16i8_v4i32(a: ::simdty::i32x4, b: i64, c: ::simdty::i8x16, d: i64) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.vcopy.lane.v16i8.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcopy.lane.v16i8.v2i64"]
+        pub fn neon_vcopy_lane_v16i8_v2i64(a: ::simdty::i64x2, b: i64, c: ::simdty::i8x16, d: i64) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.vcopy.lane.v16i8.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcopy.lane.v16i8.v4f32"]
+        pub fn neon_vcopy_lane_v16i8_v4f32(a: ::simdty::f32x4, b: i64, c: ::simdty::i8x16, d: i64) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.vcopy.lane.v16i8.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcopy.lane.v16i8.v2f64"]
+        pub fn neon_vcopy_lane_v16i8_v2f64(a: ::simdty::f64x2, b: i64, c: ::simdty::i8x16, d: i64) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.vcopy.lane.v8i16.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcopy.lane.v8i16.v16i8"]
+        pub fn neon_vcopy_lane_v8i16_v16i8(a: ::simdty::i8x16, b: i64, c: ::simdty::i16x8, d: i64) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.vcopy.lane.v8i16.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcopy.lane.v8i16.v8i16"]
+        pub fn neon_vcopy_lane_v8i16_v8i16(a: ::simdty::i16x8, b: i64, c: ::simdty::i16x8, d: i64) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.vcopy.lane.v8i16.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcopy.lane.v8i16.v4i32"]
+        pub fn neon_vcopy_lane_v8i16_v4i32(a: ::simdty::i32x4, b: i64, c: ::simdty::i16x8, d: i64) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.vcopy.lane.v8i16.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcopy.lane.v8i16.v2i64"]
+        pub fn neon_vcopy_lane_v8i16_v2i64(a: ::simdty::i64x2, b: i64, c: ::simdty::i16x8, d: i64) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.vcopy.lane.v8i16.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcopy.lane.v8i16.v4f32"]
+        pub fn neon_vcopy_lane_v8i16_v4f32(a: ::simdty::f32x4, b: i64, c: ::simdty::i16x8, d: i64) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.vcopy.lane.v8i16.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcopy.lane.v8i16.v2f64"]
+        pub fn neon_vcopy_lane_v8i16_v2f64(a: ::simdty::f64x2, b: i64, c: ::simdty::i16x8, d: i64) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.vcopy.lane.v4i32.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcopy.lane.v4i32.v16i8"]
+        pub fn neon_vcopy_lane_v4i32_v16i8(a: ::simdty::i8x16, b: i64, c: ::simdty::i32x4, d: i64) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.vcopy.lane.v4i32.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcopy.lane.v4i32.v8i16"]
+        pub fn neon_vcopy_lane_v4i32_v8i16(a: ::simdty::i16x8, b: i64, c: ::simdty::i32x4, d: i64) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.vcopy.lane.v4i32.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcopy.lane.v4i32.v4i32"]
+        pub fn neon_vcopy_lane_v4i32_v4i32(a: ::simdty::i32x4, b: i64, c: ::simdty::i32x4, d: i64) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.vcopy.lane.v4i32.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcopy.lane.v4i32.v2i64"]
+        pub fn neon_vcopy_lane_v4i32_v2i64(a: ::simdty::i64x2, b: i64, c: ::simdty::i32x4, d: i64) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.vcopy.lane.v4i32.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcopy.lane.v4i32.v4f32"]
+        pub fn neon_vcopy_lane_v4i32_v4f32(a: ::simdty::f32x4, b: i64, c: ::simdty::i32x4, d: i64) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.vcopy.lane.v4i32.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcopy.lane.v4i32.v2f64"]
+        pub fn neon_vcopy_lane_v4i32_v2f64(a: ::simdty::f64x2, b: i64, c: ::simdty::i32x4, d: i64) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.vcopy.lane.v2i64.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcopy.lane.v2i64.v16i8"]
+        pub fn neon_vcopy_lane_v2i64_v16i8(a: ::simdty::i8x16, b: i64, c: ::simdty::i64x2, d: i64) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.vcopy.lane.v2i64.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcopy.lane.v2i64.v8i16"]
+        pub fn neon_vcopy_lane_v2i64_v8i16(a: ::simdty::i16x8, b: i64, c: ::simdty::i64x2, d: i64) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.vcopy.lane.v2i64.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcopy.lane.v2i64.v4i32"]
+        pub fn neon_vcopy_lane_v2i64_v4i32(a: ::simdty::i32x4, b: i64, c: ::simdty::i64x2, d: i64) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.vcopy.lane.v2i64.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcopy.lane.v2i64.v2i64"]
+        pub fn neon_vcopy_lane_v2i64_v2i64(a: ::simdty::i64x2, b: i64, c: ::simdty::i64x2, d: i64) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.vcopy.lane.v2i64.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcopy.lane.v2i64.v4f32"]
+        pub fn neon_vcopy_lane_v2i64_v4f32(a: ::simdty::f32x4, b: i64, c: ::simdty::i64x2, d: i64) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.vcopy.lane.v2i64.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcopy.lane.v2i64.v2f64"]
+        pub fn neon_vcopy_lane_v2i64_v2f64(a: ::simdty::f64x2, b: i64, c: ::simdty::i64x2, d: i64) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.vcopy.lane.v4f32.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcopy.lane.v4f32.v16i8"]
+        pub fn neon_vcopy_lane_v4f32_v16i8(a: ::simdty::i8x16, b: i64, c: ::simdty::f32x4, d: i64) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.vcopy.lane.v4f32.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcopy.lane.v4f32.v8i16"]
+        pub fn neon_vcopy_lane_v4f32_v8i16(a: ::simdty::i16x8, b: i64, c: ::simdty::f32x4, d: i64) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.vcopy.lane.v4f32.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcopy.lane.v4f32.v4i32"]
+        pub fn neon_vcopy_lane_v4f32_v4i32(a: ::simdty::i32x4, b: i64, c: ::simdty::f32x4, d: i64) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.vcopy.lane.v4f32.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcopy.lane.v4f32.v2i64"]
+        pub fn neon_vcopy_lane_v4f32_v2i64(a: ::simdty::i64x2, b: i64, c: ::simdty::f32x4, d: i64) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.vcopy.lane.v4f32.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcopy.lane.v4f32.v4f32"]
+        pub fn neon_vcopy_lane_v4f32_v4f32(a: ::simdty::f32x4, b: i64, c: ::simdty::f32x4, d: i64) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.vcopy.lane.v4f32.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcopy.lane.v4f32.v2f64"]
+        pub fn neon_vcopy_lane_v4f32_v2f64(a: ::simdty::f64x2, b: i64, c: ::simdty::f32x4, d: i64) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.vcopy.lane.v2f64.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcopy.lane.v2f64.v16i8"]
+        pub fn neon_vcopy_lane_v2f64_v16i8(a: ::simdty::i8x16, b: i64, c: ::simdty::f64x2, d: i64) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.vcopy.lane.v2f64.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcopy.lane.v2f64.v8i16"]
+        pub fn neon_vcopy_lane_v2f64_v8i16(a: ::simdty::i16x8, b: i64, c: ::simdty::f64x2, d: i64) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.vcopy.lane.v2f64.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcopy.lane.v2f64.v4i32"]
+        pub fn neon_vcopy_lane_v2f64_v4i32(a: ::simdty::i32x4, b: i64, c: ::simdty::f64x2, d: i64) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.vcopy.lane.v2f64.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcopy.lane.v2f64.v2i64"]
+        pub fn neon_vcopy_lane_v2f64_v2i64(a: ::simdty::i64x2, b: i64, c: ::simdty::f64x2, d: i64) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.vcopy.lane.v2f64.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcopy.lane.v2f64.v4f32"]
+        pub fn neon_vcopy_lane_v2f64_v4f32(a: ::simdty::f32x4, b: i64, c: ::simdty::f64x2, d: i64) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.vcopy.lane.v2f64.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.vcopy.lane.v2f64.v2f64"]
+        pub fn neon_vcopy_lane_v2f64_v2f64(a: ::simdty::f64x2, b: i64, c: ::simdty::f64x2, d: i64) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.st1x2.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.st1x2.v16i8"]
+        pub fn neon_st1x2_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16, c: *mut ::simdty::i8x16) -> ();
+        /// The `llvm.aarch64.neon.st1x2.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.st1x2.v8i16"]
+        pub fn neon_st1x2_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8, c: *mut ::simdty::i16x8) -> ();
+        /// The `llvm.aarch64.neon.st1x2.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.st1x2.v4i32"]
+        pub fn neon_st1x2_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4, c: *mut ::simdty::i32x4) -> ();
+        /// The `llvm.aarch64.neon.st1x2.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.st1x2.v2i64"]
+        pub fn neon_st1x2_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2, c: *mut ::simdty::i64x2) -> ();
+        /// The `llvm.aarch64.neon.st1x2.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.st1x2.v4f32"]
+        pub fn neon_st1x2_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4, c: *mut ::simdty::f32x4) -> ();
+        /// The `llvm.aarch64.neon.st1x2.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.st1x2.v2f64"]
+        pub fn neon_st1x2_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2, c: *mut ::simdty::f64x2) -> ();
+        /// The `llvm.aarch64.neon.st1x3.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.st1x3.v16i8"]
+        pub fn neon_st1x3_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16, c: ::simdty::i8x16, d: *mut ::simdty::i8x16) -> ();
+        /// The `llvm.aarch64.neon.st1x3.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.st1x3.v8i16"]
+        pub fn neon_st1x3_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8, c: ::simdty::i16x8, d: *mut ::simdty::i16x8) -> ();
+        /// The `llvm.aarch64.neon.st1x3.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.st1x3.v4i32"]
+        pub fn neon_st1x3_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4, c: ::simdty::i32x4, d: *mut ::simdty::i32x4) -> ();
+        /// The `llvm.aarch64.neon.st1x3.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.st1x3.v2i64"]
+        pub fn neon_st1x3_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2, c: ::simdty::i64x2, d: *mut ::simdty::i64x2) -> ();
+        /// The `llvm.aarch64.neon.st1x3.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.st1x3.v4f32"]
+        pub fn neon_st1x3_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4, c: ::simdty::f32x4, d: *mut ::simdty::f32x4) -> ();
+        /// The `llvm.aarch64.neon.st1x3.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.st1x3.v2f64"]
+        pub fn neon_st1x3_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2, c: ::simdty::f64x2, d: *mut ::simdty::f64x2) -> ();
+        /// The `llvm.aarch64.neon.st1x4.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.st1x4.v16i8"]
+        pub fn neon_st1x4_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16, c: ::simdty::i8x16, d: ::simdty::i8x16, e: *mut ::simdty::i8x16) -> ();
+        /// The `llvm.aarch64.neon.st1x4.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.st1x4.v8i16"]
+        pub fn neon_st1x4_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8, c: ::simdty::i16x8, d: ::simdty::i16x8, e: *mut ::simdty::i16x8) -> ();
+        /// The `llvm.aarch64.neon.st1x4.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.st1x4.v4i32"]
+        pub fn neon_st1x4_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4, c: ::simdty::i32x4, d: ::simdty::i32x4, e: *mut ::simdty::i32x4) -> ();
+        /// The `llvm.aarch64.neon.st1x4.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.st1x4.v2i64"]
+        pub fn neon_st1x4_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2, c: ::simdty::i64x2, d: ::simdty::i64x2, e: *mut ::simdty::i64x2) -> ();
+        /// The `llvm.aarch64.neon.st1x4.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.st1x4.v4f32"]
+        pub fn neon_st1x4_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4, c: ::simdty::f32x4, d: ::simdty::f32x4, e: *mut ::simdty::f32x4) -> ();
+        /// The `llvm.aarch64.neon.st1x4.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.st1x4.v2f64"]
+        pub fn neon_st1x4_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2, c: ::simdty::f64x2, d: ::simdty::f64x2, e: *mut ::simdty::f64x2) -> ();
+        /// The `llvm.aarch64.neon.st2.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.st2.v16i8"]
+        pub fn neon_st2_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16, c: *mut ::simdty::i8x16) -> ();
+        /// The `llvm.aarch64.neon.st2.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.st2.v8i16"]
+        pub fn neon_st2_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8, c: *mut ::simdty::i16x8) -> ();
+        /// The `llvm.aarch64.neon.st2.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.st2.v4i32"]
+        pub fn neon_st2_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4, c: *mut ::simdty::i32x4) -> ();
+        /// The `llvm.aarch64.neon.st2.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.st2.v2i64"]
+        pub fn neon_st2_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2, c: *mut ::simdty::i64x2) -> ();
+        /// The `llvm.aarch64.neon.st2.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.st2.v4f32"]
+        pub fn neon_st2_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4, c: *mut ::simdty::f32x4) -> ();
+        /// The `llvm.aarch64.neon.st2.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.st2.v2f64"]
+        pub fn neon_st2_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2, c: *mut ::simdty::f64x2) -> ();
+        /// The `llvm.aarch64.neon.st3.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.st3.v16i8"]
+        pub fn neon_st3_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16, c: ::simdty::i8x16, d: *mut ::simdty::i8x16) -> ();
+        /// The `llvm.aarch64.neon.st3.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.st3.v8i16"]
+        pub fn neon_st3_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8, c: ::simdty::i16x8, d: *mut ::simdty::i16x8) -> ();
+        /// The `llvm.aarch64.neon.st3.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.st3.v4i32"]
+        pub fn neon_st3_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4, c: ::simdty::i32x4, d: *mut ::simdty::i32x4) -> ();
+        /// The `llvm.aarch64.neon.st3.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.st3.v2i64"]
+        pub fn neon_st3_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2, c: ::simdty::i64x2, d: *mut ::simdty::i64x2) -> ();
+        /// The `llvm.aarch64.neon.st3.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.st3.v4f32"]
+        pub fn neon_st3_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4, c: ::simdty::f32x4, d: *mut ::simdty::f32x4) -> ();
+        /// The `llvm.aarch64.neon.st3.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.st3.v2f64"]
+        pub fn neon_st3_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2, c: ::simdty::f64x2, d: *mut ::simdty::f64x2) -> ();
+        /// The `llvm.aarch64.neon.st4.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.st4.v16i8"]
+        pub fn neon_st4_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16, c: ::simdty::i8x16, d: ::simdty::i8x16, e: *mut ::simdty::i8x16) -> ();
+        /// The `llvm.aarch64.neon.st4.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.st4.v8i16"]
+        pub fn neon_st4_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8, c: ::simdty::i16x8, d: ::simdty::i16x8, e: *mut ::simdty::i16x8) -> ();
+        /// The `llvm.aarch64.neon.st4.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.st4.v4i32"]
+        pub fn neon_st4_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4, c: ::simdty::i32x4, d: ::simdty::i32x4, e: *mut ::simdty::i32x4) -> ();
+        /// The `llvm.aarch64.neon.st4.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.st4.v2i64"]
+        pub fn neon_st4_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2, c: ::simdty::i64x2, d: ::simdty::i64x2, e: *mut ::simdty::i64x2) -> ();
+        /// The `llvm.aarch64.neon.st4.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.st4.v4f32"]
+        pub fn neon_st4_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4, c: ::simdty::f32x4, d: ::simdty::f32x4, e: *mut ::simdty::f32x4) -> ();
+        /// The `llvm.aarch64.neon.st4.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.st4.v2f64"]
+        pub fn neon_st4_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2, c: ::simdty::f64x2, d: ::simdty::f64x2, e: *mut ::simdty::f64x2) -> ();
+        /// The `llvm.aarch64.neon.st2lane.v16i8.p0i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.st2lane.v16i8.p0i8"]
+        pub fn neon_st2lane_v16i8_p0i8(a: ::simdty::i8x16, b: ::simdty::i8x16, c: i64, d: *mut i8) -> ();
+        /// The `llvm.aarch64.neon.st2lane.v8i16.p0i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.st2lane.v8i16.p0i8"]
+        pub fn neon_st2lane_v8i16_p0i8(a: ::simdty::i16x8, b: ::simdty::i16x8, c: i64, d: *mut i8) -> ();
+        /// The `llvm.aarch64.neon.st2lane.v4i32.p0i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.st2lane.v4i32.p0i8"]
+        pub fn neon_st2lane_v4i32_p0i8(a: ::simdty::i32x4, b: ::simdty::i32x4, c: i64, d: *mut i8) -> ();
+        /// The `llvm.aarch64.neon.st2lane.v2i64.p0i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.st2lane.v2i64.p0i8"]
+        pub fn neon_st2lane_v2i64_p0i8(a: ::simdty::i64x2, b: ::simdty::i64x2, c: i64, d: *mut i8) -> ();
+        /// The `llvm.aarch64.neon.st2lane.v4f32.p0i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.st2lane.v4f32.p0i8"]
+        pub fn neon_st2lane_v4f32_p0i8(a: ::simdty::f32x4, b: ::simdty::f32x4, c: i64, d: *mut i8) -> ();
+        /// The `llvm.aarch64.neon.st2lane.v2f64.p0i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.st2lane.v2f64.p0i8"]
+        pub fn neon_st2lane_v2f64_p0i8(a: ::simdty::f64x2, b: ::simdty::f64x2, c: i64, d: *mut i8) -> ();
+        /// The `llvm.aarch64.neon.st3lane.v16i8.p0i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.st3lane.v16i8.p0i8"]
+        pub fn neon_st3lane_v16i8_p0i8(a: ::simdty::i8x16, b: ::simdty::i8x16, c: ::simdty::i8x16, d: i64, e: *mut i8) -> ();
+        /// The `llvm.aarch64.neon.st3lane.v8i16.p0i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.st3lane.v8i16.p0i8"]
+        pub fn neon_st3lane_v8i16_p0i8(a: ::simdty::i16x8, b: ::simdty::i16x8, c: ::simdty::i16x8, d: i64, e: *mut i8) -> ();
+        /// The `llvm.aarch64.neon.st3lane.v4i32.p0i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.st3lane.v4i32.p0i8"]
+        pub fn neon_st3lane_v4i32_p0i8(a: ::simdty::i32x4, b: ::simdty::i32x4, c: ::simdty::i32x4, d: i64, e: *mut i8) -> ();
+        /// The `llvm.aarch64.neon.st3lane.v2i64.p0i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.st3lane.v2i64.p0i8"]
+        pub fn neon_st3lane_v2i64_p0i8(a: ::simdty::i64x2, b: ::simdty::i64x2, c: ::simdty::i64x2, d: i64, e: *mut i8) -> ();
+        /// The `llvm.aarch64.neon.st3lane.v4f32.p0i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.st3lane.v4f32.p0i8"]
+        pub fn neon_st3lane_v4f32_p0i8(a: ::simdty::f32x4, b: ::simdty::f32x4, c: ::simdty::f32x4, d: i64, e: *mut i8) -> ();
+        /// The `llvm.aarch64.neon.st3lane.v2f64.p0i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.st3lane.v2f64.p0i8"]
+        pub fn neon_st3lane_v2f64_p0i8(a: ::simdty::f64x2, b: ::simdty::f64x2, c: ::simdty::f64x2, d: i64, e: *mut i8) -> ();
+        /// The `llvm.aarch64.neon.st4lane.v16i8.p0i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.st4lane.v16i8.p0i8"]
+        pub fn neon_st4lane_v16i8_p0i8(a: ::simdty::i8x16, b: ::simdty::i8x16, c: ::simdty::i8x16, d: ::simdty::i8x16, e: i64, f: *mut i8) -> ();
+        /// The `llvm.aarch64.neon.st4lane.v8i16.p0i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.st4lane.v8i16.p0i8"]
+        pub fn neon_st4lane_v8i16_p0i8(a: ::simdty::i16x8, b: ::simdty::i16x8, c: ::simdty::i16x8, d: ::simdty::i16x8, e: i64, f: *mut i8) -> ();
+        /// The `llvm.aarch64.neon.st4lane.v4i32.p0i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.st4lane.v4i32.p0i8"]
+        pub fn neon_st4lane_v4i32_p0i8(a: ::simdty::i32x4, b: ::simdty::i32x4, c: ::simdty::i32x4, d: ::simdty::i32x4, e: i64, f: *mut i8) -> ();
+        /// The `llvm.aarch64.neon.st4lane.v2i64.p0i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.st4lane.v2i64.p0i8"]
+        pub fn neon_st4lane_v2i64_p0i8(a: ::simdty::i64x2, b: ::simdty::i64x2, c: ::simdty::i64x2, d: ::simdty::i64x2, e: i64, f: *mut i8) -> ();
+        /// The `llvm.aarch64.neon.st4lane.v4f32.p0i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.st4lane.v4f32.p0i8"]
+        pub fn neon_st4lane_v4f32_p0i8(a: ::simdty::f32x4, b: ::simdty::f32x4, c: ::simdty::f32x4, d: ::simdty::f32x4, e: i64, f: *mut i8) -> ();
+        /// The `llvm.aarch64.neon.st4lane.v2f64.p0i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.st4lane.v2f64.p0i8"]
+        pub fn neon_st4lane_v2f64_p0i8(a: ::simdty::f64x2, b: ::simdty::f64x2, c: ::simdty::f64x2, d: ::simdty::f64x2, e: i64, f: *mut i8) -> ();
+        /// The `llvm.aarch64.neon.tbl1.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.tbl1.v16i8"]
+        pub fn neon_tbl1_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.tbl1.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.tbl1.v8i16"]
+        pub fn neon_tbl1_v8i16(a: ::simdty::i8x16, b: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.tbl1.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.tbl1.v4i32"]
+        pub fn neon_tbl1_v4i32(a: ::simdty::i8x16, b: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.tbl1.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.tbl1.v2i64"]
+        pub fn neon_tbl1_v2i64(a: ::simdty::i8x16, b: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.tbl1.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.tbl1.v4f32"]
+        pub fn neon_tbl1_v4f32(a: ::simdty::i8x16, b: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.tbl1.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.tbl1.v2f64"]
+        pub fn neon_tbl1_v2f64(a: ::simdty::i8x16, b: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.tbl2.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.tbl2.v16i8"]
+        pub fn neon_tbl2_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16, c: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.tbl2.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.tbl2.v8i16"]
+        pub fn neon_tbl2_v8i16(a: ::simdty::i8x16, b: ::simdty::i8x16, c: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.tbl2.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.tbl2.v4i32"]
+        pub fn neon_tbl2_v4i32(a: ::simdty::i8x16, b: ::simdty::i8x16, c: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.tbl2.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.tbl2.v2i64"]
+        pub fn neon_tbl2_v2i64(a: ::simdty::i8x16, b: ::simdty::i8x16, c: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.tbl2.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.tbl2.v4f32"]
+        pub fn neon_tbl2_v4f32(a: ::simdty::i8x16, b: ::simdty::i8x16, c: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.tbl2.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.tbl2.v2f64"]
+        pub fn neon_tbl2_v2f64(a: ::simdty::i8x16, b: ::simdty::i8x16, c: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.tbl3.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.tbl3.v16i8"]
+        pub fn neon_tbl3_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16, c: ::simdty::i8x16, d: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.tbl3.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.tbl3.v8i16"]
+        pub fn neon_tbl3_v8i16(a: ::simdty::i8x16, b: ::simdty::i8x16, c: ::simdty::i8x16, d: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.tbl3.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.tbl3.v4i32"]
+        pub fn neon_tbl3_v4i32(a: ::simdty::i8x16, b: ::simdty::i8x16, c: ::simdty::i8x16, d: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.tbl3.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.tbl3.v2i64"]
+        pub fn neon_tbl3_v2i64(a: ::simdty::i8x16, b: ::simdty::i8x16, c: ::simdty::i8x16, d: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.tbl3.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.tbl3.v4f32"]
+        pub fn neon_tbl3_v4f32(a: ::simdty::i8x16, b: ::simdty::i8x16, c: ::simdty::i8x16, d: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.tbl3.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.tbl3.v2f64"]
+        pub fn neon_tbl3_v2f64(a: ::simdty::i8x16, b: ::simdty::i8x16, c: ::simdty::i8x16, d: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.tbl4.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.tbl4.v16i8"]
+        pub fn neon_tbl4_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16, c: ::simdty::i8x16, d: ::simdty::i8x16, e: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.tbl4.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.tbl4.v8i16"]
+        pub fn neon_tbl4_v8i16(a: ::simdty::i8x16, b: ::simdty::i8x16, c: ::simdty::i8x16, d: ::simdty::i8x16, e: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.tbl4.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.tbl4.v4i32"]
+        pub fn neon_tbl4_v4i32(a: ::simdty::i8x16, b: ::simdty::i8x16, c: ::simdty::i8x16, d: ::simdty::i8x16, e: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.tbl4.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.tbl4.v2i64"]
+        pub fn neon_tbl4_v2i64(a: ::simdty::i8x16, b: ::simdty::i8x16, c: ::simdty::i8x16, d: ::simdty::i8x16, e: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.tbl4.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.tbl4.v4f32"]
+        pub fn neon_tbl4_v4f32(a: ::simdty::i8x16, b: ::simdty::i8x16, c: ::simdty::i8x16, d: ::simdty::i8x16, e: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.tbl4.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.tbl4.v2f64"]
+        pub fn neon_tbl4_v2f64(a: ::simdty::i8x16, b: ::simdty::i8x16, c: ::simdty::i8x16, d: ::simdty::i8x16, e: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.tbx1.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.tbx1.v16i8"]
+        pub fn neon_tbx1_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16, c: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.tbx1.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.tbx1.v8i16"]
+        pub fn neon_tbx1_v8i16(a: ::simdty::i16x8, b: ::simdty::i8x16, c: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.tbx1.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.tbx1.v4i32"]
+        pub fn neon_tbx1_v4i32(a: ::simdty::i32x4, b: ::simdty::i8x16, c: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.tbx1.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.tbx1.v2i64"]
+        pub fn neon_tbx1_v2i64(a: ::simdty::i64x2, b: ::simdty::i8x16, c: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.tbx1.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.tbx1.v4f32"]
+        pub fn neon_tbx1_v4f32(a: ::simdty::f32x4, b: ::simdty::i8x16, c: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.tbx1.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.tbx1.v2f64"]
+        pub fn neon_tbx1_v2f64(a: ::simdty::f64x2, b: ::simdty::i8x16, c: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.tbx2.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.tbx2.v16i8"]
+        pub fn neon_tbx2_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16, c: ::simdty::i8x16, d: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.tbx2.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.tbx2.v8i16"]
+        pub fn neon_tbx2_v8i16(a: ::simdty::i16x8, b: ::simdty::i8x16, c: ::simdty::i8x16, d: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.tbx2.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.tbx2.v4i32"]
+        pub fn neon_tbx2_v4i32(a: ::simdty::i32x4, b: ::simdty::i8x16, c: ::simdty::i8x16, d: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.tbx2.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.tbx2.v2i64"]
+        pub fn neon_tbx2_v2i64(a: ::simdty::i64x2, b: ::simdty::i8x16, c: ::simdty::i8x16, d: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.tbx2.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.tbx2.v4f32"]
+        pub fn neon_tbx2_v4f32(a: ::simdty::f32x4, b: ::simdty::i8x16, c: ::simdty::i8x16, d: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.tbx2.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.tbx2.v2f64"]
+        pub fn neon_tbx2_v2f64(a: ::simdty::f64x2, b: ::simdty::i8x16, c: ::simdty::i8x16, d: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.tbx3.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.tbx3.v16i8"]
+        pub fn neon_tbx3_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16, c: ::simdty::i8x16, d: ::simdty::i8x16, e: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.tbx3.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.tbx3.v8i16"]
+        pub fn neon_tbx3_v8i16(a: ::simdty::i16x8, b: ::simdty::i8x16, c: ::simdty::i8x16, d: ::simdty::i8x16, e: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.tbx3.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.tbx3.v4i32"]
+        pub fn neon_tbx3_v4i32(a: ::simdty::i32x4, b: ::simdty::i8x16, c: ::simdty::i8x16, d: ::simdty::i8x16, e: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.tbx3.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.tbx3.v2i64"]
+        pub fn neon_tbx3_v2i64(a: ::simdty::i64x2, b: ::simdty::i8x16, c: ::simdty::i8x16, d: ::simdty::i8x16, e: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.tbx3.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.tbx3.v4f32"]
+        pub fn neon_tbx3_v4f32(a: ::simdty::f32x4, b: ::simdty::i8x16, c: ::simdty::i8x16, d: ::simdty::i8x16, e: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.tbx3.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.tbx3.v2f64"]
+        pub fn neon_tbx3_v2f64(a: ::simdty::f64x2, b: ::simdty::i8x16, c: ::simdty::i8x16, d: ::simdty::i8x16, e: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.aarch64.neon.tbx4.v16i8` intrinsic.
+        #[link_name = "llvm.aarch64.neon.tbx4.v16i8"]
+        pub fn neon_tbx4_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16, c: ::simdty::i8x16, d: ::simdty::i8x16, e: ::simdty::i8x16, f: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.aarch64.neon.tbx4.v8i16` intrinsic.
+        #[link_name = "llvm.aarch64.neon.tbx4.v8i16"]
+        pub fn neon_tbx4_v8i16(a: ::simdty::i16x8, b: ::simdty::i8x16, c: ::simdty::i8x16, d: ::simdty::i8x16, e: ::simdty::i8x16, f: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.aarch64.neon.tbx4.v4i32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.tbx4.v4i32"]
+        pub fn neon_tbx4_v4i32(a: ::simdty::i32x4, b: ::simdty::i8x16, c: ::simdty::i8x16, d: ::simdty::i8x16, e: ::simdty::i8x16, f: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.aarch64.neon.tbx4.v2i64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.tbx4.v2i64"]
+        pub fn neon_tbx4_v2i64(a: ::simdty::i64x2, b: ::simdty::i8x16, c: ::simdty::i8x16, d: ::simdty::i8x16, e: ::simdty::i8x16, f: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.aarch64.neon.tbx4.v4f32` intrinsic.
+        #[link_name = "llvm.aarch64.neon.tbx4.v4f32"]
+        pub fn neon_tbx4_v4f32(a: ::simdty::f32x4, b: ::simdty::i8x16, c: ::simdty::i8x16, d: ::simdty::i8x16, e: ::simdty::i8x16, f: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.aarch64.neon.tbx4.v2f64` intrinsic.
+        #[link_name = "llvm.aarch64.neon.tbx4.v2f64"]
+        pub fn neon_tbx4_v2f64(a: ::simdty::f64x2, b: ::simdty::i8x16, c: ::simdty::i8x16, d: ::simdty::i8x16, e: ::simdty::i8x16, f: ::simdty::f64x2) -> ::simdty::f64x2;
         /// The `llvm.aarch64.crypto.aese` intrinsic.
         #[link_name = "llvm.aarch64.crypto.aese"]
         pub fn crypto_aese(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i8x16;
@@ -308,18 +7712,18 @@ pub mod arm {
         /// The `llvm.arm.usat` intrinsic; known as `__builtin_arm_usat` in GCC.
         #[link_name = "llvm.arm.usat"]
         pub fn usat(a: i32, b: i32) -> i32;
-        /// The `llvm.arm.ldrex` intrinsic.
-        #[link_name = "llvm.arm.ldrex"]
-        pub fn ldrex(a: *mut i8) -> i32;
-        /// The `llvm.arm.strex` intrinsic.
-        #[link_name = "llvm.arm.strex"]
-        pub fn strex(a: i32, b: *mut i8) -> i32;
-        /// The `llvm.arm.ldaex` intrinsic.
-        #[link_name = "llvm.arm.ldaex"]
-        pub fn ldaex(a: *mut i8) -> i32;
-        /// The `llvm.arm.stlex` intrinsic.
-        #[link_name = "llvm.arm.stlex"]
-        pub fn stlex(a: i32, b: *mut i8) -> i32;
+        /// The `llvm.arm.ldrex.p0i8` intrinsic.
+        #[link_name = "llvm.arm.ldrex.p0i8"]
+        pub fn ldrex_p0i8(a: *mut i8) -> i32;
+        /// The `llvm.arm.strex.p0i8` intrinsic.
+        #[link_name = "llvm.arm.strex.p0i8"]
+        pub fn strex_p0i8(a: i32, b: *mut i8) -> i32;
+        /// The `llvm.arm.ldaex.p0i8` intrinsic.
+        #[link_name = "llvm.arm.ldaex.p0i8"]
+        pub fn ldaex_p0i8(a: *mut i8) -> i32;
+        /// The `llvm.arm.stlex.p0i8` intrinsic.
+        #[link_name = "llvm.arm.stlex.p0i8"]
+        pub fn stlex_p0i8(a: i32, b: *mut i8) -> i32;
         /// The `llvm.arm.clrex` intrinsic.
         #[link_name = "llvm.arm.clrex"]
         pub fn clrex() -> ();
@@ -344,6 +7748,30 @@ pub mod arm {
         /// The `llvm.arm.set.fpscr` intrinsic; known as `__builtin_arm_set_fpscr` in GCC.
         #[link_name = "llvm.arm.set.fpscr"]
         pub fn set_fpscr(a: i32) -> ();
+        /// The `llvm.arm.vcvtr.v4f32` intrinsic.
+        #[link_name = "llvm.arm.vcvtr.v4f32"]
+        pub fn vcvtr_v4f32(a: ::simdty::f32x4) -> f32;
+        /// The `llvm.arm.vcvtr.f32` intrinsic.
+        #[link_name = "llvm.arm.vcvtr.f32"]
+        pub fn vcvtr_f32(a: f32) -> f32;
+        /// The `llvm.arm.vcvtr.v2f64` intrinsic.
+        #[link_name = "llvm.arm.vcvtr.v2f64"]
+        pub fn vcvtr_v2f64(a: ::simdty::f64x2) -> f32;
+        /// The `llvm.arm.vcvtr.f64` intrinsic.
+        #[link_name = "llvm.arm.vcvtr.f64"]
+        pub fn vcvtr_f64(a: f64) -> f32;
+        /// The `llvm.arm.vcvtru.v4f32` intrinsic.
+        #[link_name = "llvm.arm.vcvtru.v4f32"]
+        pub fn vcvtru_v4f32(a: ::simdty::f32x4) -> f32;
+        /// The `llvm.arm.vcvtru.f32` intrinsic.
+        #[link_name = "llvm.arm.vcvtru.f32"]
+        pub fn vcvtru_f32(a: f32) -> f32;
+        /// The `llvm.arm.vcvtru.v2f64` intrinsic.
+        #[link_name = "llvm.arm.vcvtru.v2f64"]
+        pub fn vcvtru_v2f64(a: ::simdty::f64x2) -> f32;
+        /// The `llvm.arm.vcvtru.f64` intrinsic.
+        #[link_name = "llvm.arm.vcvtru.f64"]
+        pub fn vcvtru_f64(a: f64) -> f32;
         /// The `llvm.arm.mcr` intrinsic; known as `__builtin_arm_mcr` in GCC.
         #[link_name = "llvm.arm.mcr"]
         pub fn mcr(a: i32, b: i32, c: i32, d: i32, e: i32, f: i32) -> ();
@@ -398,6 +7826,2730 @@ pub mod arm {
         /// The `llvm.arm.undefined` intrinsic.
         #[link_name = "llvm.arm.undefined"]
         pub fn undefined(a: i32) -> ();
+        /// The `llvm.arm.neon.vhadds.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vhadds.v16i8"]
+        pub fn neon_vhadds_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vhadds.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vhadds.v8i16"]
+        pub fn neon_vhadds_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vhadds.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vhadds.v4i32"]
+        pub fn neon_vhadds_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vhadds.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vhadds.v2i64"]
+        pub fn neon_vhadds_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vhadds.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vhadds.v4f32"]
+        pub fn neon_vhadds_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vhadds.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vhadds.v2f64"]
+        pub fn neon_vhadds_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vhaddu.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vhaddu.v16i8"]
+        pub fn neon_vhaddu_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vhaddu.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vhaddu.v8i16"]
+        pub fn neon_vhaddu_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vhaddu.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vhaddu.v4i32"]
+        pub fn neon_vhaddu_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vhaddu.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vhaddu.v2i64"]
+        pub fn neon_vhaddu_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vhaddu.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vhaddu.v4f32"]
+        pub fn neon_vhaddu_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vhaddu.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vhaddu.v2f64"]
+        pub fn neon_vhaddu_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vrhadds.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vrhadds.v16i8"]
+        pub fn neon_vrhadds_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vrhadds.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vrhadds.v8i16"]
+        pub fn neon_vrhadds_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vrhadds.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vrhadds.v4i32"]
+        pub fn neon_vrhadds_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vrhadds.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vrhadds.v2i64"]
+        pub fn neon_vrhadds_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vrhadds.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vrhadds.v4f32"]
+        pub fn neon_vrhadds_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vrhadds.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vrhadds.v2f64"]
+        pub fn neon_vrhadds_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vrhaddu.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vrhaddu.v16i8"]
+        pub fn neon_vrhaddu_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vrhaddu.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vrhaddu.v8i16"]
+        pub fn neon_vrhaddu_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vrhaddu.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vrhaddu.v4i32"]
+        pub fn neon_vrhaddu_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vrhaddu.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vrhaddu.v2i64"]
+        pub fn neon_vrhaddu_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vrhaddu.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vrhaddu.v4f32"]
+        pub fn neon_vrhaddu_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vrhaddu.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vrhaddu.v2f64"]
+        pub fn neon_vrhaddu_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vqadds.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vqadds.v16i8"]
+        pub fn neon_vqadds_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vqadds.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vqadds.v8i16"]
+        pub fn neon_vqadds_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vqadds.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vqadds.v4i32"]
+        pub fn neon_vqadds_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vqadds.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vqadds.v2i64"]
+        pub fn neon_vqadds_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vqadds.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vqadds.v4f32"]
+        pub fn neon_vqadds_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vqadds.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vqadds.v2f64"]
+        pub fn neon_vqadds_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vqaddu.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vqaddu.v16i8"]
+        pub fn neon_vqaddu_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vqaddu.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vqaddu.v8i16"]
+        pub fn neon_vqaddu_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vqaddu.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vqaddu.v4i32"]
+        pub fn neon_vqaddu_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vqaddu.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vqaddu.v2i64"]
+        pub fn neon_vqaddu_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vqaddu.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vqaddu.v4f32"]
+        pub fn neon_vqaddu_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vqaddu.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vqaddu.v2f64"]
+        pub fn neon_vqaddu_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vmulp.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vmulp.v16i8"]
+        pub fn neon_vmulp_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vmulp.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vmulp.v8i16"]
+        pub fn neon_vmulp_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vmulp.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vmulp.v4i32"]
+        pub fn neon_vmulp_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vmulp.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vmulp.v2i64"]
+        pub fn neon_vmulp_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vmulp.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vmulp.v4f32"]
+        pub fn neon_vmulp_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vmulp.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vmulp.v2f64"]
+        pub fn neon_vmulp_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vqdmulh.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vqdmulh.v16i8"]
+        pub fn neon_vqdmulh_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vqdmulh.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vqdmulh.v8i16"]
+        pub fn neon_vqdmulh_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vqdmulh.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vqdmulh.v4i32"]
+        pub fn neon_vqdmulh_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vqdmulh.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vqdmulh.v2i64"]
+        pub fn neon_vqdmulh_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vqdmulh.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vqdmulh.v4f32"]
+        pub fn neon_vqdmulh_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vqdmulh.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vqdmulh.v2f64"]
+        pub fn neon_vqdmulh_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vqrdmulh.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vqrdmulh.v16i8"]
+        pub fn neon_vqrdmulh_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vqrdmulh.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vqrdmulh.v8i16"]
+        pub fn neon_vqrdmulh_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vqrdmulh.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vqrdmulh.v4i32"]
+        pub fn neon_vqrdmulh_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vqrdmulh.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vqrdmulh.v2i64"]
+        pub fn neon_vqrdmulh_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vqrdmulh.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vqrdmulh.v4f32"]
+        pub fn neon_vqrdmulh_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vqrdmulh.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vqrdmulh.v2f64"]
+        pub fn neon_vqrdmulh_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vmaxs.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vmaxs.v16i8"]
+        pub fn neon_vmaxs_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vmaxs.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vmaxs.v8i16"]
+        pub fn neon_vmaxs_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vmaxs.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vmaxs.v4i32"]
+        pub fn neon_vmaxs_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vmaxs.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vmaxs.v2i64"]
+        pub fn neon_vmaxs_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vmaxs.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vmaxs.v4f32"]
+        pub fn neon_vmaxs_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vmaxs.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vmaxs.v2f64"]
+        pub fn neon_vmaxs_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vmaxu.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vmaxu.v16i8"]
+        pub fn neon_vmaxu_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vmaxu.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vmaxu.v8i16"]
+        pub fn neon_vmaxu_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vmaxu.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vmaxu.v4i32"]
+        pub fn neon_vmaxu_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vmaxu.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vmaxu.v2i64"]
+        pub fn neon_vmaxu_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vmaxu.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vmaxu.v4f32"]
+        pub fn neon_vmaxu_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vmaxu.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vmaxu.v2f64"]
+        pub fn neon_vmaxu_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vmaxnm.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vmaxnm.v16i8"]
+        pub fn neon_vmaxnm_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vmaxnm.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vmaxnm.v8i16"]
+        pub fn neon_vmaxnm_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vmaxnm.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vmaxnm.v4i32"]
+        pub fn neon_vmaxnm_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vmaxnm.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vmaxnm.v2i64"]
+        pub fn neon_vmaxnm_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vmaxnm.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vmaxnm.v4f32"]
+        pub fn neon_vmaxnm_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vmaxnm.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vmaxnm.v2f64"]
+        pub fn neon_vmaxnm_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vmins.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vmins.v16i8"]
+        pub fn neon_vmins_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vmins.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vmins.v8i16"]
+        pub fn neon_vmins_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vmins.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vmins.v4i32"]
+        pub fn neon_vmins_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vmins.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vmins.v2i64"]
+        pub fn neon_vmins_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vmins.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vmins.v4f32"]
+        pub fn neon_vmins_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vmins.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vmins.v2f64"]
+        pub fn neon_vmins_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vminu.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vminu.v16i8"]
+        pub fn neon_vminu_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vminu.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vminu.v8i16"]
+        pub fn neon_vminu_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vminu.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vminu.v4i32"]
+        pub fn neon_vminu_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vminu.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vminu.v2i64"]
+        pub fn neon_vminu_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vminu.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vminu.v4f32"]
+        pub fn neon_vminu_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vminu.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vminu.v2f64"]
+        pub fn neon_vminu_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vminnm.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vminnm.v16i8"]
+        pub fn neon_vminnm_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vminnm.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vminnm.v8i16"]
+        pub fn neon_vminnm_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vminnm.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vminnm.v4i32"]
+        pub fn neon_vminnm_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vminnm.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vminnm.v2i64"]
+        pub fn neon_vminnm_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vminnm.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vminnm.v4f32"]
+        pub fn neon_vminnm_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vminnm.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vminnm.v2f64"]
+        pub fn neon_vminnm_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vrecps.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vrecps.v16i8"]
+        pub fn neon_vrecps_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vrecps.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vrecps.v8i16"]
+        pub fn neon_vrecps_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vrecps.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vrecps.v4i32"]
+        pub fn neon_vrecps_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vrecps.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vrecps.v2i64"]
+        pub fn neon_vrecps_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vrecps.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vrecps.v4f32"]
+        pub fn neon_vrecps_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vrecps.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vrecps.v2f64"]
+        pub fn neon_vrecps_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vrsqrts.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vrsqrts.v16i8"]
+        pub fn neon_vrsqrts_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vrsqrts.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vrsqrts.v8i16"]
+        pub fn neon_vrsqrts_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vrsqrts.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vrsqrts.v4i32"]
+        pub fn neon_vrsqrts_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vrsqrts.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vrsqrts.v2i64"]
+        pub fn neon_vrsqrts_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vrsqrts.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vrsqrts.v4f32"]
+        pub fn neon_vrsqrts_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vrsqrts.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vrsqrts.v2f64"]
+        pub fn neon_vrsqrts_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vhsubs.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vhsubs.v16i8"]
+        pub fn neon_vhsubs_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vhsubs.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vhsubs.v8i16"]
+        pub fn neon_vhsubs_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vhsubs.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vhsubs.v4i32"]
+        pub fn neon_vhsubs_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vhsubs.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vhsubs.v2i64"]
+        pub fn neon_vhsubs_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vhsubs.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vhsubs.v4f32"]
+        pub fn neon_vhsubs_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vhsubs.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vhsubs.v2f64"]
+        pub fn neon_vhsubs_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vhsubu.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vhsubu.v16i8"]
+        pub fn neon_vhsubu_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vhsubu.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vhsubu.v8i16"]
+        pub fn neon_vhsubu_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vhsubu.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vhsubu.v4i32"]
+        pub fn neon_vhsubu_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vhsubu.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vhsubu.v2i64"]
+        pub fn neon_vhsubu_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vhsubu.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vhsubu.v4f32"]
+        pub fn neon_vhsubu_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vhsubu.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vhsubu.v2f64"]
+        pub fn neon_vhsubu_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vqsubs.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vqsubs.v16i8"]
+        pub fn neon_vqsubs_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vqsubs.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vqsubs.v8i16"]
+        pub fn neon_vqsubs_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vqsubs.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vqsubs.v4i32"]
+        pub fn neon_vqsubs_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vqsubs.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vqsubs.v2i64"]
+        pub fn neon_vqsubs_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vqsubs.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vqsubs.v4f32"]
+        pub fn neon_vqsubs_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vqsubs.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vqsubs.v2f64"]
+        pub fn neon_vqsubs_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vqsubu.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vqsubu.v16i8"]
+        pub fn neon_vqsubu_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vqsubu.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vqsubu.v8i16"]
+        pub fn neon_vqsubu_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vqsubu.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vqsubu.v4i32"]
+        pub fn neon_vqsubu_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vqsubu.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vqsubu.v2i64"]
+        pub fn neon_vqsubu_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vqsubu.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vqsubu.v4f32"]
+        pub fn neon_vqsubu_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vqsubu.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vqsubu.v2f64"]
+        pub fn neon_vqsubu_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vacge.v16i8.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vacge.v16i8.v16i8"]
+        pub fn neon_vacge_v16i8_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vacge.v16i8.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vacge.v16i8.v8i16"]
+        pub fn neon_vacge_v16i8_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vacge.v16i8.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vacge.v16i8.v4i32"]
+        pub fn neon_vacge_v16i8_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vacge.v16i8.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vacge.v16i8.v2i64"]
+        pub fn neon_vacge_v16i8_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vacge.v16i8.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vacge.v16i8.v4f32"]
+        pub fn neon_vacge_v16i8_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vacge.v16i8.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vacge.v16i8.v2f64"]
+        pub fn neon_vacge_v16i8_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vacge.v8i16.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vacge.v8i16.v16i8"]
+        pub fn neon_vacge_v8i16_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vacge.v8i16.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vacge.v8i16.v8i16"]
+        pub fn neon_vacge_v8i16_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vacge.v8i16.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vacge.v8i16.v4i32"]
+        pub fn neon_vacge_v8i16_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vacge.v8i16.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vacge.v8i16.v2i64"]
+        pub fn neon_vacge_v8i16_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vacge.v8i16.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vacge.v8i16.v4f32"]
+        pub fn neon_vacge_v8i16_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vacge.v8i16.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vacge.v8i16.v2f64"]
+        pub fn neon_vacge_v8i16_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vacge.v4i32.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vacge.v4i32.v16i8"]
+        pub fn neon_vacge_v4i32_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vacge.v4i32.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vacge.v4i32.v8i16"]
+        pub fn neon_vacge_v4i32_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vacge.v4i32.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vacge.v4i32.v4i32"]
+        pub fn neon_vacge_v4i32_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vacge.v4i32.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vacge.v4i32.v2i64"]
+        pub fn neon_vacge_v4i32_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vacge.v4i32.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vacge.v4i32.v4f32"]
+        pub fn neon_vacge_v4i32_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vacge.v4i32.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vacge.v4i32.v2f64"]
+        pub fn neon_vacge_v4i32_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vacge.v2i64.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vacge.v2i64.v16i8"]
+        pub fn neon_vacge_v2i64_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vacge.v2i64.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vacge.v2i64.v8i16"]
+        pub fn neon_vacge_v2i64_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vacge.v2i64.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vacge.v2i64.v4i32"]
+        pub fn neon_vacge_v2i64_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vacge.v2i64.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vacge.v2i64.v2i64"]
+        pub fn neon_vacge_v2i64_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vacge.v2i64.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vacge.v2i64.v4f32"]
+        pub fn neon_vacge_v2i64_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vacge.v2i64.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vacge.v2i64.v2f64"]
+        pub fn neon_vacge_v2i64_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vacge.v4f32.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vacge.v4f32.v16i8"]
+        pub fn neon_vacge_v4f32_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vacge.v4f32.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vacge.v4f32.v8i16"]
+        pub fn neon_vacge_v4f32_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vacge.v4f32.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vacge.v4f32.v4i32"]
+        pub fn neon_vacge_v4f32_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vacge.v4f32.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vacge.v4f32.v2i64"]
+        pub fn neon_vacge_v4f32_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vacge.v4f32.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vacge.v4f32.v4f32"]
+        pub fn neon_vacge_v4f32_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vacge.v4f32.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vacge.v4f32.v2f64"]
+        pub fn neon_vacge_v4f32_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vacge.v2f64.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vacge.v2f64.v16i8"]
+        pub fn neon_vacge_v2f64_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vacge.v2f64.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vacge.v2f64.v8i16"]
+        pub fn neon_vacge_v2f64_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vacge.v2f64.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vacge.v2f64.v4i32"]
+        pub fn neon_vacge_v2f64_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vacge.v2f64.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vacge.v2f64.v2i64"]
+        pub fn neon_vacge_v2f64_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vacge.v2f64.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vacge.v2f64.v4f32"]
+        pub fn neon_vacge_v2f64_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vacge.v2f64.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vacge.v2f64.v2f64"]
+        pub fn neon_vacge_v2f64_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vacgt.v16i8.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vacgt.v16i8.v16i8"]
+        pub fn neon_vacgt_v16i8_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vacgt.v16i8.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vacgt.v16i8.v8i16"]
+        pub fn neon_vacgt_v16i8_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vacgt.v16i8.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vacgt.v16i8.v4i32"]
+        pub fn neon_vacgt_v16i8_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vacgt.v16i8.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vacgt.v16i8.v2i64"]
+        pub fn neon_vacgt_v16i8_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vacgt.v16i8.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vacgt.v16i8.v4f32"]
+        pub fn neon_vacgt_v16i8_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vacgt.v16i8.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vacgt.v16i8.v2f64"]
+        pub fn neon_vacgt_v16i8_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vacgt.v8i16.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vacgt.v8i16.v16i8"]
+        pub fn neon_vacgt_v8i16_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vacgt.v8i16.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vacgt.v8i16.v8i16"]
+        pub fn neon_vacgt_v8i16_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vacgt.v8i16.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vacgt.v8i16.v4i32"]
+        pub fn neon_vacgt_v8i16_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vacgt.v8i16.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vacgt.v8i16.v2i64"]
+        pub fn neon_vacgt_v8i16_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vacgt.v8i16.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vacgt.v8i16.v4f32"]
+        pub fn neon_vacgt_v8i16_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vacgt.v8i16.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vacgt.v8i16.v2f64"]
+        pub fn neon_vacgt_v8i16_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vacgt.v4i32.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vacgt.v4i32.v16i8"]
+        pub fn neon_vacgt_v4i32_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vacgt.v4i32.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vacgt.v4i32.v8i16"]
+        pub fn neon_vacgt_v4i32_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vacgt.v4i32.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vacgt.v4i32.v4i32"]
+        pub fn neon_vacgt_v4i32_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vacgt.v4i32.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vacgt.v4i32.v2i64"]
+        pub fn neon_vacgt_v4i32_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vacgt.v4i32.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vacgt.v4i32.v4f32"]
+        pub fn neon_vacgt_v4i32_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vacgt.v4i32.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vacgt.v4i32.v2f64"]
+        pub fn neon_vacgt_v4i32_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vacgt.v2i64.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vacgt.v2i64.v16i8"]
+        pub fn neon_vacgt_v2i64_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vacgt.v2i64.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vacgt.v2i64.v8i16"]
+        pub fn neon_vacgt_v2i64_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vacgt.v2i64.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vacgt.v2i64.v4i32"]
+        pub fn neon_vacgt_v2i64_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vacgt.v2i64.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vacgt.v2i64.v2i64"]
+        pub fn neon_vacgt_v2i64_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vacgt.v2i64.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vacgt.v2i64.v4f32"]
+        pub fn neon_vacgt_v2i64_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vacgt.v2i64.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vacgt.v2i64.v2f64"]
+        pub fn neon_vacgt_v2i64_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vacgt.v4f32.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vacgt.v4f32.v16i8"]
+        pub fn neon_vacgt_v4f32_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vacgt.v4f32.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vacgt.v4f32.v8i16"]
+        pub fn neon_vacgt_v4f32_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vacgt.v4f32.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vacgt.v4f32.v4i32"]
+        pub fn neon_vacgt_v4f32_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vacgt.v4f32.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vacgt.v4f32.v2i64"]
+        pub fn neon_vacgt_v4f32_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vacgt.v4f32.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vacgt.v4f32.v4f32"]
+        pub fn neon_vacgt_v4f32_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vacgt.v4f32.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vacgt.v4f32.v2f64"]
+        pub fn neon_vacgt_v4f32_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vacgt.v2f64.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vacgt.v2f64.v16i8"]
+        pub fn neon_vacgt_v2f64_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vacgt.v2f64.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vacgt.v2f64.v8i16"]
+        pub fn neon_vacgt_v2f64_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vacgt.v2f64.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vacgt.v2f64.v4i32"]
+        pub fn neon_vacgt_v2f64_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vacgt.v2f64.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vacgt.v2f64.v2i64"]
+        pub fn neon_vacgt_v2f64_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vacgt.v2f64.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vacgt.v2f64.v4f32"]
+        pub fn neon_vacgt_v2f64_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vacgt.v2f64.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vacgt.v2f64.v2f64"]
+        pub fn neon_vacgt_v2f64_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vabds.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vabds.v16i8"]
+        pub fn neon_vabds_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vabds.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vabds.v8i16"]
+        pub fn neon_vabds_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vabds.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vabds.v4i32"]
+        pub fn neon_vabds_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vabds.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vabds.v2i64"]
+        pub fn neon_vabds_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vabds.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vabds.v4f32"]
+        pub fn neon_vabds_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vabds.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vabds.v2f64"]
+        pub fn neon_vabds_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vabdu.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vabdu.v16i8"]
+        pub fn neon_vabdu_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vabdu.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vabdu.v8i16"]
+        pub fn neon_vabdu_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vabdu.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vabdu.v4i32"]
+        pub fn neon_vabdu_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vabdu.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vabdu.v2i64"]
+        pub fn neon_vabdu_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vabdu.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vabdu.v4f32"]
+        pub fn neon_vabdu_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vabdu.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vabdu.v2f64"]
+        pub fn neon_vabdu_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vpadd.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vpadd.v16i8"]
+        pub fn neon_vpadd_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vpadd.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vpadd.v8i16"]
+        pub fn neon_vpadd_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vpadd.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vpadd.v4i32"]
+        pub fn neon_vpadd_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vpadd.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vpadd.v2i64"]
+        pub fn neon_vpadd_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vpadd.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vpadd.v4f32"]
+        pub fn neon_vpadd_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vpadd.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vpadd.v2f64"]
+        pub fn neon_vpadd_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vpaddls.v16i8.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vpaddls.v16i8.v16i8"]
+        pub fn neon_vpaddls_v16i8_v16i8(a: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vpaddls.v16i8.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vpaddls.v16i8.v8i16"]
+        pub fn neon_vpaddls_v16i8_v8i16(a: ::simdty::i16x8) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vpaddls.v16i8.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vpaddls.v16i8.v4i32"]
+        pub fn neon_vpaddls_v16i8_v4i32(a: ::simdty::i32x4) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vpaddls.v16i8.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vpaddls.v16i8.v2i64"]
+        pub fn neon_vpaddls_v16i8_v2i64(a: ::simdty::i64x2) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vpaddls.v16i8.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vpaddls.v16i8.v4f32"]
+        pub fn neon_vpaddls_v16i8_v4f32(a: ::simdty::f32x4) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vpaddls.v16i8.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vpaddls.v16i8.v2f64"]
+        pub fn neon_vpaddls_v16i8_v2f64(a: ::simdty::f64x2) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vpaddls.v8i16.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vpaddls.v8i16.v16i8"]
+        pub fn neon_vpaddls_v8i16_v16i8(a: ::simdty::i8x16) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vpaddls.v8i16.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vpaddls.v8i16.v8i16"]
+        pub fn neon_vpaddls_v8i16_v8i16(a: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vpaddls.v8i16.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vpaddls.v8i16.v4i32"]
+        pub fn neon_vpaddls_v8i16_v4i32(a: ::simdty::i32x4) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vpaddls.v8i16.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vpaddls.v8i16.v2i64"]
+        pub fn neon_vpaddls_v8i16_v2i64(a: ::simdty::i64x2) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vpaddls.v8i16.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vpaddls.v8i16.v4f32"]
+        pub fn neon_vpaddls_v8i16_v4f32(a: ::simdty::f32x4) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vpaddls.v8i16.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vpaddls.v8i16.v2f64"]
+        pub fn neon_vpaddls_v8i16_v2f64(a: ::simdty::f64x2) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vpaddls.v4i32.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vpaddls.v4i32.v16i8"]
+        pub fn neon_vpaddls_v4i32_v16i8(a: ::simdty::i8x16) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vpaddls.v4i32.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vpaddls.v4i32.v8i16"]
+        pub fn neon_vpaddls_v4i32_v8i16(a: ::simdty::i16x8) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vpaddls.v4i32.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vpaddls.v4i32.v4i32"]
+        pub fn neon_vpaddls_v4i32_v4i32(a: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vpaddls.v4i32.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vpaddls.v4i32.v2i64"]
+        pub fn neon_vpaddls_v4i32_v2i64(a: ::simdty::i64x2) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vpaddls.v4i32.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vpaddls.v4i32.v4f32"]
+        pub fn neon_vpaddls_v4i32_v4f32(a: ::simdty::f32x4) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vpaddls.v4i32.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vpaddls.v4i32.v2f64"]
+        pub fn neon_vpaddls_v4i32_v2f64(a: ::simdty::f64x2) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vpaddls.v2i64.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vpaddls.v2i64.v16i8"]
+        pub fn neon_vpaddls_v2i64_v16i8(a: ::simdty::i8x16) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vpaddls.v2i64.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vpaddls.v2i64.v8i16"]
+        pub fn neon_vpaddls_v2i64_v8i16(a: ::simdty::i16x8) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vpaddls.v2i64.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vpaddls.v2i64.v4i32"]
+        pub fn neon_vpaddls_v2i64_v4i32(a: ::simdty::i32x4) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vpaddls.v2i64.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vpaddls.v2i64.v2i64"]
+        pub fn neon_vpaddls_v2i64_v2i64(a: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vpaddls.v2i64.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vpaddls.v2i64.v4f32"]
+        pub fn neon_vpaddls_v2i64_v4f32(a: ::simdty::f32x4) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vpaddls.v2i64.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vpaddls.v2i64.v2f64"]
+        pub fn neon_vpaddls_v2i64_v2f64(a: ::simdty::f64x2) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vpaddls.v4f32.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vpaddls.v4f32.v16i8"]
+        pub fn neon_vpaddls_v4f32_v16i8(a: ::simdty::i8x16) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vpaddls.v4f32.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vpaddls.v4f32.v8i16"]
+        pub fn neon_vpaddls_v4f32_v8i16(a: ::simdty::i16x8) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vpaddls.v4f32.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vpaddls.v4f32.v4i32"]
+        pub fn neon_vpaddls_v4f32_v4i32(a: ::simdty::i32x4) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vpaddls.v4f32.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vpaddls.v4f32.v2i64"]
+        pub fn neon_vpaddls_v4f32_v2i64(a: ::simdty::i64x2) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vpaddls.v4f32.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vpaddls.v4f32.v4f32"]
+        pub fn neon_vpaddls_v4f32_v4f32(a: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vpaddls.v4f32.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vpaddls.v4f32.v2f64"]
+        pub fn neon_vpaddls_v4f32_v2f64(a: ::simdty::f64x2) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vpaddls.v2f64.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vpaddls.v2f64.v16i8"]
+        pub fn neon_vpaddls_v2f64_v16i8(a: ::simdty::i8x16) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vpaddls.v2f64.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vpaddls.v2f64.v8i16"]
+        pub fn neon_vpaddls_v2f64_v8i16(a: ::simdty::i16x8) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vpaddls.v2f64.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vpaddls.v2f64.v4i32"]
+        pub fn neon_vpaddls_v2f64_v4i32(a: ::simdty::i32x4) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vpaddls.v2f64.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vpaddls.v2f64.v2i64"]
+        pub fn neon_vpaddls_v2f64_v2i64(a: ::simdty::i64x2) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vpaddls.v2f64.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vpaddls.v2f64.v4f32"]
+        pub fn neon_vpaddls_v2f64_v4f32(a: ::simdty::f32x4) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vpaddls.v2f64.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vpaddls.v2f64.v2f64"]
+        pub fn neon_vpaddls_v2f64_v2f64(a: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vpaddlu.v16i8.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vpaddlu.v16i8.v16i8"]
+        pub fn neon_vpaddlu_v16i8_v16i8(a: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vpaddlu.v16i8.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vpaddlu.v16i8.v8i16"]
+        pub fn neon_vpaddlu_v16i8_v8i16(a: ::simdty::i16x8) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vpaddlu.v16i8.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vpaddlu.v16i8.v4i32"]
+        pub fn neon_vpaddlu_v16i8_v4i32(a: ::simdty::i32x4) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vpaddlu.v16i8.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vpaddlu.v16i8.v2i64"]
+        pub fn neon_vpaddlu_v16i8_v2i64(a: ::simdty::i64x2) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vpaddlu.v16i8.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vpaddlu.v16i8.v4f32"]
+        pub fn neon_vpaddlu_v16i8_v4f32(a: ::simdty::f32x4) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vpaddlu.v16i8.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vpaddlu.v16i8.v2f64"]
+        pub fn neon_vpaddlu_v16i8_v2f64(a: ::simdty::f64x2) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vpaddlu.v8i16.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vpaddlu.v8i16.v16i8"]
+        pub fn neon_vpaddlu_v8i16_v16i8(a: ::simdty::i8x16) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vpaddlu.v8i16.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vpaddlu.v8i16.v8i16"]
+        pub fn neon_vpaddlu_v8i16_v8i16(a: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vpaddlu.v8i16.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vpaddlu.v8i16.v4i32"]
+        pub fn neon_vpaddlu_v8i16_v4i32(a: ::simdty::i32x4) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vpaddlu.v8i16.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vpaddlu.v8i16.v2i64"]
+        pub fn neon_vpaddlu_v8i16_v2i64(a: ::simdty::i64x2) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vpaddlu.v8i16.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vpaddlu.v8i16.v4f32"]
+        pub fn neon_vpaddlu_v8i16_v4f32(a: ::simdty::f32x4) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vpaddlu.v8i16.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vpaddlu.v8i16.v2f64"]
+        pub fn neon_vpaddlu_v8i16_v2f64(a: ::simdty::f64x2) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vpaddlu.v4i32.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vpaddlu.v4i32.v16i8"]
+        pub fn neon_vpaddlu_v4i32_v16i8(a: ::simdty::i8x16) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vpaddlu.v4i32.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vpaddlu.v4i32.v8i16"]
+        pub fn neon_vpaddlu_v4i32_v8i16(a: ::simdty::i16x8) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vpaddlu.v4i32.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vpaddlu.v4i32.v4i32"]
+        pub fn neon_vpaddlu_v4i32_v4i32(a: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vpaddlu.v4i32.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vpaddlu.v4i32.v2i64"]
+        pub fn neon_vpaddlu_v4i32_v2i64(a: ::simdty::i64x2) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vpaddlu.v4i32.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vpaddlu.v4i32.v4f32"]
+        pub fn neon_vpaddlu_v4i32_v4f32(a: ::simdty::f32x4) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vpaddlu.v4i32.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vpaddlu.v4i32.v2f64"]
+        pub fn neon_vpaddlu_v4i32_v2f64(a: ::simdty::f64x2) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vpaddlu.v2i64.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vpaddlu.v2i64.v16i8"]
+        pub fn neon_vpaddlu_v2i64_v16i8(a: ::simdty::i8x16) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vpaddlu.v2i64.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vpaddlu.v2i64.v8i16"]
+        pub fn neon_vpaddlu_v2i64_v8i16(a: ::simdty::i16x8) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vpaddlu.v2i64.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vpaddlu.v2i64.v4i32"]
+        pub fn neon_vpaddlu_v2i64_v4i32(a: ::simdty::i32x4) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vpaddlu.v2i64.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vpaddlu.v2i64.v2i64"]
+        pub fn neon_vpaddlu_v2i64_v2i64(a: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vpaddlu.v2i64.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vpaddlu.v2i64.v4f32"]
+        pub fn neon_vpaddlu_v2i64_v4f32(a: ::simdty::f32x4) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vpaddlu.v2i64.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vpaddlu.v2i64.v2f64"]
+        pub fn neon_vpaddlu_v2i64_v2f64(a: ::simdty::f64x2) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vpaddlu.v4f32.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vpaddlu.v4f32.v16i8"]
+        pub fn neon_vpaddlu_v4f32_v16i8(a: ::simdty::i8x16) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vpaddlu.v4f32.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vpaddlu.v4f32.v8i16"]
+        pub fn neon_vpaddlu_v4f32_v8i16(a: ::simdty::i16x8) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vpaddlu.v4f32.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vpaddlu.v4f32.v4i32"]
+        pub fn neon_vpaddlu_v4f32_v4i32(a: ::simdty::i32x4) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vpaddlu.v4f32.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vpaddlu.v4f32.v2i64"]
+        pub fn neon_vpaddlu_v4f32_v2i64(a: ::simdty::i64x2) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vpaddlu.v4f32.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vpaddlu.v4f32.v4f32"]
+        pub fn neon_vpaddlu_v4f32_v4f32(a: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vpaddlu.v4f32.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vpaddlu.v4f32.v2f64"]
+        pub fn neon_vpaddlu_v4f32_v2f64(a: ::simdty::f64x2) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vpaddlu.v2f64.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vpaddlu.v2f64.v16i8"]
+        pub fn neon_vpaddlu_v2f64_v16i8(a: ::simdty::i8x16) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vpaddlu.v2f64.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vpaddlu.v2f64.v8i16"]
+        pub fn neon_vpaddlu_v2f64_v8i16(a: ::simdty::i16x8) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vpaddlu.v2f64.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vpaddlu.v2f64.v4i32"]
+        pub fn neon_vpaddlu_v2f64_v4i32(a: ::simdty::i32x4) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vpaddlu.v2f64.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vpaddlu.v2f64.v2i64"]
+        pub fn neon_vpaddlu_v2f64_v2i64(a: ::simdty::i64x2) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vpaddlu.v2f64.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vpaddlu.v2f64.v4f32"]
+        pub fn neon_vpaddlu_v2f64_v4f32(a: ::simdty::f32x4) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vpaddlu.v2f64.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vpaddlu.v2f64.v2f64"]
+        pub fn neon_vpaddlu_v2f64_v2f64(a: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vpadals.v16i8.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vpadals.v16i8.v16i8"]
+        pub fn neon_vpadals_v16i8_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vpadals.v16i8.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vpadals.v16i8.v8i16"]
+        pub fn neon_vpadals_v16i8_v8i16(a: ::simdty::i8x16, b: ::simdty::i16x8) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vpadals.v16i8.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vpadals.v16i8.v4i32"]
+        pub fn neon_vpadals_v16i8_v4i32(a: ::simdty::i8x16, b: ::simdty::i32x4) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vpadals.v16i8.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vpadals.v16i8.v2i64"]
+        pub fn neon_vpadals_v16i8_v2i64(a: ::simdty::i8x16, b: ::simdty::i64x2) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vpadals.v16i8.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vpadals.v16i8.v4f32"]
+        pub fn neon_vpadals_v16i8_v4f32(a: ::simdty::i8x16, b: ::simdty::f32x4) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vpadals.v16i8.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vpadals.v16i8.v2f64"]
+        pub fn neon_vpadals_v16i8_v2f64(a: ::simdty::i8x16, b: ::simdty::f64x2) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vpadals.v8i16.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vpadals.v8i16.v16i8"]
+        pub fn neon_vpadals_v8i16_v16i8(a: ::simdty::i16x8, b: ::simdty::i8x16) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vpadals.v8i16.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vpadals.v8i16.v8i16"]
+        pub fn neon_vpadals_v8i16_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vpadals.v8i16.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vpadals.v8i16.v4i32"]
+        pub fn neon_vpadals_v8i16_v4i32(a: ::simdty::i16x8, b: ::simdty::i32x4) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vpadals.v8i16.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vpadals.v8i16.v2i64"]
+        pub fn neon_vpadals_v8i16_v2i64(a: ::simdty::i16x8, b: ::simdty::i64x2) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vpadals.v8i16.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vpadals.v8i16.v4f32"]
+        pub fn neon_vpadals_v8i16_v4f32(a: ::simdty::i16x8, b: ::simdty::f32x4) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vpadals.v8i16.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vpadals.v8i16.v2f64"]
+        pub fn neon_vpadals_v8i16_v2f64(a: ::simdty::i16x8, b: ::simdty::f64x2) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vpadals.v4i32.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vpadals.v4i32.v16i8"]
+        pub fn neon_vpadals_v4i32_v16i8(a: ::simdty::i32x4, b: ::simdty::i8x16) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vpadals.v4i32.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vpadals.v4i32.v8i16"]
+        pub fn neon_vpadals_v4i32_v8i16(a: ::simdty::i32x4, b: ::simdty::i16x8) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vpadals.v4i32.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vpadals.v4i32.v4i32"]
+        pub fn neon_vpadals_v4i32_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vpadals.v4i32.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vpadals.v4i32.v2i64"]
+        pub fn neon_vpadals_v4i32_v2i64(a: ::simdty::i32x4, b: ::simdty::i64x2) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vpadals.v4i32.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vpadals.v4i32.v4f32"]
+        pub fn neon_vpadals_v4i32_v4f32(a: ::simdty::i32x4, b: ::simdty::f32x4) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vpadals.v4i32.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vpadals.v4i32.v2f64"]
+        pub fn neon_vpadals_v4i32_v2f64(a: ::simdty::i32x4, b: ::simdty::f64x2) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vpadals.v2i64.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vpadals.v2i64.v16i8"]
+        pub fn neon_vpadals_v2i64_v16i8(a: ::simdty::i64x2, b: ::simdty::i8x16) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vpadals.v2i64.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vpadals.v2i64.v8i16"]
+        pub fn neon_vpadals_v2i64_v8i16(a: ::simdty::i64x2, b: ::simdty::i16x8) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vpadals.v2i64.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vpadals.v2i64.v4i32"]
+        pub fn neon_vpadals_v2i64_v4i32(a: ::simdty::i64x2, b: ::simdty::i32x4) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vpadals.v2i64.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vpadals.v2i64.v2i64"]
+        pub fn neon_vpadals_v2i64_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vpadals.v2i64.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vpadals.v2i64.v4f32"]
+        pub fn neon_vpadals_v2i64_v4f32(a: ::simdty::i64x2, b: ::simdty::f32x4) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vpadals.v2i64.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vpadals.v2i64.v2f64"]
+        pub fn neon_vpadals_v2i64_v2f64(a: ::simdty::i64x2, b: ::simdty::f64x2) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vpadals.v4f32.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vpadals.v4f32.v16i8"]
+        pub fn neon_vpadals_v4f32_v16i8(a: ::simdty::f32x4, b: ::simdty::i8x16) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vpadals.v4f32.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vpadals.v4f32.v8i16"]
+        pub fn neon_vpadals_v4f32_v8i16(a: ::simdty::f32x4, b: ::simdty::i16x8) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vpadals.v4f32.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vpadals.v4f32.v4i32"]
+        pub fn neon_vpadals_v4f32_v4i32(a: ::simdty::f32x4, b: ::simdty::i32x4) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vpadals.v4f32.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vpadals.v4f32.v2i64"]
+        pub fn neon_vpadals_v4f32_v2i64(a: ::simdty::f32x4, b: ::simdty::i64x2) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vpadals.v4f32.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vpadals.v4f32.v4f32"]
+        pub fn neon_vpadals_v4f32_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vpadals.v4f32.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vpadals.v4f32.v2f64"]
+        pub fn neon_vpadals_v4f32_v2f64(a: ::simdty::f32x4, b: ::simdty::f64x2) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vpadals.v2f64.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vpadals.v2f64.v16i8"]
+        pub fn neon_vpadals_v2f64_v16i8(a: ::simdty::f64x2, b: ::simdty::i8x16) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vpadals.v2f64.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vpadals.v2f64.v8i16"]
+        pub fn neon_vpadals_v2f64_v8i16(a: ::simdty::f64x2, b: ::simdty::i16x8) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vpadals.v2f64.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vpadals.v2f64.v4i32"]
+        pub fn neon_vpadals_v2f64_v4i32(a: ::simdty::f64x2, b: ::simdty::i32x4) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vpadals.v2f64.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vpadals.v2f64.v2i64"]
+        pub fn neon_vpadals_v2f64_v2i64(a: ::simdty::f64x2, b: ::simdty::i64x2) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vpadals.v2f64.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vpadals.v2f64.v4f32"]
+        pub fn neon_vpadals_v2f64_v4f32(a: ::simdty::f64x2, b: ::simdty::f32x4) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vpadals.v2f64.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vpadals.v2f64.v2f64"]
+        pub fn neon_vpadals_v2f64_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vpadalu.v16i8.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vpadalu.v16i8.v16i8"]
+        pub fn neon_vpadalu_v16i8_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vpadalu.v16i8.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vpadalu.v16i8.v8i16"]
+        pub fn neon_vpadalu_v16i8_v8i16(a: ::simdty::i8x16, b: ::simdty::i16x8) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vpadalu.v16i8.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vpadalu.v16i8.v4i32"]
+        pub fn neon_vpadalu_v16i8_v4i32(a: ::simdty::i8x16, b: ::simdty::i32x4) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vpadalu.v16i8.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vpadalu.v16i8.v2i64"]
+        pub fn neon_vpadalu_v16i8_v2i64(a: ::simdty::i8x16, b: ::simdty::i64x2) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vpadalu.v16i8.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vpadalu.v16i8.v4f32"]
+        pub fn neon_vpadalu_v16i8_v4f32(a: ::simdty::i8x16, b: ::simdty::f32x4) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vpadalu.v16i8.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vpadalu.v16i8.v2f64"]
+        pub fn neon_vpadalu_v16i8_v2f64(a: ::simdty::i8x16, b: ::simdty::f64x2) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vpadalu.v8i16.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vpadalu.v8i16.v16i8"]
+        pub fn neon_vpadalu_v8i16_v16i8(a: ::simdty::i16x8, b: ::simdty::i8x16) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vpadalu.v8i16.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vpadalu.v8i16.v8i16"]
+        pub fn neon_vpadalu_v8i16_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vpadalu.v8i16.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vpadalu.v8i16.v4i32"]
+        pub fn neon_vpadalu_v8i16_v4i32(a: ::simdty::i16x8, b: ::simdty::i32x4) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vpadalu.v8i16.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vpadalu.v8i16.v2i64"]
+        pub fn neon_vpadalu_v8i16_v2i64(a: ::simdty::i16x8, b: ::simdty::i64x2) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vpadalu.v8i16.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vpadalu.v8i16.v4f32"]
+        pub fn neon_vpadalu_v8i16_v4f32(a: ::simdty::i16x8, b: ::simdty::f32x4) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vpadalu.v8i16.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vpadalu.v8i16.v2f64"]
+        pub fn neon_vpadalu_v8i16_v2f64(a: ::simdty::i16x8, b: ::simdty::f64x2) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vpadalu.v4i32.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vpadalu.v4i32.v16i8"]
+        pub fn neon_vpadalu_v4i32_v16i8(a: ::simdty::i32x4, b: ::simdty::i8x16) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vpadalu.v4i32.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vpadalu.v4i32.v8i16"]
+        pub fn neon_vpadalu_v4i32_v8i16(a: ::simdty::i32x4, b: ::simdty::i16x8) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vpadalu.v4i32.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vpadalu.v4i32.v4i32"]
+        pub fn neon_vpadalu_v4i32_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vpadalu.v4i32.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vpadalu.v4i32.v2i64"]
+        pub fn neon_vpadalu_v4i32_v2i64(a: ::simdty::i32x4, b: ::simdty::i64x2) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vpadalu.v4i32.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vpadalu.v4i32.v4f32"]
+        pub fn neon_vpadalu_v4i32_v4f32(a: ::simdty::i32x4, b: ::simdty::f32x4) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vpadalu.v4i32.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vpadalu.v4i32.v2f64"]
+        pub fn neon_vpadalu_v4i32_v2f64(a: ::simdty::i32x4, b: ::simdty::f64x2) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vpadalu.v2i64.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vpadalu.v2i64.v16i8"]
+        pub fn neon_vpadalu_v2i64_v16i8(a: ::simdty::i64x2, b: ::simdty::i8x16) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vpadalu.v2i64.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vpadalu.v2i64.v8i16"]
+        pub fn neon_vpadalu_v2i64_v8i16(a: ::simdty::i64x2, b: ::simdty::i16x8) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vpadalu.v2i64.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vpadalu.v2i64.v4i32"]
+        pub fn neon_vpadalu_v2i64_v4i32(a: ::simdty::i64x2, b: ::simdty::i32x4) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vpadalu.v2i64.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vpadalu.v2i64.v2i64"]
+        pub fn neon_vpadalu_v2i64_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vpadalu.v2i64.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vpadalu.v2i64.v4f32"]
+        pub fn neon_vpadalu_v2i64_v4f32(a: ::simdty::i64x2, b: ::simdty::f32x4) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vpadalu.v2i64.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vpadalu.v2i64.v2f64"]
+        pub fn neon_vpadalu_v2i64_v2f64(a: ::simdty::i64x2, b: ::simdty::f64x2) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vpadalu.v4f32.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vpadalu.v4f32.v16i8"]
+        pub fn neon_vpadalu_v4f32_v16i8(a: ::simdty::f32x4, b: ::simdty::i8x16) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vpadalu.v4f32.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vpadalu.v4f32.v8i16"]
+        pub fn neon_vpadalu_v4f32_v8i16(a: ::simdty::f32x4, b: ::simdty::i16x8) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vpadalu.v4f32.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vpadalu.v4f32.v4i32"]
+        pub fn neon_vpadalu_v4f32_v4i32(a: ::simdty::f32x4, b: ::simdty::i32x4) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vpadalu.v4f32.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vpadalu.v4f32.v2i64"]
+        pub fn neon_vpadalu_v4f32_v2i64(a: ::simdty::f32x4, b: ::simdty::i64x2) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vpadalu.v4f32.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vpadalu.v4f32.v4f32"]
+        pub fn neon_vpadalu_v4f32_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vpadalu.v4f32.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vpadalu.v4f32.v2f64"]
+        pub fn neon_vpadalu_v4f32_v2f64(a: ::simdty::f32x4, b: ::simdty::f64x2) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vpadalu.v2f64.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vpadalu.v2f64.v16i8"]
+        pub fn neon_vpadalu_v2f64_v16i8(a: ::simdty::f64x2, b: ::simdty::i8x16) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vpadalu.v2f64.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vpadalu.v2f64.v8i16"]
+        pub fn neon_vpadalu_v2f64_v8i16(a: ::simdty::f64x2, b: ::simdty::i16x8) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vpadalu.v2f64.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vpadalu.v2f64.v4i32"]
+        pub fn neon_vpadalu_v2f64_v4i32(a: ::simdty::f64x2, b: ::simdty::i32x4) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vpadalu.v2f64.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vpadalu.v2f64.v2i64"]
+        pub fn neon_vpadalu_v2f64_v2i64(a: ::simdty::f64x2, b: ::simdty::i64x2) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vpadalu.v2f64.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vpadalu.v2f64.v4f32"]
+        pub fn neon_vpadalu_v2f64_v4f32(a: ::simdty::f64x2, b: ::simdty::f32x4) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vpadalu.v2f64.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vpadalu.v2f64.v2f64"]
+        pub fn neon_vpadalu_v2f64_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vpmaxs.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vpmaxs.v16i8"]
+        pub fn neon_vpmaxs_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vpmaxs.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vpmaxs.v8i16"]
+        pub fn neon_vpmaxs_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vpmaxs.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vpmaxs.v4i32"]
+        pub fn neon_vpmaxs_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vpmaxs.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vpmaxs.v2i64"]
+        pub fn neon_vpmaxs_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vpmaxs.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vpmaxs.v4f32"]
+        pub fn neon_vpmaxs_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vpmaxs.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vpmaxs.v2f64"]
+        pub fn neon_vpmaxs_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vpmaxu.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vpmaxu.v16i8"]
+        pub fn neon_vpmaxu_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vpmaxu.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vpmaxu.v8i16"]
+        pub fn neon_vpmaxu_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vpmaxu.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vpmaxu.v4i32"]
+        pub fn neon_vpmaxu_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vpmaxu.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vpmaxu.v2i64"]
+        pub fn neon_vpmaxu_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vpmaxu.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vpmaxu.v4f32"]
+        pub fn neon_vpmaxu_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vpmaxu.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vpmaxu.v2f64"]
+        pub fn neon_vpmaxu_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vpmins.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vpmins.v16i8"]
+        pub fn neon_vpmins_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vpmins.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vpmins.v8i16"]
+        pub fn neon_vpmins_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vpmins.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vpmins.v4i32"]
+        pub fn neon_vpmins_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vpmins.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vpmins.v2i64"]
+        pub fn neon_vpmins_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vpmins.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vpmins.v4f32"]
+        pub fn neon_vpmins_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vpmins.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vpmins.v2f64"]
+        pub fn neon_vpmins_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vpminu.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vpminu.v16i8"]
+        pub fn neon_vpminu_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vpminu.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vpminu.v8i16"]
+        pub fn neon_vpminu_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vpminu.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vpminu.v4i32"]
+        pub fn neon_vpminu_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vpminu.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vpminu.v2i64"]
+        pub fn neon_vpminu_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vpminu.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vpminu.v4f32"]
+        pub fn neon_vpminu_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vpminu.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vpminu.v2f64"]
+        pub fn neon_vpminu_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vshifts.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vshifts.v16i8"]
+        pub fn neon_vshifts_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vshifts.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vshifts.v8i16"]
+        pub fn neon_vshifts_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vshifts.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vshifts.v4i32"]
+        pub fn neon_vshifts_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vshifts.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vshifts.v2i64"]
+        pub fn neon_vshifts_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vshifts.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vshifts.v4f32"]
+        pub fn neon_vshifts_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vshifts.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vshifts.v2f64"]
+        pub fn neon_vshifts_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vshiftu.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vshiftu.v16i8"]
+        pub fn neon_vshiftu_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vshiftu.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vshiftu.v8i16"]
+        pub fn neon_vshiftu_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vshiftu.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vshiftu.v4i32"]
+        pub fn neon_vshiftu_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vshiftu.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vshiftu.v2i64"]
+        pub fn neon_vshiftu_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vshiftu.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vshiftu.v4f32"]
+        pub fn neon_vshiftu_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vshiftu.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vshiftu.v2f64"]
+        pub fn neon_vshiftu_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vrshifts.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vrshifts.v16i8"]
+        pub fn neon_vrshifts_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vrshifts.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vrshifts.v8i16"]
+        pub fn neon_vrshifts_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vrshifts.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vrshifts.v4i32"]
+        pub fn neon_vrshifts_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vrshifts.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vrshifts.v2i64"]
+        pub fn neon_vrshifts_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vrshifts.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vrshifts.v4f32"]
+        pub fn neon_vrshifts_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vrshifts.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vrshifts.v2f64"]
+        pub fn neon_vrshifts_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vrshiftu.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vrshiftu.v16i8"]
+        pub fn neon_vrshiftu_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vrshiftu.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vrshiftu.v8i16"]
+        pub fn neon_vrshiftu_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vrshiftu.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vrshiftu.v4i32"]
+        pub fn neon_vrshiftu_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vrshiftu.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vrshiftu.v2i64"]
+        pub fn neon_vrshiftu_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vrshiftu.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vrshiftu.v4f32"]
+        pub fn neon_vrshiftu_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vrshiftu.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vrshiftu.v2f64"]
+        pub fn neon_vrshiftu_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vqshifts.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vqshifts.v16i8"]
+        pub fn neon_vqshifts_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vqshifts.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vqshifts.v8i16"]
+        pub fn neon_vqshifts_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vqshifts.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vqshifts.v4i32"]
+        pub fn neon_vqshifts_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vqshifts.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vqshifts.v2i64"]
+        pub fn neon_vqshifts_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vqshifts.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vqshifts.v4f32"]
+        pub fn neon_vqshifts_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vqshifts.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vqshifts.v2f64"]
+        pub fn neon_vqshifts_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vqshiftu.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vqshiftu.v16i8"]
+        pub fn neon_vqshiftu_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vqshiftu.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vqshiftu.v8i16"]
+        pub fn neon_vqshiftu_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vqshiftu.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vqshiftu.v4i32"]
+        pub fn neon_vqshiftu_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vqshiftu.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vqshiftu.v2i64"]
+        pub fn neon_vqshiftu_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vqshiftu.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vqshiftu.v4f32"]
+        pub fn neon_vqshiftu_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vqshiftu.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vqshiftu.v2f64"]
+        pub fn neon_vqshiftu_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vqshiftsu.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vqshiftsu.v16i8"]
+        pub fn neon_vqshiftsu_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vqshiftsu.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vqshiftsu.v8i16"]
+        pub fn neon_vqshiftsu_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vqshiftsu.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vqshiftsu.v4i32"]
+        pub fn neon_vqshiftsu_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vqshiftsu.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vqshiftsu.v2i64"]
+        pub fn neon_vqshiftsu_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vqshiftsu.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vqshiftsu.v4f32"]
+        pub fn neon_vqshiftsu_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vqshiftsu.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vqshiftsu.v2f64"]
+        pub fn neon_vqshiftsu_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vqrshifts.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vqrshifts.v16i8"]
+        pub fn neon_vqrshifts_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vqrshifts.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vqrshifts.v8i16"]
+        pub fn neon_vqrshifts_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vqrshifts.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vqrshifts.v4i32"]
+        pub fn neon_vqrshifts_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vqrshifts.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vqrshifts.v2i64"]
+        pub fn neon_vqrshifts_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vqrshifts.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vqrshifts.v4f32"]
+        pub fn neon_vqrshifts_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vqrshifts.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vqrshifts.v2f64"]
+        pub fn neon_vqrshifts_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vqrshiftu.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vqrshiftu.v16i8"]
+        pub fn neon_vqrshiftu_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vqrshiftu.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vqrshiftu.v8i16"]
+        pub fn neon_vqrshiftu_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vqrshiftu.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vqrshiftu.v4i32"]
+        pub fn neon_vqrshiftu_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vqrshiftu.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vqrshiftu.v2i64"]
+        pub fn neon_vqrshiftu_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vqrshiftu.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vqrshiftu.v4f32"]
+        pub fn neon_vqrshiftu_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vqrshiftu.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vqrshiftu.v2f64"]
+        pub fn neon_vqrshiftu_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vshiftins.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vshiftins.v16i8"]
+        pub fn neon_vshiftins_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16, c: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vshiftins.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vshiftins.v8i16"]
+        pub fn neon_vshiftins_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8, c: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vshiftins.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vshiftins.v4i32"]
+        pub fn neon_vshiftins_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4, c: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vshiftins.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vshiftins.v2i64"]
+        pub fn neon_vshiftins_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2, c: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vshiftins.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vshiftins.v4f32"]
+        pub fn neon_vshiftins_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4, c: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vshiftins.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vshiftins.v2f64"]
+        pub fn neon_vshiftins_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2, c: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vabs.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vabs.v16i8"]
+        pub fn neon_vabs_v16i8(a: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vabs.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vabs.v8i16"]
+        pub fn neon_vabs_v8i16(a: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vabs.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vabs.v4i32"]
+        pub fn neon_vabs_v4i32(a: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vabs.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vabs.v2i64"]
+        pub fn neon_vabs_v2i64(a: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vabs.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vabs.v4f32"]
+        pub fn neon_vabs_v4f32(a: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vabs.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vabs.v2f64"]
+        pub fn neon_vabs_v2f64(a: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vqabs.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vqabs.v16i8"]
+        pub fn neon_vqabs_v16i8(a: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vqabs.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vqabs.v8i16"]
+        pub fn neon_vqabs_v8i16(a: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vqabs.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vqabs.v4i32"]
+        pub fn neon_vqabs_v4i32(a: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vqabs.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vqabs.v2i64"]
+        pub fn neon_vqabs_v2i64(a: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vqabs.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vqabs.v4f32"]
+        pub fn neon_vqabs_v4f32(a: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vqabs.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vqabs.v2f64"]
+        pub fn neon_vqabs_v2f64(a: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vqneg.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vqneg.v16i8"]
+        pub fn neon_vqneg_v16i8(a: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vqneg.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vqneg.v8i16"]
+        pub fn neon_vqneg_v8i16(a: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vqneg.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vqneg.v4i32"]
+        pub fn neon_vqneg_v4i32(a: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vqneg.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vqneg.v2i64"]
+        pub fn neon_vqneg_v2i64(a: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vqneg.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vqneg.v4f32"]
+        pub fn neon_vqneg_v4f32(a: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vqneg.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vqneg.v2f64"]
+        pub fn neon_vqneg_v2f64(a: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vcls.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vcls.v16i8"]
+        pub fn neon_vcls_v16i8(a: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vcls.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vcls.v8i16"]
+        pub fn neon_vcls_v8i16(a: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vcls.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcls.v4i32"]
+        pub fn neon_vcls_v4i32(a: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vcls.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcls.v2i64"]
+        pub fn neon_vcls_v2i64(a: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vcls.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcls.v4f32"]
+        pub fn neon_vcls_v4f32(a: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vcls.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcls.v2f64"]
+        pub fn neon_vcls_v2f64(a: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vclz.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vclz.v16i8"]
+        pub fn neon_vclz_v16i8(a: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vclz.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vclz.v8i16"]
+        pub fn neon_vclz_v8i16(a: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vclz.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vclz.v4i32"]
+        pub fn neon_vclz_v4i32(a: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vclz.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vclz.v2i64"]
+        pub fn neon_vclz_v2i64(a: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vclz.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vclz.v4f32"]
+        pub fn neon_vclz_v4f32(a: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vclz.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vclz.v2f64"]
+        pub fn neon_vclz_v2f64(a: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vcnt.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vcnt.v16i8"]
+        pub fn neon_vcnt_v16i8(a: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vcnt.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vcnt.v8i16"]
+        pub fn neon_vcnt_v8i16(a: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vcnt.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcnt.v4i32"]
+        pub fn neon_vcnt_v4i32(a: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vcnt.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcnt.v2i64"]
+        pub fn neon_vcnt_v2i64(a: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vcnt.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcnt.v4f32"]
+        pub fn neon_vcnt_v4f32(a: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vcnt.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcnt.v2f64"]
+        pub fn neon_vcnt_v2f64(a: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vrecpe.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vrecpe.v16i8"]
+        pub fn neon_vrecpe_v16i8(a: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vrecpe.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vrecpe.v8i16"]
+        pub fn neon_vrecpe_v8i16(a: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vrecpe.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vrecpe.v4i32"]
+        pub fn neon_vrecpe_v4i32(a: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vrecpe.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vrecpe.v2i64"]
+        pub fn neon_vrecpe_v2i64(a: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vrecpe.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vrecpe.v4f32"]
+        pub fn neon_vrecpe_v4f32(a: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vrecpe.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vrecpe.v2f64"]
+        pub fn neon_vrecpe_v2f64(a: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vrsqrte.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vrsqrte.v16i8"]
+        pub fn neon_vrsqrte_v16i8(a: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vrsqrte.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vrsqrte.v8i16"]
+        pub fn neon_vrsqrte_v8i16(a: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vrsqrte.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vrsqrte.v4i32"]
+        pub fn neon_vrsqrte_v4i32(a: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vrsqrte.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vrsqrte.v2i64"]
+        pub fn neon_vrsqrte_v2i64(a: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vrsqrte.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vrsqrte.v4f32"]
+        pub fn neon_vrsqrte_v4f32(a: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vrsqrte.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vrsqrte.v2f64"]
+        pub fn neon_vrsqrte_v2f64(a: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vcvtau.v16i8.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtau.v16i8.v16i8"]
+        pub fn neon_vcvtau_v16i8_v16i8(a: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vcvtau.v16i8.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtau.v16i8.v8i16"]
+        pub fn neon_vcvtau_v16i8_v8i16(a: ::simdty::i16x8) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vcvtau.v16i8.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtau.v16i8.v4i32"]
+        pub fn neon_vcvtau_v16i8_v4i32(a: ::simdty::i32x4) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vcvtau.v16i8.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtau.v16i8.v2i64"]
+        pub fn neon_vcvtau_v16i8_v2i64(a: ::simdty::i64x2) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vcvtau.v16i8.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtau.v16i8.v4f32"]
+        pub fn neon_vcvtau_v16i8_v4f32(a: ::simdty::f32x4) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vcvtau.v16i8.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtau.v16i8.v2f64"]
+        pub fn neon_vcvtau_v16i8_v2f64(a: ::simdty::f64x2) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vcvtau.v8i16.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtau.v8i16.v16i8"]
+        pub fn neon_vcvtau_v8i16_v16i8(a: ::simdty::i8x16) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vcvtau.v8i16.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtau.v8i16.v8i16"]
+        pub fn neon_vcvtau_v8i16_v8i16(a: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vcvtau.v8i16.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtau.v8i16.v4i32"]
+        pub fn neon_vcvtau_v8i16_v4i32(a: ::simdty::i32x4) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vcvtau.v8i16.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtau.v8i16.v2i64"]
+        pub fn neon_vcvtau_v8i16_v2i64(a: ::simdty::i64x2) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vcvtau.v8i16.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtau.v8i16.v4f32"]
+        pub fn neon_vcvtau_v8i16_v4f32(a: ::simdty::f32x4) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vcvtau.v8i16.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtau.v8i16.v2f64"]
+        pub fn neon_vcvtau_v8i16_v2f64(a: ::simdty::f64x2) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vcvtau.v4i32.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtau.v4i32.v16i8"]
+        pub fn neon_vcvtau_v4i32_v16i8(a: ::simdty::i8x16) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vcvtau.v4i32.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtau.v4i32.v8i16"]
+        pub fn neon_vcvtau_v4i32_v8i16(a: ::simdty::i16x8) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vcvtau.v4i32.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtau.v4i32.v4i32"]
+        pub fn neon_vcvtau_v4i32_v4i32(a: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vcvtau.v4i32.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtau.v4i32.v2i64"]
+        pub fn neon_vcvtau_v4i32_v2i64(a: ::simdty::i64x2) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vcvtau.v4i32.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtau.v4i32.v4f32"]
+        pub fn neon_vcvtau_v4i32_v4f32(a: ::simdty::f32x4) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vcvtau.v4i32.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtau.v4i32.v2f64"]
+        pub fn neon_vcvtau_v4i32_v2f64(a: ::simdty::f64x2) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vcvtau.v2i64.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtau.v2i64.v16i8"]
+        pub fn neon_vcvtau_v2i64_v16i8(a: ::simdty::i8x16) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vcvtau.v2i64.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtau.v2i64.v8i16"]
+        pub fn neon_vcvtau_v2i64_v8i16(a: ::simdty::i16x8) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vcvtau.v2i64.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtau.v2i64.v4i32"]
+        pub fn neon_vcvtau_v2i64_v4i32(a: ::simdty::i32x4) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vcvtau.v2i64.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtau.v2i64.v2i64"]
+        pub fn neon_vcvtau_v2i64_v2i64(a: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vcvtau.v2i64.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtau.v2i64.v4f32"]
+        pub fn neon_vcvtau_v2i64_v4f32(a: ::simdty::f32x4) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vcvtau.v2i64.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtau.v2i64.v2f64"]
+        pub fn neon_vcvtau_v2i64_v2f64(a: ::simdty::f64x2) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vcvtau.v4f32.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtau.v4f32.v16i8"]
+        pub fn neon_vcvtau_v4f32_v16i8(a: ::simdty::i8x16) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vcvtau.v4f32.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtau.v4f32.v8i16"]
+        pub fn neon_vcvtau_v4f32_v8i16(a: ::simdty::i16x8) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vcvtau.v4f32.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtau.v4f32.v4i32"]
+        pub fn neon_vcvtau_v4f32_v4i32(a: ::simdty::i32x4) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vcvtau.v4f32.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtau.v4f32.v2i64"]
+        pub fn neon_vcvtau_v4f32_v2i64(a: ::simdty::i64x2) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vcvtau.v4f32.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtau.v4f32.v4f32"]
+        pub fn neon_vcvtau_v4f32_v4f32(a: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vcvtau.v4f32.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtau.v4f32.v2f64"]
+        pub fn neon_vcvtau_v4f32_v2f64(a: ::simdty::f64x2) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vcvtau.v2f64.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtau.v2f64.v16i8"]
+        pub fn neon_vcvtau_v2f64_v16i8(a: ::simdty::i8x16) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vcvtau.v2f64.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtau.v2f64.v8i16"]
+        pub fn neon_vcvtau_v2f64_v8i16(a: ::simdty::i16x8) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vcvtau.v2f64.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtau.v2f64.v4i32"]
+        pub fn neon_vcvtau_v2f64_v4i32(a: ::simdty::i32x4) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vcvtau.v2f64.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtau.v2f64.v2i64"]
+        pub fn neon_vcvtau_v2f64_v2i64(a: ::simdty::i64x2) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vcvtau.v2f64.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtau.v2f64.v4f32"]
+        pub fn neon_vcvtau_v2f64_v4f32(a: ::simdty::f32x4) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vcvtau.v2f64.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtau.v2f64.v2f64"]
+        pub fn neon_vcvtau_v2f64_v2f64(a: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vcvtas.v16i8.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtas.v16i8.v16i8"]
+        pub fn neon_vcvtas_v16i8_v16i8(a: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vcvtas.v16i8.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtas.v16i8.v8i16"]
+        pub fn neon_vcvtas_v16i8_v8i16(a: ::simdty::i16x8) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vcvtas.v16i8.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtas.v16i8.v4i32"]
+        pub fn neon_vcvtas_v16i8_v4i32(a: ::simdty::i32x4) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vcvtas.v16i8.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtas.v16i8.v2i64"]
+        pub fn neon_vcvtas_v16i8_v2i64(a: ::simdty::i64x2) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vcvtas.v16i8.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtas.v16i8.v4f32"]
+        pub fn neon_vcvtas_v16i8_v4f32(a: ::simdty::f32x4) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vcvtas.v16i8.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtas.v16i8.v2f64"]
+        pub fn neon_vcvtas_v16i8_v2f64(a: ::simdty::f64x2) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vcvtas.v8i16.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtas.v8i16.v16i8"]
+        pub fn neon_vcvtas_v8i16_v16i8(a: ::simdty::i8x16) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vcvtas.v8i16.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtas.v8i16.v8i16"]
+        pub fn neon_vcvtas_v8i16_v8i16(a: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vcvtas.v8i16.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtas.v8i16.v4i32"]
+        pub fn neon_vcvtas_v8i16_v4i32(a: ::simdty::i32x4) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vcvtas.v8i16.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtas.v8i16.v2i64"]
+        pub fn neon_vcvtas_v8i16_v2i64(a: ::simdty::i64x2) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vcvtas.v8i16.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtas.v8i16.v4f32"]
+        pub fn neon_vcvtas_v8i16_v4f32(a: ::simdty::f32x4) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vcvtas.v8i16.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtas.v8i16.v2f64"]
+        pub fn neon_vcvtas_v8i16_v2f64(a: ::simdty::f64x2) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vcvtas.v4i32.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtas.v4i32.v16i8"]
+        pub fn neon_vcvtas_v4i32_v16i8(a: ::simdty::i8x16) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vcvtas.v4i32.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtas.v4i32.v8i16"]
+        pub fn neon_vcvtas_v4i32_v8i16(a: ::simdty::i16x8) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vcvtas.v4i32.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtas.v4i32.v4i32"]
+        pub fn neon_vcvtas_v4i32_v4i32(a: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vcvtas.v4i32.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtas.v4i32.v2i64"]
+        pub fn neon_vcvtas_v4i32_v2i64(a: ::simdty::i64x2) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vcvtas.v4i32.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtas.v4i32.v4f32"]
+        pub fn neon_vcvtas_v4i32_v4f32(a: ::simdty::f32x4) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vcvtas.v4i32.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtas.v4i32.v2f64"]
+        pub fn neon_vcvtas_v4i32_v2f64(a: ::simdty::f64x2) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vcvtas.v2i64.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtas.v2i64.v16i8"]
+        pub fn neon_vcvtas_v2i64_v16i8(a: ::simdty::i8x16) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vcvtas.v2i64.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtas.v2i64.v8i16"]
+        pub fn neon_vcvtas_v2i64_v8i16(a: ::simdty::i16x8) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vcvtas.v2i64.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtas.v2i64.v4i32"]
+        pub fn neon_vcvtas_v2i64_v4i32(a: ::simdty::i32x4) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vcvtas.v2i64.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtas.v2i64.v2i64"]
+        pub fn neon_vcvtas_v2i64_v2i64(a: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vcvtas.v2i64.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtas.v2i64.v4f32"]
+        pub fn neon_vcvtas_v2i64_v4f32(a: ::simdty::f32x4) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vcvtas.v2i64.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtas.v2i64.v2f64"]
+        pub fn neon_vcvtas_v2i64_v2f64(a: ::simdty::f64x2) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vcvtas.v4f32.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtas.v4f32.v16i8"]
+        pub fn neon_vcvtas_v4f32_v16i8(a: ::simdty::i8x16) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vcvtas.v4f32.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtas.v4f32.v8i16"]
+        pub fn neon_vcvtas_v4f32_v8i16(a: ::simdty::i16x8) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vcvtas.v4f32.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtas.v4f32.v4i32"]
+        pub fn neon_vcvtas_v4f32_v4i32(a: ::simdty::i32x4) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vcvtas.v4f32.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtas.v4f32.v2i64"]
+        pub fn neon_vcvtas_v4f32_v2i64(a: ::simdty::i64x2) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vcvtas.v4f32.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtas.v4f32.v4f32"]
+        pub fn neon_vcvtas_v4f32_v4f32(a: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vcvtas.v4f32.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtas.v4f32.v2f64"]
+        pub fn neon_vcvtas_v4f32_v2f64(a: ::simdty::f64x2) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vcvtas.v2f64.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtas.v2f64.v16i8"]
+        pub fn neon_vcvtas_v2f64_v16i8(a: ::simdty::i8x16) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vcvtas.v2f64.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtas.v2f64.v8i16"]
+        pub fn neon_vcvtas_v2f64_v8i16(a: ::simdty::i16x8) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vcvtas.v2f64.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtas.v2f64.v4i32"]
+        pub fn neon_vcvtas_v2f64_v4i32(a: ::simdty::i32x4) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vcvtas.v2f64.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtas.v2f64.v2i64"]
+        pub fn neon_vcvtas_v2f64_v2i64(a: ::simdty::i64x2) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vcvtas.v2f64.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtas.v2f64.v4f32"]
+        pub fn neon_vcvtas_v2f64_v4f32(a: ::simdty::f32x4) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vcvtas.v2f64.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtas.v2f64.v2f64"]
+        pub fn neon_vcvtas_v2f64_v2f64(a: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vcvtnu.v16i8.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtnu.v16i8.v16i8"]
+        pub fn neon_vcvtnu_v16i8_v16i8(a: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vcvtnu.v16i8.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtnu.v16i8.v8i16"]
+        pub fn neon_vcvtnu_v16i8_v8i16(a: ::simdty::i16x8) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vcvtnu.v16i8.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtnu.v16i8.v4i32"]
+        pub fn neon_vcvtnu_v16i8_v4i32(a: ::simdty::i32x4) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vcvtnu.v16i8.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtnu.v16i8.v2i64"]
+        pub fn neon_vcvtnu_v16i8_v2i64(a: ::simdty::i64x2) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vcvtnu.v16i8.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtnu.v16i8.v4f32"]
+        pub fn neon_vcvtnu_v16i8_v4f32(a: ::simdty::f32x4) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vcvtnu.v16i8.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtnu.v16i8.v2f64"]
+        pub fn neon_vcvtnu_v16i8_v2f64(a: ::simdty::f64x2) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vcvtnu.v8i16.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtnu.v8i16.v16i8"]
+        pub fn neon_vcvtnu_v8i16_v16i8(a: ::simdty::i8x16) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vcvtnu.v8i16.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtnu.v8i16.v8i16"]
+        pub fn neon_vcvtnu_v8i16_v8i16(a: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vcvtnu.v8i16.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtnu.v8i16.v4i32"]
+        pub fn neon_vcvtnu_v8i16_v4i32(a: ::simdty::i32x4) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vcvtnu.v8i16.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtnu.v8i16.v2i64"]
+        pub fn neon_vcvtnu_v8i16_v2i64(a: ::simdty::i64x2) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vcvtnu.v8i16.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtnu.v8i16.v4f32"]
+        pub fn neon_vcvtnu_v8i16_v4f32(a: ::simdty::f32x4) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vcvtnu.v8i16.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtnu.v8i16.v2f64"]
+        pub fn neon_vcvtnu_v8i16_v2f64(a: ::simdty::f64x2) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vcvtnu.v4i32.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtnu.v4i32.v16i8"]
+        pub fn neon_vcvtnu_v4i32_v16i8(a: ::simdty::i8x16) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vcvtnu.v4i32.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtnu.v4i32.v8i16"]
+        pub fn neon_vcvtnu_v4i32_v8i16(a: ::simdty::i16x8) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vcvtnu.v4i32.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtnu.v4i32.v4i32"]
+        pub fn neon_vcvtnu_v4i32_v4i32(a: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vcvtnu.v4i32.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtnu.v4i32.v2i64"]
+        pub fn neon_vcvtnu_v4i32_v2i64(a: ::simdty::i64x2) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vcvtnu.v4i32.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtnu.v4i32.v4f32"]
+        pub fn neon_vcvtnu_v4i32_v4f32(a: ::simdty::f32x4) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vcvtnu.v4i32.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtnu.v4i32.v2f64"]
+        pub fn neon_vcvtnu_v4i32_v2f64(a: ::simdty::f64x2) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vcvtnu.v2i64.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtnu.v2i64.v16i8"]
+        pub fn neon_vcvtnu_v2i64_v16i8(a: ::simdty::i8x16) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vcvtnu.v2i64.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtnu.v2i64.v8i16"]
+        pub fn neon_vcvtnu_v2i64_v8i16(a: ::simdty::i16x8) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vcvtnu.v2i64.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtnu.v2i64.v4i32"]
+        pub fn neon_vcvtnu_v2i64_v4i32(a: ::simdty::i32x4) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vcvtnu.v2i64.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtnu.v2i64.v2i64"]
+        pub fn neon_vcvtnu_v2i64_v2i64(a: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vcvtnu.v2i64.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtnu.v2i64.v4f32"]
+        pub fn neon_vcvtnu_v2i64_v4f32(a: ::simdty::f32x4) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vcvtnu.v2i64.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtnu.v2i64.v2f64"]
+        pub fn neon_vcvtnu_v2i64_v2f64(a: ::simdty::f64x2) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vcvtnu.v4f32.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtnu.v4f32.v16i8"]
+        pub fn neon_vcvtnu_v4f32_v16i8(a: ::simdty::i8x16) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vcvtnu.v4f32.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtnu.v4f32.v8i16"]
+        pub fn neon_vcvtnu_v4f32_v8i16(a: ::simdty::i16x8) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vcvtnu.v4f32.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtnu.v4f32.v4i32"]
+        pub fn neon_vcvtnu_v4f32_v4i32(a: ::simdty::i32x4) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vcvtnu.v4f32.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtnu.v4f32.v2i64"]
+        pub fn neon_vcvtnu_v4f32_v2i64(a: ::simdty::i64x2) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vcvtnu.v4f32.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtnu.v4f32.v4f32"]
+        pub fn neon_vcvtnu_v4f32_v4f32(a: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vcvtnu.v4f32.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtnu.v4f32.v2f64"]
+        pub fn neon_vcvtnu_v4f32_v2f64(a: ::simdty::f64x2) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vcvtnu.v2f64.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtnu.v2f64.v16i8"]
+        pub fn neon_vcvtnu_v2f64_v16i8(a: ::simdty::i8x16) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vcvtnu.v2f64.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtnu.v2f64.v8i16"]
+        pub fn neon_vcvtnu_v2f64_v8i16(a: ::simdty::i16x8) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vcvtnu.v2f64.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtnu.v2f64.v4i32"]
+        pub fn neon_vcvtnu_v2f64_v4i32(a: ::simdty::i32x4) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vcvtnu.v2f64.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtnu.v2f64.v2i64"]
+        pub fn neon_vcvtnu_v2f64_v2i64(a: ::simdty::i64x2) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vcvtnu.v2f64.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtnu.v2f64.v4f32"]
+        pub fn neon_vcvtnu_v2f64_v4f32(a: ::simdty::f32x4) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vcvtnu.v2f64.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtnu.v2f64.v2f64"]
+        pub fn neon_vcvtnu_v2f64_v2f64(a: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vcvtns.v16i8.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtns.v16i8.v16i8"]
+        pub fn neon_vcvtns_v16i8_v16i8(a: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vcvtns.v16i8.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtns.v16i8.v8i16"]
+        pub fn neon_vcvtns_v16i8_v8i16(a: ::simdty::i16x8) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vcvtns.v16i8.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtns.v16i8.v4i32"]
+        pub fn neon_vcvtns_v16i8_v4i32(a: ::simdty::i32x4) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vcvtns.v16i8.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtns.v16i8.v2i64"]
+        pub fn neon_vcvtns_v16i8_v2i64(a: ::simdty::i64x2) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vcvtns.v16i8.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtns.v16i8.v4f32"]
+        pub fn neon_vcvtns_v16i8_v4f32(a: ::simdty::f32x4) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vcvtns.v16i8.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtns.v16i8.v2f64"]
+        pub fn neon_vcvtns_v16i8_v2f64(a: ::simdty::f64x2) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vcvtns.v8i16.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtns.v8i16.v16i8"]
+        pub fn neon_vcvtns_v8i16_v16i8(a: ::simdty::i8x16) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vcvtns.v8i16.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtns.v8i16.v8i16"]
+        pub fn neon_vcvtns_v8i16_v8i16(a: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vcvtns.v8i16.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtns.v8i16.v4i32"]
+        pub fn neon_vcvtns_v8i16_v4i32(a: ::simdty::i32x4) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vcvtns.v8i16.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtns.v8i16.v2i64"]
+        pub fn neon_vcvtns_v8i16_v2i64(a: ::simdty::i64x2) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vcvtns.v8i16.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtns.v8i16.v4f32"]
+        pub fn neon_vcvtns_v8i16_v4f32(a: ::simdty::f32x4) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vcvtns.v8i16.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtns.v8i16.v2f64"]
+        pub fn neon_vcvtns_v8i16_v2f64(a: ::simdty::f64x2) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vcvtns.v4i32.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtns.v4i32.v16i8"]
+        pub fn neon_vcvtns_v4i32_v16i8(a: ::simdty::i8x16) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vcvtns.v4i32.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtns.v4i32.v8i16"]
+        pub fn neon_vcvtns_v4i32_v8i16(a: ::simdty::i16x8) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vcvtns.v4i32.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtns.v4i32.v4i32"]
+        pub fn neon_vcvtns_v4i32_v4i32(a: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vcvtns.v4i32.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtns.v4i32.v2i64"]
+        pub fn neon_vcvtns_v4i32_v2i64(a: ::simdty::i64x2) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vcvtns.v4i32.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtns.v4i32.v4f32"]
+        pub fn neon_vcvtns_v4i32_v4f32(a: ::simdty::f32x4) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vcvtns.v4i32.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtns.v4i32.v2f64"]
+        pub fn neon_vcvtns_v4i32_v2f64(a: ::simdty::f64x2) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vcvtns.v2i64.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtns.v2i64.v16i8"]
+        pub fn neon_vcvtns_v2i64_v16i8(a: ::simdty::i8x16) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vcvtns.v2i64.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtns.v2i64.v8i16"]
+        pub fn neon_vcvtns_v2i64_v8i16(a: ::simdty::i16x8) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vcvtns.v2i64.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtns.v2i64.v4i32"]
+        pub fn neon_vcvtns_v2i64_v4i32(a: ::simdty::i32x4) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vcvtns.v2i64.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtns.v2i64.v2i64"]
+        pub fn neon_vcvtns_v2i64_v2i64(a: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vcvtns.v2i64.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtns.v2i64.v4f32"]
+        pub fn neon_vcvtns_v2i64_v4f32(a: ::simdty::f32x4) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vcvtns.v2i64.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtns.v2i64.v2f64"]
+        pub fn neon_vcvtns_v2i64_v2f64(a: ::simdty::f64x2) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vcvtns.v4f32.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtns.v4f32.v16i8"]
+        pub fn neon_vcvtns_v4f32_v16i8(a: ::simdty::i8x16) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vcvtns.v4f32.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtns.v4f32.v8i16"]
+        pub fn neon_vcvtns_v4f32_v8i16(a: ::simdty::i16x8) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vcvtns.v4f32.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtns.v4f32.v4i32"]
+        pub fn neon_vcvtns_v4f32_v4i32(a: ::simdty::i32x4) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vcvtns.v4f32.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtns.v4f32.v2i64"]
+        pub fn neon_vcvtns_v4f32_v2i64(a: ::simdty::i64x2) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vcvtns.v4f32.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtns.v4f32.v4f32"]
+        pub fn neon_vcvtns_v4f32_v4f32(a: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vcvtns.v4f32.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtns.v4f32.v2f64"]
+        pub fn neon_vcvtns_v4f32_v2f64(a: ::simdty::f64x2) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vcvtns.v2f64.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtns.v2f64.v16i8"]
+        pub fn neon_vcvtns_v2f64_v16i8(a: ::simdty::i8x16) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vcvtns.v2f64.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtns.v2f64.v8i16"]
+        pub fn neon_vcvtns_v2f64_v8i16(a: ::simdty::i16x8) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vcvtns.v2f64.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtns.v2f64.v4i32"]
+        pub fn neon_vcvtns_v2f64_v4i32(a: ::simdty::i32x4) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vcvtns.v2f64.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtns.v2f64.v2i64"]
+        pub fn neon_vcvtns_v2f64_v2i64(a: ::simdty::i64x2) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vcvtns.v2f64.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtns.v2f64.v4f32"]
+        pub fn neon_vcvtns_v2f64_v4f32(a: ::simdty::f32x4) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vcvtns.v2f64.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtns.v2f64.v2f64"]
+        pub fn neon_vcvtns_v2f64_v2f64(a: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vcvtpu.v16i8.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtpu.v16i8.v16i8"]
+        pub fn neon_vcvtpu_v16i8_v16i8(a: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vcvtpu.v16i8.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtpu.v16i8.v8i16"]
+        pub fn neon_vcvtpu_v16i8_v8i16(a: ::simdty::i16x8) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vcvtpu.v16i8.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtpu.v16i8.v4i32"]
+        pub fn neon_vcvtpu_v16i8_v4i32(a: ::simdty::i32x4) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vcvtpu.v16i8.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtpu.v16i8.v2i64"]
+        pub fn neon_vcvtpu_v16i8_v2i64(a: ::simdty::i64x2) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vcvtpu.v16i8.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtpu.v16i8.v4f32"]
+        pub fn neon_vcvtpu_v16i8_v4f32(a: ::simdty::f32x4) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vcvtpu.v16i8.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtpu.v16i8.v2f64"]
+        pub fn neon_vcvtpu_v16i8_v2f64(a: ::simdty::f64x2) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vcvtpu.v8i16.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtpu.v8i16.v16i8"]
+        pub fn neon_vcvtpu_v8i16_v16i8(a: ::simdty::i8x16) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vcvtpu.v8i16.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtpu.v8i16.v8i16"]
+        pub fn neon_vcvtpu_v8i16_v8i16(a: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vcvtpu.v8i16.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtpu.v8i16.v4i32"]
+        pub fn neon_vcvtpu_v8i16_v4i32(a: ::simdty::i32x4) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vcvtpu.v8i16.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtpu.v8i16.v2i64"]
+        pub fn neon_vcvtpu_v8i16_v2i64(a: ::simdty::i64x2) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vcvtpu.v8i16.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtpu.v8i16.v4f32"]
+        pub fn neon_vcvtpu_v8i16_v4f32(a: ::simdty::f32x4) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vcvtpu.v8i16.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtpu.v8i16.v2f64"]
+        pub fn neon_vcvtpu_v8i16_v2f64(a: ::simdty::f64x2) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vcvtpu.v4i32.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtpu.v4i32.v16i8"]
+        pub fn neon_vcvtpu_v4i32_v16i8(a: ::simdty::i8x16) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vcvtpu.v4i32.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtpu.v4i32.v8i16"]
+        pub fn neon_vcvtpu_v4i32_v8i16(a: ::simdty::i16x8) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vcvtpu.v4i32.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtpu.v4i32.v4i32"]
+        pub fn neon_vcvtpu_v4i32_v4i32(a: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vcvtpu.v4i32.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtpu.v4i32.v2i64"]
+        pub fn neon_vcvtpu_v4i32_v2i64(a: ::simdty::i64x2) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vcvtpu.v4i32.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtpu.v4i32.v4f32"]
+        pub fn neon_vcvtpu_v4i32_v4f32(a: ::simdty::f32x4) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vcvtpu.v4i32.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtpu.v4i32.v2f64"]
+        pub fn neon_vcvtpu_v4i32_v2f64(a: ::simdty::f64x2) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vcvtpu.v2i64.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtpu.v2i64.v16i8"]
+        pub fn neon_vcvtpu_v2i64_v16i8(a: ::simdty::i8x16) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vcvtpu.v2i64.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtpu.v2i64.v8i16"]
+        pub fn neon_vcvtpu_v2i64_v8i16(a: ::simdty::i16x8) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vcvtpu.v2i64.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtpu.v2i64.v4i32"]
+        pub fn neon_vcvtpu_v2i64_v4i32(a: ::simdty::i32x4) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vcvtpu.v2i64.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtpu.v2i64.v2i64"]
+        pub fn neon_vcvtpu_v2i64_v2i64(a: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vcvtpu.v2i64.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtpu.v2i64.v4f32"]
+        pub fn neon_vcvtpu_v2i64_v4f32(a: ::simdty::f32x4) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vcvtpu.v2i64.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtpu.v2i64.v2f64"]
+        pub fn neon_vcvtpu_v2i64_v2f64(a: ::simdty::f64x2) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vcvtpu.v4f32.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtpu.v4f32.v16i8"]
+        pub fn neon_vcvtpu_v4f32_v16i8(a: ::simdty::i8x16) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vcvtpu.v4f32.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtpu.v4f32.v8i16"]
+        pub fn neon_vcvtpu_v4f32_v8i16(a: ::simdty::i16x8) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vcvtpu.v4f32.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtpu.v4f32.v4i32"]
+        pub fn neon_vcvtpu_v4f32_v4i32(a: ::simdty::i32x4) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vcvtpu.v4f32.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtpu.v4f32.v2i64"]
+        pub fn neon_vcvtpu_v4f32_v2i64(a: ::simdty::i64x2) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vcvtpu.v4f32.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtpu.v4f32.v4f32"]
+        pub fn neon_vcvtpu_v4f32_v4f32(a: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vcvtpu.v4f32.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtpu.v4f32.v2f64"]
+        pub fn neon_vcvtpu_v4f32_v2f64(a: ::simdty::f64x2) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vcvtpu.v2f64.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtpu.v2f64.v16i8"]
+        pub fn neon_vcvtpu_v2f64_v16i8(a: ::simdty::i8x16) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vcvtpu.v2f64.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtpu.v2f64.v8i16"]
+        pub fn neon_vcvtpu_v2f64_v8i16(a: ::simdty::i16x8) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vcvtpu.v2f64.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtpu.v2f64.v4i32"]
+        pub fn neon_vcvtpu_v2f64_v4i32(a: ::simdty::i32x4) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vcvtpu.v2f64.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtpu.v2f64.v2i64"]
+        pub fn neon_vcvtpu_v2f64_v2i64(a: ::simdty::i64x2) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vcvtpu.v2f64.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtpu.v2f64.v4f32"]
+        pub fn neon_vcvtpu_v2f64_v4f32(a: ::simdty::f32x4) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vcvtpu.v2f64.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtpu.v2f64.v2f64"]
+        pub fn neon_vcvtpu_v2f64_v2f64(a: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vcvtps.v16i8.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtps.v16i8.v16i8"]
+        pub fn neon_vcvtps_v16i8_v16i8(a: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vcvtps.v16i8.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtps.v16i8.v8i16"]
+        pub fn neon_vcvtps_v16i8_v8i16(a: ::simdty::i16x8) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vcvtps.v16i8.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtps.v16i8.v4i32"]
+        pub fn neon_vcvtps_v16i8_v4i32(a: ::simdty::i32x4) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vcvtps.v16i8.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtps.v16i8.v2i64"]
+        pub fn neon_vcvtps_v16i8_v2i64(a: ::simdty::i64x2) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vcvtps.v16i8.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtps.v16i8.v4f32"]
+        pub fn neon_vcvtps_v16i8_v4f32(a: ::simdty::f32x4) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vcvtps.v16i8.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtps.v16i8.v2f64"]
+        pub fn neon_vcvtps_v16i8_v2f64(a: ::simdty::f64x2) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vcvtps.v8i16.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtps.v8i16.v16i8"]
+        pub fn neon_vcvtps_v8i16_v16i8(a: ::simdty::i8x16) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vcvtps.v8i16.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtps.v8i16.v8i16"]
+        pub fn neon_vcvtps_v8i16_v8i16(a: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vcvtps.v8i16.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtps.v8i16.v4i32"]
+        pub fn neon_vcvtps_v8i16_v4i32(a: ::simdty::i32x4) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vcvtps.v8i16.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtps.v8i16.v2i64"]
+        pub fn neon_vcvtps_v8i16_v2i64(a: ::simdty::i64x2) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vcvtps.v8i16.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtps.v8i16.v4f32"]
+        pub fn neon_vcvtps_v8i16_v4f32(a: ::simdty::f32x4) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vcvtps.v8i16.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtps.v8i16.v2f64"]
+        pub fn neon_vcvtps_v8i16_v2f64(a: ::simdty::f64x2) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vcvtps.v4i32.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtps.v4i32.v16i8"]
+        pub fn neon_vcvtps_v4i32_v16i8(a: ::simdty::i8x16) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vcvtps.v4i32.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtps.v4i32.v8i16"]
+        pub fn neon_vcvtps_v4i32_v8i16(a: ::simdty::i16x8) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vcvtps.v4i32.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtps.v4i32.v4i32"]
+        pub fn neon_vcvtps_v4i32_v4i32(a: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vcvtps.v4i32.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtps.v4i32.v2i64"]
+        pub fn neon_vcvtps_v4i32_v2i64(a: ::simdty::i64x2) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vcvtps.v4i32.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtps.v4i32.v4f32"]
+        pub fn neon_vcvtps_v4i32_v4f32(a: ::simdty::f32x4) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vcvtps.v4i32.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtps.v4i32.v2f64"]
+        pub fn neon_vcvtps_v4i32_v2f64(a: ::simdty::f64x2) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vcvtps.v2i64.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtps.v2i64.v16i8"]
+        pub fn neon_vcvtps_v2i64_v16i8(a: ::simdty::i8x16) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vcvtps.v2i64.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtps.v2i64.v8i16"]
+        pub fn neon_vcvtps_v2i64_v8i16(a: ::simdty::i16x8) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vcvtps.v2i64.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtps.v2i64.v4i32"]
+        pub fn neon_vcvtps_v2i64_v4i32(a: ::simdty::i32x4) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vcvtps.v2i64.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtps.v2i64.v2i64"]
+        pub fn neon_vcvtps_v2i64_v2i64(a: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vcvtps.v2i64.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtps.v2i64.v4f32"]
+        pub fn neon_vcvtps_v2i64_v4f32(a: ::simdty::f32x4) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vcvtps.v2i64.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtps.v2i64.v2f64"]
+        pub fn neon_vcvtps_v2i64_v2f64(a: ::simdty::f64x2) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vcvtps.v4f32.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtps.v4f32.v16i8"]
+        pub fn neon_vcvtps_v4f32_v16i8(a: ::simdty::i8x16) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vcvtps.v4f32.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtps.v4f32.v8i16"]
+        pub fn neon_vcvtps_v4f32_v8i16(a: ::simdty::i16x8) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vcvtps.v4f32.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtps.v4f32.v4i32"]
+        pub fn neon_vcvtps_v4f32_v4i32(a: ::simdty::i32x4) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vcvtps.v4f32.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtps.v4f32.v2i64"]
+        pub fn neon_vcvtps_v4f32_v2i64(a: ::simdty::i64x2) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vcvtps.v4f32.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtps.v4f32.v4f32"]
+        pub fn neon_vcvtps_v4f32_v4f32(a: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vcvtps.v4f32.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtps.v4f32.v2f64"]
+        pub fn neon_vcvtps_v4f32_v2f64(a: ::simdty::f64x2) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vcvtps.v2f64.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtps.v2f64.v16i8"]
+        pub fn neon_vcvtps_v2f64_v16i8(a: ::simdty::i8x16) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vcvtps.v2f64.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtps.v2f64.v8i16"]
+        pub fn neon_vcvtps_v2f64_v8i16(a: ::simdty::i16x8) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vcvtps.v2f64.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtps.v2f64.v4i32"]
+        pub fn neon_vcvtps_v2f64_v4i32(a: ::simdty::i32x4) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vcvtps.v2f64.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtps.v2f64.v2i64"]
+        pub fn neon_vcvtps_v2f64_v2i64(a: ::simdty::i64x2) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vcvtps.v2f64.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtps.v2f64.v4f32"]
+        pub fn neon_vcvtps_v2f64_v4f32(a: ::simdty::f32x4) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vcvtps.v2f64.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtps.v2f64.v2f64"]
+        pub fn neon_vcvtps_v2f64_v2f64(a: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vcvtmu.v16i8.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtmu.v16i8.v16i8"]
+        pub fn neon_vcvtmu_v16i8_v16i8(a: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vcvtmu.v16i8.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtmu.v16i8.v8i16"]
+        pub fn neon_vcvtmu_v16i8_v8i16(a: ::simdty::i16x8) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vcvtmu.v16i8.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtmu.v16i8.v4i32"]
+        pub fn neon_vcvtmu_v16i8_v4i32(a: ::simdty::i32x4) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vcvtmu.v16i8.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtmu.v16i8.v2i64"]
+        pub fn neon_vcvtmu_v16i8_v2i64(a: ::simdty::i64x2) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vcvtmu.v16i8.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtmu.v16i8.v4f32"]
+        pub fn neon_vcvtmu_v16i8_v4f32(a: ::simdty::f32x4) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vcvtmu.v16i8.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtmu.v16i8.v2f64"]
+        pub fn neon_vcvtmu_v16i8_v2f64(a: ::simdty::f64x2) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vcvtmu.v8i16.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtmu.v8i16.v16i8"]
+        pub fn neon_vcvtmu_v8i16_v16i8(a: ::simdty::i8x16) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vcvtmu.v8i16.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtmu.v8i16.v8i16"]
+        pub fn neon_vcvtmu_v8i16_v8i16(a: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vcvtmu.v8i16.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtmu.v8i16.v4i32"]
+        pub fn neon_vcvtmu_v8i16_v4i32(a: ::simdty::i32x4) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vcvtmu.v8i16.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtmu.v8i16.v2i64"]
+        pub fn neon_vcvtmu_v8i16_v2i64(a: ::simdty::i64x2) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vcvtmu.v8i16.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtmu.v8i16.v4f32"]
+        pub fn neon_vcvtmu_v8i16_v4f32(a: ::simdty::f32x4) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vcvtmu.v8i16.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtmu.v8i16.v2f64"]
+        pub fn neon_vcvtmu_v8i16_v2f64(a: ::simdty::f64x2) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vcvtmu.v4i32.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtmu.v4i32.v16i8"]
+        pub fn neon_vcvtmu_v4i32_v16i8(a: ::simdty::i8x16) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vcvtmu.v4i32.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtmu.v4i32.v8i16"]
+        pub fn neon_vcvtmu_v4i32_v8i16(a: ::simdty::i16x8) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vcvtmu.v4i32.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtmu.v4i32.v4i32"]
+        pub fn neon_vcvtmu_v4i32_v4i32(a: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vcvtmu.v4i32.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtmu.v4i32.v2i64"]
+        pub fn neon_vcvtmu_v4i32_v2i64(a: ::simdty::i64x2) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vcvtmu.v4i32.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtmu.v4i32.v4f32"]
+        pub fn neon_vcvtmu_v4i32_v4f32(a: ::simdty::f32x4) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vcvtmu.v4i32.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtmu.v4i32.v2f64"]
+        pub fn neon_vcvtmu_v4i32_v2f64(a: ::simdty::f64x2) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vcvtmu.v2i64.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtmu.v2i64.v16i8"]
+        pub fn neon_vcvtmu_v2i64_v16i8(a: ::simdty::i8x16) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vcvtmu.v2i64.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtmu.v2i64.v8i16"]
+        pub fn neon_vcvtmu_v2i64_v8i16(a: ::simdty::i16x8) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vcvtmu.v2i64.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtmu.v2i64.v4i32"]
+        pub fn neon_vcvtmu_v2i64_v4i32(a: ::simdty::i32x4) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vcvtmu.v2i64.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtmu.v2i64.v2i64"]
+        pub fn neon_vcvtmu_v2i64_v2i64(a: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vcvtmu.v2i64.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtmu.v2i64.v4f32"]
+        pub fn neon_vcvtmu_v2i64_v4f32(a: ::simdty::f32x4) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vcvtmu.v2i64.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtmu.v2i64.v2f64"]
+        pub fn neon_vcvtmu_v2i64_v2f64(a: ::simdty::f64x2) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vcvtmu.v4f32.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtmu.v4f32.v16i8"]
+        pub fn neon_vcvtmu_v4f32_v16i8(a: ::simdty::i8x16) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vcvtmu.v4f32.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtmu.v4f32.v8i16"]
+        pub fn neon_vcvtmu_v4f32_v8i16(a: ::simdty::i16x8) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vcvtmu.v4f32.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtmu.v4f32.v4i32"]
+        pub fn neon_vcvtmu_v4f32_v4i32(a: ::simdty::i32x4) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vcvtmu.v4f32.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtmu.v4f32.v2i64"]
+        pub fn neon_vcvtmu_v4f32_v2i64(a: ::simdty::i64x2) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vcvtmu.v4f32.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtmu.v4f32.v4f32"]
+        pub fn neon_vcvtmu_v4f32_v4f32(a: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vcvtmu.v4f32.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtmu.v4f32.v2f64"]
+        pub fn neon_vcvtmu_v4f32_v2f64(a: ::simdty::f64x2) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vcvtmu.v2f64.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtmu.v2f64.v16i8"]
+        pub fn neon_vcvtmu_v2f64_v16i8(a: ::simdty::i8x16) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vcvtmu.v2f64.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtmu.v2f64.v8i16"]
+        pub fn neon_vcvtmu_v2f64_v8i16(a: ::simdty::i16x8) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vcvtmu.v2f64.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtmu.v2f64.v4i32"]
+        pub fn neon_vcvtmu_v2f64_v4i32(a: ::simdty::i32x4) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vcvtmu.v2f64.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtmu.v2f64.v2i64"]
+        pub fn neon_vcvtmu_v2f64_v2i64(a: ::simdty::i64x2) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vcvtmu.v2f64.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtmu.v2f64.v4f32"]
+        pub fn neon_vcvtmu_v2f64_v4f32(a: ::simdty::f32x4) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vcvtmu.v2f64.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtmu.v2f64.v2f64"]
+        pub fn neon_vcvtmu_v2f64_v2f64(a: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vcvtms.v16i8.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtms.v16i8.v16i8"]
+        pub fn neon_vcvtms_v16i8_v16i8(a: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vcvtms.v16i8.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtms.v16i8.v8i16"]
+        pub fn neon_vcvtms_v16i8_v8i16(a: ::simdty::i16x8) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vcvtms.v16i8.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtms.v16i8.v4i32"]
+        pub fn neon_vcvtms_v16i8_v4i32(a: ::simdty::i32x4) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vcvtms.v16i8.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtms.v16i8.v2i64"]
+        pub fn neon_vcvtms_v16i8_v2i64(a: ::simdty::i64x2) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vcvtms.v16i8.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtms.v16i8.v4f32"]
+        pub fn neon_vcvtms_v16i8_v4f32(a: ::simdty::f32x4) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vcvtms.v16i8.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtms.v16i8.v2f64"]
+        pub fn neon_vcvtms_v16i8_v2f64(a: ::simdty::f64x2) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vcvtms.v8i16.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtms.v8i16.v16i8"]
+        pub fn neon_vcvtms_v8i16_v16i8(a: ::simdty::i8x16) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vcvtms.v8i16.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtms.v8i16.v8i16"]
+        pub fn neon_vcvtms_v8i16_v8i16(a: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vcvtms.v8i16.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtms.v8i16.v4i32"]
+        pub fn neon_vcvtms_v8i16_v4i32(a: ::simdty::i32x4) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vcvtms.v8i16.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtms.v8i16.v2i64"]
+        pub fn neon_vcvtms_v8i16_v2i64(a: ::simdty::i64x2) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vcvtms.v8i16.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtms.v8i16.v4f32"]
+        pub fn neon_vcvtms_v8i16_v4f32(a: ::simdty::f32x4) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vcvtms.v8i16.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtms.v8i16.v2f64"]
+        pub fn neon_vcvtms_v8i16_v2f64(a: ::simdty::f64x2) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vcvtms.v4i32.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtms.v4i32.v16i8"]
+        pub fn neon_vcvtms_v4i32_v16i8(a: ::simdty::i8x16) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vcvtms.v4i32.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtms.v4i32.v8i16"]
+        pub fn neon_vcvtms_v4i32_v8i16(a: ::simdty::i16x8) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vcvtms.v4i32.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtms.v4i32.v4i32"]
+        pub fn neon_vcvtms_v4i32_v4i32(a: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vcvtms.v4i32.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtms.v4i32.v2i64"]
+        pub fn neon_vcvtms_v4i32_v2i64(a: ::simdty::i64x2) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vcvtms.v4i32.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtms.v4i32.v4f32"]
+        pub fn neon_vcvtms_v4i32_v4f32(a: ::simdty::f32x4) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vcvtms.v4i32.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtms.v4i32.v2f64"]
+        pub fn neon_vcvtms_v4i32_v2f64(a: ::simdty::f64x2) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vcvtms.v2i64.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtms.v2i64.v16i8"]
+        pub fn neon_vcvtms_v2i64_v16i8(a: ::simdty::i8x16) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vcvtms.v2i64.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtms.v2i64.v8i16"]
+        pub fn neon_vcvtms_v2i64_v8i16(a: ::simdty::i16x8) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vcvtms.v2i64.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtms.v2i64.v4i32"]
+        pub fn neon_vcvtms_v2i64_v4i32(a: ::simdty::i32x4) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vcvtms.v2i64.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtms.v2i64.v2i64"]
+        pub fn neon_vcvtms_v2i64_v2i64(a: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vcvtms.v2i64.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtms.v2i64.v4f32"]
+        pub fn neon_vcvtms_v2i64_v4f32(a: ::simdty::f32x4) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vcvtms.v2i64.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtms.v2i64.v2f64"]
+        pub fn neon_vcvtms_v2i64_v2f64(a: ::simdty::f64x2) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vcvtms.v4f32.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtms.v4f32.v16i8"]
+        pub fn neon_vcvtms_v4f32_v16i8(a: ::simdty::i8x16) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vcvtms.v4f32.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtms.v4f32.v8i16"]
+        pub fn neon_vcvtms_v4f32_v8i16(a: ::simdty::i16x8) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vcvtms.v4f32.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtms.v4f32.v4i32"]
+        pub fn neon_vcvtms_v4f32_v4i32(a: ::simdty::i32x4) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vcvtms.v4f32.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtms.v4f32.v2i64"]
+        pub fn neon_vcvtms_v4f32_v2i64(a: ::simdty::i64x2) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vcvtms.v4f32.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtms.v4f32.v4f32"]
+        pub fn neon_vcvtms_v4f32_v4f32(a: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vcvtms.v4f32.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtms.v4f32.v2f64"]
+        pub fn neon_vcvtms_v4f32_v2f64(a: ::simdty::f64x2) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vcvtms.v2f64.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtms.v2f64.v16i8"]
+        pub fn neon_vcvtms_v2f64_v16i8(a: ::simdty::i8x16) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vcvtms.v2f64.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtms.v2f64.v8i16"]
+        pub fn neon_vcvtms_v2f64_v8i16(a: ::simdty::i16x8) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vcvtms.v2f64.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtms.v2f64.v4i32"]
+        pub fn neon_vcvtms_v2f64_v4i32(a: ::simdty::i32x4) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vcvtms.v2f64.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtms.v2f64.v2i64"]
+        pub fn neon_vcvtms_v2f64_v2i64(a: ::simdty::i64x2) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vcvtms.v2f64.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtms.v2f64.v4f32"]
+        pub fn neon_vcvtms_v2f64_v4f32(a: ::simdty::f32x4) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vcvtms.v2f64.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtms.v2f64.v2f64"]
+        pub fn neon_vcvtms_v2f64_v2f64(a: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vcvtfp2fxs.v16i8.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfp2fxs.v16i8.v4f32"]
+        pub fn neon_vcvtfp2fxs_v16i8_v4f32(a: ::simdty::f32x4, b: i32) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vcvtfp2fxs.v16i8.f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfp2fxs.v16i8.f32"]
+        pub fn neon_vcvtfp2fxs_v16i8_f32(a: f32, b: i32) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vcvtfp2fxs.v16i8.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfp2fxs.v16i8.v2f64"]
+        pub fn neon_vcvtfp2fxs_v16i8_v2f64(a: ::simdty::f64x2, b: i32) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vcvtfp2fxs.v16i8.f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfp2fxs.v16i8.f64"]
+        pub fn neon_vcvtfp2fxs_v16i8_f64(a: f64, b: i32) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vcvtfp2fxs.i8.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfp2fxs.i8.v4f32"]
+        pub fn neon_vcvtfp2fxs_i8_v4f32(a: ::simdty::f32x4, b: i32) -> i8;
+        /// The `llvm.arm.neon.vcvtfp2fxs.i8.f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfp2fxs.i8.f32"]
+        pub fn neon_vcvtfp2fxs_i8_f32(a: f32, b: i32) -> i8;
+        /// The `llvm.arm.neon.vcvtfp2fxs.i8.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfp2fxs.i8.v2f64"]
+        pub fn neon_vcvtfp2fxs_i8_v2f64(a: ::simdty::f64x2, b: i32) -> i8;
+        /// The `llvm.arm.neon.vcvtfp2fxs.i8.f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfp2fxs.i8.f64"]
+        pub fn neon_vcvtfp2fxs_i8_f64(a: f64, b: i32) -> i8;
+        /// The `llvm.arm.neon.vcvtfp2fxs.v8i16.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfp2fxs.v8i16.v4f32"]
+        pub fn neon_vcvtfp2fxs_v8i16_v4f32(a: ::simdty::f32x4, b: i32) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vcvtfp2fxs.v8i16.f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfp2fxs.v8i16.f32"]
+        pub fn neon_vcvtfp2fxs_v8i16_f32(a: f32, b: i32) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vcvtfp2fxs.v8i16.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfp2fxs.v8i16.v2f64"]
+        pub fn neon_vcvtfp2fxs_v8i16_v2f64(a: ::simdty::f64x2, b: i32) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vcvtfp2fxs.v8i16.f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfp2fxs.v8i16.f64"]
+        pub fn neon_vcvtfp2fxs_v8i16_f64(a: f64, b: i32) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vcvtfp2fxs.i16.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfp2fxs.i16.v4f32"]
+        pub fn neon_vcvtfp2fxs_i16_v4f32(a: ::simdty::f32x4, b: i32) -> i16;
+        /// The `llvm.arm.neon.vcvtfp2fxs.i16.f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfp2fxs.i16.f32"]
+        pub fn neon_vcvtfp2fxs_i16_f32(a: f32, b: i32) -> i16;
+        /// The `llvm.arm.neon.vcvtfp2fxs.i16.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfp2fxs.i16.v2f64"]
+        pub fn neon_vcvtfp2fxs_i16_v2f64(a: ::simdty::f64x2, b: i32) -> i16;
+        /// The `llvm.arm.neon.vcvtfp2fxs.i16.f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfp2fxs.i16.f64"]
+        pub fn neon_vcvtfp2fxs_i16_f64(a: f64, b: i32) -> i16;
+        /// The `llvm.arm.neon.vcvtfp2fxs.v4i32.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfp2fxs.v4i32.v4f32"]
+        pub fn neon_vcvtfp2fxs_v4i32_v4f32(a: ::simdty::f32x4, b: i32) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vcvtfp2fxs.v4i32.f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfp2fxs.v4i32.f32"]
+        pub fn neon_vcvtfp2fxs_v4i32_f32(a: f32, b: i32) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vcvtfp2fxs.v4i32.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfp2fxs.v4i32.v2f64"]
+        pub fn neon_vcvtfp2fxs_v4i32_v2f64(a: ::simdty::f64x2, b: i32) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vcvtfp2fxs.v4i32.f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfp2fxs.v4i32.f64"]
+        pub fn neon_vcvtfp2fxs_v4i32_f64(a: f64, b: i32) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vcvtfp2fxs.i32.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfp2fxs.i32.v4f32"]
+        pub fn neon_vcvtfp2fxs_i32_v4f32(a: ::simdty::f32x4, b: i32) -> i32;
+        /// The `llvm.arm.neon.vcvtfp2fxs.i32.f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfp2fxs.i32.f32"]
+        pub fn neon_vcvtfp2fxs_i32_f32(a: f32, b: i32) -> i32;
+        /// The `llvm.arm.neon.vcvtfp2fxs.i32.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfp2fxs.i32.v2f64"]
+        pub fn neon_vcvtfp2fxs_i32_v2f64(a: ::simdty::f64x2, b: i32) -> i32;
+        /// The `llvm.arm.neon.vcvtfp2fxs.i32.f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfp2fxs.i32.f64"]
+        pub fn neon_vcvtfp2fxs_i32_f64(a: f64, b: i32) -> i32;
+        /// The `llvm.arm.neon.vcvtfp2fxs.v2i64.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfp2fxs.v2i64.v4f32"]
+        pub fn neon_vcvtfp2fxs_v2i64_v4f32(a: ::simdty::f32x4, b: i32) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vcvtfp2fxs.v2i64.f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfp2fxs.v2i64.f32"]
+        pub fn neon_vcvtfp2fxs_v2i64_f32(a: f32, b: i32) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vcvtfp2fxs.v2i64.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfp2fxs.v2i64.v2f64"]
+        pub fn neon_vcvtfp2fxs_v2i64_v2f64(a: ::simdty::f64x2, b: i32) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vcvtfp2fxs.v2i64.f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfp2fxs.v2i64.f64"]
+        pub fn neon_vcvtfp2fxs_v2i64_f64(a: f64, b: i32) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vcvtfp2fxs.i64.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfp2fxs.i64.v4f32"]
+        pub fn neon_vcvtfp2fxs_i64_v4f32(a: ::simdty::f32x4, b: i32) -> i64;
+        /// The `llvm.arm.neon.vcvtfp2fxs.i64.f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfp2fxs.i64.f32"]
+        pub fn neon_vcvtfp2fxs_i64_f32(a: f32, b: i32) -> i64;
+        /// The `llvm.arm.neon.vcvtfp2fxs.i64.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfp2fxs.i64.v2f64"]
+        pub fn neon_vcvtfp2fxs_i64_v2f64(a: ::simdty::f64x2, b: i32) -> i64;
+        /// The `llvm.arm.neon.vcvtfp2fxs.i64.f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfp2fxs.i64.f64"]
+        pub fn neon_vcvtfp2fxs_i64_f64(a: f64, b: i32) -> i64;
+        /// The `llvm.arm.neon.vcvtfp2fxu.v16i8.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfp2fxu.v16i8.v4f32"]
+        pub fn neon_vcvtfp2fxu_v16i8_v4f32(a: ::simdty::f32x4, b: i32) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vcvtfp2fxu.v16i8.f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfp2fxu.v16i8.f32"]
+        pub fn neon_vcvtfp2fxu_v16i8_f32(a: f32, b: i32) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vcvtfp2fxu.v16i8.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfp2fxu.v16i8.v2f64"]
+        pub fn neon_vcvtfp2fxu_v16i8_v2f64(a: ::simdty::f64x2, b: i32) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vcvtfp2fxu.v16i8.f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfp2fxu.v16i8.f64"]
+        pub fn neon_vcvtfp2fxu_v16i8_f64(a: f64, b: i32) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vcvtfp2fxu.i8.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfp2fxu.i8.v4f32"]
+        pub fn neon_vcvtfp2fxu_i8_v4f32(a: ::simdty::f32x4, b: i32) -> i8;
+        /// The `llvm.arm.neon.vcvtfp2fxu.i8.f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfp2fxu.i8.f32"]
+        pub fn neon_vcvtfp2fxu_i8_f32(a: f32, b: i32) -> i8;
+        /// The `llvm.arm.neon.vcvtfp2fxu.i8.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfp2fxu.i8.v2f64"]
+        pub fn neon_vcvtfp2fxu_i8_v2f64(a: ::simdty::f64x2, b: i32) -> i8;
+        /// The `llvm.arm.neon.vcvtfp2fxu.i8.f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfp2fxu.i8.f64"]
+        pub fn neon_vcvtfp2fxu_i8_f64(a: f64, b: i32) -> i8;
+        /// The `llvm.arm.neon.vcvtfp2fxu.v8i16.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfp2fxu.v8i16.v4f32"]
+        pub fn neon_vcvtfp2fxu_v8i16_v4f32(a: ::simdty::f32x4, b: i32) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vcvtfp2fxu.v8i16.f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfp2fxu.v8i16.f32"]
+        pub fn neon_vcvtfp2fxu_v8i16_f32(a: f32, b: i32) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vcvtfp2fxu.v8i16.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfp2fxu.v8i16.v2f64"]
+        pub fn neon_vcvtfp2fxu_v8i16_v2f64(a: ::simdty::f64x2, b: i32) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vcvtfp2fxu.v8i16.f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfp2fxu.v8i16.f64"]
+        pub fn neon_vcvtfp2fxu_v8i16_f64(a: f64, b: i32) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vcvtfp2fxu.i16.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfp2fxu.i16.v4f32"]
+        pub fn neon_vcvtfp2fxu_i16_v4f32(a: ::simdty::f32x4, b: i32) -> i16;
+        /// The `llvm.arm.neon.vcvtfp2fxu.i16.f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfp2fxu.i16.f32"]
+        pub fn neon_vcvtfp2fxu_i16_f32(a: f32, b: i32) -> i16;
+        /// The `llvm.arm.neon.vcvtfp2fxu.i16.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfp2fxu.i16.v2f64"]
+        pub fn neon_vcvtfp2fxu_i16_v2f64(a: ::simdty::f64x2, b: i32) -> i16;
+        /// The `llvm.arm.neon.vcvtfp2fxu.i16.f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfp2fxu.i16.f64"]
+        pub fn neon_vcvtfp2fxu_i16_f64(a: f64, b: i32) -> i16;
+        /// The `llvm.arm.neon.vcvtfp2fxu.v4i32.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfp2fxu.v4i32.v4f32"]
+        pub fn neon_vcvtfp2fxu_v4i32_v4f32(a: ::simdty::f32x4, b: i32) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vcvtfp2fxu.v4i32.f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfp2fxu.v4i32.f32"]
+        pub fn neon_vcvtfp2fxu_v4i32_f32(a: f32, b: i32) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vcvtfp2fxu.v4i32.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfp2fxu.v4i32.v2f64"]
+        pub fn neon_vcvtfp2fxu_v4i32_v2f64(a: ::simdty::f64x2, b: i32) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vcvtfp2fxu.v4i32.f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfp2fxu.v4i32.f64"]
+        pub fn neon_vcvtfp2fxu_v4i32_f64(a: f64, b: i32) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vcvtfp2fxu.i32.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfp2fxu.i32.v4f32"]
+        pub fn neon_vcvtfp2fxu_i32_v4f32(a: ::simdty::f32x4, b: i32) -> i32;
+        /// The `llvm.arm.neon.vcvtfp2fxu.i32.f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfp2fxu.i32.f32"]
+        pub fn neon_vcvtfp2fxu_i32_f32(a: f32, b: i32) -> i32;
+        /// The `llvm.arm.neon.vcvtfp2fxu.i32.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfp2fxu.i32.v2f64"]
+        pub fn neon_vcvtfp2fxu_i32_v2f64(a: ::simdty::f64x2, b: i32) -> i32;
+        /// The `llvm.arm.neon.vcvtfp2fxu.i32.f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfp2fxu.i32.f64"]
+        pub fn neon_vcvtfp2fxu_i32_f64(a: f64, b: i32) -> i32;
+        /// The `llvm.arm.neon.vcvtfp2fxu.v2i64.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfp2fxu.v2i64.v4f32"]
+        pub fn neon_vcvtfp2fxu_v2i64_v4f32(a: ::simdty::f32x4, b: i32) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vcvtfp2fxu.v2i64.f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfp2fxu.v2i64.f32"]
+        pub fn neon_vcvtfp2fxu_v2i64_f32(a: f32, b: i32) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vcvtfp2fxu.v2i64.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfp2fxu.v2i64.v2f64"]
+        pub fn neon_vcvtfp2fxu_v2i64_v2f64(a: ::simdty::f64x2, b: i32) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vcvtfp2fxu.v2i64.f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfp2fxu.v2i64.f64"]
+        pub fn neon_vcvtfp2fxu_v2i64_f64(a: f64, b: i32) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vcvtfp2fxu.i64.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfp2fxu.i64.v4f32"]
+        pub fn neon_vcvtfp2fxu_i64_v4f32(a: ::simdty::f32x4, b: i32) -> i64;
+        /// The `llvm.arm.neon.vcvtfp2fxu.i64.f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfp2fxu.i64.f32"]
+        pub fn neon_vcvtfp2fxu_i64_f32(a: f32, b: i32) -> i64;
+        /// The `llvm.arm.neon.vcvtfp2fxu.i64.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfp2fxu.i64.v2f64"]
+        pub fn neon_vcvtfp2fxu_i64_v2f64(a: ::simdty::f64x2, b: i32) -> i64;
+        /// The `llvm.arm.neon.vcvtfp2fxu.i64.f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfp2fxu.i64.f64"]
+        pub fn neon_vcvtfp2fxu_i64_f64(a: f64, b: i32) -> i64;
+        /// The `llvm.arm.neon.vcvtfxs2fp.v4f32.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfxs2fp.v4f32.v16i8"]
+        pub fn neon_vcvtfxs2fp_v4f32_v16i8(a: ::simdty::i8x16, b: i32) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vcvtfxs2fp.v4f32.i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfxs2fp.v4f32.i8"]
+        pub fn neon_vcvtfxs2fp_v4f32_i8(a: i8, b: i32) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vcvtfxs2fp.v4f32.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfxs2fp.v4f32.v8i16"]
+        pub fn neon_vcvtfxs2fp_v4f32_v8i16(a: ::simdty::i16x8, b: i32) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vcvtfxs2fp.v4f32.i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfxs2fp.v4f32.i16"]
+        pub fn neon_vcvtfxs2fp_v4f32_i16(a: i16, b: i32) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vcvtfxs2fp.v4f32.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfxs2fp.v4f32.v4i32"]
+        pub fn neon_vcvtfxs2fp_v4f32_v4i32(a: ::simdty::i32x4, b: i32) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vcvtfxs2fp.v4f32.i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfxs2fp.v4f32.i32"]
+        pub fn neon_vcvtfxs2fp_v4f32_i32(a: i32, b: i32) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vcvtfxs2fp.v4f32.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfxs2fp.v4f32.v2i64"]
+        pub fn neon_vcvtfxs2fp_v4f32_v2i64(a: ::simdty::i64x2, b: i32) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vcvtfxs2fp.v4f32.i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfxs2fp.v4f32.i64"]
+        pub fn neon_vcvtfxs2fp_v4f32_i64(a: i64, b: i32) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vcvtfxs2fp.f32.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfxs2fp.f32.v16i8"]
+        pub fn neon_vcvtfxs2fp_f32_v16i8(a: ::simdty::i8x16, b: i32) -> f32;
+        /// The `llvm.arm.neon.vcvtfxs2fp.f32.i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfxs2fp.f32.i8"]
+        pub fn neon_vcvtfxs2fp_f32_i8(a: i8, b: i32) -> f32;
+        /// The `llvm.arm.neon.vcvtfxs2fp.f32.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfxs2fp.f32.v8i16"]
+        pub fn neon_vcvtfxs2fp_f32_v8i16(a: ::simdty::i16x8, b: i32) -> f32;
+        /// The `llvm.arm.neon.vcvtfxs2fp.f32.i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfxs2fp.f32.i16"]
+        pub fn neon_vcvtfxs2fp_f32_i16(a: i16, b: i32) -> f32;
+        /// The `llvm.arm.neon.vcvtfxs2fp.f32.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfxs2fp.f32.v4i32"]
+        pub fn neon_vcvtfxs2fp_f32_v4i32(a: ::simdty::i32x4, b: i32) -> f32;
+        /// The `llvm.arm.neon.vcvtfxs2fp.f32.i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfxs2fp.f32.i32"]
+        pub fn neon_vcvtfxs2fp_f32_i32(a: i32, b: i32) -> f32;
+        /// The `llvm.arm.neon.vcvtfxs2fp.f32.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfxs2fp.f32.v2i64"]
+        pub fn neon_vcvtfxs2fp_f32_v2i64(a: ::simdty::i64x2, b: i32) -> f32;
+        /// The `llvm.arm.neon.vcvtfxs2fp.f32.i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfxs2fp.f32.i64"]
+        pub fn neon_vcvtfxs2fp_f32_i64(a: i64, b: i32) -> f32;
+        /// The `llvm.arm.neon.vcvtfxs2fp.v2f64.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfxs2fp.v2f64.v16i8"]
+        pub fn neon_vcvtfxs2fp_v2f64_v16i8(a: ::simdty::i8x16, b: i32) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vcvtfxs2fp.v2f64.i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfxs2fp.v2f64.i8"]
+        pub fn neon_vcvtfxs2fp_v2f64_i8(a: i8, b: i32) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vcvtfxs2fp.v2f64.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfxs2fp.v2f64.v8i16"]
+        pub fn neon_vcvtfxs2fp_v2f64_v8i16(a: ::simdty::i16x8, b: i32) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vcvtfxs2fp.v2f64.i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfxs2fp.v2f64.i16"]
+        pub fn neon_vcvtfxs2fp_v2f64_i16(a: i16, b: i32) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vcvtfxs2fp.v2f64.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfxs2fp.v2f64.v4i32"]
+        pub fn neon_vcvtfxs2fp_v2f64_v4i32(a: ::simdty::i32x4, b: i32) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vcvtfxs2fp.v2f64.i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfxs2fp.v2f64.i32"]
+        pub fn neon_vcvtfxs2fp_v2f64_i32(a: i32, b: i32) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vcvtfxs2fp.v2f64.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfxs2fp.v2f64.v2i64"]
+        pub fn neon_vcvtfxs2fp_v2f64_v2i64(a: ::simdty::i64x2, b: i32) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vcvtfxs2fp.v2f64.i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfxs2fp.v2f64.i64"]
+        pub fn neon_vcvtfxs2fp_v2f64_i64(a: i64, b: i32) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vcvtfxs2fp.f64.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfxs2fp.f64.v16i8"]
+        pub fn neon_vcvtfxs2fp_f64_v16i8(a: ::simdty::i8x16, b: i32) -> f64;
+        /// The `llvm.arm.neon.vcvtfxs2fp.f64.i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfxs2fp.f64.i8"]
+        pub fn neon_vcvtfxs2fp_f64_i8(a: i8, b: i32) -> f64;
+        /// The `llvm.arm.neon.vcvtfxs2fp.f64.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfxs2fp.f64.v8i16"]
+        pub fn neon_vcvtfxs2fp_f64_v8i16(a: ::simdty::i16x8, b: i32) -> f64;
+        /// The `llvm.arm.neon.vcvtfxs2fp.f64.i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfxs2fp.f64.i16"]
+        pub fn neon_vcvtfxs2fp_f64_i16(a: i16, b: i32) -> f64;
+        /// The `llvm.arm.neon.vcvtfxs2fp.f64.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfxs2fp.f64.v4i32"]
+        pub fn neon_vcvtfxs2fp_f64_v4i32(a: ::simdty::i32x4, b: i32) -> f64;
+        /// The `llvm.arm.neon.vcvtfxs2fp.f64.i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfxs2fp.f64.i32"]
+        pub fn neon_vcvtfxs2fp_f64_i32(a: i32, b: i32) -> f64;
+        /// The `llvm.arm.neon.vcvtfxs2fp.f64.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfxs2fp.f64.v2i64"]
+        pub fn neon_vcvtfxs2fp_f64_v2i64(a: ::simdty::i64x2, b: i32) -> f64;
+        /// The `llvm.arm.neon.vcvtfxs2fp.f64.i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfxs2fp.f64.i64"]
+        pub fn neon_vcvtfxs2fp_f64_i64(a: i64, b: i32) -> f64;
+        /// The `llvm.arm.neon.vcvtfxu2fp.v4f32.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfxu2fp.v4f32.v16i8"]
+        pub fn neon_vcvtfxu2fp_v4f32_v16i8(a: ::simdty::i8x16, b: i32) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vcvtfxu2fp.v4f32.i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfxu2fp.v4f32.i8"]
+        pub fn neon_vcvtfxu2fp_v4f32_i8(a: i8, b: i32) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vcvtfxu2fp.v4f32.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfxu2fp.v4f32.v8i16"]
+        pub fn neon_vcvtfxu2fp_v4f32_v8i16(a: ::simdty::i16x8, b: i32) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vcvtfxu2fp.v4f32.i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfxu2fp.v4f32.i16"]
+        pub fn neon_vcvtfxu2fp_v4f32_i16(a: i16, b: i32) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vcvtfxu2fp.v4f32.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfxu2fp.v4f32.v4i32"]
+        pub fn neon_vcvtfxu2fp_v4f32_v4i32(a: ::simdty::i32x4, b: i32) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vcvtfxu2fp.v4f32.i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfxu2fp.v4f32.i32"]
+        pub fn neon_vcvtfxu2fp_v4f32_i32(a: i32, b: i32) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vcvtfxu2fp.v4f32.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfxu2fp.v4f32.v2i64"]
+        pub fn neon_vcvtfxu2fp_v4f32_v2i64(a: ::simdty::i64x2, b: i32) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vcvtfxu2fp.v4f32.i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfxu2fp.v4f32.i64"]
+        pub fn neon_vcvtfxu2fp_v4f32_i64(a: i64, b: i32) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vcvtfxu2fp.f32.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfxu2fp.f32.v16i8"]
+        pub fn neon_vcvtfxu2fp_f32_v16i8(a: ::simdty::i8x16, b: i32) -> f32;
+        /// The `llvm.arm.neon.vcvtfxu2fp.f32.i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfxu2fp.f32.i8"]
+        pub fn neon_vcvtfxu2fp_f32_i8(a: i8, b: i32) -> f32;
+        /// The `llvm.arm.neon.vcvtfxu2fp.f32.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfxu2fp.f32.v8i16"]
+        pub fn neon_vcvtfxu2fp_f32_v8i16(a: ::simdty::i16x8, b: i32) -> f32;
+        /// The `llvm.arm.neon.vcvtfxu2fp.f32.i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfxu2fp.f32.i16"]
+        pub fn neon_vcvtfxu2fp_f32_i16(a: i16, b: i32) -> f32;
+        /// The `llvm.arm.neon.vcvtfxu2fp.f32.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfxu2fp.f32.v4i32"]
+        pub fn neon_vcvtfxu2fp_f32_v4i32(a: ::simdty::i32x4, b: i32) -> f32;
+        /// The `llvm.arm.neon.vcvtfxu2fp.f32.i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfxu2fp.f32.i32"]
+        pub fn neon_vcvtfxu2fp_f32_i32(a: i32, b: i32) -> f32;
+        /// The `llvm.arm.neon.vcvtfxu2fp.f32.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfxu2fp.f32.v2i64"]
+        pub fn neon_vcvtfxu2fp_f32_v2i64(a: ::simdty::i64x2, b: i32) -> f32;
+        /// The `llvm.arm.neon.vcvtfxu2fp.f32.i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfxu2fp.f32.i64"]
+        pub fn neon_vcvtfxu2fp_f32_i64(a: i64, b: i32) -> f32;
+        /// The `llvm.arm.neon.vcvtfxu2fp.v2f64.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfxu2fp.v2f64.v16i8"]
+        pub fn neon_vcvtfxu2fp_v2f64_v16i8(a: ::simdty::i8x16, b: i32) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vcvtfxu2fp.v2f64.i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfxu2fp.v2f64.i8"]
+        pub fn neon_vcvtfxu2fp_v2f64_i8(a: i8, b: i32) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vcvtfxu2fp.v2f64.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfxu2fp.v2f64.v8i16"]
+        pub fn neon_vcvtfxu2fp_v2f64_v8i16(a: ::simdty::i16x8, b: i32) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vcvtfxu2fp.v2f64.i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfxu2fp.v2f64.i16"]
+        pub fn neon_vcvtfxu2fp_v2f64_i16(a: i16, b: i32) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vcvtfxu2fp.v2f64.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfxu2fp.v2f64.v4i32"]
+        pub fn neon_vcvtfxu2fp_v2f64_v4i32(a: ::simdty::i32x4, b: i32) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vcvtfxu2fp.v2f64.i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfxu2fp.v2f64.i32"]
+        pub fn neon_vcvtfxu2fp_v2f64_i32(a: i32, b: i32) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vcvtfxu2fp.v2f64.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfxu2fp.v2f64.v2i64"]
+        pub fn neon_vcvtfxu2fp_v2f64_v2i64(a: ::simdty::i64x2, b: i32) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vcvtfxu2fp.v2f64.i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfxu2fp.v2f64.i64"]
+        pub fn neon_vcvtfxu2fp_v2f64_i64(a: i64, b: i32) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vcvtfxu2fp.f64.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfxu2fp.f64.v16i8"]
+        pub fn neon_vcvtfxu2fp_f64_v16i8(a: ::simdty::i8x16, b: i32) -> f64;
+        /// The `llvm.arm.neon.vcvtfxu2fp.f64.i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfxu2fp.f64.i8"]
+        pub fn neon_vcvtfxu2fp_f64_i8(a: i8, b: i32) -> f64;
+        /// The `llvm.arm.neon.vcvtfxu2fp.f64.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfxu2fp.f64.v8i16"]
+        pub fn neon_vcvtfxu2fp_f64_v8i16(a: ::simdty::i16x8, b: i32) -> f64;
+        /// The `llvm.arm.neon.vcvtfxu2fp.f64.i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfxu2fp.f64.i16"]
+        pub fn neon_vcvtfxu2fp_f64_i16(a: i16, b: i32) -> f64;
+        /// The `llvm.arm.neon.vcvtfxu2fp.f64.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfxu2fp.f64.v4i32"]
+        pub fn neon_vcvtfxu2fp_f64_v4i32(a: ::simdty::i32x4, b: i32) -> f64;
+        /// The `llvm.arm.neon.vcvtfxu2fp.f64.i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfxu2fp.f64.i32"]
+        pub fn neon_vcvtfxu2fp_f64_i32(a: i32, b: i32) -> f64;
+        /// The `llvm.arm.neon.vcvtfxu2fp.f64.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfxu2fp.f64.v2i64"]
+        pub fn neon_vcvtfxu2fp_f64_v2i64(a: ::simdty::i64x2, b: i32) -> f64;
+        /// The `llvm.arm.neon.vcvtfxu2fp.f64.i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vcvtfxu2fp.f64.i64"]
+        pub fn neon_vcvtfxu2fp_f64_i64(a: i64, b: i32) -> f64;
         /// The `llvm.arm.neon.vcvtfp2hf` intrinsic.
         #[link_name = "llvm.arm.neon.vcvtfp2hf"]
         pub fn neon_vcvtfp2hf(a: ::simdty::f32x4) -> ::simdty::i16x4;
@@ -428,6 +10580,276 @@ pub mod arm {
         /// The `llvm.arm.neon.vtbx4` intrinsic.
         #[link_name = "llvm.arm.neon.vtbx4"]
         pub fn neon_vtbx4(a: ::simdty::i8x8, b: ::simdty::i8x8, c: ::simdty::i8x8, d: ::simdty::i8x8, e: ::simdty::i8x8, f: ::simdty::i8x8) -> ::simdty::i8x8;
+        /// The `llvm.arm.neon.vrintn.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vrintn.v16i8"]
+        pub fn neon_vrintn_v16i8(a: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vrintn.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vrintn.v8i16"]
+        pub fn neon_vrintn_v8i16(a: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vrintn.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vrintn.v4i32"]
+        pub fn neon_vrintn_v4i32(a: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vrintn.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vrintn.v2i64"]
+        pub fn neon_vrintn_v2i64(a: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vrintn.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vrintn.v4f32"]
+        pub fn neon_vrintn_v4f32(a: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vrintn.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vrintn.v2f64"]
+        pub fn neon_vrintn_v2f64(a: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vrintx.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vrintx.v16i8"]
+        pub fn neon_vrintx_v16i8(a: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vrintx.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vrintx.v8i16"]
+        pub fn neon_vrintx_v8i16(a: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vrintx.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vrintx.v4i32"]
+        pub fn neon_vrintx_v4i32(a: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vrintx.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vrintx.v2i64"]
+        pub fn neon_vrintx_v2i64(a: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vrintx.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vrintx.v4f32"]
+        pub fn neon_vrintx_v4f32(a: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vrintx.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vrintx.v2f64"]
+        pub fn neon_vrintx_v2f64(a: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vrinta.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vrinta.v16i8"]
+        pub fn neon_vrinta_v16i8(a: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vrinta.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vrinta.v8i16"]
+        pub fn neon_vrinta_v8i16(a: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vrinta.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vrinta.v4i32"]
+        pub fn neon_vrinta_v4i32(a: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vrinta.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vrinta.v2i64"]
+        pub fn neon_vrinta_v2i64(a: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vrinta.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vrinta.v4f32"]
+        pub fn neon_vrinta_v4f32(a: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vrinta.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vrinta.v2f64"]
+        pub fn neon_vrinta_v2f64(a: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vrintz.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vrintz.v16i8"]
+        pub fn neon_vrintz_v16i8(a: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vrintz.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vrintz.v8i16"]
+        pub fn neon_vrintz_v8i16(a: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vrintz.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vrintz.v4i32"]
+        pub fn neon_vrintz_v4i32(a: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vrintz.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vrintz.v2i64"]
+        pub fn neon_vrintz_v2i64(a: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vrintz.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vrintz.v4f32"]
+        pub fn neon_vrintz_v4f32(a: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vrintz.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vrintz.v2f64"]
+        pub fn neon_vrintz_v2f64(a: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vrintm.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vrintm.v16i8"]
+        pub fn neon_vrintm_v16i8(a: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vrintm.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vrintm.v8i16"]
+        pub fn neon_vrintm_v8i16(a: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vrintm.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vrintm.v4i32"]
+        pub fn neon_vrintm_v4i32(a: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vrintm.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vrintm.v2i64"]
+        pub fn neon_vrintm_v2i64(a: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vrintm.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vrintm.v4f32"]
+        pub fn neon_vrintm_v4f32(a: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vrintm.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vrintm.v2f64"]
+        pub fn neon_vrintm_v2f64(a: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vrintp.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vrintp.v16i8"]
+        pub fn neon_vrintp_v16i8(a: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vrintp.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vrintp.v8i16"]
+        pub fn neon_vrintp_v8i16(a: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vrintp.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vrintp.v4i32"]
+        pub fn neon_vrintp_v4i32(a: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vrintp.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vrintp.v2i64"]
+        pub fn neon_vrintp_v2i64(a: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vrintp.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vrintp.v4f32"]
+        pub fn neon_vrintp_v4f32(a: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vrintp.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vrintp.v2f64"]
+        pub fn neon_vrintp_v2f64(a: ::simdty::f64x2) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vld1.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vld1.v16i8"]
+        pub fn neon_vld1_v16i8(a: *mut i8, b: i32) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vld1.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vld1.v8i16"]
+        pub fn neon_vld1_v8i16(a: *mut i8, b: i32) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vld1.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vld1.v4i32"]
+        pub fn neon_vld1_v4i32(a: *mut i8, b: i32) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vld1.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vld1.v2i64"]
+        pub fn neon_vld1_v2i64(a: *mut i8, b: i32) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vld1.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vld1.v4f32"]
+        pub fn neon_vld1_v4f32(a: *mut i8, b: i32) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vld1.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vld1.v2f64"]
+        pub fn neon_vld1_v2f64(a: *mut i8, b: i32) -> ::simdty::f64x2;
+        /// The `llvm.arm.neon.vst1.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vst1.v16i8"]
+        pub fn neon_vst1_v16i8(a: *mut i8, b: ::simdty::i8x16, c: i32) -> ();
+        /// The `llvm.arm.neon.vst1.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vst1.v8i16"]
+        pub fn neon_vst1_v8i16(a: *mut i8, b: ::simdty::i16x8, c: i32) -> ();
+        /// The `llvm.arm.neon.vst1.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vst1.v4i32"]
+        pub fn neon_vst1_v4i32(a: *mut i8, b: ::simdty::i32x4, c: i32) -> ();
+        /// The `llvm.arm.neon.vst1.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vst1.v2i64"]
+        pub fn neon_vst1_v2i64(a: *mut i8, b: ::simdty::i64x2, c: i32) -> ();
+        /// The `llvm.arm.neon.vst1.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vst1.v4f32"]
+        pub fn neon_vst1_v4f32(a: *mut i8, b: ::simdty::f32x4, c: i32) -> ();
+        /// The `llvm.arm.neon.vst1.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vst1.v2f64"]
+        pub fn neon_vst1_v2f64(a: *mut i8, b: ::simdty::f64x2, c: i32) -> ();
+        /// The `llvm.arm.neon.vst2.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vst2.v16i8"]
+        pub fn neon_vst2_v16i8(a: *mut i8, b: ::simdty::i8x16, c: ::simdty::i8x16, d: i32) -> ();
+        /// The `llvm.arm.neon.vst2.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vst2.v8i16"]
+        pub fn neon_vst2_v8i16(a: *mut i8, b: ::simdty::i16x8, c: ::simdty::i16x8, d: i32) -> ();
+        /// The `llvm.arm.neon.vst2.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vst2.v4i32"]
+        pub fn neon_vst2_v4i32(a: *mut i8, b: ::simdty::i32x4, c: ::simdty::i32x4, d: i32) -> ();
+        /// The `llvm.arm.neon.vst2.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vst2.v2i64"]
+        pub fn neon_vst2_v2i64(a: *mut i8, b: ::simdty::i64x2, c: ::simdty::i64x2, d: i32) -> ();
+        /// The `llvm.arm.neon.vst2.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vst2.v4f32"]
+        pub fn neon_vst2_v4f32(a: *mut i8, b: ::simdty::f32x4, c: ::simdty::f32x4, d: i32) -> ();
+        /// The `llvm.arm.neon.vst2.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vst2.v2f64"]
+        pub fn neon_vst2_v2f64(a: *mut i8, b: ::simdty::f64x2, c: ::simdty::f64x2, d: i32) -> ();
+        /// The `llvm.arm.neon.vst3.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vst3.v16i8"]
+        pub fn neon_vst3_v16i8(a: *mut i8, b: ::simdty::i8x16, c: ::simdty::i8x16, d: ::simdty::i8x16, e: i32) -> ();
+        /// The `llvm.arm.neon.vst3.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vst3.v8i16"]
+        pub fn neon_vst3_v8i16(a: *mut i8, b: ::simdty::i16x8, c: ::simdty::i16x8, d: ::simdty::i16x8, e: i32) -> ();
+        /// The `llvm.arm.neon.vst3.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vst3.v4i32"]
+        pub fn neon_vst3_v4i32(a: *mut i8, b: ::simdty::i32x4, c: ::simdty::i32x4, d: ::simdty::i32x4, e: i32) -> ();
+        /// The `llvm.arm.neon.vst3.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vst3.v2i64"]
+        pub fn neon_vst3_v2i64(a: *mut i8, b: ::simdty::i64x2, c: ::simdty::i64x2, d: ::simdty::i64x2, e: i32) -> ();
+        /// The `llvm.arm.neon.vst3.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vst3.v4f32"]
+        pub fn neon_vst3_v4f32(a: *mut i8, b: ::simdty::f32x4, c: ::simdty::f32x4, d: ::simdty::f32x4, e: i32) -> ();
+        /// The `llvm.arm.neon.vst3.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vst3.v2f64"]
+        pub fn neon_vst3_v2f64(a: *mut i8, b: ::simdty::f64x2, c: ::simdty::f64x2, d: ::simdty::f64x2, e: i32) -> ();
+        /// The `llvm.arm.neon.vst4.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vst4.v16i8"]
+        pub fn neon_vst4_v16i8(a: *mut i8, b: ::simdty::i8x16, c: ::simdty::i8x16, d: ::simdty::i8x16, e: ::simdty::i8x16, f: i32) -> ();
+        /// The `llvm.arm.neon.vst4.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vst4.v8i16"]
+        pub fn neon_vst4_v8i16(a: *mut i8, b: ::simdty::i16x8, c: ::simdty::i16x8, d: ::simdty::i16x8, e: ::simdty::i16x8, f: i32) -> ();
+        /// The `llvm.arm.neon.vst4.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vst4.v4i32"]
+        pub fn neon_vst4_v4i32(a: *mut i8, b: ::simdty::i32x4, c: ::simdty::i32x4, d: ::simdty::i32x4, e: ::simdty::i32x4, f: i32) -> ();
+        /// The `llvm.arm.neon.vst4.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vst4.v2i64"]
+        pub fn neon_vst4_v2i64(a: *mut i8, b: ::simdty::i64x2, c: ::simdty::i64x2, d: ::simdty::i64x2, e: ::simdty::i64x2, f: i32) -> ();
+        /// The `llvm.arm.neon.vst4.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vst4.v4f32"]
+        pub fn neon_vst4_v4f32(a: *mut i8, b: ::simdty::f32x4, c: ::simdty::f32x4, d: ::simdty::f32x4, e: ::simdty::f32x4, f: i32) -> ();
+        /// The `llvm.arm.neon.vst4.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vst4.v2f64"]
+        pub fn neon_vst4_v2f64(a: *mut i8, b: ::simdty::f64x2, c: ::simdty::f64x2, d: ::simdty::f64x2, e: ::simdty::f64x2, f: i32) -> ();
+        /// The `llvm.arm.neon.vst2lane.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vst2lane.v16i8"]
+        pub fn neon_vst2lane_v16i8(a: *mut i8, b: ::simdty::i8x16, c: ::simdty::i8x16, d: i32, e: i32) -> ();
+        /// The `llvm.arm.neon.vst2lane.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vst2lane.v8i16"]
+        pub fn neon_vst2lane_v8i16(a: *mut i8, b: ::simdty::i16x8, c: ::simdty::i16x8, d: i32, e: i32) -> ();
+        /// The `llvm.arm.neon.vst2lane.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vst2lane.v4i32"]
+        pub fn neon_vst2lane_v4i32(a: *mut i8, b: ::simdty::i32x4, c: ::simdty::i32x4, d: i32, e: i32) -> ();
+        /// The `llvm.arm.neon.vst2lane.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vst2lane.v2i64"]
+        pub fn neon_vst2lane_v2i64(a: *mut i8, b: ::simdty::i64x2, c: ::simdty::i64x2, d: i32, e: i32) -> ();
+        /// The `llvm.arm.neon.vst2lane.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vst2lane.v4f32"]
+        pub fn neon_vst2lane_v4f32(a: *mut i8, b: ::simdty::f32x4, c: ::simdty::f32x4, d: i32, e: i32) -> ();
+        /// The `llvm.arm.neon.vst2lane.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vst2lane.v2f64"]
+        pub fn neon_vst2lane_v2f64(a: *mut i8, b: ::simdty::f64x2, c: ::simdty::f64x2, d: i32, e: i32) -> ();
+        /// The `llvm.arm.neon.vst3lane.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vst3lane.v16i8"]
+        pub fn neon_vst3lane_v16i8(a: *mut i8, b: ::simdty::i8x16, c: ::simdty::i8x16, d: ::simdty::i8x16, e: i32, f: i32) -> ();
+        /// The `llvm.arm.neon.vst3lane.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vst3lane.v8i16"]
+        pub fn neon_vst3lane_v8i16(a: *mut i8, b: ::simdty::i16x8, c: ::simdty::i16x8, d: ::simdty::i16x8, e: i32, f: i32) -> ();
+        /// The `llvm.arm.neon.vst3lane.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vst3lane.v4i32"]
+        pub fn neon_vst3lane_v4i32(a: *mut i8, b: ::simdty::i32x4, c: ::simdty::i32x4, d: ::simdty::i32x4, e: i32, f: i32) -> ();
+        /// The `llvm.arm.neon.vst3lane.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vst3lane.v2i64"]
+        pub fn neon_vst3lane_v2i64(a: *mut i8, b: ::simdty::i64x2, c: ::simdty::i64x2, d: ::simdty::i64x2, e: i32, f: i32) -> ();
+        /// The `llvm.arm.neon.vst3lane.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vst3lane.v4f32"]
+        pub fn neon_vst3lane_v4f32(a: *mut i8, b: ::simdty::f32x4, c: ::simdty::f32x4, d: ::simdty::f32x4, e: i32, f: i32) -> ();
+        /// The `llvm.arm.neon.vst3lane.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vst3lane.v2f64"]
+        pub fn neon_vst3lane_v2f64(a: *mut i8, b: ::simdty::f64x2, c: ::simdty::f64x2, d: ::simdty::f64x2, e: i32, f: i32) -> ();
+        /// The `llvm.arm.neon.vst4lane.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vst4lane.v16i8"]
+        pub fn neon_vst4lane_v16i8(a: *mut i8, b: ::simdty::i8x16, c: ::simdty::i8x16, d: ::simdty::i8x16, e: ::simdty::i8x16, f: i32, g: i32) -> ();
+        /// The `llvm.arm.neon.vst4lane.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vst4lane.v8i16"]
+        pub fn neon_vst4lane_v8i16(a: *mut i8, b: ::simdty::i16x8, c: ::simdty::i16x8, d: ::simdty::i16x8, e: ::simdty::i16x8, f: i32, g: i32) -> ();
+        /// The `llvm.arm.neon.vst4lane.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vst4lane.v4i32"]
+        pub fn neon_vst4lane_v4i32(a: *mut i8, b: ::simdty::i32x4, c: ::simdty::i32x4, d: ::simdty::i32x4, e: ::simdty::i32x4, f: i32, g: i32) -> ();
+        /// The `llvm.arm.neon.vst4lane.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vst4lane.v2i64"]
+        pub fn neon_vst4lane_v2i64(a: *mut i8, b: ::simdty::i64x2, c: ::simdty::i64x2, d: ::simdty::i64x2, e: ::simdty::i64x2, f: i32, g: i32) -> ();
+        /// The `llvm.arm.neon.vst4lane.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vst4lane.v4f32"]
+        pub fn neon_vst4lane_v4f32(a: *mut i8, b: ::simdty::f32x4, c: ::simdty::f32x4, d: ::simdty::f32x4, e: ::simdty::f32x4, f: i32, g: i32) -> ();
+        /// The `llvm.arm.neon.vst4lane.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vst4lane.v2f64"]
+        pub fn neon_vst4lane_v2f64(a: *mut i8, b: ::simdty::f64x2, c: ::simdty::f64x2, d: ::simdty::f64x2, e: ::simdty::f64x2, f: i32, g: i32) -> ();
+        /// The `llvm.arm.neon.vbsl.v16i8` intrinsic.
+        #[link_name = "llvm.arm.neon.vbsl.v16i8"]
+        pub fn neon_vbsl_v16i8(a: ::simdty::i8x16, b: ::simdty::i8x16, c: ::simdty::i8x16) -> ::simdty::i8x16;
+        /// The `llvm.arm.neon.vbsl.v8i16` intrinsic.
+        #[link_name = "llvm.arm.neon.vbsl.v8i16"]
+        pub fn neon_vbsl_v8i16(a: ::simdty::i16x8, b: ::simdty::i16x8, c: ::simdty::i16x8) -> ::simdty::i16x8;
+        /// The `llvm.arm.neon.vbsl.v4i32` intrinsic.
+        #[link_name = "llvm.arm.neon.vbsl.v4i32"]
+        pub fn neon_vbsl_v4i32(a: ::simdty::i32x4, b: ::simdty::i32x4, c: ::simdty::i32x4) -> ::simdty::i32x4;
+        /// The `llvm.arm.neon.vbsl.v2i64` intrinsic.
+        #[link_name = "llvm.arm.neon.vbsl.v2i64"]
+        pub fn neon_vbsl_v2i64(a: ::simdty::i64x2, b: ::simdty::i64x2, c: ::simdty::i64x2) -> ::simdty::i64x2;
+        /// The `llvm.arm.neon.vbsl.v4f32` intrinsic.
+        #[link_name = "llvm.arm.neon.vbsl.v4f32"]
+        pub fn neon_vbsl_v4f32(a: ::simdty::f32x4, b: ::simdty::f32x4, c: ::simdty::f32x4) -> ::simdty::f32x4;
+        /// The `llvm.arm.neon.vbsl.v2f64` intrinsic.
+        #[link_name = "llvm.arm.neon.vbsl.v2f64"]
+        pub fn neon_vbsl_v2f64(a: ::simdty::f64x2, b: ::simdty::f64x2, c: ::simdty::f64x2) -> ::simdty::f64x2;
         /// The `llvm.arm.neon.aesd` intrinsic.
         #[link_name = "llvm.arm.neon.aesd"]
         pub fn neon_aesd(a: ::simdty::i8x16, b: ::simdty::i8x16) -> ::simdty::i8x16;
@@ -5635,33 +16057,111 @@ pub mod nvvm {
         /// The `llvm.nvvm.read.ptx.sreg.warpsize` intrinsic; known as `__nvvm_read_ptx_sreg_warpsize` in GCC.
         #[link_name = "llvm.nvvm.read.ptx.sreg.warpsize"]
         pub fn read_ptx_sreg_warpsize() -> i32;
-        /// The `llvm.nvvm.ptr.local.to.gen` intrinsic.
-        #[link_name = "llvm.nvvm.ptr.local.to.gen"]
-        pub fn ptr_local_to_gen(a: *mut i8) -> *mut i8;
-        /// The `llvm.nvvm.ptr.shared.to.gen` intrinsic.
-        #[link_name = "llvm.nvvm.ptr.shared.to.gen"]
-        pub fn ptr_shared_to_gen(a: *mut i8) -> *mut i8;
-        /// The `llvm.nvvm.ptr.global.to.gen` intrinsic.
-        #[link_name = "llvm.nvvm.ptr.global.to.gen"]
-        pub fn ptr_global_to_gen(a: *mut i8) -> *mut i8;
-        /// The `llvm.nvvm.ptr.constant.to.gen` intrinsic.
-        #[link_name = "llvm.nvvm.ptr.constant.to.gen"]
-        pub fn ptr_constant_to_gen(a: *mut i8) -> *mut i8;
-        /// The `llvm.nvvm.ptr.gen.to.global` intrinsic.
-        #[link_name = "llvm.nvvm.ptr.gen.to.global"]
-        pub fn ptr_gen_to_global(a: *mut i8) -> *mut i8;
-        /// The `llvm.nvvm.ptr.gen.to.shared` intrinsic.
-        #[link_name = "llvm.nvvm.ptr.gen.to.shared"]
-        pub fn ptr_gen_to_shared(a: *mut i8) -> *mut i8;
-        /// The `llvm.nvvm.ptr.gen.to.local` intrinsic.
-        #[link_name = "llvm.nvvm.ptr.gen.to.local"]
-        pub fn ptr_gen_to_local(a: *mut i8) -> *mut i8;
-        /// The `llvm.nvvm.ptr.gen.to.constant` intrinsic.
-        #[link_name = "llvm.nvvm.ptr.gen.to.constant"]
-        pub fn ptr_gen_to_constant(a: *mut i8) -> *mut i8;
-        /// The `llvm.nvvm.ptr.gen.to.param` intrinsic.
-        #[link_name = "llvm.nvvm.ptr.gen.to.param"]
-        pub fn ptr_gen_to_param(a: *mut i8) -> *mut i8;
+        /// The `llvm.nvvm.ldu.global.i.v16i8` intrinsic.
+        #[link_name = "llvm.nvvm.ldu.global.i.v16i8"]
+        pub fn ldu_global_i_v16i8(a: *mut ::simdty::i8x16, b: i32) -> ::simdty::i8x16;
+        /// The `llvm.nvvm.ldu.global.i.i8` intrinsic.
+        #[link_name = "llvm.nvvm.ldu.global.i.i8"]
+        pub fn ldu_global_i_i8(a: *mut i8, b: i32) -> i8;
+        /// The `llvm.nvvm.ldu.global.i.v8i16` intrinsic.
+        #[link_name = "llvm.nvvm.ldu.global.i.v8i16"]
+        pub fn ldu_global_i_v8i16(a: *mut ::simdty::i16x8, b: i32) -> ::simdty::i16x8;
+        /// The `llvm.nvvm.ldu.global.i.i16` intrinsic.
+        #[link_name = "llvm.nvvm.ldu.global.i.i16"]
+        pub fn ldu_global_i_i16(a: *mut i16, b: i32) -> i16;
+        /// The `llvm.nvvm.ldu.global.i.v4i32` intrinsic.
+        #[link_name = "llvm.nvvm.ldu.global.i.v4i32"]
+        pub fn ldu_global_i_v4i32(a: *mut ::simdty::i32x4, b: i32) -> ::simdty::i32x4;
+        /// The `llvm.nvvm.ldu.global.i.i32` intrinsic.
+        #[link_name = "llvm.nvvm.ldu.global.i.i32"]
+        pub fn ldu_global_i_i32(a: *mut i32, b: i32) -> i32;
+        /// The `llvm.nvvm.ldu.global.i.v2i64` intrinsic.
+        #[link_name = "llvm.nvvm.ldu.global.i.v2i64"]
+        pub fn ldu_global_i_v2i64(a: *mut ::simdty::i64x2, b: i32) -> ::simdty::i64x2;
+        /// The `llvm.nvvm.ldu.global.i.i64` intrinsic.
+        #[link_name = "llvm.nvvm.ldu.global.i.i64"]
+        pub fn ldu_global_i_i64(a: *mut i64, b: i32) -> i64;
+        /// The `llvm.nvvm.ldu.global.f.v4f32` intrinsic.
+        #[link_name = "llvm.nvvm.ldu.global.f.v4f32"]
+        pub fn ldu_global_f_v4f32(a: *mut ::simdty::f32x4, b: i32) -> ::simdty::f32x4;
+        /// The `llvm.nvvm.ldu.global.f.f32` intrinsic.
+        #[link_name = "llvm.nvvm.ldu.global.f.f32"]
+        pub fn ldu_global_f_f32(a: *mut f32, b: i32) -> f32;
+        /// The `llvm.nvvm.ldu.global.f.v2f64` intrinsic.
+        #[link_name = "llvm.nvvm.ldu.global.f.v2f64"]
+        pub fn ldu_global_f_v2f64(a: *mut ::simdty::f64x2, b: i32) -> ::simdty::f64x2;
+        /// The `llvm.nvvm.ldu.global.f.f64` intrinsic.
+        #[link_name = "llvm.nvvm.ldu.global.f.f64"]
+        pub fn ldu_global_f_f64(a: *mut f64, b: i32) -> f64;
+        /// The `llvm.nvvm.ldu.global.p.p0i8` intrinsic.
+        #[link_name = "llvm.nvvm.ldu.global.p.p0i8"]
+        pub fn ldu_global_p_p0i8(a: *mut *mut i8, b: i32) -> *mut i8;
+        /// The `llvm.nvvm.ldg.global.i.v16i8` intrinsic.
+        #[link_name = "llvm.nvvm.ldg.global.i.v16i8"]
+        pub fn ldg_global_i_v16i8(a: *mut ::simdty::i8x16, b: i32) -> ::simdty::i8x16;
+        /// The `llvm.nvvm.ldg.global.i.i8` intrinsic.
+        #[link_name = "llvm.nvvm.ldg.global.i.i8"]
+        pub fn ldg_global_i_i8(a: *mut i8, b: i32) -> i8;
+        /// The `llvm.nvvm.ldg.global.i.v8i16` intrinsic.
+        #[link_name = "llvm.nvvm.ldg.global.i.v8i16"]
+        pub fn ldg_global_i_v8i16(a: *mut ::simdty::i16x8, b: i32) -> ::simdty::i16x8;
+        /// The `llvm.nvvm.ldg.global.i.i16` intrinsic.
+        #[link_name = "llvm.nvvm.ldg.global.i.i16"]
+        pub fn ldg_global_i_i16(a: *mut i16, b: i32) -> i16;
+        /// The `llvm.nvvm.ldg.global.i.v4i32` intrinsic.
+        #[link_name = "llvm.nvvm.ldg.global.i.v4i32"]
+        pub fn ldg_global_i_v4i32(a: *mut ::simdty::i32x4, b: i32) -> ::simdty::i32x4;
+        /// The `llvm.nvvm.ldg.global.i.i32` intrinsic.
+        #[link_name = "llvm.nvvm.ldg.global.i.i32"]
+        pub fn ldg_global_i_i32(a: *mut i32, b: i32) -> i32;
+        /// The `llvm.nvvm.ldg.global.i.v2i64` intrinsic.
+        #[link_name = "llvm.nvvm.ldg.global.i.v2i64"]
+        pub fn ldg_global_i_v2i64(a: *mut ::simdty::i64x2, b: i32) -> ::simdty::i64x2;
+        /// The `llvm.nvvm.ldg.global.i.i64` intrinsic.
+        #[link_name = "llvm.nvvm.ldg.global.i.i64"]
+        pub fn ldg_global_i_i64(a: *mut i64, b: i32) -> i64;
+        /// The `llvm.nvvm.ldg.global.f.v4f32` intrinsic.
+        #[link_name = "llvm.nvvm.ldg.global.f.v4f32"]
+        pub fn ldg_global_f_v4f32(a: *mut ::simdty::f32x4, b: i32) -> ::simdty::f32x4;
+        /// The `llvm.nvvm.ldg.global.f.f32` intrinsic.
+        #[link_name = "llvm.nvvm.ldg.global.f.f32"]
+        pub fn ldg_global_f_f32(a: *mut f32, b: i32) -> f32;
+        /// The `llvm.nvvm.ldg.global.f.v2f64` intrinsic.
+        #[link_name = "llvm.nvvm.ldg.global.f.v2f64"]
+        pub fn ldg_global_f_v2f64(a: *mut ::simdty::f64x2, b: i32) -> ::simdty::f64x2;
+        /// The `llvm.nvvm.ldg.global.f.f64` intrinsic.
+        #[link_name = "llvm.nvvm.ldg.global.f.f64"]
+        pub fn ldg_global_f_f64(a: *mut f64, b: i32) -> f64;
+        /// The `llvm.nvvm.ldg.global.p.p0i8` intrinsic.
+        #[link_name = "llvm.nvvm.ldg.global.p.p0i8"]
+        pub fn ldg_global_p_p0i8(a: *mut *mut i8, b: i32) -> *mut i8;
+        /// The `llvm.nvvm.ptr.local.to.gen.p0i8.p0i8` intrinsic.
+        #[link_name = "llvm.nvvm.ptr.local.to.gen.p0i8.p0i8"]
+        pub fn ptr_local_to_gen_p0i8_p0i8(a: *mut i8) -> *mut i8;
+        /// The `llvm.nvvm.ptr.shared.to.gen.p0i8.p0i8` intrinsic.
+        #[link_name = "llvm.nvvm.ptr.shared.to.gen.p0i8.p0i8"]
+        pub fn ptr_shared_to_gen_p0i8_p0i8(a: *mut i8) -> *mut i8;
+        /// The `llvm.nvvm.ptr.global.to.gen.p0i8.p0i8` intrinsic.
+        #[link_name = "llvm.nvvm.ptr.global.to.gen.p0i8.p0i8"]
+        pub fn ptr_global_to_gen_p0i8_p0i8(a: *mut i8) -> *mut i8;
+        /// The `llvm.nvvm.ptr.constant.to.gen.p0i8.p0i8` intrinsic.
+        #[link_name = "llvm.nvvm.ptr.constant.to.gen.p0i8.p0i8"]
+        pub fn ptr_constant_to_gen_p0i8_p0i8(a: *mut i8) -> *mut i8;
+        /// The `llvm.nvvm.ptr.gen.to.global.p0i8.p0i8` intrinsic.
+        #[link_name = "llvm.nvvm.ptr.gen.to.global.p0i8.p0i8"]
+        pub fn ptr_gen_to_global_p0i8_p0i8(a: *mut i8) -> *mut i8;
+        /// The `llvm.nvvm.ptr.gen.to.shared.p0i8.p0i8` intrinsic.
+        #[link_name = "llvm.nvvm.ptr.gen.to.shared.p0i8.p0i8"]
+        pub fn ptr_gen_to_shared_p0i8_p0i8(a: *mut i8) -> *mut i8;
+        /// The `llvm.nvvm.ptr.gen.to.local.p0i8.p0i8` intrinsic.
+        #[link_name = "llvm.nvvm.ptr.gen.to.local.p0i8.p0i8"]
+        pub fn ptr_gen_to_local_p0i8_p0i8(a: *mut i8) -> *mut i8;
+        /// The `llvm.nvvm.ptr.gen.to.constant.p0i8.p0i8` intrinsic.
+        #[link_name = "llvm.nvvm.ptr.gen.to.constant.p0i8.p0i8"]
+        pub fn ptr_gen_to_constant_p0i8_p0i8(a: *mut i8) -> *mut i8;
+        /// The `llvm.nvvm.ptr.gen.to.param.p0i8.p0i8` intrinsic.
+        #[link_name = "llvm.nvvm.ptr.gen.to.param.p0i8.p0i8"]
+        pub fn ptr_gen_to_param_p0i8_p0i8(a: *mut i8) -> *mut i8;
         /// The `llvm.nvvm.move.i16` intrinsic.
         #[link_name = "llvm.nvvm.move.i16"]
         pub fn move_i16(a: i16) -> i16;
@@ -5677,21 +16177,21 @@ pub mod nvvm {
         /// The `llvm.nvvm.move.double` intrinsic.
         #[link_name = "llvm.nvvm.move.double"]
         pub fn move_double(a: f64) -> f64;
-        /// The `llvm.nvvm.move.ptr` intrinsic.
-        #[link_name = "llvm.nvvm.move.ptr"]
-        pub fn move_ptr(a: *mut i8) -> *mut i8;
-        /// The `llvm.nvvm.texsurf.handle.internal` intrinsic.
-        #[link_name = "llvm.nvvm.texsurf.handle.internal"]
-        pub fn texsurf_handle_internal(a: *mut i8) -> i64;
-        /// The `llvm.nvvm.compiler.error` intrinsic.
-        #[link_name = "llvm.nvvm.compiler.error"]
-        pub fn compiler_error(a: *mut i8) -> ();
-        /// The `llvm.nvvm.compiler.warn` intrinsic.
-        #[link_name = "llvm.nvvm.compiler.warn"]
-        pub fn compiler_warn(a: *mut i8) -> ();
-        /// The `llvm.nvvm.reflect` intrinsic.
-        #[link_name = "llvm.nvvm.reflect"]
-        pub fn reflect(a: *mut i8) -> i32;
+        /// The `llvm.nvvm.move.ptr.p0i8.p0i8` intrinsic.
+        #[link_name = "llvm.nvvm.move.ptr.p0i8.p0i8"]
+        pub fn move_ptr_p0i8_p0i8(a: *mut i8) -> *mut i8;
+        /// The `llvm.nvvm.texsurf.handle.internal.p0i8` intrinsic.
+        #[link_name = "llvm.nvvm.texsurf.handle.internal.p0i8"]
+        pub fn texsurf_handle_internal_p0i8(a: *mut i8) -> i64;
+        /// The `llvm.nvvm.compiler.error.p0i8` intrinsic.
+        #[link_name = "llvm.nvvm.compiler.error.p0i8"]
+        pub fn compiler_error_p0i8(a: *mut i8) -> ();
+        /// The `llvm.nvvm.compiler.warn.p0i8` intrinsic.
+        #[link_name = "llvm.nvvm.compiler.warn.p0i8"]
+        pub fn compiler_warn_p0i8(a: *mut i8) -> ();
+        /// The `llvm.nvvm.reflect.p0i8` intrinsic.
+        #[link_name = "llvm.nvvm.reflect.p0i8"]
+        pub fn reflect_p0i8(a: *mut i8) -> i32;
         /// The `llvm.nvvm.isspacep.const` intrinsic; known as `__nvvm_isspacep_const` in GCC.
         #[link_name = "llvm.nvvm.isspacep.const"]
         pub fn isspacep_const(a: *mut i8) -> bool;
@@ -6708,6 +17208,30 @@ pub mod ppc {
         /// The `llvm.ppc.lwsync` intrinsic.
         #[link_name = "llvm.ppc.lwsync"]
         pub fn lwsync() -> ();
+        /// The `llvm.ppc.mtctr.v16i8` intrinsic.
+        #[link_name = "llvm.ppc.mtctr.v16i8"]
+        pub fn mtctr_v16i8(a: ::simdty::i8x16) -> ();
+        /// The `llvm.ppc.mtctr.i8` intrinsic.
+        #[link_name = "llvm.ppc.mtctr.i8"]
+        pub fn mtctr_i8(a: i8) -> ();
+        /// The `llvm.ppc.mtctr.v8i16` intrinsic.
+        #[link_name = "llvm.ppc.mtctr.v8i16"]
+        pub fn mtctr_v8i16(a: ::simdty::i16x8) -> ();
+        /// The `llvm.ppc.mtctr.i16` intrinsic.
+        #[link_name = "llvm.ppc.mtctr.i16"]
+        pub fn mtctr_i16(a: i16) -> ();
+        /// The `llvm.ppc.mtctr.v4i32` intrinsic.
+        #[link_name = "llvm.ppc.mtctr.v4i32"]
+        pub fn mtctr_v4i32(a: ::simdty::i32x4) -> ();
+        /// The `llvm.ppc.mtctr.i32` intrinsic.
+        #[link_name = "llvm.ppc.mtctr.i32"]
+        pub fn mtctr_i32(a: i32) -> ();
+        /// The `llvm.ppc.mtctr.v2i64` intrinsic.
+        #[link_name = "llvm.ppc.mtctr.v2i64"]
+        pub fn mtctr_v2i64(a: ::simdty::i64x2) -> ();
+        /// The `llvm.ppc.mtctr.i64` intrinsic.
+        #[link_name = "llvm.ppc.mtctr.i64"]
+        pub fn mtctr_i64(a: i64) -> ();
         /// The `llvm.ppc.is.decremented.ctr.nonzero` intrinsic.
         #[link_name = "llvm.ppc.is.decremented.ctr.nonzero"]
         pub fn is_decremented_ctr_nonzero() -> bool;
@@ -9579,93 +20103,93 @@ pub mod xcore {
         /// The `llvm.xcore.clrsr` intrinsic.
         #[link_name = "llvm.xcore.clrsr"]
         pub fn clrsr(a: i32) -> ();
-        /// The `llvm.xcore.getr` intrinsic.
-        #[link_name = "llvm.xcore.getr"]
-        pub fn getr(a: i32) -> *mut i8;
-        /// The `llvm.xcore.freer` intrinsic.
-        #[link_name = "llvm.xcore.freer"]
-        pub fn freer(a: *mut i8) -> ();
-        /// The `llvm.xcore.in` intrinsic.
-        #[link_name = "llvm.xcore.in"]
-        pub fn in_(a: *mut i8) -> i32;
-        /// The `llvm.xcore.int` intrinsic.
-        #[link_name = "llvm.xcore.int"]
-        pub fn int(a: *mut i8) -> i32;
-        /// The `llvm.xcore.inct` intrinsic.
-        #[link_name = "llvm.xcore.inct"]
-        pub fn inct(a: *mut i8) -> i32;
-        /// The `llvm.xcore.out` intrinsic.
-        #[link_name = "llvm.xcore.out"]
-        pub fn out(a: *mut i8, b: i32) -> ();
-        /// The `llvm.xcore.outt` intrinsic.
-        #[link_name = "llvm.xcore.outt"]
-        pub fn outt(a: *mut i8, b: i32) -> ();
-        /// The `llvm.xcore.outct` intrinsic.
-        #[link_name = "llvm.xcore.outct"]
-        pub fn outct(a: *mut i8, b: i32) -> ();
-        /// The `llvm.xcore.chkct` intrinsic.
-        #[link_name = "llvm.xcore.chkct"]
-        pub fn chkct(a: *mut i8, b: i32) -> ();
-        /// The `llvm.xcore.testct` intrinsic.
-        #[link_name = "llvm.xcore.testct"]
-        pub fn testct(a: *mut i8) -> i32;
-        /// The `llvm.xcore.testwct` intrinsic.
-        #[link_name = "llvm.xcore.testwct"]
-        pub fn testwct(a: *mut i8) -> i32;
-        /// The `llvm.xcore.setd` intrinsic.
-        #[link_name = "llvm.xcore.setd"]
-        pub fn setd(a: *mut i8, b: i32) -> ();
-        /// The `llvm.xcore.setc` intrinsic.
-        #[link_name = "llvm.xcore.setc"]
-        pub fn setc(a: *mut i8, b: i32) -> ();
-        /// The `llvm.xcore.inshr` intrinsic.
-        #[link_name = "llvm.xcore.inshr"]
-        pub fn inshr(a: *mut i8, b: i32) -> i32;
-        /// The `llvm.xcore.outshr` intrinsic.
-        #[link_name = "llvm.xcore.outshr"]
-        pub fn outshr(a: *mut i8, b: i32) -> i32;
-        /// The `llvm.xcore.setpt` intrinsic.
-        #[link_name = "llvm.xcore.setpt"]
-        pub fn setpt(a: *mut i8, b: i32) -> ();
-        /// The `llvm.xcore.clrpt` intrinsic.
-        #[link_name = "llvm.xcore.clrpt"]
-        pub fn clrpt(a: *mut i8) -> ();
-        /// The `llvm.xcore.getts` intrinsic.
-        #[link_name = "llvm.xcore.getts"]
-        pub fn getts(a: *mut i8) -> i32;
-        /// The `llvm.xcore.syncr` intrinsic.
-        #[link_name = "llvm.xcore.syncr"]
-        pub fn syncr(a: *mut i8) -> ();
-        /// The `llvm.xcore.settw` intrinsic.
-        #[link_name = "llvm.xcore.settw"]
-        pub fn settw(a: *mut i8, b: i32) -> ();
-        /// The `llvm.xcore.setv` intrinsic.
-        #[link_name = "llvm.xcore.setv"]
-        pub fn setv(a: *mut i8, b: *mut i8) -> ();
-        /// The `llvm.xcore.setev` intrinsic.
-        #[link_name = "llvm.xcore.setev"]
-        pub fn setev(a: *mut i8, b: *mut i8) -> ();
-        /// The `llvm.xcore.eeu` intrinsic.
-        #[link_name = "llvm.xcore.eeu"]
-        pub fn eeu(a: *mut i8) -> ();
-        /// The `llvm.xcore.edu` intrinsic.
-        #[link_name = "llvm.xcore.edu"]
-        pub fn edu(a: *mut i8) -> ();
-        /// The `llvm.xcore.setclk` intrinsic.
-        #[link_name = "llvm.xcore.setclk"]
-        pub fn setclk(a: *mut i8, b: *mut i8) -> ();
-        /// The `llvm.xcore.setrdy` intrinsic.
-        #[link_name = "llvm.xcore.setrdy"]
-        pub fn setrdy(a: *mut i8, b: *mut i8) -> ();
-        /// The `llvm.xcore.setpsc` intrinsic.
-        #[link_name = "llvm.xcore.setpsc"]
-        pub fn setpsc(a: *mut i8, b: i32) -> ();
-        /// The `llvm.xcore.peek` intrinsic.
-        #[link_name = "llvm.xcore.peek"]
-        pub fn peek(a: *mut i8) -> i32;
-        /// The `llvm.xcore.endin` intrinsic.
-        #[link_name = "llvm.xcore.endin"]
-        pub fn endin(a: *mut i8) -> i32;
+        /// The `llvm.xcore.getr.p0i8` intrinsic.
+        #[link_name = "llvm.xcore.getr.p0i8"]
+        pub fn getr_p0i8(a: i32) -> *mut i8;
+        /// The `llvm.xcore.freer.p0i8` intrinsic.
+        #[link_name = "llvm.xcore.freer.p0i8"]
+        pub fn freer_p0i8(a: *mut i8) -> ();
+        /// The `llvm.xcore.in.p0i8` intrinsic.
+        #[link_name = "llvm.xcore.in.p0i8"]
+        pub fn in_p0i8(a: *mut i8) -> i32;
+        /// The `llvm.xcore.int.p0i8` intrinsic.
+        #[link_name = "llvm.xcore.int.p0i8"]
+        pub fn int_p0i8(a: *mut i8) -> i32;
+        /// The `llvm.xcore.inct.p0i8` intrinsic.
+        #[link_name = "llvm.xcore.inct.p0i8"]
+        pub fn inct_p0i8(a: *mut i8) -> i32;
+        /// The `llvm.xcore.out.p0i8` intrinsic.
+        #[link_name = "llvm.xcore.out.p0i8"]
+        pub fn out_p0i8(a: *mut i8, b: i32) -> ();
+        /// The `llvm.xcore.outt.p0i8` intrinsic.
+        #[link_name = "llvm.xcore.outt.p0i8"]
+        pub fn outt_p0i8(a: *mut i8, b: i32) -> ();
+        /// The `llvm.xcore.outct.p0i8` intrinsic.
+        #[link_name = "llvm.xcore.outct.p0i8"]
+        pub fn outct_p0i8(a: *mut i8, b: i32) -> ();
+        /// The `llvm.xcore.chkct.p0i8` intrinsic.
+        #[link_name = "llvm.xcore.chkct.p0i8"]
+        pub fn chkct_p0i8(a: *mut i8, b: i32) -> ();
+        /// The `llvm.xcore.testct.p0i8` intrinsic.
+        #[link_name = "llvm.xcore.testct.p0i8"]
+        pub fn testct_p0i8(a: *mut i8) -> i32;
+        /// The `llvm.xcore.testwct.p0i8` intrinsic.
+        #[link_name = "llvm.xcore.testwct.p0i8"]
+        pub fn testwct_p0i8(a: *mut i8) -> i32;
+        /// The `llvm.xcore.setd.p0i8` intrinsic.
+        #[link_name = "llvm.xcore.setd.p0i8"]
+        pub fn setd_p0i8(a: *mut i8, b: i32) -> ();
+        /// The `llvm.xcore.setc.p0i8` intrinsic.
+        #[link_name = "llvm.xcore.setc.p0i8"]
+        pub fn setc_p0i8(a: *mut i8, b: i32) -> ();
+        /// The `llvm.xcore.inshr.p0i8` intrinsic.
+        #[link_name = "llvm.xcore.inshr.p0i8"]
+        pub fn inshr_p0i8(a: *mut i8, b: i32) -> i32;
+        /// The `llvm.xcore.outshr.p0i8` intrinsic.
+        #[link_name = "llvm.xcore.outshr.p0i8"]
+        pub fn outshr_p0i8(a: *mut i8, b: i32) -> i32;
+        /// The `llvm.xcore.setpt.p0i8` intrinsic.
+        #[link_name = "llvm.xcore.setpt.p0i8"]
+        pub fn setpt_p0i8(a: *mut i8, b: i32) -> ();
+        /// The `llvm.xcore.clrpt.p0i8` intrinsic.
+        #[link_name = "llvm.xcore.clrpt.p0i8"]
+        pub fn clrpt_p0i8(a: *mut i8) -> ();
+        /// The `llvm.xcore.getts.p0i8` intrinsic.
+        #[link_name = "llvm.xcore.getts.p0i8"]
+        pub fn getts_p0i8(a: *mut i8) -> i32;
+        /// The `llvm.xcore.syncr.p0i8` intrinsic.
+        #[link_name = "llvm.xcore.syncr.p0i8"]
+        pub fn syncr_p0i8(a: *mut i8) -> ();
+        /// The `llvm.xcore.settw.p0i8` intrinsic.
+        #[link_name = "llvm.xcore.settw.p0i8"]
+        pub fn settw_p0i8(a: *mut i8, b: i32) -> ();
+        /// The `llvm.xcore.setv.p0i8` intrinsic.
+        #[link_name = "llvm.xcore.setv.p0i8"]
+        pub fn setv_p0i8(a: *mut i8, b: *mut i8) -> ();
+        /// The `llvm.xcore.setev.p0i8` intrinsic.
+        #[link_name = "llvm.xcore.setev.p0i8"]
+        pub fn setev_p0i8(a: *mut i8, b: *mut i8) -> ();
+        /// The `llvm.xcore.eeu.p0i8` intrinsic.
+        #[link_name = "llvm.xcore.eeu.p0i8"]
+        pub fn eeu_p0i8(a: *mut i8) -> ();
+        /// The `llvm.xcore.edu.p0i8` intrinsic.
+        #[link_name = "llvm.xcore.edu.p0i8"]
+        pub fn edu_p0i8(a: *mut i8) -> ();
+        /// The `llvm.xcore.setclk.p0i8.p0i8` intrinsic.
+        #[link_name = "llvm.xcore.setclk.p0i8.p0i8"]
+        pub fn setclk_p0i8_p0i8(a: *mut i8, b: *mut i8) -> ();
+        /// The `llvm.xcore.setrdy.p0i8.p0i8` intrinsic.
+        #[link_name = "llvm.xcore.setrdy.p0i8.p0i8"]
+        pub fn setrdy_p0i8_p0i8(a: *mut i8, b: *mut i8) -> ();
+        /// The `llvm.xcore.setpsc.p0i8` intrinsic.
+        #[link_name = "llvm.xcore.setpsc.p0i8"]
+        pub fn setpsc_p0i8(a: *mut i8, b: i32) -> ();
+        /// The `llvm.xcore.peek.p0i8` intrinsic.
+        #[link_name = "llvm.xcore.peek.p0i8"]
+        pub fn peek_p0i8(a: *mut i8) -> i32;
+        /// The `llvm.xcore.endin.p0i8` intrinsic.
+        #[link_name = "llvm.xcore.endin.p0i8"]
+        pub fn endin_p0i8(a: *mut i8) -> i32;
         /// The `llvm.xcore.waitevent` intrinsic.
         #[link_name = "llvm.xcore.waitevent"]
         pub fn waitevent() -> *mut i8;
@@ -9675,33 +20199,33 @@ pub mod xcore {
         /// The `llvm.xcore.clre` intrinsic.
         #[link_name = "llvm.xcore.clre"]
         pub fn clre() -> ();
-        /// The `llvm.xcore.getst` intrinsic.
-        #[link_name = "llvm.xcore.getst"]
-        pub fn getst(a: *mut i8) -> *mut i8;
-        /// The `llvm.xcore.msync` intrinsic.
-        #[link_name = "llvm.xcore.msync"]
-        pub fn msync(a: *mut i8) -> ();
+        /// The `llvm.xcore.getst.p0i8.p0i8` intrinsic.
+        #[link_name = "llvm.xcore.getst.p0i8.p0i8"]
+        pub fn getst_p0i8_p0i8(a: *mut i8) -> *mut i8;
+        /// The `llvm.xcore.msync.p0i8` intrinsic.
+        #[link_name = "llvm.xcore.msync.p0i8"]
+        pub fn msync_p0i8(a: *mut i8) -> ();
         /// The `llvm.xcore.ssync` intrinsic.
         #[link_name = "llvm.xcore.ssync"]
         pub fn ssync() -> ();
-        /// The `llvm.xcore.mjoin` intrinsic.
-        #[link_name = "llvm.xcore.mjoin"]
-        pub fn mjoin(a: *mut i8) -> ();
-        /// The `llvm.xcore.initsp` intrinsic.
-        #[link_name = "llvm.xcore.initsp"]
-        pub fn initsp(a: *mut i8, b: *mut i8) -> ();
-        /// The `llvm.xcore.initpc` intrinsic.
-        #[link_name = "llvm.xcore.initpc"]
-        pub fn initpc(a: *mut i8, b: *mut i8) -> ();
-        /// The `llvm.xcore.initlr` intrinsic.
-        #[link_name = "llvm.xcore.initlr"]
-        pub fn initlr(a: *mut i8, b: *mut i8) -> ();
-        /// The `llvm.xcore.initcp` intrinsic.
-        #[link_name = "llvm.xcore.initcp"]
-        pub fn initcp(a: *mut i8, b: *mut i8) -> ();
-        /// The `llvm.xcore.initdp` intrinsic.
-        #[link_name = "llvm.xcore.initdp"]
-        pub fn initdp(a: *mut i8, b: *mut i8) -> ();
+        /// The `llvm.xcore.mjoin.p0i8` intrinsic.
+        #[link_name = "llvm.xcore.mjoin.p0i8"]
+        pub fn mjoin_p0i8(a: *mut i8) -> ();
+        /// The `llvm.xcore.initsp.p0i8` intrinsic.
+        #[link_name = "llvm.xcore.initsp.p0i8"]
+        pub fn initsp_p0i8(a: *mut i8, b: *mut i8) -> ();
+        /// The `llvm.xcore.initpc.p0i8` intrinsic.
+        #[link_name = "llvm.xcore.initpc.p0i8"]
+        pub fn initpc_p0i8(a: *mut i8, b: *mut i8) -> ();
+        /// The `llvm.xcore.initlr.p0i8` intrinsic.
+        #[link_name = "llvm.xcore.initlr.p0i8"]
+        pub fn initlr_p0i8(a: *mut i8, b: *mut i8) -> ();
+        /// The `llvm.xcore.initcp.p0i8` intrinsic.
+        #[link_name = "llvm.xcore.initcp.p0i8"]
+        pub fn initcp_p0i8(a: *mut i8, b: *mut i8) -> ();
+        /// The `llvm.xcore.initdp.p0i8` intrinsic.
+        #[link_name = "llvm.xcore.initdp.p0i8"]
+        pub fn initdp_p0i8(a: *mut i8, b: *mut i8) -> ();
     }
 }
 /// Listing of the corresponding name(s) of many GCC intrinsics, for reference/search purposes.
@@ -11683,6 +22207,41 @@ pub mod xcore {
 /// <dd><a href="../ppc/fn.altivec_vupklsb.html"><code>ppc::altivec_vupklsb</code></a></dd>
 /// <dt><strong><code>__builtin_altivec_vupklsh</code></strong></dt>
 /// <dd><a href="../ppc/fn.altivec_vupklsh.html"><code>ppc::altivec_vupklsh</code></a></dd>
+/// <dt><strong><code>__builtin_amdgpu_div_fixup</code></strong></dt>
+/// <dd><a href="../AMDGPU/fn.div_fixup_v4f32.html"><code>AMDGPU::div_fixup_v4f32</code></a></dd>
+/// <dd><a href="../AMDGPU/fn.div_fixup_f32.html"><code>AMDGPU::div_fixup_f32</code></a></dd>
+/// <dd><a href="../AMDGPU/fn.div_fixup_v2f64.html"><code>AMDGPU::div_fixup_v2f64</code></a></dd>
+/// <dd><a href="../AMDGPU/fn.div_fixup_f64.html"><code>AMDGPU::div_fixup_f64</code></a></dd>
+/// <dt><strong><code>__builtin_amdgpu_div_fmas</code></strong></dt>
+/// <dd><a href="../AMDGPU/fn.div_fmas_v4f32.html"><code>AMDGPU::div_fmas_v4f32</code></a></dd>
+/// <dd><a href="../AMDGPU/fn.div_fmas_f32.html"><code>AMDGPU::div_fmas_f32</code></a></dd>
+/// <dd><a href="../AMDGPU/fn.div_fmas_v2f64.html"><code>AMDGPU::div_fmas_v2f64</code></a></dd>
+/// <dd><a href="../AMDGPU/fn.div_fmas_f64.html"><code>AMDGPU::div_fmas_f64</code></a></dd>
+/// <dt><strong><code>__builtin_amdgpu_ldexp</code></strong></dt>
+/// <dd><a href="../AMDGPU/fn.ldexp_v4f32.html"><code>AMDGPU::ldexp_v4f32</code></a></dd>
+/// <dd><a href="../AMDGPU/fn.ldexp_f32.html"><code>AMDGPU::ldexp_f32</code></a></dd>
+/// <dd><a href="../AMDGPU/fn.ldexp_v2f64.html"><code>AMDGPU::ldexp_v2f64</code></a></dd>
+/// <dd><a href="../AMDGPU/fn.ldexp_f64.html"><code>AMDGPU::ldexp_f64</code></a></dd>
+/// <dt><strong><code>__builtin_amdgpu_rcp</code></strong></dt>
+/// <dd><a href="../AMDGPU/fn.rcp_v4f32.html"><code>AMDGPU::rcp_v4f32</code></a></dd>
+/// <dd><a href="../AMDGPU/fn.rcp_f32.html"><code>AMDGPU::rcp_f32</code></a></dd>
+/// <dd><a href="../AMDGPU/fn.rcp_v2f64.html"><code>AMDGPU::rcp_v2f64</code></a></dd>
+/// <dd><a href="../AMDGPU/fn.rcp_f64.html"><code>AMDGPU::rcp_f64</code></a></dd>
+/// <dt><strong><code>__builtin_amdgpu_rsq</code></strong></dt>
+/// <dd><a href="../AMDGPU/fn.rsq_v4f32.html"><code>AMDGPU::rsq_v4f32</code></a></dd>
+/// <dd><a href="../AMDGPU/fn.rsq_f32.html"><code>AMDGPU::rsq_f32</code></a></dd>
+/// <dd><a href="../AMDGPU/fn.rsq_v2f64.html"><code>AMDGPU::rsq_v2f64</code></a></dd>
+/// <dd><a href="../AMDGPU/fn.rsq_f64.html"><code>AMDGPU::rsq_f64</code></a></dd>
+/// <dt><strong><code>__builtin_amdgpu_rsq_clamped</code></strong></dt>
+/// <dd><a href="../AMDGPU/fn.rsq_clamped_v4f32.html"><code>AMDGPU::rsq_clamped_v4f32</code></a></dd>
+/// <dd><a href="../AMDGPU/fn.rsq_clamped_f32.html"><code>AMDGPU::rsq_clamped_f32</code></a></dd>
+/// <dd><a href="../AMDGPU/fn.rsq_clamped_v2f64.html"><code>AMDGPU::rsq_clamped_v2f64</code></a></dd>
+/// <dd><a href="../AMDGPU/fn.rsq_clamped_f64.html"><code>AMDGPU::rsq_clamped_f64</code></a></dd>
+/// <dt><strong><code>__builtin_amdgpu_trig_preop</code></strong></dt>
+/// <dd><a href="../AMDGPU/fn.trig_preop_v4f32.html"><code>AMDGPU::trig_preop_v4f32</code></a></dd>
+/// <dd><a href="../AMDGPU/fn.trig_preop_f32.html"><code>AMDGPU::trig_preop_f32</code></a></dd>
+/// <dd><a href="../AMDGPU/fn.trig_preop_v2f64.html"><code>AMDGPU::trig_preop_v2f64</code></a></dd>
+/// <dd><a href="../AMDGPU/fn.trig_preop_f64.html"><code>AMDGPU::trig_preop_f64</code></a></dd>
 /// <dt><strong><code>__builtin_arm_cdp</code></strong></dt>
 /// <dd><a href="../arm/fn.cdp.html"><code>arm::cdp</code></a></dd>
 /// <dt><strong><code>__builtin_arm_cdp2</code></strong></dt>
@@ -14466,6 +25025,15 @@ pub mod xcore {
 /// <dd><a href="../mips/fn.xor_v.html"><code>mips::xor_v</code></a></dd>
 /// <dt><strong><code>__builtin_msa_xori_b</code></strong></dt>
 /// <dd><a href="../mips/fn.xori_b.html"><code>mips::xori_b</code></a></dd>
+/// <dt><strong><code>__builtin_object_size</code></strong></dt>
+/// <dd><a href="../fn.objectsize_v16i8_p0i8.html"><code>objectsize_v16i8_p0i8</code></a></dd>
+/// <dd><a href="../fn.objectsize_i8_p0i8.html"><code>objectsize_i8_p0i8</code></a></dd>
+/// <dd><a href="../fn.objectsize_v8i16_p0i8.html"><code>objectsize_v8i16_p0i8</code></a></dd>
+/// <dd><a href="../fn.objectsize_i16_p0i8.html"><code>objectsize_i16_p0i8</code></a></dd>
+/// <dd><a href="../fn.objectsize_v4i32_p0i8.html"><code>objectsize_v4i32_p0i8</code></a></dd>
+/// <dd><a href="../fn.objectsize_i32_p0i8.html"><code>objectsize_i32_p0i8</code></a></dd>
+/// <dd><a href="../fn.objectsize_v2i64_p0i8.html"><code>objectsize_v2i64_p0i8</code></a></dd>
+/// <dd><a href="../fn.objectsize_i64_p0i8.html"><code>objectsize_i64_p0i8</code></a></dd>
 /// <dt><strong><code>__builtin_ptx_bar_sync</code></strong></dt>
 /// <dd><a href="../ptx/fn.bar_sync.html"><code>ptx::bar_sync</code></a></dd>
 /// <dt><strong><code>__builtin_ptx_read_clock</code></strong></dt>
