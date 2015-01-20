@@ -11,7 +11,6 @@ pub enum MatchStyle {
 
 #[derive(Show, PartialEq, Eq, Clone)]
 pub enum LLVMType {
-    Anon,
     Int(Option<u32>),
     Float(Option<u32>),
     FixedPoint(u32),
@@ -25,6 +24,11 @@ pub enum LLVMType {
     Mips(Box<LLVMType>),
 
     MatchedType(u32, MatchStyle),
+}
+
+
+enum TypeKind {
+    Generic, Matched(u32), Concrete,
 }
 
 fn int(x: u32) -> LLVMType { LLVMType::Int(Some(x)) }
@@ -98,6 +102,18 @@ impl LLVMType {
                 _ => return None,
             };
             Some(LLVMType::MatchedType(n, style))
+        }
+    }
+
+    fn kind(&self) -> TypeKind {
+        match *self {
+            LLVMType::MatchedType(n, _) => TypeKind::Matched(n),
+            LLVMType::Vector(None) | LLVMType::Int(None) | LLVMType::Float(None)
+                => TypeKind::Generic,
+            LLVMType::Vector(Some((_, ref ty))) |
+                LLVMType::Ptr(ref ty) | LLVMType::Mips(ref ty) => ty.kind(),
+
+            _ => TypeKind::Concrete
         }
     }
 }
@@ -196,6 +212,12 @@ pub struct Intrinsic {
     pub ret: Vec<LLVMType>,
 }
 
+pub enum Signature {
+    One(String),
+    Many(Vec<(String, String)>),
+    CouldntRender
+}
+
 impl Intrinsic {
     pub fn from_ast(d: &ast::Def) -> Option<Intrinsic> {
         if !d.name.starts_with("int_") { return None }
@@ -260,6 +282,55 @@ impl Intrinsic {
             ret: ret,
             params: params,
         })
+    }
+
+
+    pub fn signature(&self) -> Signature {
+        use std::iter::repeat;
+        let mut generics = vec![];
+
+        let ret_iter = self.ret.iter().zip(repeat(true).enumerate());
+        let param_iter = self.params.iter().zip(repeat(false).enumerate());
+        for (ty, pos) in ret_iter.chain(param_iter) {
+            match ty.kind() {
+                TypeKind::Generic => generics.push(pos),
+                TypeKind::Matched(n) => assert!(generics.len() >= n as usize),
+                TypeKind::Concrete => {}
+            }
+        }
+
+        if generics.is_empty() {
+            let params = self.params.iter()
+                .enumerate()
+                .map(|(i, ty)| {
+                    ty.to_concrete_rust_string()
+                        .map(|s| {
+                            if s == "..." {
+                                s
+                            } else {
+                                format!("{}: {}", (b'a' + i as u8) as char, s)
+                            }
+                        })
+                })
+                .collect::<Option<Vec<_>>>();
+            let p = match params {
+                Some(p) => p.connect(", "),
+                None => return Signature::CouldntRender
+            };
+
+            let ret = match &self.ret[] {
+                [] => "()".to_string(),
+                [ref ret] => match ret.to_concrete_rust_string() {
+                    Some(r) => r,
+                    None => return Signature::CouldntRender
+                },
+                _ => return Signature::CouldntRender
+            };
+
+            Signature::One(format!("({}) -> {}", p, ret))
+        } else {
+            Signature::CouldntRender
+        }
     }
 }
 

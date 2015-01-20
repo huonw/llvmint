@@ -4,6 +4,7 @@
 extern crate regex;
 #[plugin] #[no_link] extern crate regex_macros;
 
+use std::io;
 use std::collections::{BTreeMap, btree_map};
 
 macro_rules! try_opt {
@@ -95,34 +96,15 @@ pub mod {arch} {{
         };
 
         for intr in items.iter() {
-            let params = intr.params.iter()
-                .enumerate()
-                .map(|(i, ty)| {
-                    ty.to_concrete_rust_string()
-                        .map(|s| {
-                            if s == "..." {
-                                s
-                            } else {
-                                format!("{}: {}", (b'a' + i as u8) as char, s)
-                            }
-                        })
-                })
-                .collect::<Option<Vec<_>>>();
-            let p = match params {
-                Some(p) => p.connect(", "),
-                None => continue
-            };
-            let ret = match &intr.ret[] {
-                [] => "()".to_string(),
-                [ref ret] => match ret.to_concrete_rust_string() {
-                    Some(r) => r,
-                    None => continue
-                },
-                _ => continue
+            let sig = match intr.signature() {
+                intrinsic::Signature::One(sig) => sig,
+                intrinsic::Signature::Many(_) => unimplemented!(),
+                intrinsic::Signature::CouldntRender => continue
             };
 
             let link_name = intr.llvm_name.clone()
                 .unwrap_or_else(|| format!("llvm.{}", intr.name["int_".len()..].replace("_", ".")));
+
             let fn_name = avoid_keywords(&intr.name[strip..]);
             let mut docs = format!("The `{}` intrinsic", link_name);
             if let Some(ref name) = intr.gcc_name {
@@ -140,13 +122,12 @@ pub mod {arch} {{
             println!("\
 {indent}/// {docs}
 {indent}#[link_name = \"{link_name}\"]
-{indent}pub fn {fn_name}({params}) -> {ret};",
+{indent}pub fn {fn_name}{sig};",
                      indent = indent,
                      docs = docs,
                      link_name = link_name,
                      fn_name = fn_name,
-                     params = p,
-                     ret = ret);
+                     sig = sig);
         }
 
         println!("{}", close);
