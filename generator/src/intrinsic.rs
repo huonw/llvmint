@@ -1,15 +1,14 @@
 use std::fmt;
-use std::num::Int;
 use std::str::FromStr;
 
 use ast;
 
-#[derive(Show, PartialEq, Eq, Clone, Copy)]
+#[derive(Debug, PartialEq, Eq, Clone, Copy)]
 pub enum MatchStyle {
     Direct, Extend, Truncate
 }
 
-#[derive(Show, PartialEq, Eq, Clone)]
+#[derive(Debug, PartialEq, Eq, Clone)]
 pub enum LLVMType {
     Int(Option<u32>),
     Float(Option<u32>),
@@ -35,58 +34,59 @@ fn int(x: u32) -> LLVMType { LLVMType::Int(Some(x)) }
 fn float(x: u32) -> LLVMType { LLVMType::Float(Some(x)) }
 fn ptr(ty: LLVMType) -> LLVMType { LLVMType::Ptr(Some(Box::new(ty))) }
 
-fn parse_internals(s: &str) -> Option<LLVMType> {
+fn parse_internals(s: &str) -> Result<LLVMType, ()> {
     match s {
-        "float" => return Some(float(32)),
-        "double" => return Some(float(64)),
-        "anyvector" => return Some(LLVMType::Vector(None)),
-        "anyfloat" => return Some(LLVMType::Float(None)),
-        "anyint" => return Some(LLVMType::Int(None)),
-        "anyptr" => return Some(LLVMType::Ptr(None)),
-        "ptr" => return Some(ptr(int(8))),
-        "ptrptr" => return Some(ptr(ptr(int(8)))),
-        "anyi64ptr" => return Some(ptr(int(64))),
-        "metadata" => return Some(LLVMType::Metadata),
-        "vararg" => return Some(LLVMType::Vararg),
-        "descriptor" => return Some(LLVMType::Descriptor),
-        "x86mmx" => return Some(LLVMType::X86mmx),
-        "ptrx86mmx" => return Some(ptr(LLVMType::X86mmx)),
+        "float" => return Ok(float(32)),
+        "double" => return Ok(float(64)),
+        "anyvector" => return Ok(LLVMType::Vector(None)),
+        "anyfloat" => return Ok(LLVMType::Float(None)),
+        "anyint" => return Ok(LLVMType::Int(None)),
+        "anyptr" => return Ok(LLVMType::Ptr(None)),
+        "ptr" => return Ok(ptr(int(8))),
+        "ptrptr" => return Ok(ptr(ptr(int(8)))),
+        "anyi64ptr" => return Ok(ptr(int(64))),
+        "metadata" => return Ok(LLVMType::Metadata),
+        "vararg" => return Ok(LLVMType::Vararg),
+        "descriptor" => return Ok(LLVMType::Descriptor),
+        "x86mmx" => return Ok(LLVMType::X86mmx),
+        "ptrx86mmx" => return Ok(ptr(LLVMType::X86mmx)),
         _ => {}
     }
     if s.starts_with("i") {
-        s[1..].parse().map(int)
+        s[1..].parse().map(int).map_err(|_| ())
     } else if s.starts_with("f") {
-        s[1..].parse().map(float)
+        s[1..].parse().map(float).map_err(|_| ())
     } else if s.starts_with("q") {
-        s[1..].parse().map(LLVMType::FixedPoint)
+        s[1..].parse().map(LLVMType::FixedPoint).map_err(|_| ())
     } else if s.starts_with("v") {
         let v_len_idx = 1 + s[1..].chars().take_while(|d| d.is_digit(10)).count();
-        s[1..v_len_idx].parse().and_then(|n| {
+        s[1..v_len_idx].parse().map_err(|_| ()).and_then(|n| {
             parse_internals(&s[v_len_idx..]).map(|t| LLVMType::Vector(Some((n, Box::new(t)))))
         })
     } else {
         println!("unrecognised {}", s);
-        None
+        Err(())
     }
 }
 
 impl FromStr for LLVMType {
-    fn from_str(s: &str) -> Option<LLVMType> {
+    type Err = ();
+    fn from_str(s: &str) -> Result<LLVMType, ()> {
         if s.starts_with("mips_") && s.ends_with("_ty") {
             return parse_internals(&s["mips_".len()..s.len()-"_ty".len()])
                 .map(|t| LLVMType::Mips(Box::new(t)))
         }
         parse_internals(&s["llvm_".len()..s.len() - "_ty".len()])
-            .or_else(|| parse_internals(s))
+            .or_else(|_| parse_internals(s))
     }
 }
 
 impl LLVMType {
     fn from_ast(t: &ast::Type) -> Option<LLVMType> {
         if t.args.is_empty() {
-            t.name.parse()
+            t.name.parse().ok()
         } else {
-            let style = match &t.name[] {
+            let style = match &*t.name {
                 "LLVMMatchType" => MatchStyle::Direct,
                 "LLVMExtendedType" => MatchStyle::Extend,
                 "LLVMTruncatedType" => MatchStyle::Truncate,
@@ -221,7 +221,7 @@ impl LLVMType {
     }
 }
 
-#[derive(PartialEq, Eq, Hash, Copy, Show, PartialOrd, Ord)]
+#[derive(PartialEq, Eq, Hash, Copy, Debug, PartialOrd, Ord, Clone)]
 pub enum Arch {
     AMDGPU,
     Aarch64,
@@ -255,8 +255,9 @@ impl Arch {
     }
 }
 impl FromStr for Arch {
-    fn from_str(s: &str) -> Option<Arch> {
-        Some(match s {
+    type Err = ();
+    fn from_str(s: &str) -> Result<Arch, ()> {
+        Ok(match s {
             "AMDGPU" => Arch::AMDGPU,
             "aarch64" => Arch::Aarch64,
             "arm" => Arch::Arm,
@@ -269,15 +270,15 @@ impl FromStr for Arch {
             "r600" => Arch::R600,
             "x86" => Arch::X86,
             "xcore" => Arch::Xcore,
-            _ => return None
+            _ => return Err(())
         })
     }
 }
-impl fmt::String for Arch {
-    fn fmt(&self, fmt: &mut fmt::Formatter) -> fmt::Result { fmt::String::fmt(self.as_str(), fmt) }
+impl fmt::Display for Arch {
+    fn fmt(&self, fmt: &mut fmt::Formatter) -> fmt::Result { fmt::Display::fmt(self.as_str(), fmt) }
 }
 
-#[derive(Show, PartialEq, Eq)]
+#[derive(Debug, PartialEq, Eq)]
 pub struct Intrinsic {
     pub arch: Option<Arch>,
     pub name: String,
@@ -291,14 +292,14 @@ impl Intrinsic {
     pub fn from_ast(d: &ast::Def) -> Option<Intrinsic> {
         if !d.name.starts_with("int_") { return None }
         let arch = regex!(r"^int_([^_]*)");
-        let arch = arch.captures(&d.name[]).unwrap().at(1).unwrap().parse();
+        let arch = arch.captures(&d.name).unwrap().at(1).unwrap().parse();
 
         let mut gcc_name = None;
         let mut llvm_name = None;
         let mut ret = vec![];
         let mut params = vec![];
         for sup in d.inherits.iter() {
-            match &sup.name[] {
+            match &*sup.name {
                 "GCCBuiltin" => {
                     match sup.args[0] {
                         ast::Val::String(ref s) => {
@@ -344,7 +345,7 @@ impl Intrinsic {
         }
 
         Some(Intrinsic {
-            arch: arch,
+            arch: arch.ok(),
             name: d.name.clone(),
             gcc_name: gcc_name,
             llvm_name: llvm_name,
@@ -371,11 +372,11 @@ impl Intrinsic {
         let mut used_params = self.params.clone();
 
         let mut sigs = vec![];
-        choose_types(&mut sigs, &generics[],
-                     0, &self.ret[],
-                     0, &self.params[],
+        choose_types(&mut sigs, &generics,
+                     0, &self.ret,
+                     0, &self.params,
                      &mut vec![],
-                     &mut used_ret[], &mut used_params[]);
+                     &mut used_ret, &mut used_params);
 
         return sigs;
 
@@ -440,7 +441,7 @@ impl Intrinsic {
                 None => return
             };
 
-            let ret = match &used_ret[] {
+            let ret = match &*used_ret {
                 [] => "()".to_string(),
                 [ref ret] => match ret.to_concrete_rust_string() {
                     Some(r) => r,

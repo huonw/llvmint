@@ -1,11 +1,11 @@
-#![feature(plugin)]
-#![allow(unstable)]
-
+#![feature(plugin, slice_patterns, str_char)]
+#![plugin(regex_macros)]
 extern crate regex;
-#[plugin] #[no_link] extern crate regex_macros;
 
 use std::io;
+use std::io::prelude::*;
 use std::collections::{BTreeMap, btree_map};
+use std::path::Path;
 
 macro_rules! try_opt {
     ($e: expr) => {  match $e { Some(x) => x, None => { return None } } }
@@ -14,12 +14,13 @@ macro_rules! try_opt {
 mod intrinsic;
 mod ast;
 fn main() {
-    let s = std::io::stdin().read_to_string().unwrap();
+    let mut s = String::new();
+    io::stdin().read_to_string(&mut s).unwrap();
 
-    let ast = ast::parse(&s[], &Path::new(""));
+    let ast = ast::parse(&s, Path::new(""));
     let (classes, mut defs) = ast::flatten_separate(ast);
-    let class_names = ast::classes_by_name(&classes[]);
-    ast::resolve_classes(&mut defs[], &class_names);
+    let class_names = ast::classes_by_name(&classes);
+    ast::resolve_classes(&mut defs, &class_names);
 
     let mut modules = BTreeMap::new();
     for d in defs.iter() {
@@ -103,17 +104,17 @@ pub mod {arch} {{
                 let mut link_name = intr.llvm_name.clone()
                     .unwrap_or_else(|| format!("llvm.{}",
                                                intr.name["int_".len()..].replace("_", ".")));
-                link_name.push_str(&suffix[]);
+                link_name.push_str(&suffix);
 
                 let raw_name = format!("{}{}", &intr.name[strip..], suffix.replace(".", "_"));
-                let fn_name = avoid_keywords(&raw_name[]);
+                let fn_name = avoid_keywords(&raw_name);
                 let mut docs = format!("The `{}` intrinsic", link_name);
                 if let Some(ref name) = intr.gcc_name {
                     docs.push_str("; known as `");
-                    docs.push_str(&name[]);
+                    docs.push_str(&name);
                     docs.push_str("` in GCC");
 
-                    (match gcc_reexports.entry(&name[]) {
+                    (match gcc_reexports.entry(&*name) {
                         btree_map::Entry::Occupied(o) => o.into_mut(),
                         btree_map::Entry::Vacant(v) => v.insert(vec![])
                     }).push((*module, fn_name.to_string()))

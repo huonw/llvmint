@@ -1,8 +1,10 @@
-use std::io::File;
+use std::fs::File;
+use std::io::prelude::*;
 use std::collections::HashMap;
 use std::{cmp, mem};
+use std::path::Path;
 
-#[derive(Show, Clone, PartialEq, Eq)]
+#[derive(Debug, Clone, PartialEq, Eq)]
 enum Token {
     Ident(String),
     Int(u32),
@@ -94,7 +96,7 @@ fn tokenize(mut s: &str) -> Vec<Token> {
     current
 }
 
-#[derive(Clone, Show)]
+#[derive(Clone, Debug)]
 pub enum Val {
     List(Vec<Val>),
     Strconcat(Vec<Val>),
@@ -102,35 +104,35 @@ pub enum Val {
     String(String),
     Int(u32),
 }
-#[derive(Clone, Show)]
+#[derive(Clone, Debug)]
 pub struct Type {
     pub name: String,
     pub args: Vec<Val>
 }
 
-#[derive(Clone, Show)]
+#[derive(Clone, Debug)]
 pub struct Class {
     pub name: String,
     pub args: Vec<(Type, String, Option<Val>)>,
     pub inherits: Vec<Type>
 }
 
-#[derive(Clone, Show)]
+#[derive(Clone, Debug)]
 pub struct Def {
     pub name: String,
     pub inherits: Vec<Type>,
 }
-#[derive(Clone, Show)]
+#[derive(Clone, Debug)]
 pub struct Let {
     pub items: Vec<Item>,
 }
 
-#[derive(Clone, Show)]
+#[derive(Clone, Debug)]
 pub struct Include {
     items: Vec<Item>,
 }
 
-#[derive(Clone, Show)]
+#[derive(Clone, Debug)]
 pub enum Item {
     Class(Class),
     Multiclass(Class),
@@ -161,7 +163,7 @@ pub fn flatten_separate(items: Vec<Item>) -> (Vec<Class>, Vec<Def>) {
 pub fn classes_by_name(classes: &[Class]) -> HashMap<&str, &Class> {
     let mut map = HashMap::new();
     for c in classes.iter() {
-        assert!(map.insert(&c.name[], c).is_none());
+        assert!(map.insert(&*c.name, c).is_none());
     }
     map
 }
@@ -180,7 +182,7 @@ pub fn resolve_classes(defs: &mut [Def], classes: &HashMap<&str, &Class>) {
                        args: &HashMap<&String, &Val>) {
         use std::iter::repeat;
 
-        let class = match classes.get(&ty.name[]) {
+        let class = match classes.get(&*ty.name) {
             None => {types.push(ty.clone()); return}
             Some(c) => c,
         };
@@ -219,7 +221,7 @@ pub fn resolve_classes(defs: &mut [Def], classes: &HashMap<&str, &Class>) {
                 let new = vals.iter().map(|v| substitute(v, rules)).collect::<Vec<_>>();
                 if new.iter().all(|s| match *s { Val::String(_) => true, _ => false }) {
                     Val::String(new.iter().map(|s| match *s {
-                        Val::String(ref s) => &s[], _ => unreachable!() }).collect())
+                        Val::String(ref s) => &**s, _ => unreachable!() }).collect())
                 } else {
                     Val::Strconcat(new)
                 }
@@ -276,7 +278,7 @@ impl<'a, I: Iterator<Item = Token>> Parser<'a, I> {
 
     fn parse_item_or_eof(&mut self) -> Option<Item> {
         self.expect_ident_or_eof().map(|s| {
-            match &s[] {
+            match &*s {
                 "def" => Item::Def(self.parse_def()),
                 "defm" => Item::Defm(self.parse_def()),
                 "let" => Item::Let(self.parse_let()),
@@ -366,8 +368,9 @@ impl<'a, I: Iterator<Item = Token>> Parser<'a, I> {
             return Include { items: vec![] }
         }
         let file = self.root.join(path);
-        let s = File::open(&file).read_to_string().unwrap();
-        Include { items: parse(&s[], self.root) }
+        let mut s = String::new();
+        File::open(&file).unwrap().read_to_string(&mut s).unwrap();
+        Include { items: parse(&s, self.root) }
     }
 
     fn parse_inherits(&mut self) -> Vec<Type> {

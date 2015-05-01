@@ -7,3 +7,6 @@ authors = ["Huon Wilson <dbau.pp@gmail.com>"]
 [dependencies]
 regex = "0.1.10"
 regex_macros = "0.1.5"
+
+[features]
+unstable = []
