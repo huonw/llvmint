@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `ptx` mod in crate `llvmint`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, ptx">
+
+    <title>llvmint::ptx - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <section class="sidebar">
+        
+        <p class='location'><a href='../index.html'>llvmint</a></p><script>window.sidebarCurrent = {name: 'ptx', ty: 'mod', relpath: '../'};</script><script defer src="../sidebar-items.js"></script>
+    </section>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press 'S' to search, '?' for more options..."
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content mod">
+<h1 class='fqn'><span class='in-band'>Module <a href='../index.html'>llvmint</a>::<wbr><a class='mod' href=''>ptx</a></span><span class='out-of-band'><span id='render-detail'>
+            <a id="toggle-all-docs" href="#" title="collapse all docs">[&minus;]</a>
+        </span><a id='src-53008' class='srclink' href='../../src/llvmint/lib.rs.html#17682-17739' title='goto source code'>[src]</a></span></h1>
+<div class='docblock'><p>LLVM intrinsics for the ptx architecture.</p>
+</div><h2 id='functions' class='section-header'><a href="#functions">Functions</a></h2>
+<table>
+                    <tr class=' module-item'>
+                        <td><a class='fn' href='fn.bar_sync.html'
+                               title='llvmint::ptx::bar_sync'>bar_sync</a></td>
+                        <td class='docblock short'>
+                             <p>The <code>llvm.ptx.bar.sync</code> intrinsic; known as <code>__builtin_ptx_bar_sync</code> in GCC.</p>
+
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='fn' href='fn.read_clock.html'
+                               title='llvmint::ptx::read_clock'>read_clock</a></td>
+                        <td class='docblock short'>
+                             <p>The <code>llvm.ptx.read.clock</code> intrinsic; known as <code>__builtin_ptx_read_clock</code> in GCC.</p>
+
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='fn' href='fn.read_clock64.html'
+                               title='llvmint::ptx::read_clock64'>read_clock64</a></td>
+                        <td class='docblock short'>
+                             <p>The <code>llvm.ptx.read.clock64</code> intrinsic; known as <code>__builtin_ptx_read_clock64</code> in GCC.</p>
+
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='fn' href='fn.read_gridid.html'
+                               title='llvmint::ptx::read_gridid'>read_gridid</a></td>
+                        <td class='docblock short'>
+                             <p>The <code>llvm.ptx.read.gridid</code> intrinsic; known as <code>__builtin_ptx_read_gridid</code> in GCC.</p>
+
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='fn' href='fn.read_laneid.html'
+                               title='llvmint::ptx::read_laneid'>read_laneid</a></td>
+                        <td class='docblock short'>
+                             <p>The <code>llvm.ptx.read.laneid</code> intrinsic; known as <code>__builtin_ptx_read_laneid</code> in GCC.</p>
+
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='fn' href='fn.read_lanemask_eq.html'
+                               title='llvmint::ptx::read_lanemask_eq'>read_lanemask_eq</a></td>
+                        <td class='docblock short'>
+                             <p>The <code>llvm.ptx.read.lanemask.eq</code> intrinsic; known as <code>__builtin_ptx_read_lanemask_eq</code> in GCC.</p>
+
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='fn' href='fn.read_lanemask_ge.html'
+                               title='llvmint::ptx::read_lanemask_ge'>read_lanemask_ge</a></td>
+                        <td class='docblock short'>
+                             <p>The <code>llvm.ptx.read.lanemask.ge</code> intrinsic; known as <code>__builtin_ptx_read_lanemask_ge</code> in GCC.</p>
+
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='fn' href='fn.read_lanemask_gt.html'
+                               title='llvmint::ptx::read_lanemask_gt'>read_lanemask_gt</a></td>
+                        <td class='docblock short'>
+                             <p>The <code>llvm.ptx.read.lanemask.gt</code> intrinsic; known as <code>__builtin_ptx_read_lanemask_gt</code> in GCC.</p>
+
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='fn' href='fn.read_lanemask_le.html'
+                               title='llvmint::ptx::read_lanemask_le'>read_lanemask_le</a></td>
+                        <td class='docblock short'>
+                             <p>The <code>llvm.ptx.read.lanemask.le</code> intrinsic; known as <code>__builtin_ptx_read_lanemask_le</code> in GCC.</p>
+
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='fn' href='fn.read_lanemask_lt.html'
+                               title='llvmint::ptx::read_lanemask_lt'>read_lanemask_lt</a></td>
+                        <td class='docblock short'>
+                             <p>The <code>llvm.ptx.read.lanemask.lt</code> intrinsic; known as <code>__builtin_ptx_read_lanemask_lt</code> in GCC.</p>
+
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='fn' href='fn.read_nsmid.html'
+                               title='llvmint::ptx::read_nsmid'>read_nsmid</a></td>
+                        <td class='docblock short'>
+                             <p>The <code>llvm.ptx.read.nsmid</code> intrinsic; known as <code>__builtin_ptx_read_nsmid</code> in GCC.</p>
+
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='fn' href='fn.read_nwarpid.html'
+                               title='llvmint::ptx::read_nwarpid'>read_nwarpid</a></td>
+                        <td class='docblock short'>
+                             <p>The <code>llvm.ptx.read.nwarpid</code> intrinsic; known as <code>__builtin_ptx_read_nwarpid</code> in GCC.</p>
+
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='fn' href='fn.read_pm0.html'
+                               title='llvmint::ptx::read_pm0'>read_pm0</a></td>
+                        <td class='docblock short'>
+                             <p>The <code>llvm.ptx.read.pm0</code> intrinsic; known as <code>__builtin_ptx_read_pm0</code> in GCC.</p>
+
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='fn' href='fn.read_pm1.html'
+                               title='llvmint::ptx::read_pm1'>read_pm1</a></td>
+                        <td class='docblock short'>
+                             <p>The <code>llvm.ptx.read.pm1</code> intrinsic; known as <code>__builtin_ptx_read_pm1</code> in GCC.</p>
+
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='fn' href='fn.read_pm2.html'
+                               title='llvmint::ptx::read_pm2'>read_pm2</a></td>
+                        <td class='docblock short'>
+                             <p>The <code>llvm.ptx.read.pm2</code> intrinsic; known as <code>__builtin_ptx_read_pm2</code> in GCC.</p>
+
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='fn' href='fn.read_pm3.html'
+                               title='llvmint::ptx::read_pm3'>read_pm3</a></td>
+                        <td class='docblock short'>
+                             <p>The <code>llvm.ptx.read.pm3</code> intrinsic; known as <code>__builtin_ptx_read_pm3</code> in GCC.</p>
+
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='fn' href='fn.read_smid.html'
+                               title='llvmint::ptx::read_smid'>read_smid</a></td>
+                        <td class='docblock short'>
+                             <p>The <code>llvm.ptx.read.smid</code> intrinsic; known as <code>__builtin_ptx_read_smid</code> in GCC.</p>
+
+                        </td>
+                    </tr>
+                
+                    <tr class=' module-item'>
+                        <td><a class='fn' href='fn.read_warpid.html'
+                               title='llvmint::ptx::read_warpid'>read_warpid</a></td>
+                        <td class='docblock short'>
+                             <p>The <code>llvm.ptx.read.warpid</code> intrinsic; known as <code>__builtin_ptx_read_warpid</code> in GCC.</p>
+
+                        </td>
+                    </tr>
+                </table></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <div id="help" class="hidden">
+        <div class="shortcuts">
+            <h1>Keyboard shortcuts</h1>
+            <dl>
+                <dt>?</dt>
+                <dd>Show this help dialog</dd>
+                <dt>S</dt>
+                <dd>Focus the search field</dd>
+                <dt>&larrb;</dt>
+                <dd>Move up in search results</dd>
+                <dt>&rarrb;</dt>
+                <dd>Move down in search results</dd>
+                <dt>&#9166;</dt>
+                <dd>Go to active search result</dd>
+            </dl>
+        </div>
+        <div class="infos">
+            <h1>Search tricks</h1>
+            <p>
+                Prefix searches with a type followed by a colon (e.g.
+                <code>fn:</code>) to restrict the search to a given type.
+            </p>
+            <p>
+                Accepted types are: <code>fn</code>, <code>mod</code>,
+                <code>struct</code>, <code>enum</code>,
+                <code>trait</code>, <code>typedef</code> (or
+                <code>tdef</code>).
+            </p>
+        </div>
+    </div>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "llvmint";
+        window.playgroundUrl = "";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    
+    <script async src="../../search-index.js"></script>
+</body>
+</html>
