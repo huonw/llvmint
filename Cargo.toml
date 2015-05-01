@@ -17,3 +17,6 @@ Bindings to (almost) all LLVM intrinsics, for all platforms.
 
 [dependencies]
 simdty = "0"
+
+[features]
+unstable = []
